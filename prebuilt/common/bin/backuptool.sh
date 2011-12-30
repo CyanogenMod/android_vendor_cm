@@ -71,8 +71,6 @@ etc/permissions/features.xml
 app/MediaUploader.apk
 app/GoogleFeedback.apk
 app/GoogleTTS.apk
-app/CalendarGoogle.apk app/Calendar.apk
-app/CalendarProvider.apk
 app/MarketUpdater.apk
 app/GoogleServicesFramework.apk
 app/YouTube.apk
@@ -91,6 +89,7 @@ app/GalleryGoogle.apk app/Gallery.apk
 app/FaceLock.apk
 app/Vending.apk
 app/GoogleContactsSyncAdapter.apk
+app/GoogleCalendarSyncAdapter.apk
 app/Gmail.apk
 app/OneTimeInitializer.apk
 app/NetworkLocation.apk
