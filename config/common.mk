@@ -42,8 +42,15 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm3.so:system/lib/libjackpal-androidterm3.so \
+
+# Check for device specific bootanimation_zip
+ifdef LOCAL_BOOTANIMATION
+PRODUCT_COPY_FILES +=  \
+    $(LOCAL_BOOTANIMATION)bootanimation.zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
-  	
+endif
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
