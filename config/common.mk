@@ -46,7 +46,7 @@ PRODUCT_COPY_FILES +=  \
 # Check for device specific bootanimation_zip
 ifdef LOCAL_BOOTANIMATION
 PRODUCT_COPY_FILES +=  \
-    $(LOCAL_BOOTANIMATION)bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_BOOTANIMATION):system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
