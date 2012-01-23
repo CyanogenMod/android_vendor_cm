@@ -139,13 +139,16 @@ rm -rf $REPACK/ota/recovery
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
+# Date
+DATE=$(date +%F)
+
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
 	MODVERSION=`sed -n -e'/ro\.cm\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/update-cm-$MODVERSION-signed.zip
+	OUTFILE=$OUT/update-cm-$MODVERSION-$DATE-signed.zip
 else
-	OUTFILE=$OUT/update-squished.zip
+	OUTFILE=$OUT/update-squished-$DATE.zip
 fi
 
 # Pack it up and sign
