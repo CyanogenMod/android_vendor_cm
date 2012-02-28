@@ -158,6 +158,14 @@ restore_file() {
    fi
 }
 
+remove_duplicate_gallery() {
+   if [ -f "/system/app/Gallery2.apk" ] && [ -f "/system/app/GalleryGoogle.apk" ];
+   then
+      echo "Removing duplicate gallery"
+      rm /system/app/Gallery2.apk
+   fi
+}
+
 # don't (u)mount system if already done
 UMOUNT=0
 
@@ -201,6 +209,7 @@ case "$1" in
          done
          rm -rf $C
       fi
+      remove_duplicate_gallery;
       if [ $UMOUNT -ne 0 ]; then
          umount $S
       fi
