@@ -158,6 +158,19 @@ restore_file() {
    fi
 }
 
+remove_duplicate_apps() {
+   if [ -f "/system/app/Gallery2.apk" ] && [ -f "/system/app/GalleryGoogle.apk" ];
+   then
+      echo "Removing duplicate gallery"
+      rm /system/app/Gallery2.apk
+   fi
+   if [ -f "/system/app/QuickSearchBox.apk" ] && [ -f "/system/app/GoogleQuickSearchBox.apk" ];
+   then
+      echo "Removing duplicate quicksearch"
+      rm /system/app/QuickSearchBox.apk
+   fi
+}
+
 # don't (u)mount system if already done
 UMOUNT=0
 
@@ -201,6 +214,7 @@ case "$1" in
          done
          rm -rf $C
       fi
+      remove_duplicate_apps;
       if [ $UMOUNT -ne 0 ]; then
          umount $S
       fi
