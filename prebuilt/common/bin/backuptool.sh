@@ -97,22 +97,8 @@ app/GooglePartnerSetup.apk
 app/Phonesky.apk
 app/VoiceSearch.apk
 etc/hosts
-etc/custom_backup_list.txt
 etc/force_backuptool
 EOF
-}
-
-get_custom_files() {
-   local L
-   if [ -f "$C/custom_backup_list.txt" ];
-   then
-      [ ! -f $C/fixed_custom_backup_list.txt ] && tr -d '\r' < $C/custom_backup_list.txt \
-            > $C/fixed_custom_backup_list.txt
-      L=`cat $C/fixed_custom_backup_list.txt`
-      cat <<EOF
-$L
-EOF
-   fi
 }
 
 backup_file() {
@@ -174,11 +160,9 @@ case "$1" in
       then
          rm -rf $C
          mkdir -p $C
-         for file_list in get_files get_custom_files; do
-           $file_list | while read FILE REPLACEMENT; do
+           get_files | while read FILE REPLACEMENT; do
               backup_file $S/$FILE
            done
-         done
       fi
       if [ $UMOUNT -ne 0 ]; then
          umount $S
@@ -193,13 +177,11 @@ case "$1" in
       check_installscript;
       if [ $PROCEED -ne 0 ];
       then
-         for file_list in get_files get_custom_files; do
-           $file_list | while read FILE REPLACEMENT; do
+           get_files | while read FILE REPLACEMENT; do
               R=""
               [ -n "$REPLACEMENT" ] && R="$S/$REPLACEMENT"
               restore_file $S/$FILE $R
            done
-         done
          rm -rf $C
       fi
       if [ $UMOUNT -ne 0 ]; then
