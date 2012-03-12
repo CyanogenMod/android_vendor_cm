@@ -4,6 +4,7 @@ add_lunch_combo cm_crespo-userdebug
 add_lunch_combo cm_crespo4g-userdebug
 add_lunch_combo cm_epicmtd-userdebug
 add_lunch_combo cm_galaxys2-userdebug
+add_lunch_combo cm_galaxytab7c-userdebug
 add_lunch_combo cm_haida-userdebug
 add_lunch_combo cm_hallon-userdebug
 add_lunch_combo cm_iyokan-userdebug
