@@ -15,3 +15,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
   Mms
+
+PRODUCT_COPY_FILES += \
+     vendor/cm/prebuilt/common/bootanimation/vertical-720x1280.zip:system/media/bootanimation.zip
