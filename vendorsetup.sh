@@ -1,4 +1,5 @@
 add_lunch_combo cm_anzu-userdebug
+add_lunch_combo cm_blade-userdebug
 add_lunch_combo cm_captivatemtd-userdebug
 add_lunch_combo cm_coconut-userdebug
 add_lunch_combo cm_crespo-userdebug
@@ -35,6 +36,7 @@ add_lunch_combo cm_tf101-userdebug
 add_lunch_combo cm_tf201-userdebug
 add_lunch_combo cm_toro-userdebug
 add_lunch_combo cm_urushi-userdebug
+add_lunch_combo cm_v9-userdebug
 add_lunch_combo cm_vibrantmtd-userdebug
 add_lunch_combo cm_wingray-userdebug
 add_lunch_combo cm_zeus-userdebug
