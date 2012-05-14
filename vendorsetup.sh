@@ -7,6 +7,7 @@ add_lunch_combo cm_epicmtd-userdebug
 add_lunch_combo cm_galaxysbmtd-userdebug
 add_lunch_combo cm_galaxysmtd-userdebug
 add_lunch_combo cm_galaxys2-userdebug
+add_lunch_combo cm_galaxynote-userdebug
 add_lunch_combo cm_haida-userdebug
 add_lunch_combo cm_hallon-userdebug
 add_lunch_combo cm_i777-userdebug

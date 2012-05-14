@@ -20,6 +20,7 @@ Maintainers (CyanogenMod 9):
 * Samsung Galaxy S (GT-I9000): coolya, codeworkx, atinm, GuiperPT, Unhelpful
 * Samsung Galaxy S II (GT-I9100): atinm, codeworkx, coolya, GuiperPT, Unhelpful
 * Samsung Galaxy S II AT&T (SGH-I777): atinm, Andrew Dodd, codeworkx, coolya, GuiperPT, Unhelpful
+* Samsung Galaxy Note (GT-N7000): xplodwild, Andrew Dodd, codeworkx
 * Samsung Galaxy Tab 10.1: cyanogen, pershoot
 * Samsung Galaxy Tab 8.9: kallt_kaffe
 * Samsung Galaxy Tab 7: cdesai, humberos, jt1134
