@@ -1,0 +1,38 @@
+#!/system/bin/sh
+#
+# only start dropbear if /data/dropbear/.ssh/authorized_keys exists
+#
+
+if [ ! -f /data/dropbear/.ssh/authorized_keys ] ; then
+  echo "not starting dropbear because there is no /data/dropbear/.ssh/authorized_keys"
+  exit 0
+fi
+
+if [ ! -f /data/dropbear/dropbear_rsa_host_key ] ; then
+  echo "generate /data/dropbear/dropbear_rsa_host_key"
+  if [ ! -x /system/xbin/dropbearkey ] ; then
+    echo "/system/xbin/dropbearkey is missing"
+    exit 1
+  fi
+  /system/xbin/dropbearkey -t rsa -f /data/dropbear/dropbear_rsa_host_key
+fi
+
+if [ ! -f /data/dropbear/dropbear_dss_host_key ] ; then
+  echo "generate /data/dropbear/dropbear_dss_host_key"
+  if [ ! -x /system/xbin/dropbearkey ] ; then
+    echo "/system/xbin/dropbearkey is missing"
+    exit 1
+  fi
+  /system/xbin/dropbearkey -t dss -f /data/dropbear/dropbear_dss_host_key
+fi
+
+# fix perms - just be sure
+chmod 755 /data/dropbear
+chmod 700 /data/dropbear/.ssh
+chmod 644 /data/dropbear/.ssh/authorized_keys
+chown root.root /data/dropbear
+chown root.root /data/dropbear/.ssh
+chown root.root /data/dropbear/.ssh/authorized_keys
+
+echo "starting dropbear"
+exec /system/xbin/dropbear -s
