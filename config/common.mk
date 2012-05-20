@@ -50,6 +50,10 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
+# dropbear
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/init.d/30dropbear:system/etc/init.d/30dropbear
+
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
@@ -111,6 +115,11 @@ PRODUCT_PACKAGES += \
 # Extra tools in CM
 PRODUCT_PACKAGES += \
     openvpn
+
+# remote access tools
+PRODUCT_PACKAGES += \
+    ssh scp dropbear dropbearkey rsync
+
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
