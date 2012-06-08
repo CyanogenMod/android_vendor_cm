@@ -1,0 +1,41 @@
+#!/system/bin/sh
+
+ISMULTI="$(getprop ro.cm.multistorage 0)"
+PRIMARY="$(getprop persist.cm.primarystorage internal)"
+SYMLINK=""
+
+# It's safe to assume we only have internal storage
+if [ "$ISMULTI" = "0" ];
+then
+    SYMLINK="/mnt/internalstorage"
+fi
+
+# In case primary is chosen
+if [ "$SYMLINK" = "" -a "$PRIMARY" = "internal" ];
+then
+    SYMLINK="/mnt/internalstorage"
+fi
+
+# In case external is chosen
+if [ "$SYMLINK" = "" -a "$PRIMARY" = "external" ];
+then
+    SYMLINK="/mnt/externalstorage"
+fi
+
+if [ "$SYMLINK" != "" ];
+then
+    # Remount / rw so we can touch /mnt stuff
+    busybox mount -o remount,rw rootfs /
+    # Remove the symlink
+    busybox rm -f /mnt/sdcard/ 2>/dev/null
+    # Or the directory
+    busybox rmdir /mnt/sdcard/ 2>/dev/null
+    # Apply the required symlink
+    busybox ln -s "$SYMLINK" /mnt/sdcard
+    # And remount / back to ro
+    busybox mount -o remount,ro rootfs /
+    echo "Symlinked /mnt/sdcard -> $SYMLINK"
+else
+    echo "ERR: PRIMARY string is invalid!"
+    exit 1
+fi
