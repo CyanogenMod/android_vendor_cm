@@ -130,18 +130,14 @@ endif
 ifdef CM_RELEASE
     CM_BUILDTYPE := RELEASE
 endif
+# Default to UNOFFICIAL
+ifndef CM_BUILDTYPE
+               CM_BUILDTYPE := UNOFFICIAL
+endif
 
-ifdef CM_BUILDTYPE
-    ifdef CM_EXTRAVERSION
-        # Force build type to EXPERIMENTAL
-        CM_BUILDTYPE := EXPERIMENTAL
-        # Add leading dash to CM_EXTRAVERSION
-        CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
-    endif
-else
-    # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
-    CM_EXTRAVERSION :=
+ifdef CM_EXTRAVERSION
+  # Add leading dash to CM_EXTRAVERSION
+  CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
 endif
 
 ifdef CM_RELEASE
