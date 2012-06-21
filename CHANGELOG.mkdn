@@ -34,7 +34,11 @@ Maintainers (CyanogenMod 9):
 * Samsung Galaxy S III (SPH-L710 - Sprint): noobnl, mkasick (Team Epic)
 * Samsung Galaxy Tab 10.1: cyanogen, pershoot
 * Samsung Galaxy Tab 8.9: kallt_kaffe
+* Samsung Galaxy Tab 2 7" (GT-P31XX): codeworkx
+* Samsung Galaxy Tab 2 10.1" (GT-P51XX): codeworkx
 * Samsung Galaxy Tab 7: cdesai, humberos, jt1134
+* Samsung Galaxy Tab 8.9: kallt_kaffe
+* Samsung Galaxy Tab 10.1: cyanogen, pershoot
 * Samsung Vibrant (SGH-T959): FaultException
 * Sony Xperia Arc (LT15i): Bin4ry,defer,jerpelea (FreeXperia team)
 * Sony Xperia Neo (MT15i): Bin4ry,defer,jerpelea (FreeXperia team)
