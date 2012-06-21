@@ -28,6 +28,9 @@ add_lunch_combo cm_p4vzw-userdebug
 add_lunch_combo cm_p4wifi-userdebug
 add_lunch_combo cm_p5-userdebug
 add_lunch_combo cm_p5wifi-userdebug
+add_lunch_combo cm_p5100-userdebug
+add_lunch_combo cm_p5110-userdebug
+add_lunch_combo cm_p5113-userdebug
 add_lunch_combo cm_p930-userdebug
 add_lunch_combo cm_pyramid-userdebug
 add_lunch_combo cm_quincyatt-userdebug
