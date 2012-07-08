@@ -9,6 +9,7 @@ add_lunch_combo cm_d2tmo-userdebug
 add_lunch_combo cm_epicmtd-userdebug
 add_lunch_combo cm_e730-userdebug
 add_lunch_combo cm_e739-userdebug
+add_lunch_combo cm_fascinatemtd-userdebug
 add_lunch_combo cm_galaxysbmtd-userdebug
 add_lunch_combo cm_galaxysmtd-userdebug
 add_lunch_combo cm_galaxys2-userdebug
