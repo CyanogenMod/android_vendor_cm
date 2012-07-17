@@ -58,7 +58,7 @@ Translators:
 * Catalan: Oriol Pellicer
 * Finnish: Antti Leukkunen
 * Swedish: Patrik Kullman
-* Polish: Maciej Rozbicki
+* Polish: Burag, Maciej Rozbicki
 * Korean: Inseok Lee
 * Traditional Chinese: Ladios Jonquil
 * Slovak: Juraj Janecek
