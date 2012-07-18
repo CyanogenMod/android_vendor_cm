@@ -38,6 +38,10 @@ add_lunch_combo cm_p5wifi-userdebug
 add_lunch_combo cm_p5100-userdebug
 add_lunch_combo cm_p5110-userdebug
 add_lunch_combo cm_p5113-userdebug
+add_lunch_combo cm_p6200-userdebug
+add_lunch_combo cm_p6210-userdebug
+add_lunch_combo cm_p6800-userdebug
+add_lunch_combo cm_p6810-userdebug
 add_lunch_combo cm_p930-userdebug
 add_lunch_combo cm_pyramid-userdebug
 add_lunch_combo cm_quincyatt-userdebug

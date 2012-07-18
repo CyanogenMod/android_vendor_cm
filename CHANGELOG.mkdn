@@ -33,11 +33,11 @@ Maintainers (CyanogenMod 9):
 * Samsung Galaxy S III (SGH-I747 - AT&T): Unhelpful, cyanogen
 * Samsung Galaxy S III (SGH-T999 - T-Mobile): cyanogen
 * Samsung Galaxy S III (SPH-L710 - Sprint): noobnl, mkasick (Team Epic)
-* Samsung Galaxy Tab 10.1: cyanogen, pershoot
-* Samsung Galaxy Tab 8.9: kallt_kaffe
 * Samsung Galaxy Tab 2 7" (GT-P31XX): codeworkx
 * Samsung Galaxy Tab 2 10.1" (GT-P51XX): codeworkx
 * Samsung Galaxy Tab 7: cdesai, humberos, jt1134
+* Samsung Galaxy Tab 7 Plus (GT-P62XX): aorth
+* Samsung Galaxy Tab 7.7 (GT-P68X0): ohanar
 * Samsung Galaxy Tab 8.9: kallt_kaffe
 * Samsung Galaxy Tab 10.1: cyanogen, pershoot
 * Samsung Vibrant (SGH-T959): FaultException
