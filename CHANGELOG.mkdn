@@ -15,6 +15,8 @@ Maintainers (CyanogenMod 9):
 * Google Nexus S: KalimochoAz, burnsra
 * Google Galaxy Nexus: KalimochoAz, bekit, Bumble-Bee
 * HP Touchpad: dalingrin, green--, jcsullins
+* HTC One S: intervigil
+* HTC Sensation: cretin45, intervigil
 * LG Optimus LTE / AT&T Nitro HD: arcee
 * LG Optimus Sol / LG myTouch: Kali-, arcee
 * Motorola Xoom (stingray): TDR, Steady Hawkin, Bazar6 (Team Rogue)
