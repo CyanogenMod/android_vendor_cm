@@ -15,6 +15,7 @@ Maintainers (CyanogenMod 9):
 * __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
 * __Google Nexus S:__ burnsra, KalimochoAz
 * __HP Touchpad:__ dalingrin, green--, jcsullins
+* __HTC One S:__ intervigil
 * __HTC Sensation:__ cretin45, intervigil
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
 * __LG Optimus LTE (SK Telecom) (SU640):__ arcee
