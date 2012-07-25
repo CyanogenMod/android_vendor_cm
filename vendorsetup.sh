@@ -44,7 +44,7 @@ add_lunch_combo cm_maguro-userdebug
 #add_lunch_combo cm_stingray-userdebug
 #add_lunch_combo cm_tenderloin-userdebug
 #add_lunch_combo cm_tf101-userdebug
-#add_lunch_combo cm_tf201-userdebug
+add_lunch_combo cm_tf201-userdebug
 #add_lunch_combo cm_tf300t-userdebug
 add_lunch_combo cm_toro-userdebug
 add_lunch_combo cm_toroplus-userdebug
