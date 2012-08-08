@@ -1,8 +1,8 @@
 #add_lunch_combo cm_anzu-userdebug
 #add_lunch_combo cm_captivatemtd-userdebug
 #add_lunch_combo cm_coconut-userdebug
-#add_lunch_combo cm_crespo-userdebug
-#add_lunch_combo cm_crespo4g-userdebug
+add_lunch_combo cm_crespo-userdebug
+add_lunch_combo cm_crespo4g-userdebug
 #add_lunch_combo cm_d2att-userdebug
 #add_lunch_combo cm_d2spr-userdebug
 #add_lunch_combo cm_d2tmo-userdebug
