@@ -50,11 +50,11 @@ Translators:
 * Italian: Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera
 * Japanese: Takuo Kitame
 * French: Sébastien Vaucher, David Girault, Tanguy Pruvot
-* Simplified Chinese: comercy, Qian Zheng
+* Simplified Chinese: comercy, Qian Zheng, John Hsing
 * Russian: OlegKrikun, Pavel Volkov, Kir Kolyshkin
 * Portuguese: Eduardo Martins, Ricardo Pinho
 * Portuguese-Brazil: Gustavo Rosa
-* Spanish: PeRiJeY, KalimochoAz, Chuckycrx
+* Spanish: PeRiJeY, KalimochoAz, Chuckycrx, djMesias
 * Catalan: Oriol Pellicer
 * Finnish: Antti Leukkunen
 * Swedish: Patrik Kullman
@@ -63,6 +63,9 @@ Translators:
 * Traditional Chinese: Ladios Jonquil
 * Slovak: Juraj Janecek
 * Czech: Ondrej Zima
+* Turkish: Ethem Evlice (androidmeda)
+* Hungarian: Kalman Stipta (apeelme), Zsolt Kelemen (kelzsoca), Zsolt Villant (Keeperv85), Janos Horvath (hjanos1)
+* Dutch: Marco Brohet
 
 CHANGELOG (notable new features)
 ---------
