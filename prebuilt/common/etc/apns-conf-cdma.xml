@@ -30,5 +30,26 @@
   <apn carrier="Virgin Mobile US" mcc="311" mnc="490" apn="0" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" port="" type="mms" />
   <apn carrier="Boost MMS" mcc="505" mnc="02" apn="mms" user="" password="" server="" proxy="61.88.190.10" port="8070" mmsc="http://mmsc.optus.com.au:8002/" mmsproxy="61.88.190.10" mmsport="8070" type="mms" authtype="3"/>
   <apn carrier="Boost Mobile" mcc="505" mnc="02" apn="yesinternet" user="" password="" server="" proxy="" port="" mmsc="" mmsproxy="" mmsport="" type="default,supl" authtype="3"/>
-</apns>
 
+<!-- Sprint LTE/eHRPD: S3 LG8 build -->
+  <!--<apn carrier="LTE - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />-->
+  <apn carrier="LTE - SPRINT test ISP" mcc="001" mnc="01" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - SPRINT test OTA" mcc="001" mnc="01" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - SPRINT test PAM" mcc="001" mnc="01" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - SPRINT test ISP" mcc="001" mnc="010" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - SPRINT test OTA" mcc="001" mnc="010" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <!--<apn carrier="EHRPD - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />-->
+  <apn carrier="EHRPD - SPRINT test ISP" mcc="001" mnc="01" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test OTA" mcc="001" mnc="01" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test PAM" mcc="001" mnc="01" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test ISP" mcc="001" mnc="010" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test OTA" mcc="001" mnc="010" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+
+<!-- Sprint LTE/eHRPD: Programmatically added in S3 LG8 build. -->
+  <apn carrier="APN0 LTE ota" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="APN0 EHRPD ota" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+  <apn carrier="APN2 LTE internet" mcc="310" mnc="120" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="APN2 EHRPD internet" mcc="310" mnc="120" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
+</apns>
