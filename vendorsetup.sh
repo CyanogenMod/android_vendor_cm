@@ -49,7 +49,7 @@ add_lunch_combo cm_maguro-userdebug
 add_lunch_combo cm_toro-userdebug
 add_lunch_combo cm_toroplus-userdebug
 #add_lunch_combo cm_urushi-userdebug
-#add_lunch_combo cm_vibrantmtd-userdebug
+add_lunch_combo cm_vibrantmtd-userdebug
 #add_lunch_combo cm_wingray-userdebug
 #add_lunch_combo cm_zeus-userdebug
 #add_lunch_combo cm_zeusc-userdebug
