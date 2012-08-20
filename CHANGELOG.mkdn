@@ -56,6 +56,7 @@ Translators:
 * Traditional Chinese: Ladios Jonquil
 * Slovak: Juraj Janecek
 * Czech: Ondrej Zima
+* Dutch: Marco Brohet, Kasper Hettinga, Sam Segers, Eddy Witkamp
 
 CHANGELOG (notable new features)
 ---------
