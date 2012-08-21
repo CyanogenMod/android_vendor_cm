@@ -16,6 +16,7 @@ cm_galaxys2-userdebug
 cm_haida-userdebug
 cm_hallon-userdebug
 cm_hercules-userdebug
+cm_hikari-userdebug
 cm_i777-userdebug
 cm_i9100g-userdebug
 cm_i9300-userdebug
@@ -26,6 +27,8 @@ cm_n7000-userdebug
 cm_nozomi-userdebug
 cm_p1-userdebug
 cm_p1c-userdebug
+cm_p1l-userdebug
+cm_p1n-userdebug
 cm_p3-userdebug
 cm_p3100-userdebug
 cm_p3110-userdebug
@@ -46,7 +49,6 @@ cm_satsuma-userdebug
 cm_shooter-userdebug
 cm_shooteru-userdebug
 cm_skyrocket-userdebug
-cm_smb_a1011-userdebug
 cm_smultron-userdebug
 cm_stingray-userdebug
 cm_su640-userdebug
