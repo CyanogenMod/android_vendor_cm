@@ -1,8 +1,20 @@
 PRODUCT_BRAND ?= cyanogenmod
 
 ifneq ($(TARGET_BOOTANIMATION_NAME),)
+CHECK := $(shell sed 's/^vertical-\(.*\)x.*$/\1/' <<< "$(TARGET_BOOTANIMATION_NAME)")
+ifneq ($(TARGET_BOOTANIMATION_NAME),$(CHECK))
+    PRODUCT_COPY_FILES += \
+        vendor/cm/prebuilt/common/bootanimation/$(CHECK).zip:system/media/bootanimation.zip
+else
+CHECK := $(shell sed 's/^horizontal-.*x\(.*\)$/\1/' <<< "$(TARGET_BOOTANIMATION_NAME)")
+ifneq ($(TARGET_BOOTANIMATION_NAME),$(CHECK))
+    PRODUCT_COPY_FILES += \
+        vendor/cm/prebuilt/common/bootanimation/$(CHECK).zip:system/media/bootanimation.zip
+else
     PRODUCT_COPY_FILES += \
         vendor/cm/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+endif
+endif
 endif
 
 ifdef CM_NIGHTLY
