@@ -9,60 +9,74 @@ Follow http://twitter.com/cmsrc for commit-by-commit updates.
 
 Maintainers (CyanogenMod 9):
 ------------
-* Asus EeePad Transformer (tf101): Bumble-Bee, EnJens
-* Asus EeePad Transformer Prime (tf201): Bumble-Bee, EnJens
-* Asus EeePad Transformer Prime (tf300t): xplodwild
-* Google Nexus S: KalimochoAz, burnsra
-* Google Galaxy Nexus: KalimochoAz, bekit, Bumble-Bee
-* HP Touchpad: dalingrin, green--, jcsullins
-* LG Optimus LTE / AT&T Nitro HD: arcee
-* LG Optimus Sol / LG myTouch: Kali-, arcee
-* Motorola Xoom (stingray): TDR, Steady Hawkin, Bazar6 (Team Rogue)
-* Motorola Xoom (wingray): TDR, Steady Hawkin, Bazar6 (Team Rogue)
-* Samsung Epic 4G (SPH-D700): noobnl, Decad3nce, mkasick, UberPinguin, wtogami, bbelos (Team Epic)
-* Samsung Fascinate (SCH-I500): sbrissen, jt1134
-* Samsung Galaxy Note (GT-N7000): Entropy512, xplodwild
-* Samsung Galaxy Note AT&T (SGH-I717): cyanogen
-* Samsung Galaxy S (GT-I9000): pawitp
-* Samsung Galaxy S II (GT-I9100): codeworkx, Unhelpful, xplodwild
-* Samsung Galaxy S II (GT-I9100G): codeworkx
-* Samsung Galaxy S II AT&T (SGH-I777): atinm, Entropy512
-* Samsung Galaxy S II Skyrocket (SGH-I727): David Ferguson (dferg)
-* Samsung Galaxy S II T-Mobile (SGH-T989): Mike Grissom (mikeyman77)
-* Samsung Galaxy S III (GT-I9300): codeworkx, xplodwild
-* Samsung Galaxy S III (SGH-I747 - AT&T): Unhelpful, cyanogen
-* Samsung Galaxy S III (SGH-T999 - T-Mobile): cyanogen
-* Samsung Galaxy S III (SPH-L710 - Sprint): noobnl, mkasick (Team Epic)
-* Samsung Galaxy Tab 10.1: cyanogen, pershoot
-* Samsung Galaxy Tab 8.9: kallt_kaffe
-* Samsung Galaxy Tab 2 7" (GT-P31XX): codeworkx
-* Samsung Galaxy Tab 2 10.1" (GT-P51XX): codeworkx
-* Samsung Galaxy Tab 7: cdesai, humberos, jt1134
-* Samsung Galaxy Tab 8.9: kallt_kaffe
-* Samsung Galaxy Tab 10.1: cyanogen, pershoot
-* Samsung Vibrant (SGH-T959): FaultException
-* Sony Xperia Arc (LT15i): Bin4ry,defer,jerpelea (FreeXperia team)
-* Sony Xperia Neo (MT15i): Bin4ry,defer,jerpelea (FreeXperia team)
+* __Asus EeePad Transformer (TF101):__ Bumble-Bee, EnJens
+* __Asus EeePad Transformer Prime (TF201):__ Bumble-Bee, EnJens
+* __Asus EeePad Transformer Pad TF300T:__ xplodwild
+* __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
+* __Google Nexus S:__ burnsra, KalimochoAz
+* __HP Touchpad:__ dalingrin, green--, jcsullins
+* __HTC Sensation:__ 
+* __LG Optimus LTE / LG Nitro HD:__ arcee
+* __LG Optimus LTE (SK Telecom) (SU640):__ arcee
+* __LG Optimus Sol (E730):__ arcee, Kali-
+* __LG myTouch (E839):__ arcee, Kali-
+* __Motorola Xoom (CDMA):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
+* __Motorola Xoom (Wi-Fi):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
+* __Samsung Captivate (SGH-I896 / SGH-I897):__ 
+* __Samsung Epic 4G (SPH-D700):__ bbelos, Decad3nce, mkasick, noobnl, UberPinguin (Team Epic)
+* __Samsung Fascinate (SCH-I500):__ jt1134, sbrissen
+* __Samsung Galaxy Note (GT-N7000): Entropy512, xplodwild
+* __Samsung Galaxy Note (AT&T) (SGH-I717):__ cyanogen
+* __Samsung Galaxy S (GT-I9000):__ pawitp
+* __Samsung Galaxy S (GT-I9000B):__ 
+* __Samsung Galaxy S II (GT-I9100):__ codeworkx, Unhelpful, xplodwild
+* __Samsung Galaxy S II (GT-I9100G):__ codeworkx
+* __Samsung Galaxy S II (AT&T) (SGH-I777):__ atinm, Entropy512
+* __Samsung Galaxy S II (T-Mobile) (SGH-T989):__ Mike Grissom (mikeyman77)
+* __Samsung Galaxy S II Skyrocket (SGH-I727):__ David Ferguson (dferg)
+* __Samsung Galaxy S III (GT-I9300):__ codeworkx, xplodwild
+* __Samsung Galaxy S III (AT&T) (SGH-I747): cyanogen, Unhelpful
+* __Samsung Galaxy S III (Sprint) (SPH-L710): mkasick, noobnl (Team Epic)
+* __Samsung Galaxy S III (T-Mobile) (SGH-T999): cyanogen
+* __Samsung Galaxy Tab 7:__ cdesai, humberos, jt1134
+* __Samsung Galaxy Tab 8.9:__ kallt_kaffe
+* __Samsung Galaxy Tab 10.1:__ cyanogen, pershoot
+* __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codeworkx
+* __Samsung Galaxy Tab 2 10.1" (GT-P51xx):__ codeworkx
+* __Samsung Vibrant (SGH-T959):__ FaultException
+* __Sony Ericsson Live with Walkman (WT19i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Active (ST17i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Arc (LT15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Mini (ST15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Mini Pro (SK17i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Neo (MT15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Neo V (MT11i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Play (CDMA) (R800x):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Play (GSM) (R800i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Pro (MK16i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Ray (ST18i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Xperia Acro S (LT26w):__ Bin4ry, Kali-, jerpelea
+* __Sony Xperia S (LT26i):__ Bin4ry, defer, Kali-, jerpelea
 
 Translators:
 ------------
-* German: Matthias Büchner, Alexander Hofbauer, Sebastian K (DerSeppel), Ricco Thiel, Andreas Böhm
-* Italian: Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera
-* Japanese: Takuo Kitame
-* French: Sébastien Vaucher, David Girault, Tanguy Pruvot
-* Simplified Chinese: comercy, Qian Zheng
-* Russian: OlegKrikun, Pavel Volkov, Kir Kolyshkin
-* Portuguese: Eduardo Martins, Ricardo Pinho
-* Portuguese-Brazil: Gustavo Rosa
-* Spanish: PeRiJeY, KalimochoAz, Chuckycrx
-* Catalan: Oriol Pellicer
-* Finnish: Antti Leukkunen
-* Swedish: Patrik Kullman
-* Polish: Maciej Rozbicki
-* Korean: Inseok Lee
-* Traditional Chinese: Ladios Jonquil
-* Slovak: Juraj Janecek
-* Czech: Ondrej Zima
+* __Catalan:__ Oriol Pellicer
+* __Czech:__ Ondrej Zima
+* __Finnish:__ Antti Leukkunen
+* __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
+* __German:__ Matthias Büchner, Alexander Hofbauer, Sebastian K (DerSeppel), Ricco Thiel, Andreas Böhm
+* __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera
+* __Japanese:__ Takuo Kitame
+* __Korean:__ Inseok Lee
+* __Polish:__ Maciej Rozbicki
+* __Portuguese-Brazil:__ Gustavo Rosa
+* __Portuguese:__ Eduardo Martins, Ricardo Pinho
+* __Russian:__ OlegKrikun, Pavel Volkov, Kir Kolyshkin
+* __Simplified Chinese:__ comercy, Qian Zheng
+* __Slovak:__ Juraj Janecek
+* __Spanish:__ PeRiJeY, KalimochoAz, Chuckycrx
+* __Swedish:__ Patrik Kullman
+* __Traditional Chinese:__ Ladios Jonquil
 
 CHANGELOG (notable new features)
 ---------
@@ -118,7 +132,6 @@ CHANGELOG (notable new features)
 * Common: "eat" pushes fresh brunch/breakfast to device - Ricardo Cerqueira
 * Common: Customizable account color chip in Email - copolii
 * Common: "Rings" lockscreen - Valera Trubachev
-
 * Click, Motorola: Speed up photo recording - Emilio López
 * Click, Motorola: Add Geolocation to photo app - KalimochoAz
 * Click: Upgraded kernel from HTC 2.6.29 to 2.6.35
@@ -333,7 +346,6 @@ CHANGELOG (notable new features)
 * Vision: LED enhancement - Pershoot
 * Droid: Kernel 2.6.32.9
 
-
 ### 6.0.0
 * ANDROID: Google, HTC, Qualcomm, and everybody else.  We <3 U
 * Common: ADWLauncher 1.1.4 - Ander Webbs
@@ -403,5 +415,3 @@ CHANGELOG (notable new features)
 * EVO: Sprint MMS fixes - Darchstar, toastcfh
 * N1/Desire: True 720P encoding support - HTC, Cyanogen, Charan Singh, Enomther
 * Desire: Kernel base from Kali- & Defer
-
-
