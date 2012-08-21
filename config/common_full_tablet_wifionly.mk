@@ -25,5 +25,5 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(TARGET_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
-        vendor/cm/prebuilt/common/bootanimation/horizontal-1280x800.zip:system/media/bootanimation.zip
+        vendor/cm/prebuilt/common/bootanimation/horizontal-800.zip:system/media/bootanimation.zip
 endif
