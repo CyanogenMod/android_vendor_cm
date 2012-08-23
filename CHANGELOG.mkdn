@@ -24,8 +24,7 @@ Maintainers (CyanogenMod 9):
 * __Motorola Xoom (Wi-Fi):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
 * __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
 * __Samsung Epic 4G (SPH-D700):__ bbelos, Decad3nce, mkasick, noobnl, UberPinguin (Team Epic)
-* __Samsung Fascinate (SCH-I500):__ jt1134, sbrissen
-* __Samsung Galaxy Note (GT-N7000): Entropy512, xplodwild
+* __Samsung Galaxy Note (GT-N7000):__ Entropy512, xplodwild
 * __Samsung Galaxy Note (AT&T) (SGH-I717):__ cyanogen
 * __Samsung Galaxy S (GT-I9000):__ pawitp
 * __Samsung Galaxy S (GT-I9000B):__ helvio88
@@ -35,9 +34,9 @@ Maintainers (CyanogenMod 9):
 * __Samsung Galaxy S II (T-Mobile) (SGH-T989):__ Mike Grissom (mikeyman77)
 * __Samsung Galaxy S II Skyrocket (SGH-I727):__ David Ferguson (dferg)
 * __Samsung Galaxy S III (GT-I9300):__ codeworkx, xplodwild
-* __Samsung Galaxy S III (AT&T) (SGH-I747): cyanogen, Unhelpful
-* __Samsung Galaxy S III (Sprint) (SPH-L710): mkasick, noobnl (Team Epic)
-* __Samsung Galaxy S III (T-Mobile) (SGH-T999): cyanogen
+* __Samsung Galaxy S III (AT&T) (SGH-I747):__ cyanogen, Unhelpful
+* __Samsung Galaxy S III (Sprint) (SPH-L710):__ mkasick, noobnl (Team Epic)
+* __Samsung Galaxy S III (T-Mobile) (SGH-T999):__ cyanogen
 * __Samsung Galaxy Tab 7:__ cdesai, humberos, jt1134
 * __Samsung Galaxy Tab 8.9:__ kallt_kaffe
 * __Samsung Galaxy Tab 10.1:__ cyanogen, pershoot
