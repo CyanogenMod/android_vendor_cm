@@ -24,6 +24,7 @@ Maintainers (CyanogenMod 9):
 * __Motorola Xoom (Wi-Fi):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
 * __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
 * __Samsung Epic 4G (SPH-D700):__ bbelos, Decad3nce, mkasick, noobnl, UberPinguin (Team Epic)
+* __Samsung Fascinate (SCH-I500):__ jt1134, sbrissen
 * __Samsung Galaxy Note (GT-N7000):__ Entropy512, xplodwild
 * __Samsung Galaxy Note (AT&T) (SGH-I717):__ cyanogen
 * __Samsung Galaxy S (GT-I9000):__ pawitp
