@@ -11,7 +11,7 @@ You can do this by using these commands:
     (Go to repo you are patching, make your changes and commit)
     cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
 
-    repo start ics .
+    repo start jellybean .
     (Make your changes and commit)
     repo upload .
 Note: "." meaning current directory
@@ -27,11 +27,11 @@ Getting Started
 ---------------
 
 To get started with Android/CyanogenMod, you'll need to get
-familiar with [Git and Repo](http://source.android.com/download/using-repo).
+familiar with [Git and Repo](http://source.android.com/source/downloading.html).
 
 To initialize your local repository using the CyanogenMod trees, use a command like this:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b ics
+    repo init -u git://github.com/CyanogenMod/android.git -b jellybean
 
 Then to sync up:
 
@@ -47,4 +47,4 @@ Buildbot
 
 All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
 
-You can view the current build statuses at [buildbot.teamdouche.net](http://buildbot.teamdouche.net/)
+You can view the current build statuses at [jenkins.cyanogenmod.com](http://jenkins.cyanogenmod.com/)
