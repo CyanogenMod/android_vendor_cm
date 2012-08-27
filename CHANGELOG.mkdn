@@ -22,6 +22,7 @@ Maintainers (CyanogenMod 9):
 * __LG Optimus LTE (SK Telecom) (SU640):__ arcee
 * __LG Optimus Sol (E730):__ arcee, Kali-
 * __LG myTouch (E739):__ arcee, Kali-
+* __LG myTouch / LG Eclypse (C800):__ chui101
 * __Motorola Xoom (CDMA):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
 * __Motorola Xoom (Wi-Fi):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
 * __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
