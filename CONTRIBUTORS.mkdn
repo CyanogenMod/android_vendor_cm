@@ -77,3 +77,4 @@ Translators:
 * __Spanish:__ PeRiJeY, KalimochoAz, Chuckycrx
 * __Swedish:__ Patrik Kullman
 * __Traditional Chinese:__ Ladios Jonquil
+* __Turkish:__ Ethem Evlice (androidmeda)
