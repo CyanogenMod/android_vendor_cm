@@ -1,4 +1,5 @@
 cm_anzu-userdebug
+cm_c800-userdebug
 cm_captivatemtd-userdebug
 cm_coconut-userdebug
 cm_crespo-userdebug
@@ -9,6 +10,8 @@ cm_d2tmo-userdebug
 cm_epicmtd-userdebug
 cm_e730-userdebug
 cm_e739-userdebug
+cm_endeavoru-userdebug
+cm_evita-userdebug
 cm_fascinatemtd-userdebug
 cm_galaxysbmtd-userdebug
 cm_galaxysmtd-userdebug
@@ -16,6 +19,7 @@ cm_galaxys2-userdebug
 cm_haida-userdebug
 cm_hallon-userdebug
 cm_hercules-userdebug
+cm_hikari-userdebug
 cm_i777-userdebug
 cm_i9100g-userdebug
 cm_i9300-userdebug
@@ -26,6 +30,8 @@ cm_n7000-userdebug
 cm_nozomi-userdebug
 cm_p1-userdebug
 cm_p1c-userdebug
+cm_p1l-userdebug
+cm_p1n-userdebug
 cm_p3-userdebug
 cm_p3100-userdebug
 cm_p3110-userdebug
@@ -46,7 +52,6 @@ cm_satsuma-userdebug
 cm_shooter-userdebug
 cm_shooteru-userdebug
 cm_skyrocket-userdebug
-cm_smb_a1011-userdebug
 cm_smultron-userdebug
 cm_stingray-userdebug
 cm_su640-userdebug
@@ -58,6 +63,7 @@ cm_toro-userdebug
 cm_toroplus-userdebug
 cm_urushi-userdebug
 cm_vibrantmtd-userdebug
+cm_ville-userdebug
 cm_wingray-userdebug
 cm_zeus-userdebug
 cm_zeusc-userdebug
