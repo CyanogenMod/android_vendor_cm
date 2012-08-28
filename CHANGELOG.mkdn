@@ -10,6 +10,9 @@ Follow http://twitter.com/cmsrc for commit-by-commit updates.
 CHANGELOG (notable new features)
 ---------
 
+### 9.1.0
+* Common: Things and Stuff (I swear we will fill this out much better later on)
+
 ### 9.0.0
 * Common: Android 4.0.4 (Google)
 
