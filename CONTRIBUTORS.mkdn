@@ -1,0 +1,78 @@
+CyanogenMod
+===============
+
+Maintainers (CyanogenMod 9):
+------------
+* __Asus EeePad Transformer (TF101):__ Bumble-Bee, EnJens
+* __Asus EeePad Transformer Prime (TF201):__ Bumble-Bee, EnJens
+* __Asus EeePad Transformer Pad TF300T:__ xplodwild
+* __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
+* __Google Nexus S:__ burnsra, KalimochoAz
+* __HP Touchpad:__ dalingrin, green--, jcsullins
+* __HTC Sensation:__ cretin45, intervigil
+* __HTC One S:__ xkonni, intervigil
+* __HTC One X:__ mdeejay, tbalden
+* __HTC One XL:__ h8rift, intervigil
+* __LG Optimus LTE (P930) / LG Nitro HD (P935):__ arcee
+* __LG Optimus LTE (SK Telecom) (SU640):__ arcee
+* __LG Optimus Sol (E730):__ arcee, Kali-
+* __LG myTouch (E739):__ arcee, Kali-
+* __LG myTouch Q / LG Eclypse (C800):__ chui101
+* __Motorola Xoom (CDMA):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
+* __Motorola Xoom (Wi-Fi):__ Bazar6, Steady Hawkin, TDR (Team Rogue)
+* __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
+* __Samsung Epic 4G (SPH-D700):__ bbelos, Decad3nce, mkasick, noobnl, UberPinguin (Team Epic)
+* __Samsung Fascinate (SCH-I500):__ jt1134, sbrissen
+* __Samsung Galaxy Note (GT-N7000):__ Entropy512, xplodwild
+* __Samsung Galaxy Note (AT&T) (SGH-I717):__ cyanogen
+* __Samsung Galaxy S (GT-I9000):__ pawitp
+* __Samsung Galaxy S (GT-I9000B):__ helvio88
+* __Samsung Galaxy S II (GT-I9100):__ codeworkx, Unhelpful, xplodwild
+* __Samsung Galaxy S II (GT-I9100G):__ codeworkx
+* __Samsung Galaxy S II (AT&T) (SGH-I777):__ atinm, Entropy512
+* __Samsung Galaxy S II (T-Mobile) (SGH-T989):__ Mike Grissom (mikeyman77)
+* __Samsung Galaxy S II Skyrocket (SGH-I727):__ David Ferguson (dferg)
+* __Samsung Galaxy S III (GT-I9300):__ codeworkx, xplodwild
+* __Samsung Galaxy S III (AT&T) (SGH-I747):__ cyanogen, Unhelpful
+* __Samsung Galaxy S III (Sprint) (SPH-L710):__ mkasick, noobnl (Team Epic)
+* __Samsung Galaxy S III (T-Mobile) (SGH-T999):__ cyanogen
+* __Samsung Galaxy Tab 7:__ cdesai, humberos, jt1134
+* __Samsung Galaxy Tab 8.9:__ kallt_kaffe
+* __Samsung Galaxy Tab 10.1:__ cyanogen, pershoot
+* __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codeworkx
+* __Samsung Galaxy Tab 2 10.1" (GT-P51xx):__ codeworkx
+* __Samsung Vibrant (SGH-T959):__ FaultException
+* __Sony Ericsson Live with Walkman (WT19i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Active (ST17i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Arc (LT15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Mini (ST15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Mini Pro (SK17i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Neo (MT15i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Neo V (MT11i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Play (CDMA) (R800x):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Play (GSM) (R800i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Pro (MK16i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Ericsson Xperia Ray (ST18i):__ Bin4ry, defer, jerpelea (FreeXperia team)
+* __Sony Xperia Acro S (LT26w):__ Bin4ry, jerpelea, Kali-
+* __Sony Xperia S (LT26i):__ Bin4ry, defer, jerpelea, Kali-
+
+Translators:
+------------
+* __Catalan:__ Oriol Pellicer
+* __Czech:__ Ondrej Zima
+* __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Eddy Witkamp
+* __Finnish:__ Antti Leukkunen
+* __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
+* __German:__ Matthias Büchner, Alexander Hofbauer, Sebastian K (DerSeppel), Ricco Thiel, Andreas Böhm
+* __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera
+* __Japanese:__ Takuo Kitame
+* __Korean:__ Inseok Lee
+* __Polish:__ Maciej Rozbicki
+* __Portuguese-Brazil:__ Gustavo Rosa
+* __Portuguese:__ Eduardo Martins, Ricardo Pinho
+* __Russian:__ OlegKrikun, Pavel Volkov, Kir Kolyshkin
+* __Simplified Chinese:__ comercy, Qian Zheng
+* __Slovak:__ Juraj Janecek
+* __Spanish:__ PeRiJeY, KalimochoAz, Chuckycrx
+* __Swedish:__ Patrik Kullman
+* __Traditional Chinese:__ Ladios Jonquil
