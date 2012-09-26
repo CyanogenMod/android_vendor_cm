@@ -53,8 +53,9 @@ Maintainers (CyanogenMod 9):
 * __Sony Ericsson Xperia Play (GSM) (R800i):__ Bin4ry, defer, jerpelea (FreeXperia team)
 * __Sony Ericsson Xperia Pro (MK16i):__ Bin4ry, defer, jerpelea (FreeXperia team)
 * __Sony Ericsson Xperia Ray (ST18i):__ Bin4ry, defer, jerpelea (FreeXperia team)
-* __Sony Xperia Acro S (LT26w):__ Bin4ry, jerpelea, Kali-
-* __Sony Xperia S (LT26i):__ Bin4ry, defer, jerpelea, Kali-
+* __Sony Xperia Acro S (LT26w):__ Bin4ry, jerpelea, Kali- (FreeXperia team)
+* __Sony Xperia S (LT26i):__ Bin4ry, defer, jerpelea, Kali- (FreeXperia team)
+* __Sony Xperia ion (LT28h):__ jerpelea, Kali- (FreeXperia team)
 
 Translators:
 ------------
