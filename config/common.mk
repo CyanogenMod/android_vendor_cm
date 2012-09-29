@@ -51,7 +51,6 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 PRODUCT_COPY_FILES +=  \
-    vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 	vendor/cm/prebuilt/common/apps/Superuser.apk:system/app/Superuser.apk
@@ -106,7 +105,8 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf \
     CMWallpapers \
-    Apollo
+    Apollo \
+    CMUpdater
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
