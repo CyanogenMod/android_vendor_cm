@@ -87,7 +87,6 @@ PRODUCT_COPY_FILES += \
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.local.rc:system/etc/init.local.rc \
     vendor/cm/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/cm/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
