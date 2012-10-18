@@ -52,8 +52,8 @@
   <!-- END modify Apn database for Sprint EHRPD support -->
 
   <!-- Sprint LTE/eHRPD: These apns are added then programmatically removed in S3 LG8 build. -->
-  <!--<apn carrier="LTE - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />-->
-  <!--<apn carrier="EHRPD - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />-->
+  <apn carrier="LTE - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="EHRPD - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
 
   <!-- Sprint LTE/eHRPD: Programmatically added in S3 LG8 build. -->
   <apn carrier="APN0 LTE ota" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
