@@ -7,5 +7,8 @@
     <!-- Location services -->
     <string name="config_networkLocationProviderPackageName">com.google.android.location</string>
     <string name="config_geocodeProviderPackageName">com.google.android.location</string>
+
+    <!-- Dreams of Electric Sheep -->
+    <bool name="config_enableDreams">true</bool>
 </resources>
 
