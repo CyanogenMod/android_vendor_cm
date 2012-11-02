@@ -10,6 +10,10 @@ on post-fs-data
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
 
+# Import custom storage configuration
+    chmod 0644 /data/system/storage.rc
+    export_rc /data/system/storage.rc
+
 on boot
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
