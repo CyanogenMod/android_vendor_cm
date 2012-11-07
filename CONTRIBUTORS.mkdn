@@ -46,7 +46,7 @@ Translators:
 ------------
 * __Catalan:__ Oriol Pellicer
 * __Croatian:__ Antonio Marin
-* __Czech:__ Ondrej Zima
+* __Czech:__ Ondrej Zima, Radovan Kepak, Jozka Jozin, Jiri Silvarich, Vaclav Moucha
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Bart Tiemersma, Eddy Witkamp
 * __Finnish:__ Antti Leukkunen
 * __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
