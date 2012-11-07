@@ -46,11 +46,11 @@ Translators:
 ------------
 * __Catalan:__ Oriol Pellicer
 * __Croatian:__ Antonio Marin
-* __Czech:__ Ondrej Zima
+* __Czech:__ Ondrej Zima, Radovan Kepak, Jozka Jozin, Jiri Silvarich, Vaclav Moucha
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Bart Tiemersma, Eddy Witkamp
 * __Finnish:__ Antti Leukkunen
-* __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
-* __German:__ Matthias Büchner, Alexander Hofbauer, Sebastian K., Ricco Thiel, Andreas Böhm, Kim Lê
+* __French:__ Sï¿½bastien Vaucher, David Girault, Tanguy Pruvot
+* __German:__ Matthias Bï¿½chner, Alexander Hofbauer, Sebastian K., Ricco Thiel, Andreas Bï¿½hm, Kim Lï¿½
 * __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera, Mauro Bazzano
 * __Japanese:__ Takuo Kitame
 * __Korean:__ Inseok Lee
