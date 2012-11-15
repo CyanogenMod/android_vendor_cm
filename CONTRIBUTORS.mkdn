@@ -10,7 +10,7 @@ Maintainers (CyanogenMod 10):
 * __B&N NookColor (encore):__ eyeballer, fattire, keyodi, krylon360, sluo (NookieDevs)
 * __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
 * __Google Nexus S:__ burnsra, KalimochoAz
-* __Google Nexus 7:__ 
+* __Google Nexus 7:__
 * __HTC Evo 4G LTE:__ kushdeck, toastcfh
 * __HTC One S:__ intervigil, xkonni
 * __HTC One XL:__ h8rift, intervigil
@@ -52,7 +52,8 @@ Translators:
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Bart Tiemersma, Eddy Witkamp
 * __Finnish:__ Antti Leukkunen
 * __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
-* __German:__ Matthias Büchner, Alexander Hofbauer, Sebastian K., Ricco Thiel, Andreas Böhm, Kim Lê
+* __German:__ Matthias Büchner, Ricco Thiel, Andreas Böhm, Kim Lê, Jacob Müller
+* __Hungarian:__ Tóth Tamás, László Dávid, Buga Dániel
 * __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera, Mauro Bazzano
 * __Japanese:__ Takuo Kitame
 * __Korean:__ Inseok Lee
