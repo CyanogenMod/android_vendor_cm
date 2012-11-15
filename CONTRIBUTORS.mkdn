@@ -6,11 +6,12 @@ Maintainers (CyanogenMod 10):
 * __Acer A700:__ pawitp
 * __Asus EeePad Transformer (TF101):__ Bumble-Bee, EnJens
 * __Asus EeePad Transformer Prime (TF201):__ Bumble-Bee, EnJens
-* __Asus EeePad Transformer Pad TF300T:__ xplodwild
+* __Asus EeePad Transformer Pad (TF300T):__ xplodwild
+* __Asus EeePad Transformer Pad Infinity (TF700T):__ xplodwild, Aaron Echols, Markus Hoeber
 * __B&N NookColor (encore):__ eyeballer, fattire, keyodi, krylon360, sluo (NookieDevs)
 * __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
 * __Google Nexus S:__ burnsra, KalimochoAz
-* __Google Nexus 7:__ 
+* __Google Nexus 7:__ fattire
 * __HTC Evo 4G LTE:__ kushdeck, toastcfh
 * __HTC One S:__ intervigil, xkonni
 * __HTC One XL:__ h8rift, intervigil
@@ -52,7 +53,8 @@ Translators:
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Bart Tiemersma, Eddy Witkamp
 * __Finnish:__ Antti Leukkunen
 * __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
-* __German:__ Matthias Büchner, Alexander Hofbauer, Sebastian K., Ricco Thiel, Andreas Böhm, Kim Lê
+* __German:__ Kim Lê, Jacob Müller, Patrick Schaaf, Christoph Quiter, Markus Hoeber, Matthias Büchner
+* __Hungarian:__ Tamás Tóth, Dávid László, Dániel Buga
 * __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera, Mauro Bazzano
 * __Japanese:__ Takuo Kitame
 * __Korean:__ Inseok Lee
@@ -62,7 +64,7 @@ Translators:
 * __Russian:__ OlegKrikun, Pavel Volkov, Kir Kolyshkin
 * __Simplified Chinese:__ comercy, Qian Zheng, Andrew Jiang, John Hsing
 * __Slovak:__ Juraj Janecek
-* __Spanish:__ PeRiJeY, KalimochoAz, Chuckycrx, Jorge Ruesga
+* __Spanish:__ PeRiJeY, KalimochoAz, Chuckycrx, Jorge Ruesga, djMesias
 * __Swedish:__ Patrik Kullman
 * __Traditional Chinese:__ Ladios Jonquil
 * __Turkish:__ Ethem Evlice (androidmeda)
