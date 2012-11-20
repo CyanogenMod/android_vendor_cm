@@ -24,7 +24,7 @@ Maintainers (CyanogenMod 10):
 * __Samsung Fascinate / Mesmerize (SCH-I500):__ jt1134, sbrissen
 * __Samsung Galaxy Note (GT-N7000):__ Entropy512, Espenfjo
 * __Samsung Galaxy Note 10.1 (GT-N80XX):__ Entropy512, Espenfjo
-* __Samsung Galaxy S Blaze 4G (SGH-T769):__ UberPinguin
+* __Samsung Galaxy S Blaze 4G (SGH-T769):__ UberPinguin, dr4stic
 * __Samsung Galaxy S (GT-I9000):__ pawitp
 * __Samsung Galaxy S (GT-I9000B):__ helvio88
 * __Samsung Galaxy S II (AT&T) (SGH-I777):__ Entropy512
