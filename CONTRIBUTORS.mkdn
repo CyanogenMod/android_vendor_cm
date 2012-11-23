@@ -51,7 +51,7 @@ Translators:
 * __Croatian:__ Antonio Marin
 * __Czech:__ Ondrej Zima, Radovan Kepak, Pavel Kucera, Jozka Jozin, Jiri Silvarich, Vaclav Moucha
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Sam Segers, Bart Tiemersma, Eddy Witkamp
-* __Finnish:__ Antti Leukkunen
+* __Finnish:__ Antti Leukkunen, Niko Koivu
 * __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
 * __German:__ Kim Lê, Jacob Müller, Patrick Schaaf, Christoph Quiter, Markus Hoeber, Matthias Büchner
 * __Hungarian:__ Tamás Tóth, Dávid László, Dániel Buga
