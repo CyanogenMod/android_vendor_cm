@@ -54,6 +54,7 @@ Translators:
 * __Finnish:__ Antti Leukkunen, Niko Koivu
 * __French:__ Sébastien Vaucher, David Girault, Tanguy Pruvot
 * __German:__ Kim Lê, Jacob Müller, Patrick Schaaf, Christoph Quiter, Markus Hoeber, Matthias Büchner
+* __Greek:__ Michael Bestas
 * __Hungarian:__ Tamás Tóth, Dávid László, Dániel Buga
 * __Italian:__ Francesco Foresta, Moreno Pojer, Eugenio Ziliotto, Giulio Cervera, Mauro Bazzano
 * __Japanese:__ Takuo Kitame
