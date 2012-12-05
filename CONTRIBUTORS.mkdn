@@ -9,6 +9,7 @@ Maintainers (CyanogenMod 9):
 * __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz
 * __Google Nexus S:__ burnsra, KalimochoAz
 * __HP Touchpad:__ dalingrin, green--, jcsullins
+* __HTC Doubleshot:__ kornyone, tbalden
 * __HTC Sensation:__ cretin45, intervigil
 * __HTC One S:__ xkonni, intervigil
 * __HTC One X:__ mdeejay, tbalden
