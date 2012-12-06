@@ -21,6 +21,7 @@ Maintainers (CyanogenMod 10):
 * __Motorola Xoom 3G (UMTS):__ bazar, SteadyHawkin, TDR (Team Rogue)
 * __Motorola Xoom 4G LTE (Verizon):__ bazar, SteadyHawkin, TDR (Team Rogue)
 * __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
+* __Samsung Captivate Glide (SGH-I927):__Dman3285, codeworkx
 * __Samsung Epic 4G (SPH-D700):__ bbelos, Decad3nce, mkasick, UberPinguin (Team Epic)
 * __Samsung Fascinate / Mesmerize (SCH-I500):__ jt1134, sbrissen
 * __Samsung Galaxy Note (GT-N7000):__ Entropy512, Espenfjo
