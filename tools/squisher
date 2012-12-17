@@ -88,7 +88,9 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.cm\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTFILE=$OUT/cm-$MODVERSION.zip
+BACON_VERSION=`get_build_var BACON_VERSION`
+OUTFILE=$OUT/cm-$BACON_VERSION.zip
+export $OUTFILE
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 
 # Pack it up and sign
