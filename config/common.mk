@@ -164,7 +164,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMUpdater \
     CMFileManager \
-    LockClock
+    Chronus
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
