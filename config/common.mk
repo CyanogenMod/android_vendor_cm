@@ -100,14 +100,10 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh
 
 PRODUCT_COPY_FILES += \
-    vendor/cm/proprietary/Term.apk:system/app/Term.apk
-
-# Copy JNI libarary of Term
-ifeq ($(TARGET_ARCH),arm)
-PRODUCT_COPY_FILES +=  \
+    vendor/cm/proprietary/Term.apk:system/app/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
-endif
 
+# Override JNI library of Term if needed
 ifeq ($(TARGET_ARCH),mips)
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/lib/mips/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
