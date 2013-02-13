@@ -1,0 +1,34 @@
+﻿#!/system/bin/sh
+# 
+# This script looks for apps which are available in the AOSP and have also been
+# released as Play Sote apps by Google. When the Play Store version of the app
+# is installed the one in /system/app will be deleted.
+#
+
+# Mount /system rw
+grep " /system " /proc/mounts | awk '{system("mount -o rw,remount -t "$3" "$1" "$2)}';
+
+# Create an array with the CM apps which will be deleted
+cmapps=( "Calendar" "Browser" );
+
+# Create an array with the names of Google apps which will be checked if they exists
+# The array entries have to be in the same order as the CM apps
+gapps=( "com.google.android.calendar" "com.chrome" );
+
+# Create an index which will increased in the for loop
+index=0;
+
+# Delete CM app if Google one is available
+if [ ${#cmapps[*]} = ${#gapps[*]} ]; then
+    for i in ${gapps[@]}; do
+        filepath="/data/app/$i*";
+        if [ -e $filepath ]; then
+            filepath="/system/app/${cmapps[$index]}.apk";
+            rm -f $filepath;
+        fi;
+        index=$(( index + 1 ));
+    done;
+fi;
+
+# Mount /system ro
+grep " /system " /proc/mounts | awk '{system("mount -o ro,remount -t "$3" "$1" "$2)}';
