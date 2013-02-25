@@ -5,7 +5,7 @@
 # /system is formatted and reinstalled, then the file is restored.
 #
 
-. /tmp/backuptool.functions
+. /tmp/install/bin/backuptool.functions
 
 list_files() {
 cat <<EOF
