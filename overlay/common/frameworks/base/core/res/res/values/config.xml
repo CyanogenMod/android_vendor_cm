@@ -10,5 +10,8 @@
         <!-- The Google provider -->
         <item>com.google.android.location</item>
     </string-array>
+
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+
 </resources>
 
