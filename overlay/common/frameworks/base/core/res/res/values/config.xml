@@ -10,5 +10,7 @@
         <!-- The Google provider -->
         <item>com.google.android.location</item>
     </string-array>
+
+    <string name="default_wallpaper_component" translatable="false">wallpaper_ashersimonds_cmpatternholodark</string>
 </resources>
 
