@@ -173,7 +173,9 @@ PRODUCT_PACKAGES += \
     nano \
     htop \
     powertop \
-    lsof
+    lsof \
+    curl \
+    libcurl
 
 # Openssh
 PRODUCT_PACKAGES += \
