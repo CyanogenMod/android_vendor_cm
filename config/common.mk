@@ -159,8 +159,12 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock
 
+# Cell Broadcasts
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.cellbroadcast.emergencyids=0-65534
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
