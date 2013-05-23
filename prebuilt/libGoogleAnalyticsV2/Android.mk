@@ -25,3 +25,4 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/fake_packages/$(LOCAL_SRC_FILES)
 include $(BUILD_PREBUILT)
 1
 2
+3
