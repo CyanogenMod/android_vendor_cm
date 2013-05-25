@@ -3,8 +3,8 @@
 # Backup and restore addon /system files
 #
 
-export C=/tmp/backupdir
 export S=/system
+export C="$S/tmp-backupdir/"
 export V=10.1
 
 # Preserve /system/addon.d in /tmp/addon.d
@@ -46,6 +46,11 @@ for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
 done
 }
 
+# Remove everything from /system but the backup
+remove_system_files() {
+cd /system; for f in $(ls -a | grep -v ^tmp-backupdir); do rm -rf $f; done
+}
+
 case "$1" in
   backup)
     mkdir -p $C
@@ -55,6 +60,7 @@ case "$1" in
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
+    remove_system_files
   ;;
   restore)
     check_prereq
