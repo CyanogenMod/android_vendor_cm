@@ -457,6 +457,7 @@
   <apn carrier="o2" mcc="262" mnc="11" apn="internet" mmsc="http://10.81.0.7:8002" mmsproxy="82.113.100.5" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Vodafone PT Internet" mcc="268" mnc="01" apn="net2.vodafone.pt" user="vodafone" password="vodafone" server="*" type="default,supl" />
   <apn carrier="Vodafone PT MMS" mcc="268" mnc="01" apn="vas.vodafone.pt" user="vas" password="vas" server="*" mmsc="http://mms/servlets/mms" mmsproxy="213.30.27.63" mmsport="8799" type="mms" />
+  <apn carrier="Lycamobile PT" mcc="268" mnc="01" apn="data.lycamobile.pt" user="lmpt" password="plus" type="default,supl"/>
   <apn carrier="Optimus Internet" mcc="268" mnc="03" apn="umts" server="*" type="default,supl" />
   <apn carrier="Optimus MMS" mcc="268" mnc="03" apn="mms" server="*" mmsc="http://mmsc:10021/mmsc" mmsproxy="62.169.66.5" mmsport="8799" type="mms" />
   <apn carrier="TMN Internet" mcc="268" mnc="06" apn="internet" server="*" type="default,supl" />
