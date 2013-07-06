@@ -174,7 +174,10 @@ PRODUCT_PACKAGES += \
     nano \
     htop \
     powertop \
-    lsof
+    lsof \
+    exfat-fuse \
+    exfatfsck \
+    mkexfatfs
 
 # Openssh
 PRODUCT_PACKAGES += \
