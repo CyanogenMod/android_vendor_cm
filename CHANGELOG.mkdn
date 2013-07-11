@@ -8,6 +8,9 @@ Visit http://review.cyanogenmod.org for our Gerrit instance.
 CHANGELOG (notable new features)
 ---------
 
+### 10.1.2
+* All: Patched google/android security bugs 8476102 and 9695860
+
 ### 10.1.1
 * Qualcomm hardware: Security patches for CVE-2013-2596 and CVE-2013-2597
 * Grouper/Tilapia: Patched CVE-2013-2094
