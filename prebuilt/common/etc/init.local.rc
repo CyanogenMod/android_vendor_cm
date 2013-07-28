@@ -48,3 +48,8 @@ service sysinit /system/bin/sysinit
     user root
     oneshot
     disabled
+
+# su daemon
+service su_daemon /system/xbin/su --daemon
+    class main
+    oneshot
