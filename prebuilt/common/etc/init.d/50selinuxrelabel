@@ -2,8 +2,6 @@
 
 L="log -p i -t SELinuxLabel"
 
-# Bail out early if not on a SELinux build
-getprop ro.build.selinux | grep -q 1 || exit
 if [ ! -f /file_contexts ]; then
   exit
 fi
