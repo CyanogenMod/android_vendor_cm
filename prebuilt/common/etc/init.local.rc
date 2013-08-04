@@ -28,6 +28,7 @@ on boot
     chmod 0664 /sys/kernel/mm/ksm/run
     write /sys/kernel/mm/ksm/sleep_millisecs 1500
     write /sys/kernel/mm/ksm/pages_to_scan 256
+    restorecon /sys/kernel/mm/ksm/run
 
 # adb over network
 on property:service.adb.tcp.port=5555
