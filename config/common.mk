@@ -155,7 +155,9 @@ PRODUCT_PACKAGES += \
     VideoEditor \
     VoiceDialer \
     SoundRecorder \
-    Basic
+    Basic \
+    FastBoot \
+    RestoreAirplaneMode	
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
