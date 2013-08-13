@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     VideoEditor \
     VoiceDialer \
     SoundRecorder \
-    Basic
+    Basic \
+    Fastboot
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
