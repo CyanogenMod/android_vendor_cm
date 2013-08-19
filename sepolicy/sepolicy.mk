@@ -11,4 +11,5 @@ BOARD_SEPOLICY_UNION := \
     file_contexts \
     file.te \
     adbd.te \
-    rild.te
+    rild.te \
+    system.te

@@ -1,0 +1,4 @@
+# Allow settings app to manipulate properties
+allow system_app property_socket:sock_file write;
+allow system_app init:unix_stream_socket connectto;
+
