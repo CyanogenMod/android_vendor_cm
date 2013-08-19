@@ -2,3 +2,9 @@
 # Cache
 #
 /cache/dalvik-cache(/.*)? u:object_r:dalvikcache_data_file:s0
+
+#
+# Data
+#
+/data/misc/adb(/.*)?            u:object_r:adb_keys_file:s0
+

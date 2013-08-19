@@ -8,4 +8,6 @@ BOARD_SEPOLICY_DIRS := \
 
 BOARD_SEPOLICY_UNION := \
     mac_permissions.xml \
-    file_contexts
+    file_contexts \
+    file.te \
+    adbd.te
