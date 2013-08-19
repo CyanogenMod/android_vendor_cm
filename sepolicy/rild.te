@@ -1,0 +1,1 @@
+allow rild self:netlink_route_socket { setopt write };

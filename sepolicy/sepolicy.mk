@@ -10,4 +10,5 @@ BOARD_SEPOLICY_UNION := \
     mac_permissions.xml \
     file_contexts \
     file.te \
-    adbd.te
+    adbd.te \
+    rild.te
