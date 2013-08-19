@@ -2,3 +2,6 @@
 allow system_app property_socket:sock_file write;
 allow system_app init:unix_stream_socket connectto;
 
+# Set sys.cpufreq.restored for Performance Settings
+allow system_app system_prop:property_service set;
+
