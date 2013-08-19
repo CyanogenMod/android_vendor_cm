@@ -7,4 +7,5 @@ BOARD_SEPOLICY_DIRS := \
     vendor/cm/sepolicy
 
 BOARD_SEPOLICY_UNION := \
-    mac_permissions.xml
+    mac_permissions.xml \
+    file_contexts
