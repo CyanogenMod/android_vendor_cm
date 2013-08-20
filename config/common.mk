@@ -163,7 +163,8 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMUpdater \
     CMFileManager \
-    LockClock
+    LockClock \
+    CMAccount
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
