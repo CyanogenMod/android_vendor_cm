@@ -1,5 +1,10 @@
 PRODUCT_BRAND ?= cyanogenmod
 
+# Copy Persistence Files
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/cm/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+
 -include vendor/cm-priv/keys.mk
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
