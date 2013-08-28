@@ -6,6 +6,33 @@
 export C=/tmp/backupdir
 export S=/system
 export V=10.2
+persist_props="ro.sf.lcd_density"
+sysroot="/system"
+saveroot="/tmp/save"
+
+# Preserve DPI
+save_props()
+{
+    rm -f "$saveroot/prop"
+    for prop in $persist_props; do
+        echo "save_props: $prop"
+        grep "^$prop=" "$sysroot/build.prop" >> "$saveroot/prop"
+    done
+}
+
+# Restore DPI
+restore_props()
+{
+    local sedargs
+
+    sedargs="-i"
+    for prop in $(cat $saveroot/prop); do
+        echo "restore_props: $prop"
+        k=$(echo $prop | cut -d'=' -f1)
+        sedargs="$sedargs s/^$k=.*/$prop/"
+    done
+    sed $sedargs "$sysroot/build.prop"
+}
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -58,6 +85,8 @@ check_whitelist() {
   return $found
 }
 
+mkdir -p $saveroot
+
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
 for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
@@ -67,6 +96,7 @@ done
 
 case "$1" in
   backup)
+    save_props
     mkdir -p $C
     if check_prereq; then
         if check_whitelist system; then
@@ -80,6 +110,7 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
+    restore_props
     if check_prereq; then
         if check_whitelist tmp; then
             exit 127
