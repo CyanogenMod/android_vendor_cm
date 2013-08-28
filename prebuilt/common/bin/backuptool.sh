@@ -6,6 +6,33 @@
 export C=/tmp/backupdir
 export S=/system
 export V=10.2
+persist_props="ro.sf.lcd_density"
+sysroot="/system"
+saveroot="/tmp/save"
+
+# Preserve DPI
+save_props()
+{
+    rm -f "$saveroot/prop"
+    for prop in $persist_props; do
+        echo "save_props: $prop"
+        grep "^$prop=" "$sysroot/build.prop" >> "$saveroot/prop"
+    done
+}
+
+# Restore DPI
+restore_props()
+{
+    local sedargs
+
+    sedargs="-i"
+    for prop in $(cat $saveroot/prop); do
+        echo "restore_props: $prop"
+        k=$(echo $prop | cut -d'=' -f1)
+        sedargs="$sedargs s/^$k=.*/$prop/"
+    done
+    sed $sedargs "$sysroot/build.prop"
+}
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -73,6 +100,7 @@ case "$1" in
             exit 127
         fi
     fi
+    save_props
     check_blacklist system
     preserve_addon_d
     run_stage pre-backup
@@ -85,6 +113,7 @@ case "$1" in
             exit 127
         fi
     fi
+    restore_props
     check_blacklist tmp
     run_stage pre-restore
     run_stage restore
