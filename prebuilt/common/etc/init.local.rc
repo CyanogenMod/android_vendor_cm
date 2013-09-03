@@ -11,9 +11,6 @@ on post-fs-data
     chmod 0771 /cache/dalvik-cache
     mkdir /data/.ssh 0750 root shell
 
-    # Run sysinit
-    start sysinit
-
 on boot
     # interactive governor
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
@@ -107,9 +104,3 @@ on property:service.adb.tcp.port=5555
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
