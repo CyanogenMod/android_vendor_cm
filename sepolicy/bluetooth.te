@@ -1,0 +1,7 @@
+#
+# Bluetooth
+#
+
+allow bluetooth sdcard_external:dir create_dir_perms;
+allow bluetooth sdcard_external:file create_file_perms;
+
