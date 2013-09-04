@@ -1,0 +1,6 @@
+#
+# surfaceflinger
+#
+
+binder_call(surfaceflinger, appdomain)
+ 
