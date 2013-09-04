@@ -1,0 +1,5 @@
+#
+# Adbd
+#
+
+allow adbd adb_keys_file:dir create_dir_perms;
