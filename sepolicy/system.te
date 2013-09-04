@@ -1,0 +1,9 @@
+#
+# System
+#
+
+# Allow system to talk to adbd
+allow system adbd_socket:sock_file rw_file_perms;
+# Fix Settings's access to sysfs nodes.
+# (Why isn't the domain authorization sufficient?)
+allow system_app sysfs_writable:file rw_file_perms;

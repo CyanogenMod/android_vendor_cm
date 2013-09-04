@@ -1,0 +1,8 @@
+#
+# Zygote
+#
+
+# The vm compiler needs execute in ashmem
+allow zygote ashmem_device:chr_file rwx_file_perms;
+# zygote now bindmounts /system to drop suid
+allow zygote labeledfs:filesystem remount;

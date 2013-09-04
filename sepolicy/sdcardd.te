@@ -1,0 +1,5 @@
+#
+# sdcardd
+#
+
+allow sdcardd self:capability { setuid setgid dac_override sys_admin sys_resource };
