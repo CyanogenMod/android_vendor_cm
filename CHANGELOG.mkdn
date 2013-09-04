@@ -8,6 +8,14 @@ Visit http://review.cyanogenmod.org for our Gerrit instance.
 CHANGELOG (notable new features)
 ---------
 
+### 10.1.3
+* Common: Privacy Guard
+* Common: Dialer blacklists
+* Common: Wake-on-Home
+* Common: QuickSettings camera
+* Common: Profile improvements
+* Various small bugfixes, global and device-specific
+
 ### 10.1.0
 * Common: Android 4.2.2 (Google)
 * Common: cLock Lockscreen and Homescreen Widget
