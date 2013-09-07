@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     Superuser \
+    BluetoothExt \
     su
 
 # Optional CM packages
