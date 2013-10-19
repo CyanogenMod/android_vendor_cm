@@ -121,3 +121,11 @@ service sysinit /system/bin/sysinit
     user root
     oneshot
     disabled
+
+service governor_perm /system/bin/sh /system/etc/set_governor_permission.sh
+    user root
+    oneshot
+    disabled
+
+on property:sys.cpufreq.governor=*
+    start governor_perm

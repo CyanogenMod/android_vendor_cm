@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# set CPUGovernor permission
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/set_governor_permission.sh:system/etc/set_governor_permission.sh
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 
