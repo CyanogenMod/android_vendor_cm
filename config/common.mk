@@ -184,8 +184,6 @@ PRODUCT_PACKAGES += \
     gdbserver \
     micro_bench \
     oprofiled \
-    procmem \
-    procrank \
     sqlite3 \
     strace
 
