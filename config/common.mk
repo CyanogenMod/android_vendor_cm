@@ -148,10 +148,15 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMFileManager \
     LockClock \
-    CMUpdater \
-    CMFota \
     CMAccount \
     WhisperPush
+
+# CM Updaters
+ifneq ($(DISABLE_OTA),true)
+PRODUCT_PACKAGES += \
+    CMUpdater \
+    CMFota
+endif
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
