@@ -10,6 +10,9 @@ CHANGELOG (notable new features)
 
 ### 10.2.0
 * Common: Android 4.3 (Google)
+* Common: Integration of hardware-specific features into the regular Settings
+* Common: Privacy Guard reimplemented on top of fine-grained AppOps feature
+* Common: Addition of Voice+
 
 ### 10.1.3
 * Common: CyanogenMod Account
