@@ -1406,6 +1406,9 @@
   <apn carrier="Orange KE" mcc="639" mnc="07" apn="bew.orange.co.ke" user="orange" password="orange" type="default,supl" />
   <apn carrier="Orange net KE" mcc="639" mnc="07" apn="wap.orange.co.ke" type="default" />
   <apn carrier="Orange MMS" mcc="639" mnc="07" apn="mms.orange.co.ke" mmsproxy="10.36.16.5" mmsport="8080" mmsc="http://10.36.16.5/servlets/mms" type="mms" />
+  <apn carrier="Safaricom Live" mcc="639" mnc="02" apn="safaricom " user="saf" password="data" type="default,supl" />
+  <apn carrier="Safaricom MMS" mcc="639" mnc="02" apn="safaricom " user="saf" password="data" mmsproxy="172.022.002.038" mmsport="8080" mmsc="http://mms.gprs.safaricom.com" type="mms" />
+  <apn carrier="Airtel KE" mcc="639" mnc="03" apn="internet" type="default,supl" />
   <apn carrier="Airtel Tanzania" mcc="640" mnc="05" apn="internet" type="default,supl" />
   <apn carrier="Airtel UG" mcc="641" mnc="01" apn="web.ug.zain.com" type="default,supl" />
   <apn carrier="MTN UG" mcc="641" mnc="10" apn="yellopix.mtn.co.ug" type="default,supl" />
