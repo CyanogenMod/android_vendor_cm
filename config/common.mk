@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
+    CMS \
     VoicePlus \
     VoiceDialer \
     SoundRecorder \
