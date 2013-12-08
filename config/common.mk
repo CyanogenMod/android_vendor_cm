@@ -144,6 +144,11 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt
 
+# CyanogenMod Mobile Services
+PRODUCT_PACKAGES += \
+    CMS \
+    com.cyanogenmod.services.xml
+
 # Optional CM packages
 PRODUCT_PACKAGES += \
     VoicePlus \
