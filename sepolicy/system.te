@@ -1,0 +1,2 @@
+# Allow backup transport to relabel files
+allow system cache_backup_file:file relabelto;

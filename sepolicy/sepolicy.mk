@@ -13,5 +13,6 @@ BOARD_SEPOLICY_UNION += \
     genfs_contexts \
     installd.te \
     seapp_contexts \
+    system.te \
     vold.te \
     mac_permissions.xml
