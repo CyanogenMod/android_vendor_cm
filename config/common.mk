@@ -204,8 +204,20 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
+    ProBamUpdater \
+    ProBamStats \
+    XposedAppSettings \
+    XposedInstaller \
     Superuser \
     su
+
+############### Add PROBAM GAPPS
+
+# copy gapps
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/gapps,system)
+
+############### Add PROBAM GAPPS
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
@@ -294,6 +306,28 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION)
+
+# Add PROBAM version
+PROBAM_VERSION_MAJOR = 1.0.1
+PROBAM_VERSION_MINOR = beta2
+PROBAM_GOO_VERSION = 101
+VERSION := $(PROBAM_VERSION_MAJOR)_$(PROBAM_VERSION_MINOR)
+PROBAM_VERSION := $(VERSION)_$(shell date +%Y%m%d-%H%M%S)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=probam \
+    ro.goo.rom=probam \
+    ro.goo.version=$(PROBAM_GOO_VERSION)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.probamstats.url=http://stats.codexc.com \
+    ro.probamstats.name=ProBam \
+    ro.probamstats.version=$(PROBAM_VERSION_MAJOR) \
+    ro.probamstats.tframe=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.probam.version=$(PROBAM_VERSION_MAJOR) \
+    ro.probamrom.version=probam_$(PROBAM_VERSION)
 
 -include vendor/cm-priv/keys/keys.mk
 
