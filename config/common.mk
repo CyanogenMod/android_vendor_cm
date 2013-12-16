@@ -204,10 +204,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    ProBamUpdater \
     ProBamStats \
-    XposedAppSettings \
-    XposedInstaller \
     Superuser \
     su
 
@@ -218,6 +215,12 @@ PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/gapps,system)
 
 ############### Add PROBAM GAPPS
+
+# ProBAM Updater and Xposed
+PRODUCT_COPY_FILES +=  \
+    vendor/cm/proprietary/appsettings_v22_3efb74.apk:system/app/appsettings_v22_3efb74.apk \
+    vendor/cm/proprietary/xposed.installer_v25_36cbbc.apk:system/app/xposed.installer_v25_36cbbc.apk \
+    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
