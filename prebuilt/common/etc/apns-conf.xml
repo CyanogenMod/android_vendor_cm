@@ -227,6 +227,8 @@
   <apn carrier="O2 UK Prepay MMS" mcc="234" mnc="10" apn="payandgo.o2.co.uk" user="Vertigo" port="8080" mmsc="http://mmsc.mms.o2.co.uk" mmsproxy="193.113.200.195" type="default,supl,mms" />
   <apn carrier="O2 MMS Prepay" mcc="234" mnc="10" apn="payandgo.o2.co.uk" user="payandgo" password="password" mmsc="http://mmsc.mms.o2.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" type="mms" />
   <apn carrier="Tesco" mcc="234" mnc="10" apn="prepay.tesco-mobile.com" user="tescowap" password="tescowap" proxy="193.113.200.195" port="8080" mmsc="http://mmsc.mms.02.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" type="default,supl,mms" />
+  <apn carrier="TMI Internet APN" mcc="272" mnc="11" apn="tescomobile.liffeytelecom.com" type="default,supl" />
+  <apn carrier="TMI MMS APN" mcc="272" mnc="11" apn="tescomobile.liffeytelecom.com" mmsc="http://mmc1/servlets/mms" mmsproxy="10.1.11.19" mmsport="8080" type="mms" />
   <apn carrier="O2 UK Postpay MMS" mcc="234" mnc="10" apn="wap.o2.co.uk" user="O2wap" port="8080" mmsc="http://mmsc.mms.o2.co.uk" mmsproxy="193.113.200.195" type="default,supl,mms" />
   <apn carrier="O2 MMS Postpay" mcc="234" mnc="10" apn="wap.o2.co.uk" user="o2wap" password="password" mmsc="http://mmsc.mms.o2.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" type="mms" />
   <apn carrier="O2 MOBILE WEB" mcc="234" mnc="11" apn="mobile.o2.co.uk" user="O2web" password="O2web" type="default,supl" />
