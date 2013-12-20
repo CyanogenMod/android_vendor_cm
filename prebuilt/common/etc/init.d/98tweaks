@@ -1,0 +1,8 @@
+#!/system/bin/sh
+
+if $file_system_speedups
+then
+	busybox mount -o remount,noatime,barrier=0,nobh /system
+	busybox mount -o remount,noatime /data
+	busybox mount -o remount,noatime,barrier=0,nobh /cache
+fi

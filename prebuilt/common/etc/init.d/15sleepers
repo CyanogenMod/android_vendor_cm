@@ -1,0 +1,9 @@
+#!/system/bin/sh
+if $sleepers
+mount -t debugfs none /sys/kernel/debug
+echo "NO_ARCH_POWER" > /sys/kernel/debug/sched_features;
+echo "NO_GENTLE_FAIR_SLEEPERS" > /sys/kernel/debug/sched_features;
+echo "NO_NORMALIZED_SLEEPERS" > /sys/kernel/debug/sched_features
+echo "NO_NEW_FAIR_SLEEPERS" > /sys/kernel/debug/sched_features
+umount /sys/kernel/debug
+fi

@@ -1,0 +1,8 @@
+#!/system/bin/sh
+
+. /system/etc/cron/cron.conf
+
+if $weekly_clear_data_cache
+then
+	busybox find /data/data -type d -iname "*cache*" -maxdepth 2 -mindepth 2 -exec busybox rm -rf {} ';'
+fi

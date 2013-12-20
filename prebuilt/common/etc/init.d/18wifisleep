@@ -1,0 +1,14 @@
+#!/system/bin/sh
+if $wifisleep
+sqlite=/system/xbin/sqlite3;
+wifi_idle_wait=10000;
+RETURN_VALUE=$($sqlite /data/data/com.android.providers.settings/databases/settings.db "select value from secure where name='wifi_idle_ms'");
+echo "  Old wifi_idle_ms value was $RETURN_VALUE " | tee -a $LOG_FILE;
+
+if [ $RETURN_VALUE="" ] 
+then
+   $sqlite /data/data/com.android.providers.settings/databases/settings.db "insert into secure (name, value) values ('wifi_idle_ms', $wifi_idle_wait )"
+fi
+$sqlite /data/data/com.android.providers.settings/databases/settings.db "update secure set value=$wifi_idle_wait where name='wifi_idle_ms'"
+RETURN_VALUE=$($sqlite /data/data/com.android.providers.settings/databases/settings.db "select value from secure where name='wifi_idle_ms'");
+fi

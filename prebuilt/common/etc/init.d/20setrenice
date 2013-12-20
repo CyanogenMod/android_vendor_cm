@@ -1,0 +1,15 @@
+#!/system/bin/sh
+if $setrenice
+renice -20 `pidof com.android.phone`
+renice -19 `pidof com.android.inputmethod.latin`
+renice -19 `pidof com.swype.android.inputmethod`
+renice -17 `pidof com.android.systemui`
+renice -15 `pidof com.android.launcher`
+renice -9 `pidof com.android.settings`
+renice -9 `pidof com.android.vending`
+renice -6 `pidof com.sec.android.app.camera`
+renice -6 `pidof com.sec.android.app.fm`
+renice -6 `pidof com.google.android.apps.maps`
+renice -4 `pidof com.google.android.apps.googlevoice`
+renice -3 `pidof android.process.media`
+fi

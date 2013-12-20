@@ -1,0 +1,5 @@
+#!/system/bin/sh
+if $battery
+echo "1000" > /proc/sys/vm/dirty_expire_centisecs;
+echo "2000" > /proc/sys/vm/dirty_writeback_centisecs
+fi

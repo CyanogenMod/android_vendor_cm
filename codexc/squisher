@@ -1,0 +1,121 @@
+#!/bin/sh
+#
+# Squish a CM otapackage for distribution
+# cyanogen
+#
+
+OUT_TARGET_HOST=`uname -a | grep Darwin`
+if [ -z "$OUT_TARGET_HOST" ]
+then
+   OUT_TARGET_HOST=linux-x86
+   MD5=md5sum
+   XARGS="xargs --max-args=1 --max-procs `grep 'processor' /proc/cpuinfo|wc -l`"
+   SED=sed
+else
+   OUT_TARGET_HOST=darwin-x86
+   MD5=md5
+   XARGS="xargs -n 1 -P `sysctl hw.ncpu | awk '{print $2}'`"
+   SED=gsed
+fi
+
+if [ -z "$OUT" -o ! -d "$OUT" ]; then
+	echo "ERROR: $0 only works with a full build environment. $OUT should exist."
+	exit 1
+fi
+
+if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
+    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$USER.zip
+elif [ "$TARGET_BUILD_VARIANT" = "userdebug" ]; then
+    cdate=`date +"%Y%m%d"`
+    OTAPACKAGE=$OUT/cm-11-$cdate-UNOFFICIAL-n7100.zip
+else
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
+fi
+if [ ! -f "$OTAPACKAGE" ]; then
+	echo "$OTAPACKAGE doesn't exist!";
+	exit 1
+fi
+
+QUIET=-q
+DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
+
+REPACK=$OUT/repack
+printf "Sanitizing environment..."
+rm -rf $REPACK
+mkdir -p $REPACK
+echo
+
+
+# Unpack the otapackage and opticharge all apks
+mkdir $REPACK/ota
+(
+cd $REPACK/ota
+printf "Unpacking $OTAPACKAGE..."
+unzip $QUIET $OTAPACKAGE
+)
+
+# Delete ProBam specific files
+if [ -f $ANDROID_BUILD_TOP/vendor/cm/codexc/squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/cm/codexc/squisher.rm`; do
+		rm -f $REPACK/ota/$RM_FILE
+	done
+fi
+
+# Delete target product specific files
+#if [ -f $ANDROID_BUILD_TOP/vendor/cm/codexc/$TARGET_PRODUCT-squisher.rm ]; then
+#	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/cm/codexc/$TARGET_PRODUCT-squisher.rm`; do
+#		rm -f $REPACK/ota/$RM_FILE
+#	done
+#fi
+
+# No need for recovery
+rm -rf $REPACK/ota/recovery
+
+# Determine what to name the new signed package
+PROBAMVERSION=`grep 'ro.probam.version=' $REPACK/ota/system/build.prop | sed -e 's/ro.probam.version=//g'`
+OUTFILE=$OUT/$PROBAMVERSION.zip
+echo PROBAMVERSION: $PROBAMVERSION
+
+# Get GAPPS
+wget 'http://goo.im/json2&path=/devs/paranoidandroid/roms/gapps&query=pa_gapps' -O $REPACK/goo.json
+NEWESTGAPPS=`cat $REPACK/goo.json | grep -P -o -e 'pa_gapps.*?.zip' -m 1 | head -1`
+
+echo
+printf "Fetching latest GAPPS..."
+echo
+(
+if [ -f $ANDROID_BUILD_TOP/gapps/$NEWESTGAPPS ];
+then
+    echo "Gapps package $NEWESTGAPPS found"
+    echo
+else
+    echo "Gapps package $NEWESTGAPPS not found, trying to download ..."
+    echo
+    rm -rf $ANDROID_BUILD_TOP/gapps
+    mkdir -p $ANDROID_BUILD_TOP/gapps
+    cd $ANDROID_BUILD_TOP/gapps
+    wget "http://goo.im/devs/paranoidandroid/roms/gapps/$NEWESTGAPPS"
+    unzip -qq $ANDROID_BUILD_TOP/gapps/$NEWESTGAPPS
+    rm -rf META-INF/ install-optional.sh
+    cp -r optional/face/* $ANDROID_BUILD_TOP/gapps/system/
+    rm -rf optional/
+fi
+)
+
+# Copy Gapps overlays
+printf "Copying overlay preferences for $OVERLAYTARGET..."
+echo
+cp -r $ANDROID_BUILD_TOP/gapps/system/* $REPACK/ota/system/
+
+# Create a md5 checksum image of the repacked package
+(
+img=`basename $OUTFILE`
+cd `dirname $OUTFILE`
+$MD5 $img >$img.md5sum
+echo
+echo "Package complete: $OUTFILE"
+cat $img.md5sum
+echo
+)
+
+exit 0

@@ -1,0 +1,108 @@
+#!/system/bin/sh
+#
+# 
+#
+if $speedy_modified
+rm -r /data/local/tmp/*
+rm -r /data/tmp/*
+rm -r /data/system/usagestats/*
+rm -r /data/system/appusagestats/*
+rm -r /data/system/dropbox/*
+rm -r /data/tombstones/*
+rm -r /data/anr/*
+busybox chmod 000 /data/system/userbehavior.db
+busybox chmod 000 /data/system/usagestats/
+busybox chmod 000 /data/system/dropbox/
+busybox chmod 000 /data/anr/
+busybox chmod 000 /data/tombstones/
+busybox chmod 000 /data/system/appusagestats/
+busybox chmod 000 /data/data/com.google.android.location/files/cache.cell
+busybox chmod 000 /data/data/com.google.android.location/files/cache.wifi
+
+# Allow configuring of both cores
+#echo "1" > /sys/devices/system/cpu/cpu0/online;
+#echo "1" > /sys/devices/system/cpu/cpu1/online;
+
+# Remount each file system with noatime and nodiratime flags to save battery and CPU cycles
+# and change journaling mode for data and cache
+#
+busybox mount -o remount,noatime,nodiratime,remount,rw,barrier=0,data=writeback /data;
+busybox mount -o remount,noatime,nodiratime,remount,rw,barrier=0,data=writeback /cache;
+busybox mount -o remount,noatime,nodiratime /dev;
+busybox mount -o remount,noatime,nodiratime /proc;
+busybox mount -o remount,noatime,nodiratime /sys;
+busybox mount -o remount,noatime,nodiratime /system;
+
+
+# Flag 
+# --------------
+#
+# 
+#.
+#
+
+MMC=`ls -d /sys/block/mmc*`;
+for q in $MMC
+do
+#	echo "deadline" > $q/queue/scheduler;
+#	echo "512" > $q/queue/read_ahead_kb;
+	echo "0" > $q/queue/rotational;
+	echo "1" > $q/queue/iosched/fifo_batch;
+	echo "1" > $q/queue/iosched/low_latency;
+	echo "1" > $q/queue/iosched/back_seek_penalty;
+	echo "1000000000" > $q/queue/iosched/back_seek_max;
+	echo "3" > $q/queue/iosched/slice_idle; 
+	echo "16" > $q/queue/iosched/quantum
+	echo "512" > $q/queue/nr_requests;
+done
+
+echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb; # Set sd card read ahead cache size
+
+#
+# END SECTION--------------
+
+
+# /proc/sys/net/ipv4
+sysctl -w net.ipv4.tcp_timestamps=0;
+sysctl -w net.ipv4.tcp_tw_reuse=1;
+sysctl -w net.ipv4.tcp_tw_recycle=1;
+sysctl -w net.ipv4.tcp_sack=1;
+sysctl -w net.ipv4.tcp_window_scaling=1;
+sysctl -w net.ipv4.tcp_keepalive_probes=5; # Retries before connection is considered dead
+sysctl -w net.ipv4.tcp_keepalive_intvl=156; # 
+sysctl -w net.ipv4.tcp_fin_timeout=30;
+sysctl -w net.ipv4.tcp_rmem='6144	87380 524288'; # 65536	131072 524288
+sysctl -w net.ipv4.tcp_wmem='6144	131072 524288'; # 65536	131072 524288
+sysctl -w net.ipv4.tcp_ecn=0; # Explict Congestion Notification
+sysctl -w net.ipv4.tcp_max_tw_buckets=360000; # 
+sysctl -w net.ipv4.tcp_synack_retries=2; #Default: 5
+
+# Ignore all icmp packets or pings
+sysctl -w net.ipv4.icmp_echo_ignore_all=1;
+sysctl -w net.ipv6.icmp_echo_ignore_all=1;
+
+# Net Core Settings
+# Location: /proc/sys/net/core
+sysctl -w net.core.wmem_max=524288; #404480
+sysctl -w net.core.rmem_max=524288; #404480
+sysctl -w net.core.rmem_default=110592;
+sysctl -w net.core.wmem_default=110592;
+
+#
+sysctl -w net.ipv4.route.flush=1;
+
+
+# Kernel Tweaks
+#
+sysctl -w kernel.sched_features=15834233;
+#sysctl -w kernel.msgmni=2048;
+#sysctl -w kernel.msgmax=64000;
+#sysctl -w kernel.shmmax=268435500;
+#sysctl -w kernel.sem=500,512000,64,2048;
+#sysctl -w kernel.hung_task_timeout_secs=0;
+#sysctl -w kernel.sched_latency_ns=5000000; #600000
+#sysctl -w kernel.sched_compat_yield=1;
+#sysctl -w kernel.sched_shares_ratelimit=256000;
+#sysctl -w kernel.sched_child_runs_first=0;
+#sysctl -w kernel.threads-max=10000;
+fi

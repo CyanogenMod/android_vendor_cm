@@ -82,16 +82,23 @@ endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Set Selinux Permissive 
+# Configurable init.d 
+# PropModder files
 # userinit support
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/init.d,system/etc) \
+	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/cron,system/etc)
+
+
+# Configurable
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
+    vendor/cm/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
+    vendor/cm/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \

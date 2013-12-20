@@ -1,0 +1,25 @@
+#!/system/bin/sh
+if $tweaks
+echo "0" > /proc/sys/vm/swappiness;
+
+echo "3" > /proc/sys/vm/page-cluster;
+
+echo "10" > /proc/sys/vm/vfs_cache_pressure; 
+
+echo "2000" > /proc/sys/vm/dirty_writeback_centisecs;
+
+echo "1000" > /proc/sys/vm/dirty_expire_centisecs; 
+
+echo "0" > /proc/sys/vm/laptop_mode; 
+echo "90" > /proc/sys/vm/dirty_ratio; 
+echo "85" > /proc/sys/vm/dirty_background_ratio;  
+
+echo "0" > /proc/sys/vm/oom_kill_allocating_task;  
+echo "8" > /proc/sys/vm/page-cluster; 
+echo "4096" > /proc/sys/vm/vm.min_free_kbytes; 
+echo "10" > /proc/sys/fs/lease-break-time;
+echo "0" > /proc/sys/vm/panic_on_oom; 
+echo "64000" > /proc/sys/kernel/msgmni;
+echo "64000" > /proc/sys/kernel/msgmax;
+echo "10" > /proc/sys/fs/lease-break-time;
+fi

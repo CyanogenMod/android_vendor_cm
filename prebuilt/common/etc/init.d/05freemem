@@ -1,0 +1,41 @@
+#!/system/bin/sh
+: '
+ ============ Copyright (C) 2010 Jared Rummler (JRummy16) ============
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ =====================================================================
+' 
+
+. /system/etc/init.d.cfg
+
+minfree=/sys/module/lowmemorykiller/parameters/minfree
+
+if $free_mem && busybox [ -e $minfree ]
+then
+	busybox echo $foreground_app_mem,$visible_app_mem,$perceptible_app_mem,$secondary_server_mem,$hidden_app_mem,$empty_app_mem > $minfree
+
+	setprop ro.FOREGROUND_APP_MEM $foreground_app_mem
+	setprop ro.VISIBLE_APP_MEM $visible_app_mem
+	setprop ro.PERCEPTIBLE_APP_MEM $perceptible_app_mem
+	setprop ro.HEAVY_WEIGHT_APP_MEM $heavy_weight_app_mem
+	setprop ro.SECONDARY_SERVER_MEM $secondary_server_mem
+	setprop ro.BACKUP_APP_MEM $backup_app_mem
+	setprop ro.HOME_APP_MEM $home_app_mem
+	setprop ro.HIDDEN_APP_MEM $hidden_app_mem
+	setprop ro.EMPTY_APP_MEM $empty_app_mem
+
+	freeram=` busybox expr $empty_app_mem \* 4 / 1024 `
+	log -p i -t boot "Set ${freeram}mb of RAM free."
+fi

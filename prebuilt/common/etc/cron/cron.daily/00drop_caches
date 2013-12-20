@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+. /system/etc/cron/cron.conf
+
+if $daily_drop_caches
+then
+	sync
+	echo 3 > /proc/sys/vm/drop_caches
+fi

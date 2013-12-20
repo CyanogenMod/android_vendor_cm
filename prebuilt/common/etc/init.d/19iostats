@@ -1,0 +1,7 @@
+#!/system/bin/sh
+if $iostats
+if [ -e $i/queue/iostats ];
+	then
+		echo "0" > $i/queue/iostats;
+	fi;
+fi

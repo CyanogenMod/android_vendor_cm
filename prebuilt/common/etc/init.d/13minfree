@@ -1,0 +1,26 @@
+#!/system/bin/sh
+if $minfree
+if [ -e /sys/module/lowmemorykiller/parameters/adj ]; then
+	echo "0,1,2,4,6,15" > /sys/module/lowmemorykiller/parameters/adj
+fi
+
+if [ -e /sys/module/lowmemorykiller/parameters/minfree ]; then
+	echo "2560,4096,6144,12288,14336,18432" > /sys/module/lowmemorykiller/parameters/minfree
+fi
+
+if [ -e /proc/sys/vm/swappiness ]; then
+	echo "10" > /proc/sys/vm/swappiness
+fi
+
+if [ -e /proc/sys/vm/vfs_cache_pressure ]; then
+	echo "50" > /proc/sys/vm/vfs_cache_pressure
+fi
+
+if [ -e /proc/sys/vm/dirty_ratio ]; then
+	echo "22" > /proc/sys/vm/dirty_ratio
+fi
+
+if [ -e /proc/sys/vm/dirty_background_ratio ]; then
+	echo "4" > /proc/sys/vm/dirty_background_ratio
+fi
+fi
