@@ -85,14 +85,21 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Set Selinux Permissive 
-# Configurable init.d 
+# Configurable init.d
 # PropModder files
 # userinit support
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/init.d,system/etc) \
-	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/cron,system/etc)
+	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/init.d,system/etc/init.d)
 
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/cron,system/etc/cron)
+
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/su/su:system/xbin/daemonsu \
+    vendor/cm/prebuilt/common/su/su:system/xbin/su \
+    vendor/cm/prebuilt/common/su/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/cm/prebuilt/common/su/Superuser.apk:system/app/Superuser.apk
 
 # Configurable
 PRODUCT_COPY_FILES += \
@@ -209,9 +216,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    ProBamStats \
-    Superuser \
-    su
+    ProBamStats
 
 ############### Add PROBAM GAPPS
 
