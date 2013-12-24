@@ -1,242 +1,185 @@
-CyanogenMod
-===============
+ProBAM Project name: android_vendor_probam
+  .codexc - Add su support and upadte to prebuilt su v 1.86
+  .codexc - add Configurable init.d , PropModder files
+  .codexc - configs cleanup
+  .codexc - change default wallpaper
+  .codexc - update probam gapps and version
+  .codexc - Merge "vendor: support custom unofficial build tags" into cm-11.0
+  .Michael Bestas - overlay: Fix Keyguard configuration
+  .Matt Mower - vendor: support custom unofficial build tags
+  .Pawit Pornkitprasan - cm: only include WhisperPush in telephony-enabled devices
 
-Visit http://github.com/CyanogenMod for full source and git access.
+ProBAM Project name: android_frameworks_base
+  .codexc - FULL ActiveDisplay Fixes/Options by codexc
+  .0xD34D - Active display [squashed] (1/2)
+  .broodplank - core: added national roaming info for Tesco Mobile in Ireland.
+  .Mårten Kongstad - Fix ResTable_config::CONFIG_* typo (MCC vs MNC)
+  .codexc - add halo master switch
+  .Ricardo Cerqueira - BatteryService: Restore the original parcel order
+  .Sven Dawitz - SystemUI: Forward port Statusbar Clock and Date actions
+  .Jorge Ruesga - systemui: Use the same color for circle battery than clock color
+  .codexc - AudioFX: Add center frequency param to bassboost
+  .codexc - AudioEffect: Add a stereo widener effect
+  .Jorge Ruesga - systemui: fix circle battery percentage alignment for low dpi devices
+  .Jorge Ruesga - systemui: Fix hidden battery icon style
+  .Chirayu Desai - KeyguardServiceDelegate: disable DEBUG
+  .Danny Baumann - Fix indention.
+  .Kyrylo Mikos - PhoneWindowManager: fix navbar behavior in expanded mode after 4.4.2 merge.
+  .Steve Kondik - Rollback Bluetooth changes for now.
+  .Nebojsa Cvetkovic - National roaming info for 3 in Ireland
+  .Geo Pan - National roaming info for yesss! in Austria
+  .Ricardo Cerqueira - Unbreak the public API again...
+  .Fernando Membrive - base: added national roaming info for Pepephone in Spain
+  .codexc - add Navbar, Rambar
+  .cristianomatos - RAM bar (1/2) - This commit includes small re-sizes to fit transparency in new launcher and also moves clear recents button to bottom|left
+  .arnau - SystemUI: CA translations
+  .cristianomatos -  Navigation bar dimensions (1/2)
+  .Chris Holmes - Revert "Telephony: Add data rat constant"
+  .maxwen - [1/3] base: allow disabling non intrusive incall ui
+  .cristianomatos - Fit HALO in CyanogenMod custom battery implementation
+  .drcmda - [2/2] Frameworks: HALO
 
-Visit http://review.cyanogenmod.org for our Gerrit instance.
+ProBAM Project name: android_packages_apps_Settings
+  .codexc - enable developer options by default
+  .codexc - Show DSPManager
+  .codexc - FULL ActiveDisplay Settings
+  .0xD34D - Active display [squashed] (2/2)
+  .codexc - [revert] set permission for init.d.cfg
+  .codexc - halo missing key!
+  .codexc - set permission for init.d.cfg
+  .codexc - add PropModder
+  .codexc - add halo master switch
+  .codexc - Configurable init.d
+  .codexc - add navbar , fix rambar , add colorpicker
+  .Darren Salt - en_GB translation (localisation)
+  .codexc - add RamBar in Menu
+  .cristianomatos - RAM bar (2/2)
+  .cristianomatos - Navigation bar dimensions (2/2)
+  .codexc - add probam in settings
+  .codexc - Add Xposed Settings
+  .drcmda - [1/2] Settings: HALO
 
-CHANGELOG (notable new features)
----------
+ProBAM Project name: android_packages_apps_Camera2
+  .codexc - Merge tag 'android-4.4.2_r1' into HEAD
+  .Steve Kondik - Add options to better control video preview size
+  .codeworkx - Add Samsung camcorder mode
+  .maxwen - camera: added needsEarlyVideoSize
+  .Lars Greiss - Merge remote-tracking branch 'aosp/kitkat-mr1-release' into HEAD
+  .Michael Bestas - Camera2: Port additional resolutions from cm-10.2
 
-### 11.0.0
-* Common: Android 4.4 (Google)
+ProBAM Project name: android_packages_services_Telephony
+  .maxwen - [2/3] Telephony: allow disabling non intrusive incall ui
+  .Lingchao Xin - Telephony: add Chinese Simplified translations
+  .fairct - Fix NT_MODE case statements
 
-### 10.2.0
-* Common: Android 4.3 (Google)
-* Common: Privacy Guard 2.0 with AppOps
-* Common: Quick Settings Ribbon (replaces Notification Power Widgets)
-* Common: Hardware Tunables HAL
-* Common: Settings restructure
-* SMS: Voice+ (Google Voice integration)
-* SMS: Middleware layer
-* APN: World Phone Support (unified APN list)
-* Trebuchet: Universal Icon Pack support
-* Various small bugfixes, global and device-specific
+ProBAM Project name: android_packages_providers_MediaProvider
+  .Pawit Pornkitprasan - MediaProvider: allow write access to external SD
 
-### 10.1.3
-* Common: CyanogenMod Account
-* Common: Privacy Guard
-* Common: Dialer blacklists
-* Common: Wake-on-Home
-* Common: QuickSettings camera
-* Common: Profile improvements
-* Various small bugfixes, global and device-specific
+ProBAM Project name: android_packages_providers_TelephonyProvider
+  .rob43 - Missing commas before sub_id in sql queries
+  .Steve Kondik - Handle database upgrade for MSIM
 
-### 10.1.2
-* Master Key #2 fix
+ProBAM Project name: android_packages_inputmethods_LatinIME
+  .Stefano - Added smiles without noise to AOSP keyboard
 
-### 10.1.1
-* Master Key #1 fix
+ProBAM Project name: android_packages_apps_Calendar
+  .Marco Brohet - Calendar: update translations
 
-### 10.1.0
-* Common: Android 4.2.2 (Google)
-* Common: cLock Lockscreen and Homescreen Widget
-* Common: Theme Engine Support
-* Common: Customize Navigation Bar (on devices without hardware keys)
-* Common: Customize Notification Light
-* Common: Display Battery Light
-* Common: Profiles with NFC support
-* Common: Customize Screen Rotation
-* Common: Notification Power Widgets
-* Common: DSP Manager
-* Common: Volume Rocker Wake
-* Common: Performance Settings (I/O Scheduler, CPU Governor, etc)
-* Quick Settings: Panel Customization
-* Quick Settings: Toggle QS panel with horizontal swipe
-* Quick Settings: Split QS actionable area
-* Quick Settings: Added QS Tiles
-* Status Bar: Hide or Show Clock
-* Status Bar: Battery Percentage and Circle Battery
-* Status Bar: Show Notification Counts
-* Status Bar: Signal Status Customization
-* Status Bar: Set Date and Time as buttons (with longpress actions)
-* Trebuchet: Launcher Updates
-* Lockscreen: Slider Shortcuts
-* Lockscreen: Maximize Widgets on Wake
+ProBAM Project name: android_packages_apps_InCallUI
+  .maxwen - [3/3] InCallUI: allow disabling non intrusive incall ui
+  .xplodwild - [1/2] InCall: Add a non-intrusive dialog for incoming calls
 
-### 10.0.0
-* Common: Android 4.1.2 (Google)
+ProBAM Project name: android_packages_apps_DeskClock
+  .Marco Brohet - Revert "DeskClock: CA translations"
+  .arnau - DeskClock: CA translations
 
-### 9.0.0
-* Common: Android 4.0.4 (Google)
+ProBAM Project name: android_packages_apps_DSPManager
+  .Frant1c - DSPManager: LT translations
 
-### 7.1.0
-* Common: Android 2.3.7 (Google)
-* Common: Bluetooth mouse support - Scott Brady
-* Common: Improve notification swipe-to-clear - Evan Charlton
-* Common: Improve album-artist support in media scanner - Paul Crovella
-* Common: Profile improvements and bugfixes - Martin Long, Danny Baumann, Robert Burns
-* Common: RTL text improvements - Eyad Aboulouz, Eran Mizrahi
-* Common: Wake on volume key option - Sven Dawitz
-* Common: Support for revoking application permissions - Plamen K. Kosseff
-* Common: Latest Superuser app - ChainsDD
-* Common: Control brightness by sliding on statusbar - Danesh M
-* Common: Add "copy all" to context menu - Danesh M
-* Common: Lockscreen haptic and statusbar indicators toggle - Danesh M
-* Common: Nicer timepicker/datepicker - Jiri Tyr
-* Common: Configuration 0/90/180/270 rotation - Jonas Larsson, Scott Brady
-* Common: DSP Manager bugfixes and improvements - Antti S Lankila
-* Common: Support for launching apps via gestures in the background - Jiri Tyr
-* Common: Option to hide hold button during call - Roberto Leinardi
-* Common: Allow using wildcards for call blacklisting - Nihanth Subramanya
-* Common: Option to allow in-call lockscreen to match main lockscren - Sven Dawitz
-* Common: Option to notify about incoming call only in background when screen is on - Pavel Kucera
-* Common: ADWLauncher- Transitions, catalog improvements, bugfixes - John Van Etten
-* Common: Optional GMT correction for SMS/MMS timestamps - Terry Hau
-* Common: Add FM Seek for TI devices - KalimochoAz
-* Common: Add FM support for SI4708 devices (Blade, V9, Racer) - Stéphane Konstantaropoulos
-* Common: Add FM seek implementation to FM application - Tom Giordano
-* Common: Show current FM status on lockscreen - Tom Giordano
-* Common: Camera touch-to-focus - cyanogen, arcee, m0viefreak, Danny Baumann
-* Common: Screenshot feature via power menu - arcee
-* Common: WEBP backport - Vikas Arora
-* Common: Add CM copyright noticies - arcee
-* Common: Skia/Zlib/libcore ARM optimizations - 0xlab
-* Common: Bluetooth tethering - Stéphane Konstantaropoulos
-* Common: Lockscreen widget alignment - Danesh Mondegarian
-* Common: Lockscreen calendar - David Morgan
-* Common: AVRCP 1.3 support - Qualcomm (bugfix by Danny Baumann)
-* Common: LED notification overhaul - Danny Baumann
-* Common: System-wide DNS cache - Google, SEMC
-* Common: Headset icon toggle - Cameron Pickett
-* Common: FM seek support - Emilio López, Tom Giordano
-* Common: Editable event fields in Contacts app - Danny Baumann
-* Common: Remove compromised CA from system certs - Guardian Project
-* Common: Mute camera shutter option - George Maizel
-* Common: Camera timer - Danesh Mondegarian
-* Common: "Mark all read" option in MMS - Vinod Surendran
-* Common: "eat" pushes fresh brunch/breakfast to device - Ricardo Cerqueira
-* Common: Customizable account color chip in Email - copolii
-* Common: "Rings" lockscreen - Valera Trubachev
-* Click, Motorola: Speed up photo recording - Emilio López
-* Click, Motorola: Add Geolocation to photo app - KalimochoAz
-* Click: Upgraded kernel from HTC 2.6.29 to 2.6.35
-* HTC msm7x30: 2.6.35 kernel and updated userspace
-* Buzz: 2.6.35 kernel - Arne Coucheron
-* Bravo(c)/Vivo(w)/Ace/Liberty: On charge notification led - Richard Antony Burton
-* Crespo/Crespo4G: Kernel update 2.6.35.14 and more, voodoo implementation, BLN, BLX...
-* Encore: Update kernel from 2.6.29 to 2.6.32 - Dalingrin,Fattire,Verygreen
-* Encore: New GPU drivers and userspace libs
-* Encore: Adjustable clockspeed and voltage - Dalingrin
-* Encore: Backport 2.6.35 Bluetooth - Fattire
-* Encore: Working mem sleep
-* Encore: USB host support - Verygreen
+ProBAM Project name: android_packages_apps_Bluetooth
+  .Danny Baumann - Fix signal strength indicator.
 
-### 7.0.3
-* Common: Don't allow packages with platform keys on user-controlled storage
+ProBAM Project name: android_packages_apps_CMWallpapers
+  .Ben Butzow - Update wallpaper app UI
+  .Marco Brohet - CMWallpapers: update translations
 
-### 7.0.2
-* Common: Fix issue with missing built-in themes
-* Common: Update bundled ROM Manager to latest version
-* Supersonic: Actually fix GPS
-* Supersonic: Fix proximity and light sensor
+ProBAM Project name: android_packages_apps_Mms
+  .Fr33L4nc3r - Mms: Option to delay SMS Sending
+  .elektroschmock - Mms: Remove aapt warnings in DE
+  .Pawit Pornkitprasan - Mms: fix quick message layout on 320dp
 
-### 7.0.1
-* Common: Fix fling velocity of status bar and ADW swipe - Sven Dawitz
-* Common: Fixed webview layout bug (issue 3229) - Zinx
-* Common: Fix GVoice-opens-twice bug - Zinx
-* Common: Fix issues on all devices with DNS resolution failure after some time - Zinx, various
-* Common: RTL improvements - Eran Mizrahi, Eyad Aboulouz
-* Common: Fix crashes in Arabic locale - Eyad Aboulouz
-* Common: Add Arabic keylayout - Eyad Aboulouz
-* Common: Improve ADWLauncher scrolling/zoom performance - Pavel Kucera
-* Common: Fix excessive memory use when appending to textviews - Cyanogen
-* Common: New wallpapers from the CM community (CC License, see app for credits)
-* Common: Option to disable vibration while in-call - Evan Charlton
-* Common: Add long press option to status bar widgets for settings - Alex Avance
-* Common: Compact carrier and status bar tweaks - Nihanth Subramanya, rorifree
-* Sholes: Fix connectivity loss bug - cvpcs
-* Speedy: Fix keyboard lights - JD Horelick
-* Glacier: Fix backlights - Zinx
-* Glacier: fix GPS issues - Zinx/QCom
-* msm7x30: Fix bugs during video resume - Zinx
-* qsd8x50: Fix 720p video playback
-* qsd8x50: Unified 2.6.37 kernel - Cyanogen, toastcfh, slayher
-* Espresso, Legend: WiFi fix (HTC)
-* Supersonic: Fix GPS issues (HTC)
-* msm7227: Fix GPS issues - Alex Hofbauer
-* Click: Fix recovery kernel and compilation. Now works well with latest code - KalimochoAz
-* Click: Speed up internet connection - KalimochoAz
-* Blade: Update kernel to match Gen2 Radio - kallt_kaffe
-* Blade: Update libaudio to fix SIP audio routing and microphone mute - Tom Giordano
+ProBAM Project name: android_packages_apps_Browser
+  .Marco Brohet - Browser: update translations
+  .Pawit Pornkitprasan - Browser: fix pie crash
+  .Pawit Pornkitprasan - Browser: disable incognito mode
 
-### 7.0.0
-* Common: Android 2.3.3 (Gingerbread) - Google
-* Common: Fixes and changes from AOSP master - Various
-* Common: ClockworkMod Recovery 3.0: Koush, Cyanogen, Zinx
-* Common: Themes engine - T-Mobile
-* Common: Performance enhancements for Qualcomm hardware - Code Aurora
-* Common: New boot animation - 73v1n - http://www.youtube.com/watch?v=mYXiKWwp0DQ
-* Common: Fix readahead values for NAND/MMC devices
-* Common: Revamped notification widget - cvpcs
-* Common: Updated various graphics for GB style - blunden
-* Common: DSPManager updated for 2.3 - alankila
-* Common: Restyled music app and forward-port of features - Jason Asher
-* Common: Rotary answer in Phone app - James Peterson
-* Common: BT VoiceDialer fixes - Matthew Sparby
-* Common: Calendar enhancements - James Peterson
-* Common: Stagefright fixes for 7x30, 8x50, and 7x27 - Zinx, arcee, Cyanogen
-* Common: Pacman package manager - Kmobs
-* Common: Workaround for unknown phone number - Jiri Tyr
-* Common: Trackball answer/hangup - Juan Rodriguez
-* Common: CMParts reorganization - Robert Burns
-* Common: View ChangeLog via CMParts (System) - Wes Garner
-* Common: Optional screen on/off animations - Diogo Ferreira
-* Common: New browser incognito mode - optedoblivion
-* Common: New trackball/trackpad wake - Zinx, Cyanogen
-* Common: Legacy sensor/GPS support - arcee
-* Common: Enabled v8 javascript engine on armv6 (msm7227/msm7225) - arcee
-* Common: Customizable overscroll - arcee
-* Common: Torch cleanup - defer
-* Common: 2D compositor backwards compatibility - arcee
-* Common: OpenGL backwards compatibility - Zinx, Cyanogen, Sileht, ezterry
-* Common: SMS templates using gestures - Riccardo Ciovati
-* Common: Phone Goggles - David Bidorff
-* Common: Option to always show battery percentage on lockscreen - Robert Burns
-* Common: Option to show music controls with compatible headset connection - Wes Garner
-* Common: CPU frequency/scaling control in CMParts - Robert Ramiega
-* Common: Option to pause/play music with camera button - cvpcs
-* Common: Allow SIP User-Agent configuration - arcee
-* Common (non-HTC): Fixed mobile connection suspension - arcee
-* Common: New music widgets - Jason Asher
-* Common: Updated FLAC support - cvpcs, Cyanogen, kroot
-* Common: Updated wallpapers - Fitsnugly, Prash
-* Common: Customizable search/long-press search - Sven Dawitz
-* Common: New lockscreen styles - Rotary Revamped (default) and Lense - Sven Dawitz, Stefano Pignataro
-* Common: Customizable app launcher on rotary lockscreen - Sven Dawitz
-* Common: Now playing and album art on lockscreen - kmobs
-* Common: GPS fixes - CodeAurora, arcee
-* Common: Breakfast/Brunch - arcee
-* Common: Statusbar battery percentage with mini icon - Sven Dawitz, design by Jazz Kalsi
-* Common: SMS split for braindead carriers - Mike Wielgosz
-* Common: MMS user-defined custom vibrate - Wes Garner
-* Common: CMParts cleanup - Sven Dawitz
-* Common: Notification profiles - Martin Long
-* Common: TI wl12xx FM radio reverse engineering - Michael A. Reid
-* Common: Tablet tweaks - Sven Dawitz
-* Common: Revamped CMStats - Chris Soyars
-* Common: Improved RTL text support and fonts - Eyad Aboulouz, Eran Mizrahi,  
-* Espresso/Legend: Enabled native WiFi tethering - Cyanogen, OMAPZoom.org
-* Legend/Liberty/Buzz/Click: Enabled FM Radio - Alexander Hofbauer (libaudio patch)
-* Z71: Enabled MPEG4/AAC video recording - arcee
-* Z71: Enabled native WiFi tethering - arcee
-* Passion/Bravo/BravoC/Supersonic/Inc: Kernel 2.6.37 - Google, Cyanogen, defer, Kali-, toastcfh, slayher
-* Vision/Glacier/Espresso: WiFi calling compatibility and optimization - Zinx
-* Vision/Glacier/Ace: Unified kernel - HTC, Cyanogen, Zinx, Kali-, defer
-* Vision/Glacier/Ace: Fix FM radio on 2.3 - Zinx
-* Vision/Glacier/Ace: Fixes for video overlay - Zinx, CodeAurora
-* Vision: Only install WiFi calling on TMUS devices - attn1
-* Espresso/Legend/Liberty: Unified kernel - HTC, Cyanogen, attn1, jznomoney, Alexander Hofbauer
-* Supersonic: WiMAX support - HTC, Shinzul, toastcfh, shift, #teamwin, Cyanogen, Joey Conway
-* Supersonic: HDMI mirror support: #teamwin
-* ONE: Enabled native WiFi tethering - arcee
+ProBAM Project name: android_packages_apps_CMUpdater
+  .Marco Brohet - CMUpdater: update translations
+
+ProBAM Project name: android_packages_apps_Gallery2
+  .Ethan Chen - Gallery2: Use correct editor ID for sharpness filter
+
+ProBAM Project name: android_packages_apps_Apollo
+  .Marco Brohet - Apollo: update translations
+
+ProBAM Project name: android_packages_apps_Dialer
+  .codexc - [2/2] Dialer: Add a non-intrusive dialoger for incoming calls
+  .arnau - Dialer: CA translations
+
+ProBAM Project name: android_packages_apps_LockClock
+  .DelPETER - LockClock: FR translation
+  .blunden - Add xxhdpi weather drawables for the white monochrome set
+
+ProBAM Project name: android_packages_apps_CMFileManager
+  .Kirill Rakhman - Save scrolling position and restore it when going back
+  .Marco Brohet - CMFM: update translations
+
+ProBAM Project name: android_packages_apps_Torch
+  .Ricardo Cerqueira - Don't show variable brightness options when using the camera iface
+
+ProBAM Project name: android_packages_apps_Calculator
+  .Marco Brohet - Calculator: update translations
+
+ProBAM Project name: android_frameworks_av
+  .Lorenzo M - stagefright: Fix "add an extra buffer to ANW's BUfferQueue"
+  .Krishnankutty Kolathappilly - libstagefright: Fix intermittent pause during tunnel A-V playback
+  .Eric Ho - libstagefright: print seek statistics even when paused
+  .Eric Ho - stagefright: add rendering statistics
+  .Santhosh Behara - libstagefright: Filewrite in seperate thread for single video track
+  .Praveen Chavan - stagefright: add an extra buffer to ANW's BUfferQueue
+  .Steve Kondik - Revert "frameworks/av: rendering statistics for Stagefright."
+  .Haynes Mathew George - libstagefright: Delay release of wakelock
+  .Haynes Mathew George - audioflinger: check for condition before waiting
+  .Krishnankutty Kolathappilly - libstagefright: Fix timestamp corruption during offload playback
+  .Preetam Singh Ranawat - libstagefright: Fix incorrect progress bar display during device switch
+  .Narsinga Rao Chella - audio: do not allow FAST output for voice call stream type
+  .Fred Oh - AudioFlinger: Handle sound card status change
+  .Fred Oh - frameworks/av: Add audio parameter for sound card status
+
+ProBAM Project name: android_frameworks_native
+  .Ricardo Cerqueira - installd: Invert the default for dexopt-on-cache
+  .Ricardo Cerqueira - BatteryService: Restore the original parcel order
+  .Ricardo Cerqueira - Revert "SensorEventQueue: Allow setRate on sensor enable"
+  .Ricardo Cerqueira - sensorservice: Fix init sequence for pre-1.1 API sensor HALs
+  .Steven Luo - Forward-port surface dithering from CM10.2
+
+ProBAM Project name: android_frameworks_opt_telephony
+  .Dorian Snyder - SamsungCDMAv6RIL: update to latest RIL
+  .Chris Holmes - Revert "Fix cdma data calls based on NV"
+  .Alex Yakavenka - Fix cdma data calls based on NV
+  .Michael Gernoth - CdmaLte: call setDataRegState when using RilVoiceRadioTechnology for data
+  .Danny Baumann - Properly handle a null URI.
+
+
+ProBAM Project name: proprietary_vendor_htc
+  .David Hays - m7vzw: update blobs from 2.10.605.1 RUU
+  .Christopher R. Palmer - dlx: Update shared libraries from Verizon's 4.2.2 release
+
+ProBAM Project name: proprietary_vendor_samsung
+  .UtkarshGupta - Revert "smdk4412-common: 4.3 blobs"
+  .Dominik Marszk - smdk4412-common: 4.3 blobs
+  .Menno van Grinsven - MANTA: Update proprietary files to 4.4.2
+  .Menno van Grinsven - MANTA: Update proprietary files to 4.4.2
+  .Dan Pasanen - jf: update bcmdhd firmware to 1.88.51 from gpe 4.4
+  .sbrissen - n7105: remove closed source blobs
+

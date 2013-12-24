@@ -3,34 +3,9 @@ PRODUCT_BRAND ?= cyanogenmod
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-# determine the smaller dimension
-TARGET_BOOTANIMATION_SIZE := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -lt $(TARGET_SCREEN_HEIGHT) ]; then \
-    echo $(TARGET_SCREEN_WIDTH); \
-  else \
-    echo $(TARGET_SCREEN_HEIGHT); \
-  fi )
-
-# get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/cm/prebuilt/common/bootanimation))
-bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
-
-# find the appropriate size and set
-define check_and_set_bootanimation
-$(eval TARGET_BOOTANIMATION_NAME := $(shell \
-  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
-      echo $(1); \
-      exit 0; \
-    fi;
-  fi;
-  echo $(TARGET_BOOTANIMATION_NAME); ))
-endef
-$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
-
-PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
-endif
+## ProBAM boot animation
+PRODUCT_COPY_FILES +=  \
+    vendor/cm/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 ifdef CM_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -96,10 +71,9 @@ PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/cron,system/etc/cron)
 
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/su/su:system/xbin/daemonsu \
-    vendor/cm/prebuilt/common/su/su:system/xbin/su \
-    vendor/cm/prebuilt/common/su/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/cm/prebuilt/common/su/Superuser.apk:system/app/Superuser.apk
+    vendor/cm/prebuilt/common/su/daemonsu:system/xbin/daemonsu \
+    vendor/cm/prebuilt/common/su/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 
 # Configurable
 PRODUCT_COPY_FILES += \
@@ -216,6 +190,8 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
+    Superuser \
+    su \
     ProBamStats
 
 ############### Add PROBAM GAPPS
@@ -328,9 +304,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 # Add PROBAM version
-PROBAM_VERSION_MAJOR = 1.0.1
-PROBAM_VERSION_MINOR = beta2
-PROBAM_GOO_VERSION = 101
+PROBAM_VERSION_MAJOR = 1.2.0
+PROBAM_VERSION_MINOR = stable
+PROBAM_GOO_VERSION = 120
 VERSION := $(PROBAM_VERSION_MAJOR)_$(PROBAM_VERSION_MINOR)
 PROBAM_VERSION := $(VERSION)_$(shell date +%Y%m%d-%H%M%S)
 

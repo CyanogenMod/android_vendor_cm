@@ -10,10 +10,3 @@ echo "Set Selinux Permissive..."
 setenforce 0
 
 setenforce Permissive
-
-##echo "Fixing permissions..."
-
-##busybox mount -o remount,rw /system
-
-##busybox chmod 777 /system/build.prop
-##busybox chmod 777 /system/etc/init.d.cfg
