@@ -1,17 +1,32 @@
-ProBAM Project name: android_vendor_probam
-  .codexc - Add su support and upadte to prebuilt su v 1.86
-  .codexc - add Configurable init.d , PropModder files
-  .codexc - configs cleanup
-  .codexc - change default wallpaper
-  .codexc - update probam gapps and version
-  .codexc - Merge "vendor: support custom unofficial build tags" into cm-11.0
-  .Michael Bestas - overlay: Fix Keyguard configuration
-  .Matt Mower - vendor: support custom unofficial build tags
-  .Pawit Pornkitprasan - cm: only include WhisperPush in telephony-enabled devices
-
-ProBAM Project name: android_frameworks_base
+ProBAM Project name: frameworks_base
+  .Robert Burns - Forward port Status Bar interface (1/2)
+  .Lars Greiss - Frameworks: Advanced low battery indicator options (1/2)
+  .codexc - Screenshot delete credit cristianomatos
+  .codexc - port forword: Add a key combo to start/stop video recording
+  .Arham Jamal - Improve scrolling cache
+  .codexc - fixup
+  .Nitin Arora - Bluetooth: Changes for LPP and extended LE scan
+  .Juffin Alex Varghese - OBEX: Reduce Obex MTU size for A2DP or SCO concurrency
+  .Hemant Gupta - Bluetooth: HID: Add support for HID Device Role
+  .maxwen - base: correct default enablement of battery light
+  .Prachee Ramsinghani - ActivityManager: Donot take launcher screenshot.
+  .Cyril Mottier - Correctly set the animation flag of the ActionBar
+  .Janson Kang - Speed up orientation rotation
+  .PrimeDirective - increase touch sensitivity
+  .Scott Brady - Restore options to disable bootanimation and wallpaper
+  .Steve Kondik - Revert "Revert "Rollback Bluetooth changes for now.""
+  .Steve Kondik - Revert "Rollback Bluetooth changes for now."
+  .Griffin Millender - [1/3] fb: Change density on the fly
+  .Maunik Shah - framework/base: get proper obb mountpoint based on user handle
+  .Mahesh A Saptasagar - wlan: Fix for delay in PNO scan trigger after p2p disconnect.
+  .Liam Mark - frameworks/base: add app launch timeline instrumentation
+  .Rashmi Ramanna - Close sockets on wpa_supplicant termination.
+  .Mahesh A Saptasagar - wlan: Error handling on PNO failure due to active P2P session.
+  .Sameer Thalappil - Clear the scan list when an empty list is received
   .codexc - FULL ActiveDisplay Fixes/Options by codexc
+  .Pawit Pornkitprasan - SystemUI: don't crash when user disable default apps
   .0xD34D - Active display [squashed] (1/2)
+  .Kyrylo Mikos - Update immersive confirmation.
   .broodplank - core: added national roaming info for Tesco Mobile in Ireland.
   .Mårten Kongstad - Fix ResTable_config::CONFIG_* typo (MCC vs MNC)
   .codexc - add halo master switch
@@ -22,24 +37,27 @@ ProBAM Project name: android_frameworks_base
   .codexc - AudioEffect: Add a stereo widener effect
   .Jorge Ruesga - systemui: fix circle battery percentage alignment for low dpi devices
   .Jorge Ruesga - systemui: Fix hidden battery icon style
-  .Chirayu Desai - KeyguardServiceDelegate: disable DEBUG
-  .Danny Baumann - Fix indention.
-  .Kyrylo Mikos - PhoneWindowManager: fix navbar behavior in expanded mode after 4.4.2 merge.
-  .Steve Kondik - Rollback Bluetooth changes for now.
-  .Nebojsa Cvetkovic - National roaming info for 3 in Ireland
-  .Geo Pan - National roaming info for yesss! in Austria
-  .Ricardo Cerqueira - Unbreak the public API again...
+  .brisma - frameworks/base: IT translations
+  .Michael Bestas - Forward port CM Screen Security settings (1/2)
   .Fernando Membrive - base: added national roaming info for Pepephone in Spain
   .codexc - add Navbar, Rambar
-  .cristianomatos - RAM bar (1/2) - This commit includes small re-sizes to fit transparency in new launcher and also moves clear recents button to bottom|left
-  .arnau - SystemUI: CA translations
-  .cristianomatos -  Navigation bar dimensions (1/2)
-  .Chris Holmes - Revert "Telephony: Add data rat constant"
-  .maxwen - [1/3] base: allow disabling non intrusive incall ui
-  .cristianomatos - Fit HALO in CyanogenMod custom battery implementation
-  .drcmda - [2/2] Frameworks: HALO
 
 ProBAM Project name: android_packages_apps_Settings
+  .Lars Greiss - Settings: Advanced low battery indicator options (1/2)
+  .Robert Burns - Forward port Status Bar settings (2/2)
+  .codexc - init improvement with probam
+  .Michael Bestas - Forward port CM Screen Security settings (2/2)
+  .Veeti Paananen - Reorganize and clean up lock screen section
+  .Gaurav Asati - Bluetooth: Destroy BT Dialog on BT power off.
+  .Hemant Gupta - Bluetooth: GAP: don't update autoconnect on bonding state
+  .Srinu Jella - Bluetooth: GAP: Cancel the pairing notification on bond state change
+  .Srinu Jella - Bluetooth: GAP: Cancel the previous visibilty alarms if already set
+  .Nitin Shivpure - Bluetooth: Remove remote device from trust list on BOND change
+  .Pradeep Panigrahi - Bluetooth: Not allow Blank BT device name.
+  .Srinu Jella - Bluetooth: Set alias name only through Rename option
+  .Nitin Shivpure - Bluetooth: Fix to show internet access as marked when pan is connected
+  .Griffin Millender - [3/3] settings: Change density on the fly
+  .Ricardo Cerqueira - ReportingService: Fix service startup
   .codexc - enable developer options by default
   .codexc - Show DSPManager
   .codexc - FULL ActiveDisplay Settings
@@ -49,17 +67,18 @@ ProBAM Project name: android_packages_apps_Settings
   .codexc - set permission for init.d.cfg
   .codexc - add PropModder
   .codexc - add halo master switch
+  .Espen Fjellvær Olsen - Add option for switching between UMS and MTP/PTP mode. (2/2)
+  .brisma - Settings: IT translations
   .codexc - Configurable init.d
   .codexc - add navbar , fix rambar , add colorpicker
-  .Darren Salt - en_GB translation (localisation)
-  .codexc - add RamBar in Menu
-  .cristianomatos - RAM bar (2/2)
-  .cristianomatos - Navigation bar dimensions (2/2)
-  .codexc - add probam in settings
-  .codexc - Add Xposed Settings
-  .drcmda - [1/2] Settings: HALO
 
 ProBAM Project name: android_packages_apps_Camera2
+  .gwindlord - Missing strings translated to Russian
+  .Muhammed Nazim - TrueView Returns!
+  .Muhammed Nazim - Fix Smart Capture label display
+  .Josue Rivera - Fixes Mako continues focus  problem
+  .Steve Kondik - camera: Add ZSL support for Samsung/Qualcomm cameras
+  .Pawit Pornkitprasan - Camera: don't display picture size unless supported
   .codexc - Merge tag 'android-4.4.2_r1' into HEAD
   .Steve Kondik - Add options to better control video preview size
   .codeworkx - Add Samsung camcorder mode
@@ -67,119 +86,158 @@ ProBAM Project name: android_packages_apps_Camera2
   .Lars Greiss - Merge remote-tracking branch 'aosp/kitkat-mr1-release' into HEAD
   .Michael Bestas - Camera2: Port additional resolutions from cm-10.2
 
-ProBAM Project name: android_packages_services_Telephony
-  .maxwen - [2/3] Telephony: allow disabling non intrusive incall ui
-  .Lingchao Xin - Telephony: add Chinese Simplified translations
-  .fairct - Fix NT_MODE case statements
+ProBAM Project name: packages_apps_Mms
+  .rdgate - Fix max bubble width when no avatars
+  .rdgate - No avatars option for speech bubbles theme
+  .rdgate - Auto-complete email recipient
+  .rdgate - Import com.android.ex.chips
+  .rdgate - Mailto intent
+  .rdgate - Speech bubbles theme option
+  .rdgate - Use enter for new line if mInputType is TYPE_TEXT_VARIATION_LONG_MESSAGE
+  .rdgate - Update Japanese translation
+  .rdgate - Add quick emoji button next to text input
+  .rdgate - Emoji and Smiley support
+  .rdgate - Custom user-agent option
+  .rdgate - Fix invalid charset mail
+  .rdgate - Subject line break
 
-ProBAM Project name: android_packages_providers_MediaProvider
-  .Pawit Pornkitprasan - MediaProvider: allow write access to external SD
-
-ProBAM Project name: android_packages_providers_TelephonyProvider
-  .rob43 - Missing commas before sub_id in sql queries
-  .Steve Kondik - Handle database upgrade for MSIM
-
-ProBAM Project name: android_packages_inputmethods_LatinIME
-  .Stefano - Added smiles without noise to AOSP keyboard
-
-ProBAM Project name: android_packages_apps_Calendar
-  .Marco Brohet - Calendar: update translations
-
-ProBAM Project name: android_packages_apps_InCallUI
-  .maxwen - [3/3] InCallUI: allow disabling non intrusive incall ui
-  .xplodwild - [1/2] InCall: Add a non-intrusive dialog for incoming calls
-
-ProBAM Project name: android_packages_apps_DeskClock
-  .Marco Brohet - Revert "DeskClock: CA translations"
-  .arnau - DeskClock: CA translations
-
-ProBAM Project name: android_packages_apps_DSPManager
-  .Frant1c - DSPManager: LT translations
-
-ProBAM Project name: android_packages_apps_Bluetooth
-  .Danny Baumann - Fix signal strength indicator.
-
-ProBAM Project name: android_packages_apps_CMWallpapers
-  .Ben Butzow - Update wallpaper app UI
-  .Marco Brohet - CMWallpapers: update translations
-
-ProBAM Project name: android_packages_apps_Mms
-  .Fr33L4nc3r - Mms: Option to delay SMS Sending
-  .elektroschmock - Mms: Remove aapt warnings in DE
-  .Pawit Pornkitprasan - Mms: fix quick message layout on 320dp
+ProBAM Project name: android_packages_apps_Launcher3
+  .Jeronyson - Launcher3: RU translations
+  .Marco Brohet - Launcher3: NL translations
+  .arnau - Launcher3: CA translations
 
 ProBAM Project name: android_packages_apps_Browser
-  .Marco Brohet - Browser: update translations
-  .Pawit Pornkitprasan - Browser: fix pie crash
-  .Pawit Pornkitprasan - Browser: disable incognito mode
+  .adhiti - Browser: Fix browser force close
 
 ProBAM Project name: android_packages_apps_CMUpdater
-  .Marco Brohet - CMUpdater: update translations
+  .pureexe - CMUpdater : TH translations
+  .Tomasz Popielarczyk - CMUpdater: PL translations
+
 
 ProBAM Project name: android_packages_apps_Gallery2
-  .Ethan Chen - Gallery2: Use correct editor ID for sharpness filter
+  .pureexe - Gallery : TH translations
+  .Ashok Raj Deenadayalan - If the decoding fails, change the inSampleSize to 1.
+  .Vasantha Balla - Gallery2 - add wmv, mpgts, mkv, asf,avi & divx mimetypes  - adds extra mimetypes so they can be used for streaming.
+  .Vasantha Balla - Gallery2: Fix crash for unsupported format on mute operation. -Mpeg4 Writer does not support formats other thanmp4/h264/h263. -Need to check in app for unsupported format before starting  mute operation. -Fix is to add condition in app to check for unsupported format  and display toast message.  CRs-Fixed: 514347
+  .Eric (Quic - Gallery2 - add wmv, mpgts, mkv, asf mimetypes
 
 ProBAM Project name: android_packages_apps_Apollo
-  .Marco Brohet - Apollo: update translations
+  .Marco Brohet - Revert "Apollo : TH translation"
+  .pureexe - Apollo : TH translation
+  .Ethan Chen - Apollo: handle possible exceptions
 
 ProBAM Project name: android_packages_apps_Dialer
   .codexc - [2/2] Dialer: Add a non-intrusive dialoger for incoming calls
-  .arnau - Dialer: CA translations
 
 ProBAM Project name: android_packages_apps_LockClock
+  .Marco Brohet - cLock: Fix PT-PT clock display
+  .pureexe - LockClock : TH Translation
   .DelPETER - LockClock: FR translation
-  .blunden - Add xxhdpi weather drawables for the white monochrome set
 
 ProBAM Project name: android_packages_apps_CMFileManager
+  .pureexe - CMFileManager : TH Translation
   .Kirill Rakhman - Save scrolling position and restore it when going back
-  .Marco Brohet - CMFM: update translations
 
 ProBAM Project name: android_packages_apps_Torch
+  .pureexe - Torch : TH translation
   .Ricardo Cerqueira - Don't show variable brightness options when using the camera iface
 
 ProBAM Project name: android_packages_apps_Calculator
-  .Marco Brohet - Calculator: update translations
+  .rheeze - Calculator: IT translation
+  .pureexe - Calculator : TH translations
 
 ProBAM Project name: android_frameworks_av
+  .Steve Kondik - camera: Handle the num-jpegs-per-shutter mode
+  .Steve Kondik - stagefright: Cleanup ifdefs in pause code
+  .Suman Mukherjee - Camera: Rotate display if app doesn't use setDisplayOrientation.
+  .Haynes Mathew George - libmedia: Increase offload shared buffer size
+  .Mingming Yin - libstagefright: Do not use offload playback for DRM content
+  .Leena Winterrowd - NuPlayer: Check if video input format is NULL
+  .Naresh Tanniru - Audio: Tunnel Exception for AAC main profile format
+  .Shreyas Nagasandra Chandrasekhar -  audio: Fix framecount calculation in AudioFlinger
+  .Pavan Chikkala - audio: Fix for OMXCodec::read() getting blocked
+  .Mingming Yin - audio: do not invalidate stream used by voip
+  .Srikanth Katta - audio: Modified API for compress voip formats
+  .Steve Kondik - Revert extra buffer hack.
   .Lorenzo M - stagefright: Fix "add an extra buffer to ANW's BUfferQueue"
-  .Krishnankutty Kolathappilly - libstagefright: Fix intermittent pause during tunnel A-V playback
-  .Eric Ho - libstagefright: print seek statistics even when paused
-  .Eric Ho - stagefright: add rendering statistics
-  .Santhosh Behara - libstagefright: Filewrite in seperate thread for single video track
-  .Praveen Chavan - stagefright: add an extra buffer to ANW's BUfferQueue
-  .Steve Kondik - Revert "frameworks/av: rendering statistics for Stagefright."
-  .Haynes Mathew George - libstagefright: Delay release of wakelock
-  .Haynes Mathew George - audioflinger: check for condition before waiting
-  .Krishnankutty Kolathappilly - libstagefright: Fix timestamp corruption during offload playback
-  .Preetam Singh Ranawat - libstagefright: Fix incorrect progress bar display during device switch
-  .Narsinga Rao Chella - audio: do not allow FAST output for voice call stream type
-  .Fred Oh - AudioFlinger: Handle sound card status change
-  .Fred Oh - frameworks/av: Add audio parameter for sound card status
 
 ProBAM Project name: android_frameworks_native
+  .Arun Kumar K.R - SurfaceFlinger: Change to support framebuffer flip for 2D blitters
+  .Arun Kumar K.R - SurfaceFlinger: Enable Vsync trace for SF Composition
+  .Praveena Pachipulusu - SurfaceFlinger: Add NULL check for buffer handling
+  .Ramkumar Radhakrishnan - frameworks/native: Add support for Secure Display
+  .Baldev Sahu - libs/ui: Fix crash issue because of null pointer access
   .Ricardo Cerqueira - installd: Invert the default for dexopt-on-cache
   .Ricardo Cerqueira - BatteryService: Restore the original parcel order
   .Ricardo Cerqueira - Revert "SensorEventQueue: Allow setRate on sensor enable"
   .Ricardo Cerqueira - sensorservice: Fix init sequence for pre-1.1 API sensor HALs
-  .Steven Luo - Forward-port surface dithering from CM10.2
 
 ProBAM Project name: android_frameworks_opt_telephony
-  .Dorian Snyder - SamsungCDMAv6RIL: update to latest RIL
-  .Chris Holmes - Revert "Fix cdma data calls based on NV"
-  .Alex Yakavenka - Fix cdma data calls based on NV
-  .Michael Gernoth - CdmaLte: call setDataRegState when using RilVoiceRadioTechnology for data
-  .Danny Baumann - Properly handle a null URI.
-
+  .Peter Pan - Could not enable data connection
 
 ProBAM Project name: proprietary_vendor_htc
+  .Ethan Chen - m7-common: use hw_get_module_by_class
+  .Thomas Wendt - endeavoru: Update graphics libraries
+  .Thomas Wendt - endeavoru: Don't copy libril.so and libril-icera.so
+  .Thomas Wendt - endeavoru: Revert libnvmmlite_video.so because it breaks video recording
   .David Hays - m7vzw: update blobs from 2.10.605.1 RUU
-  .Christopher R. Palmer - dlx: Update shared libraries from Verizon's 4.2.2 release
 
 ProBAM Project name: proprietary_vendor_samsung
+  .ljzyal - Add support for superior
+  .Austin - Add support for N5110 and N5100 (Galaxy Note 8)
+  .Jake Whatley - jf-common: remove mpdecision
+  .Steve Kondik - jf: Rename vendor camera
+  .ljzyal - Add samsung i9260
+  .Jake Whatley - jf-common: add camera blob
   .UtkarshGupta - Revert "smdk4412-common: 4.3 blobs"
-  .Dominik Marszk - smdk4412-common: 4.3 blobs
-  .Menno van Grinsven - MANTA: Update proprietary files to 4.4.2
-  .Menno van Grinsven - MANTA: Update proprietary files to 4.4.2
-  .Dan Pasanen - jf: update bcmdhd firmware to 1.88.51 from gpe 4.4
-  .sbrissen - n7105: remove closed source blobs
 
+ProBAM Project name: android_vendor_cm
+  .codexc - some updates and some fixes
+  .codexc - Add su support and upadte to prebuilt su v 1.86
+  .codexc - add Configurable init.d , PropModder files
+  .codexc - configs cleanup
+  .codexc - change default wallpaper
+  .codexc - update probam gapps and version
+  .codexc - Merge "vendor: support custom unofficial build tags" into cm-11.0
+
+ProBAM Project name: proprietary_vendor_lge
+  .Ricardo Cerqueira - g2: Update widevine libraries
+  .Ricardo Cerqueira - mako: Add widevine libraries
+  .Ricardo Cerqueira - v500: Updated camera blobs
+
+ProBAM Project name: android_packages_apps_DeskClock
+  .Vladislav Koldobskiy - DeskClock: RU translation
+  .Marco Brohet - Revert "DeskClock: LT translations"
+  .pureexe - DeskClock : TH Translation
+  .brisma - DeskClock: IT translations
+  .arnau - DeskClock: CA translations
+  .Marco Brohet - Revert "DeskClock: CA translations"
+
+ProBAM Project name: android_packages_apps_Email
+  .Dimitris Kazakos - Add missing "Notify for every message"...
+
+ProBAM Project name: android_packages_services_Telephony
+  .maxwen - [2/3] Telephony: allow disabling non intrusive incall ui
+
+ProBAM Project name: android_packages_providers_DownloadProvider
+  .kasif - Clear notifications for Deleted items from Download list
+
+ProBAM Project name: android_packages_apps_CMAccount
+  .pureexe - CMAccount : THtranslation
+
+ProBAM Project name: android_packages_apps_Calendar
+  .Frant1c - Calendar: LT translations
+
+ProBAM Project name: android_packages_apps_DSPManager
+  .Frant1c - DSPManager: LT translations
+
+ProBAM Project name: android_packages_apps_BluetoothExt
+  .arnau - BluetoothExt: CA translations
+
+ProBAM Project name: android_packages_apps_Bluetooth
+  .Chirayu Desai - Allow sending apk files to remote device
+  .Marco Brohet - Bluetooth: NL translations
+  .Danny Baumann - Fix signal strength indicator.
+
+ProBAM Project name: android_packages_apps_CMWallpapers
+  .Ben Butzow - Update wallpaper app UI
