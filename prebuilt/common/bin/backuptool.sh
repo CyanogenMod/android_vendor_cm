@@ -20,6 +20,25 @@ restore_addon_d() {
   rm -rf /tmp/addon.d/
 }
 
+# Backup Xposed Framework (bin/app_process)
+xposed_backup()
+{
+        if [ -f /system/bin/app_process.orig ]
+                then
+                        cp /system/bin/app_process /tmp/backupdir/
+        fi
+}
+
+# Restore Xposed Framework (bin/app_process)
+xposed_restore()
+{
+        if [ -f /tmp/backup/app_process ]
+                then
+                        mv /system/bin/app_process /system/bin/app_process.orig
+                        cp /tmp/backupdir/app_process /system/bin/
+        fi
+}
+
 # Proceed only if /system is the expected major and minor version
 check_prereq() {
 if ( ! grep -q "^ro.cm.version=$V.*" /system/build.prop ); then
@@ -74,6 +93,7 @@ case "$1" in
         fi
     fi
     check_blacklist system
+    xposed_backup
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
@@ -86,6 +106,7 @@ case "$1" in
         fi
     fi
     check_blacklist tmp
+    xposed_restore
     run_stage pre-restore
     run_stage restore
     run_stage post-restore
