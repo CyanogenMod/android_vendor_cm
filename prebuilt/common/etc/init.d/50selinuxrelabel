@@ -50,13 +50,15 @@ if [ $? -eq 0 ]; then
   LABELDALVIKCACHE=1
 fi
 
-
 if [ $LABELSYS = "1" ]; then
+  DEVICE="$(busybox mount|busybox grep /system|busybox cut -f1 -d' ')"
+  busybox blockdev --setrw $DEVICE
   busybox mount -o remount,rw /system
   $L "/system relabel starting..."
   restorecon -R /system
   $L "/system relabel complete"
   busybox mount -o remount,ro /system
+  busybox blockdev --setro $DEVICE
 fi
 
 if [ $LABELDATA = "1" ]; then
