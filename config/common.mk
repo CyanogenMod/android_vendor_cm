@@ -206,7 +206,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/appsetting.apk:system/app/appsetting.apk \
     vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk \
-    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk
+    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk \
+    vendor/cm/proprietary/Restart_Camera_xda.apk:system/app/Restart_Camera_xda.apk \
+    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk \
+    vendor/cm/proprietary/intelli3g.apk:system/app/intelli3g.apk
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
@@ -304,9 +307,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 # Add PROBAM version
-PROBAM_VERSION_MAJOR = 1.2.1
+PROBAM_VERSION_MAJOR = 1.2.2
 PROBAM_VERSION_MINOR = stable
-PROBAM_GOO_VERSION = 121
+PROBAM_GOO_VERSION = 122
 VERSION := $(PROBAM_VERSION_MAJOR)_$(PROBAM_VERSION_MINOR)
 PROBAM_VERSION := $(VERSION)_$(shell date +%Y%m%d-%H%M%S)
 

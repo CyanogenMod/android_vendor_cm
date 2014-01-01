@@ -6,16 +6,30 @@
 
 list_files() {
 cat <<EOF
+app/Books.apk
 app/CalendarGoogle.apk
+app/Chrome.apk
+app/CloudPrint2.apk
+app/Drive.apk
 app/GenieWidget.apk
 app/Gmail2.apk
 app/GoogleContactsSyncAdapter.apk
+app/GoogleEars.apk
+app/GoogleEarth.apk
 app/GoogleHome.apk
 app/GoogleTTS.apk
 app/Hangouts.apk
+app/Keep.apk
+app/LatinImeGoogle.apk
+app/Magazines.apk
 app/Maps.apk
+app/Music2.apk
+app/PlayGames.apk
 app/PlusOne.apk
+app/QuickOffice.apk
 app/Street.apk
+app/SunBeam.apk
+app/Videos.apk
 app/YouTube.apk
 etc/g.prop
 etc/permissions/com.google.android.maps.xml
@@ -27,15 +41,26 @@ framework/com.google.android.maps.jar
 framework/com.google.android.media.effects.jar
 framework/com.google.widevine.software.drm.jar
 lib/libAppDataSearch.so
+lib/libchromeview.so
+lib/libdocscanner_image-v7a.so
+lib/libdocsimageutils.so
+lib/libearthandroid.so
+lib/libearthmobile.so
 lib/libfilterframework_jni.so
 lib/libfilterpack_facedetect.so
 lib/libgames_rtmp_jni.so
 lib/libgoogle_recognizer_jni_l.so
+lib/libjni_latinime.so
 lib/libjni_t13n_shared_engine.so
+lib/libjni_unbundled_latinimegoogle.so
+lib/liblinearalloc.so
 lib/libmoviemaker-jni.so
+lib/libndk1.so
 lib/libnetjni.so
+lib/libocrclient.so
 lib/libpatts_engine_jni_api.so
 lib/libplus_jni_v8.so
+lib/librectifier-v7a.so
 lib/librs.antblur.so
 lib/librs.antblur_constant.so
 lib/librs.antblur_drama.so
@@ -50,8 +75,10 @@ lib/libRSSupport.so
 lib/libspeexwrapper.so
 lib/libvcdecoder_jni.so
 lib/libvideochat_jni.so
+lib/libvorbisencoder.so
 lib/libwebp_android.so
 lib/libwebrtc_audio_coding.so
+lib/libWVphoneAPI.so
 priv-app/CalendarProvider.apk
 priv-app/GoogleBackupTransport.apk
 priv-app/GoogleFeedback.apk
@@ -62,7 +89,9 @@ priv-app/GoogleServicesFramework.apk
 priv-app/Phonesky.apk
 priv-app/PrebuiltGmsCore.apk
 priv-app/SetupWizard.apk
+priv-app/talkback.apk
 priv-app/Velvet.apk
+priv-app/Wallet.apk
 usr/srec/en-US/c_fst
 usr/srec/en-US/clg
 usr/srec/en-US/commands.abnf
@@ -124,14 +153,25 @@ case "$1" in
     rm -f /system/app/Launcher2.apk
     rm -f /system/app/Launcher3.apk
 
-    # Removing pieces that may be left over from other GApps or ROM's (from updater-script)
+    # Remove the AOSP MMS app after restore
+    rm -f /system/priv-app/Mms.apk
+    
+    # Remove the AOSP Browser after restore
+    rm -f /system/app/Browser.apk
+
+    # Remove the AOSP Keyboard after restore
+    rm -f /system/app/LatinIME.apk
+
+    # Remove pieces from other GApps or ROM's (from updater-script)
     rm -f /system/app/BrowserProviderProxy.apk
     rm -f /system/app/Calendar.apk
     rm -f /system/app/Gmail.apk
     rm -f /system/app/GmsCore.apk
     rm -f /system/app/GoogleCalendar.apk
     rm -f /system/app/GoogleCalendarSyncAdapter.apk
+    rm -f /system/app/GoogleCloudPrint.apk
     rm -f /system/app/GoogleHangouts.apk
+    rm -f /system/app/GoogleKeep.apk
     rm -f /system/app/GooglePlus.apk
     rm -f /system/app/OneTimeInitializer.apk
     rm -f /system/app/PartnerBookmarksProvider.apk
@@ -157,6 +197,8 @@ case "$1" in
     rm -f /system/app/Phonesky.apk
     rm -f /system/app/PrebuiltGmsCore.apk
     rm -f /system/app/SetupWizard.apk
-      rm -f /system/app/Velvet.apk
+    rm -f /system/app/talkback.apk
+    rm -f /system/app/Velvet.apk
+    rm -f /system/app/Wallet.apk
 ;;
 esac
