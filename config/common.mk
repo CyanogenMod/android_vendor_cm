@@ -233,6 +233,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip         
     
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/cm/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/cm/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 else
