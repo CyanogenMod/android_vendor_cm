@@ -1,4 +1,77 @@
-ProBAM Project name: frameworks_base
+ProBAM Project name: android_packages_apps_Settings
+  .codexc - import the required class
+  .codexc - Advanced reboot enabled by default (2/2)
+  .codexc - Notification drawer: full swipe to switch detection (2/2)
+  .codexc - Statusbar: double-tap to sleep
+  .Andrew Xie - Fix FC when trying to adjust radio band via *#*#4636#*#* dialer code.
+  .Craig Schmitt - Settings: Fix for missing notification volume slider in Volume panel.
+  .Koushik Dutta - AppOps/Privacy Guard: Fix up misaligned switches.
+  .jereksel - Settings: PL translations
+  .Marco Brohet - Settings: NL translations
+  .Chirayu Desai - PrivacyGuard: Specify a default value in Settings.getInt method call
+  .Frant1c - Settings: LT translations
+  .Lorenzo M - Settings: ES translations
+  .Vladislav Koldobskiy - Settings: RU translation
+  .pureexe - Setting : TH translation
+  .Francesco - Settings: IT translations
+  .arnau - Settings: CA translations
+  .codexc - enable halo or multiwindow
+  .maxwen - settings: performance icons
+  .kroz - Settings: follow kitkat's ui
+  .codexc - add omni performance control
+  .codexc - Density changer ported from SlimRoms credits to kufikugel thanks andros11  timpohladthomas
+  .codexc - Revert LCD Density From init.d
+  .codexc - Remove help button from Rambar
+  .Lars Greiss - Settings: TRDS 3.0 and new theme engine preparation (2/4)
+  .Lars Greiss - Settings: MediaScanner behavior on boot (3/3)
+  .codexc - Revert Change density on the fly in settings
+  .codexc - implement app sidebar and network usage stats [2/2]
+  .Lars Greiss - Settings: Advanced low battery indicator options (1/2)
+  .Robert Burns - Forward port Status Bar settings (2/2)
+
+ProBAM Project name: android_frameworks_base
+  .codexc - HALO notification should open in floating window mode
+  .codexc - getBoolean alternative
+  .kroz - trds:[framework] dark images adjustments
+  .garwedgess - Notification drawer: full swipe to switch detection (1/2)
+  .Der-Schubi - Advanced reboot enabled by default (1/2)
+  .Ricardo Cerqueira - Limit QC camera features to post-ICS HALs
+  .Vladislav Koldobskiy - Core: RU: revert some strings.xml changes
+  .Lorenzo M - frameworks_base: ES translations
+  .Vladislav Koldobskiy - Core & SystemUI: RU translation
+  .Dalingrin - SystemUI: Add double tap to sleep gesture
+  .Veeti Paananen - Remove the navigation camera icon in keyguard if disabled by DPM
+  .Marco Brohet - base: NL translations
+  .arnau - Base_SystemUI: CA translations
+  .elektroschmock - Frameworks: Update DE translation
+  .Kyrylo Mikos - BluetoothManagerService: fix enabling/disabling BT from Quictsettings under second user,
+  .codexc - Revert "Base: Fix ActiveDisplay"
+  .codexc - prevent multiwindow if halo enabled please multiwindow stay out if HALO there !! , but we will leave you in activity
+  .codexc - Base: Fix ActiveDisplay fix: ActiveDisplay never disabled after using turn off display option revert: fix for disappearing notification bar
+  .Lokesh Chamane - Remove Slims Wallpapers
+  .JBirdVegas - Suppress String resources build warnings
+  .Tylar Overturf - frameworks: Smooth background gradient
+  .Sungmin Choi - fix possible buffer overrun and memory leak
+  .Roman Birg - services: don't clear wallpaper when SystemUI disconnects.
+  .nuclearmistake - Merge in a lot of VANIR fixes and improvements
+  .nico - Don't show Netstats when there's no traffic
+  .Dirk Rettschlag - Network stats: use number formating based on android code
+  .mengsun - NetworkPolicy: Validate policy templates before updating
+  .Xiaocheng Li - audio: Set slient persist property according to ringer mode
+  .Narayan Kamath - MediaDrm#mNativeContext is a long, not int.
+  .Daniel 2 Olofsson - Fix to NullPointerException on move back in ActivityStack.
+  .Kroz - Improve AOSP Download/Upload animation
+  .kroz - TRDS: Dark DocumentsUI
+  .codexc - fixup
+  .Lars Greiss - fb: TRDS dark base theme
+  .Lars Greiss - fb: TRDS 3.0 and new theme engine preparation (1/4)
+  .codexc - [Revert] Change density on the fly
+  .sehoon.jang - Prevent MediaScanner infinite loop with invalid path
+  .Lars Greiss - base: MediaScanner behavior on boot (1/3)
+  .codexc - support chinese language from moKee
+  .xplodwild - Multi-window support
+  .0xD34D - implement app sidebar
+  .0xD34D - Add network usage stats to status bar [1/2]
   .Robert Burns - Forward port Status Bar interface (1/2)
   .Lars Greiss - Frameworks: Advanced low battery indicator options (1/2)
   .codexc - Screenshot delete credit cristianomatos
@@ -14,230 +87,166 @@ ProBAM Project name: frameworks_base
   .Janson Kang - Speed up orientation rotation
   .PrimeDirective - increase touch sensitivity
   .Scott Brady - Restore options to disable bootanimation and wallpaper
-  .Steve Kondik - Revert "Revert "Rollback Bluetooth changes for now.""
-  .Steve Kondik - Revert "Rollback Bluetooth changes for now."
-  .Griffin Millender - [1/3] fb: Change density on the fly
-  .Maunik Shah - framework/base: get proper obb mountpoint based on user handle
-  .Mahesh A Saptasagar - wlan: Fix for delay in PNO scan trigger after p2p disconnect.
-  .Liam Mark - frameworks/base: add app launch timeline instrumentation
-  .Rashmi Ramanna - Close sockets on wpa_supplicant termination.
-  .Mahesh A Saptasagar - wlan: Error handling on PNO failure due to active P2P session.
-  .Sameer Thalappil - Clear the scan list when an empty list is received
-  .codexc - FULL ActiveDisplay Fixes/Options by codexc
-  .Pawit Pornkitprasan - SystemUI: don't crash when user disable default apps
-  .0xD34D - Active display [squashed] (1/2)
-  .Kyrylo Mikos - Update immersive confirmation.
-  .broodplank - core: added national roaming info for Tesco Mobile in Ireland.
-  .Mårten Kongstad - Fix ResTable_config::CONFIG_* typo (MCC vs MNC)
-  .codexc - add halo master switch
-  .Ricardo Cerqueira - BatteryService: Restore the original parcel order
-  .Sven Dawitz - SystemUI: Forward port Statusbar Clock and Date actions
-  .Jorge Ruesga - systemui: Use the same color for circle battery than clock color
-  .codexc - AudioFX: Add center frequency param to bassboost
-  .codexc - AudioEffect: Add a stereo widener effect
-  .Jorge Ruesga - systemui: fix circle battery percentage alignment for low dpi devices
-  .Jorge Ruesga - systemui: Fix hidden battery icon style
-  .brisma - frameworks/base: IT translations
-  .Michael Bestas - Forward port CM Screen Security settings (1/2)
-  .Fernando Membrive - base: added national roaming info for Pepephone in Spain
-  .codexc - add Navbar, Rambar
-
-ProBAM Project name: android_packages_apps_Settings
-  .Lars Greiss - Settings: Advanced low battery indicator options (1/2)
-  .Robert Burns - Forward port Status Bar settings (2/2)
-  .codexc - init improvement with probam
-  .Michael Bestas - Forward port CM Screen Security settings (2/2)
-  .Veeti Paananen - Reorganize and clean up lock screen section
-  .Gaurav Asati - Bluetooth: Destroy BT Dialog on BT power off.
-  .Hemant Gupta - Bluetooth: GAP: don't update autoconnect on bonding state
-  .Srinu Jella - Bluetooth: GAP: Cancel the pairing notification on bond state change
-  .Srinu Jella - Bluetooth: GAP: Cancel the previous visibilty alarms if already set
-  .Nitin Shivpure - Bluetooth: Remove remote device from trust list on BOND change
-  .Pradeep Panigrahi - Bluetooth: Not allow Blank BT device name.
-  .Srinu Jella - Bluetooth: Set alias name only through Rename option
-  .Nitin Shivpure - Bluetooth: Fix to show internet access as marked when pan is connected
-  .Griffin Millender - [3/3] settings: Change density on the fly
-  .Ricardo Cerqueira - ReportingService: Fix service startup
-  .codexc - enable developer options by default
-  .codexc - Show DSPManager
-  .codexc - FULL ActiveDisplay Settings
-  .0xD34D - Active display [squashed] (2/2)
-  .codexc - [revert] set permission for init.d.cfg
-  .codexc - halo missing key!
-  .codexc - set permission for init.d.cfg
-  .codexc - add PropModder
-  .codexc - add halo master switch
-  .Espen Fjellvær Olsen - Add option for switching between UMS and MTP/PTP mode. (2/2)
-  .brisma - Settings: IT translations
-  .codexc - Configurable init.d
-  .codexc - add navbar , fix rambar , add colorpicker
-
-ProBAM Project name: android_packages_apps_Camera2
-  .gwindlord - Missing strings translated to Russian
-  .Muhammed Nazim - TrueView Returns!
-  .Muhammed Nazim - Fix Smart Capture label display
-  .Josue Rivera - Fixes Mako continues focus  problem
-  .Steve Kondik - camera: Add ZSL support for Samsung/Qualcomm cameras
-  .Pawit Pornkitprasan - Camera: don't display picture size unless supported
-  .codexc - Merge tag 'android-4.4.2_r1' into HEAD
-  .Steve Kondik - Add options to better control video preview size
-  .codeworkx - Add Samsung camcorder mode
-  .maxwen - camera: added needsEarlyVideoSize
-  .Lars Greiss - Merge remote-tracking branch 'aosp/kitkat-mr1-release' into HEAD
-  .Michael Bestas - Camera2: Port additional resolutions from cm-10.2
-
-ProBAM Project name: packages_apps_Mms
-  .rdgate - Fix max bubble width when no avatars
-  .rdgate - No avatars option for speech bubbles theme
-  .rdgate - Auto-complete email recipient
-  .rdgate - Import com.android.ex.chips
-  .rdgate - Mailto intent
-  .rdgate - Speech bubbles theme option
-  .rdgate - Use enter for new line if mInputType is TYPE_TEXT_VARIATION_LONG_MESSAGE
-  .rdgate - Update Japanese translation
-  .rdgate - Add quick emoji button next to text input
-  .rdgate - Emoji and Smiley support
-  .rdgate - Custom user-agent option
-  .rdgate - Fix invalid charset mail
-  .rdgate - Subject line break
-
-ProBAM Project name: android_packages_apps_Launcher3
-  .Jeronyson - Launcher3: RU translations
-  .Marco Brohet - Launcher3: NL translations
-  .arnau - Launcher3: CA translations
-
-ProBAM Project name: android_packages_apps_Browser
-  .adhiti - Browser: Fix browser force close
-
-ProBAM Project name: android_packages_apps_CMUpdater
-  .pureexe - CMUpdater : TH translations
-  .Tomasz Popielarczyk - CMUpdater: PL translations
-
-
-ProBAM Project name: android_packages_apps_Gallery2
-  .pureexe - Gallery : TH translations
-  .Ashok Raj Deenadayalan - If the decoding fails, change the inSampleSize to 1.
-  .Vasantha Balla - Gallery2 - add wmv, mpgts, mkv, asf,avi & divx mimetypes  - adds extra mimetypes so they can be used for streaming.
-  .Vasantha Balla - Gallery2: Fix crash for unsupported format on mute operation. -Mpeg4 Writer does not support formats other thanmp4/h264/h263. -Need to check in app for unsupported format before starting  mute operation. -Fix is to add condition in app to check for unsupported format  and display toast message.  CRs-Fixed: 514347
-  .Eric (Quic - Gallery2 - add wmv, mpgts, mkv, asf mimetypes
-
-ProBAM Project name: android_packages_apps_Apollo
-  .Marco Brohet - Revert "Apollo : TH translation"
-  .pureexe - Apollo : TH translation
-  .Ethan Chen - Apollo: handle possible exceptions
-
-ProBAM Project name: android_packages_apps_Dialer
-  .codexc - [2/2] Dialer: Add a non-intrusive dialoger for incoming calls
-
-ProBAM Project name: android_packages_apps_LockClock
-  .Marco Brohet - cLock: Fix PT-PT clock display
-  .pureexe - LockClock : TH Translation
-  .DelPETER - LockClock: FR translation
-
-ProBAM Project name: android_packages_apps_CMFileManager
-  .pureexe - CMFileManager : TH Translation
-  .Kirill Rakhman - Save scrolling position and restore it when going back
-
-ProBAM Project name: android_packages_apps_Torch
-  .pureexe - Torch : TH translation
-  .Ricardo Cerqueira - Don't show variable brightness options when using the camera iface
-
-ProBAM Project name: android_packages_apps_Calculator
-  .rheeze - Calculator: IT translation
-  .pureexe - Calculator : TH translations
-
-ProBAM Project name: android_frameworks_av
-  .Steve Kondik - camera: Handle the num-jpegs-per-shutter mode
-  .Steve Kondik - stagefright: Cleanup ifdefs in pause code
-  .Suman Mukherjee - Camera: Rotate display if app doesn't use setDisplayOrientation.
-  .Haynes Mathew George - libmedia: Increase offload shared buffer size
-  .Mingming Yin - libstagefright: Do not use offload playback for DRM content
-  .Leena Winterrowd - NuPlayer: Check if video input format is NULL
-  .Naresh Tanniru - Audio: Tunnel Exception for AAC main profile format
-  .Shreyas Nagasandra Chandrasekhar -  audio: Fix framecount calculation in AudioFlinger
-  .Pavan Chikkala - audio: Fix for OMXCodec::read() getting blocked
-  .Mingming Yin - audio: do not invalidate stream used by voip
-  .Srikanth Katta - audio: Modified API for compress voip formats
-  .Steve Kondik - Revert extra buffer hack.
-  .Lorenzo M - stagefright: Fix "add an extra buffer to ANW's BUfferQueue"
-
-ProBAM Project name: android_frameworks_native
-  .Arun Kumar K.R - SurfaceFlinger: Change to support framebuffer flip for 2D blitters
-  .Arun Kumar K.R - SurfaceFlinger: Enable Vsync trace for SF Composition
-  .Praveena Pachipulusu - SurfaceFlinger: Add NULL check for buffer handling
-  .Ramkumar Radhakrishnan - frameworks/native: Add support for Secure Display
-  .Baldev Sahu - libs/ui: Fix crash issue because of null pointer access
-  .Ricardo Cerqueira - installd: Invert the default for dexopt-on-cache
-  .Ricardo Cerqueira - BatteryService: Restore the original parcel order
-  .Ricardo Cerqueira - Revert "SensorEventQueue: Allow setRate on sensor enable"
-  .Ricardo Cerqueira - sensorservice: Fix init sequence for pre-1.1 API sensor HALs
-
-ProBAM Project name: android_frameworks_opt_telephony
-  .Peter Pan - Could not enable data connection
-
-ProBAM Project name: proprietary_vendor_htc
-  .Ethan Chen - m7-common: use hw_get_module_by_class
-  .Thomas Wendt - endeavoru: Update graphics libraries
-  .Thomas Wendt - endeavoru: Don't copy libril.so and libril-icera.so
-  .Thomas Wendt - endeavoru: Revert libnvmmlite_video.so because it breaks video recording
-  .David Hays - m7vzw: update blobs from 2.10.605.1 RUU
-
-ProBAM Project name: proprietary_vendor_samsung
-  .ljzyal - Add support for superior
-  .Austin - Add support for N5110 and N5100 (Galaxy Note 8)
-  .Jake Whatley - jf-common: remove mpdecision
-  .Steve Kondik - jf: Rename vendor camera
-  .ljzyal - Add samsung i9260
-  .Jake Whatley - jf-common: add camera blob
-  .UtkarshGupta - Revert "smdk4412-common: 4.3 blobs"
 
 ProBAM Project name: android_vendor_cm
-  .codexc - some updates and some fixes
-  .codexc - Add su support and upadte to prebuilt su v 1.86
-  .codexc - add Configurable init.d , PropModder files
-  .codexc - configs cleanup
-  .codexc - change default wallpaper
-  .codexc - update probam gapps and version
-  .codexc - Merge "vendor: support custom unofficial build tags" into cm-11.0
+  .codexc - update gapps and update to v1.2.2
+  .Ricardo Cerqueira - selinuxrelabel: Remove attempts to relabel /system
+  .Dan Pasanen - add crpalmer for droid dna
+  .Michael Bestas - Fix Dialog Mobile Broadband MMS APN
+  .mcampbellsmith - Recheck /data for selinux labeling
+  .introkun - Fix internet APN for Life:) provider.
+  .Brinly Taylor - cm: add Samsung Galaxy Premier (GT-I9260) maintainer
+  .Abhisek Devkota - Reorder FarEast APN
+  .Veeti Paananen - Port: Don't show phone unlock targets for devices without voice (2/2)
+  .broodplank - Add Internet/MMS APNS for Tesco Ireland (TMI)
+  .Steven Luo - common_mini_tablet_wifionly.mk: don't try to install removed BlueZ config file
+  .codexc - cleanup
+  .codexc - update to v1.2.1
+  .codexc - Preserve Xposed Framework Files
+  .codexc - update change logs
 
-ProBAM Project name: proprietary_vendor_lge
-  .Ricardo Cerqueira - g2: Update widevine libraries
-  .Ricardo Cerqueira - mako: Add widevine libraries
-  .Ricardo Cerqueira - v500: Updated camera blobs
-
-ProBAM Project name: android_packages_apps_DeskClock
-  .Vladislav Koldobskiy - DeskClock: RU translation
-  .Marco Brohet - Revert "DeskClock: LT translations"
-  .pureexe - DeskClock : TH Translation
-  .brisma - DeskClock: IT translations
-  .arnau - DeskClock: CA translations
-  .Marco Brohet - Revert "DeskClock: CA translations"
-
-ProBAM Project name: android_packages_apps_Email
-  .Dimitris Kazakos - Add missing "Notify for every message"...
+ProBAM Project name: android_packages_apps_Camera2
+  .Steve Kondik - camera: ZSL and focus fixes
+  .Lars Greiss - camera2: set focusmode default always to auto
+  .Emilian Peev - Camera: Overrides the focus mode for ZSL
+  .Vijay kumar Tumati - Camera: Avoid animating cature with decoded jpeg in long shot
+  .Lars Greiss - camera2: remove fine/normal/superfine jpegquality and use always int
+  .Lars Greiss - camera2: enable ISO mode settings to new UI
+  .Lars Greiss - camera2: enable focusmode settings UI
+  .Lars Greiss - Camera2: fix warnings
+  .Lars Greiss - Camera2: set default video quality back to 5 and code style cleanup
+  .Muhammed Nazim - TrueView Returns!
+  .Pawit Pornkitprasan - Camera: don't display picture size unless supported
+  .Lars Greiss - Camera2: seperate color effect settings camera and video
+  .Lars Greiss - Camera: enable jpeg quality setting and add video jpeg quality
+  .Michael Bestas - Camera: Add red-eye flash mode support
+  .Lars Greiss - camera2: fix scene mode crash
+  .codeworkx - Add Samsung camcorder mode
+  .maxwen - camera: added needsEarlyVideoSize
+  .Lars Greiss - camera2: update to new 4.4 KitKat UI
+  .Lars Greiss - camera2: add proper lable for screen capture on video mode
+  .Lars Greiss - camera2: follow new 4.4 UI guidelines
+  .Lars Greiss - Camera: finish Settings in new google style
+  .Lars Greiss - Camera2: move custom strings into slim files
+  .Lars Greiss - Camera2: enable color effects Settings in UI
+  .Pascal Pollet - Camera: Add a GPS indicator
+  .Lars Greiss - Camera: add Smart capture
+  .Lars Greiss - Camera2: roll back UI menu changes from CAF
+  .Lars Greiss - fix aapt warnings + correct strings.xml
+  .Pawit Pornkitprasan - Camera: fix preview for landscape devices
+  .Pawit Pornkitprasan - Camera: revert CodeAurora's panorama angle handling
+  .Lars Greiss - Camera2: Preview needs to be stopped when changing resolution
+  .Lars Greiss - Camera2: check for video size available
+  .Pawit Pornkitprasan - Camera2: enable antibanding by default
+  .Pawit Pornkitprasan - Camera: fix panorama preview on older devices
+  .Steve Kondik - camera: Support for HTC's HDR mode
+  .Steve Kondik - camera: Disable wavelet denoise by default
+  .Jorge Ruesga - Camera: Fix CameraRootView layout size on tablets
+  .Lars Greiss - camera: Add all resolutions, focus modes, scene modes, and color effects.
+  .Steve Kondik - camera: Remove the luma-adaptation seekbar
+  .Lars Greiss - camera: Cleanup and compatibility fixes
+  .Lars Greiss - Revert "Camera: Propagate power mode selection from UI to lower layers."
 
 ProBAM Project name: android_packages_services_Telephony
-  .maxwen - [2/3] Telephony: allow disabling non intrusive incall ui
+  .kroz - TRDS:[Telephony] Dark Dialer (2/2)
+  .Lorenzo M - Telephony: fix LT translations
+  .Frant1c - Telephony: LT translations
+  .Marco Brohet - Telephony: NL translations
 
-ProBAM Project name: android_packages_providers_DownloadProvider
-  .kasif - Clear notifications for Deleted items from Download list
+ProBAM Project name: android_packages_providers_MediaProvider
+  .blk_jack - MediaProvider: MediaScanner behavior on boot (2/3)
 
-ProBAM Project name: android_packages_apps_CMAccount
-  .pureexe - CMAccount : THtranslation
+ProBAM Project name: android_packages_inputmethods_LatinIME
+  .kroz - TRDS: Darker Keyboard
 
-ProBAM Project name: android_packages_apps_Calendar
-  .Frant1c - Calendar: LT translations
+ProBAM Project name: android_packages_apps_PerformanceControl
+  .ale8530 - Update IT Translation
 
-ProBAM Project name: android_packages_apps_DSPManager
-  .Frant1c - DSPManager: LT translations
+ProBAM Project name: android_packages_apps_InCallUI
+  .kroz - TRDS: Dark InCallUI
+
+ProBAM Project name: android_packages_apps_DeskClock
+  .Ricardo Cerqueira - Dedupe NL xlation
+  .Frant1c - DeskClock: LT translations
+  .Marco Brohet - DeskClock: NL translations
+
+ProBAM Project name: android_packages_apps_Email
+  .Lorenzo M - Email: ES translations
 
 ProBAM Project name: android_packages_apps_BluetoothExt
-  .arnau - BluetoothExt: CA translations
+  .Frant1c - BluetoothExt: LT translations
 
-ProBAM Project name: android_packages_apps_Bluetooth
-  .Chirayu Desai - Allow sending apk files to remote device
-  .Marco Brohet - Bluetooth: NL translations
-  .Danny Baumann - Fix signal strength indicator.
+ProBAM Project name: android_packages_apps_ContactsCommon
+  .kroz - TRDS:[ContactsCommon] Dark Contacts (2/2)
 
-ProBAM Project name: android_packages_apps_CMWallpapers
-  .Ben Butzow - Update wallpaper app UI
+ProBAM Project name: android_packages_apps_Launcher3
+  .elektroschmock - Launcher3: Add AOSP dummy strings to reduce aapt warnings
+  .choldimir - Launcher3: ES translations
+  .jereksel - Launcher3: PL translations
+
+ProBAM Project name: android_packages_apps_Contacts
+  .kroz - TRDS:[Contacts] Dark Contacts (1/2)
+
+ProBAM Project name: android_packages_apps_Gallery2
+  .Gustavo - Gallery2: PT-BR Translations
+
+ProBAM Project name: android_packages_apps_Dialer
+  .kroz - TRDS:[Dialer] Dark Dialer (1/2)
+  .codexc - [2/2] Dialer: Add a non-intrusive dialoger for incoming calls
+  .wszfer - fix NullPointerException
+
+ProBAM Project name: android_packages_apps_CMFileManager
+  .jereksel - CMFileManager: PL translations
+
+ProBAM Project name: android_packages_apps_Torch
+  .Lorenzo M - Torch: ES translations
+  .jereksel - Torch: PL translations
+
+ProBAM Project name: android_frameworks_av
+  .Steve Kondik - Revert "Camera: Rotate display if app doesn't use setDisplayOrientation."
+  .Steve Kondik - av: Additional ifdefs for QCOM DirectTrack
+  .Praveen Chavan - stagefright: provide a custom key to prefer adaptive playback
+  .Shiv Maliyappanahalli - libmedia: Add support for LCH tones
+  .Steve Kondik - DTS Postpro integration (for frameworks/av)
+  .Haynes Mathew George - audioflinger: Fix for a deadlock
+  .Deva Ramasubramanian - libstagefright: Add HEVC as a recognized MIME in ExtendedExtractor
+
+ProBAM Project name: android_frameworks_native
+  .Ricardo Cerqueira - surfaceflinger: Apply bugfixes to the correct hwc code paths
+  .Tom Briden - surfaceflinger: don't handle EVENT_ORIENTATION when !HWC_DEVICE_API_VERSION_1_0
+  .Lars Greiss - [3-4/4] TRDS 3.0 Native theme engine preparation
+
+ProBAM Project name: android_frameworks_opt_telephony
+  .Shareef Ali - SamsungQualcommRil: reversed engineered implimentation of dial() from touchwiz
+  .Shareef Ali - SamsungQualcommRIL: Add more validation of Signal Strength
+
+ProBAM Project name: proprietary_vendor_samsung
+  .Hashcode - hltevzw: fix to the fix for the sensor fix
+  .Hashcode - hltevzw: fix libsensirion
+  .Arne Coucheron - serrano: Remove unused blobs and update vidc firmware
+  .slayher - Update ril blobs.
+  .Hashcode - hltevzw: blobs
+  .Arne Coucheron - serrano: Rename camera driver
+  .Shareef Ali - h: fix derp.
+  .Steve Kondik - hltexx: Fix makefile
+  .Steve Kondik - hlte: Blobs
+  .Shareef Ali - h: fixup sensor libs
+  .Brian Beloshapka - epicmtd: Switch to opensource libGLES_android.so.
+  .Brian Beloshapka - epicmtd: Remove proprietary lpm binaries.
+  .Steve Kondik - hlte: Remove libxml2
+  .Steve Kondik - hltexx: Sensors
+  .Shareef Ali - remove dsstores
+  .Shareef Ali - h: use working gps lib from arcee
+  .Shareef Ali - h: update props
+  .Steve Kondik - hlte: Sexy hexy
+  .slayher - h add tmo variant files
+  .Shareef Ali - h: add bluetooth workaround
+  .Shareef Ali - h: hltespr
+  .Steve Kondik - hlte: Add blobs
+
+ProBAM Project name: themes-platform-vendor-tmobile-apps-ThemeChooser
+  .Lorenzo M - ThemeChooser: ES translations
+  .Frant1c - ThemeChooser: LT translations
+
+ProBAM Project name: proprietary_vendor_lge
+  .Brint E. Kriebel - hammerhead: Add APKs as PRODUCT_PACKAGES
