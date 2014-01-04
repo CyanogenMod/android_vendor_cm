@@ -253,9 +253,9 @@ ifdef BUILDTYPE_RELEASE
         CM_VERSION := $(PLATFORM_VERSION)-$(TARGET_PRODUCT_SHORT)
 else
 ifeq ($(CM_BUILDTIME_LOCAL),y)
-        CM_VERSION := PixelROM-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
+        CM_VERSION := IOAP-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
 else
-        CM_VERSION := PixelROM-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
+        CM_VERSION := IOAP-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
 endif
 endif
 
