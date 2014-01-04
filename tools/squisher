@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Squish a CM otapackage for distribution
+# cyanogen
+#
+
+. $ANDROID_BUILD_TOP/vendor/cm/tools/functions
+
+OUT_TARGET_HOST=`uname -s`
+if [ x"$OUT_TARGET_HOST" = x"Linux" ]
+then
+   OUT_TARGET_HOST=linux-x86
+   XARGS="xargs --max-args=1 --max-procs `grep 'processor' /proc/cpuinfo|wc -l`"
+elif [ x"$OUT_TARGET_HOST" = x"Darwin" ]
+then
+   OUT_TARGET_HOST=darwin-x86
+   XARGS="xargs -n 1 -P `sysctl hw.ncpu | awk '{print $2}'`"
+else
+   echo -e $CL_RED"ERROR: unknown/unsupported host OS!"$CL_RST
+   exit 1
+fi
+
+if [ -z "$OUT" -o ! -d "$OUT" ]; then
+	echo -e $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
+	exit 1
+fi
+
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/cm/tools/opticharger
+QUIET=-q
+DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
+
+# Optimize PNG resources in APKs
+( cd $OUT/system; find framework/ app/ priv-app/ vendor/app/ -name \*.apk -print | $XARGS $OPTICHARGER; )
+
+# Delete unnecessary binaries
+( cd $OUT/system/bin; echo $DELETE_BINS | xargs rm -f; )
+
+# We should fix the build to stop this from being installed in the first place
+rm -rf $OUT/system/extras
+
+exit 0
