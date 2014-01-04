@@ -52,11 +52,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=1 \
+    persist.sys.root_access=3 \
+    dalvik.vm.dexopt-data-only=1
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    persist.sys.root_access=3
 endif
 
 # Copy over the changelog to the device
@@ -69,8 +74,15 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/cm/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/cm/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
+    vendor/cm/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/cm/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 endif
+
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/cm/prebuilt/common/etc/persist.conf:system/etc/persist.conf
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -125,8 +137,9 @@ PRODUCT_PACKAGES += \
     VoicePlus \
     VoiceDialer \
     SoundRecorder \
-    Basic \
-    libemoji
+    libemoji \
+    ScreenRecorder \
+    libscreenrecorder
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
@@ -251,9 +264,9 @@ ifdef BUILDTYPE_RELEASE
         CM_VERSION := $(PLATFORM_VERSION)-$(TARGET_PRODUCT_SHORT)
 else
 ifeq ($(CM_BUILDTIME_LOCAL),y)
-        CM_VERSION := IOAP-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
+        CM_VERSION := IOAP-$(CM_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 else
-        CM_VERSION := IOAP-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
+        CM_VERSION := IOAP-$(CM_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 endif
 endif
 

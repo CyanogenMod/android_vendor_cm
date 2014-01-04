@@ -5,6 +5,10 @@ on init
     export ANDROID_CACHE /cache
     export TERMINFO /system/etc/terminfo
 
+    # Disabled virtual memory randomization
+    # (if randomization is enabled the AEM-JIT will have a lower cache hit rate)
+    write /proc/sys/kernel/randomize_va_space 0
+
 on post-fs-data
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
@@ -89,6 +93,12 @@ on boot
     chmod 0664 /sys/kernel/mm/ksm/run
     write /sys/kernel/mm/ksm/sleep_millisecs 1500
     write /sys/kernel/mm/ksm/pages_to_scan 256
+
+    # See http://www.netmite.com/android/mydroid/2.0/dalvik/docs/embedded-vm-control.html
+    # Disable verification, should speed things up
+    setprop dalvik.vm.dexopt-flags v=n
+    # Disable extended JNI checks, should speed things up
+    setprop dalvik.vm.checkjni false
 
     chown system system /dev/cpuctl/apps/cpu.notify_on_migrate
     chmod 0644 /dev/cpuctl/apps/cpu.notify_on_migrate
