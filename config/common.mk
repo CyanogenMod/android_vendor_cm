@@ -271,12 +271,12 @@ ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
 endif
 
 ifeq ($(CM_BUILDTYPE), RELEASE)
-    CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
+    CM_VERSION := $(IOAP)-$(shell date -u +%Y%m%d)
 else
     ifeq ($(PRODUCT_VERSION_MINOR),0)
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+        CM_VERSION := $(IOAP)-$(shell date -u +%Y%m%d)-$(CM_EXTRAVERSION)-$(CM_BUILD)
     else
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+        CM_VERSION := $(IOAP).-$(shell date -u +%Y%m%d)-$(CM_EXTRAVERSION)-$(CM_BUILD)
     endif
 endif
 
