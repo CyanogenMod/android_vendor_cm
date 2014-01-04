@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= cyanogenmod
+PRODUCT_BRAND ?= IOAP
 
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
@@ -61,7 +61,7 @@ endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-#    vendor/cm/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/cm/CHANGELOG.mkdn:system/etc/CHANGELOG-IOAP.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMUpdater \
     CMFota \
-    CMAccount \
+    DashClock \
     HALO \
     WhisperPush
 
@@ -218,10 +218,6 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
-PRODUCT_VERSION_MAJOR = 3
-PRODUCT_VERSION_MINOR = 3.1
-PRODUCT_VERSION_MAINTENANCE = OFFICIAL
-
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
 ifndef CM_BUILDTYPE
@@ -232,53 +228,37 @@ ifndef CM_BUILDTYPE
     endif
 endif
 
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
-    CM_BUILDTYPE :=
+ifdef BUILDTYPE_NIGHTLY
+        CM_BUILDTYPE := NIGHTLY
+endif
+ifdef BUILDTYPE_AUTOTEST
+        CM_BUILDTYPE := AUTOTEST
+endif
+ifdef BUILDTYPE_EXPERIMENTAL
+        CM_BUILDTYPE := EXPERIMENTAL
+endif
+ifdef BUILDTYPE_RELEASE
+        CM_BUILDTYPE := RELEASE
 endif
 
-ifdef CM_BUILDTYPE
-    ifneq ($(CM_BUILDTYPE), SNAPSHOT)
-        ifdef CM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL
-            CM_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
-        endif
-    else
-        ifndef CM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            CM_BUILDTYPE := EXPERIMENTAL
-        else
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
-        endif
-    endif
+ifndef CM_BUILDTYPE
+        CM_BUILDTYPE := UNOFFICIAL
+endif
+
+TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
+TARGET_PRODUCT_SHORT := $(subst omni_,,$(TARGET_PRODUCT_SHORT))
+
+# Build the final version string
+ifdef BUILDTYPE_RELEASE
+        CM_VERSION := $(PLATFORM_VERSION)-$(TARGET_PRODUCT_SHORT)
 else
-    # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
-    CM_EXTRAVERSION :=
-endif
-
-ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        CM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
-    endif
-endif
-
-ifeq ($(CM_BUILDTYPE), RELEASE)
-    CM_VERSION := $(IOAP)-$(shell date -u +%Y%m%d)
+ifeq ($(CM_BUILDTIME_LOCAL),y)
+        CM_VERSION := PixelROM-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
 else
-    ifeq ($(PRODUCT_VERSION_MINOR),0)
-        CM_VERSION := $(IOAP)-$(shell date -u +%Y%m%d)-$(CM_EXTRAVERSION)-$(CM_BUILD)
-    else
-        CM_VERSION := $(IOAP).-$(shell date -u +%Y%m%d)-$(CM_EXTRAVERSION)-$(CM_BUILD)
-    endif
+        CM_VERSION := PixelROM-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)
 endif
+endif
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.ioap.version=$(CM_VERSION) \
