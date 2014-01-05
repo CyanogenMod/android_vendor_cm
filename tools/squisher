@@ -78,6 +78,9 @@ rm -rf $REPACK/parallel
 # No need for recovery
 rm -rf $REPACK/ota/recovery
 
+# We should fix the build to stop this from being installed in the first place
+rm -rf $REPACK/ota/system/extras
+
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.cm\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 OUTFILE=$OUT/cm-$MODVERSION.zip
