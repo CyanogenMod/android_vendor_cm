@@ -16,3 +16,7 @@ PRODUCT_PACKAGES += \
     Mms \
     Stk \
     WhisperPush
+
+# Mms depends on SoundRecorder for recorded audio messages
+PRODUCT_PACKAGES += \
+    SoundRecorder
