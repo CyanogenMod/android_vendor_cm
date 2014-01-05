@@ -17,7 +17,10 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     VisualizationWallpapers \
-    PhotoTable
+    PhotoTable \
+    VoicePlus \
+    VoiceDialer \
+    SoundRecorder
 
 PRODUCT_PACKAGES += \
     VideoEditor \
