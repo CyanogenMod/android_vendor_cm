@@ -1,6 +1,10 @@
 # CyanogenMod Extras
 import /init.superuser.rc
 
+on early-init
+    # increase max files soft limit
+    setrlimit 7 2048 4096
+
 on init
     export ANDROID_CACHE /cache
     export TERMINFO /system/etc/terminfo
