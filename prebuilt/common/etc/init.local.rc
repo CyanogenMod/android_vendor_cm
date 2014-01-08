@@ -93,6 +93,9 @@ on boot
     chown system system /dev/cpuctl/apps/cpu.notify_on_migrate
     chmod 0644 /dev/cpuctl/apps/cpu.notify_on_migrate
 
+    # increase max files soft limit
+    setrlimit 7 2048 4096
+
 # adb over network
 on property:service.adb.tcp.port=5555
     stop adbd
