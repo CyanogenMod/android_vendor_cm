@@ -52,16 +52,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1 \
-    persist.sys.root_access=3 \
-    dalvik.vm.dexopt-data-only=1
+    ro.build.selinux=1
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    persist.sys.root_access=3
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # Copy over the changelog to the device
@@ -86,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-#    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
@@ -274,6 +269,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.ioap.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION) \
+  ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 -include vendor/cm-priv/keys/keys.mk
 
