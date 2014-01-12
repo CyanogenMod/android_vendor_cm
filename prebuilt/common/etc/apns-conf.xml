@@ -20,7 +20,6 @@
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
 <apns version="8">
-  <apn carrier="Virgin Mobile US" mcc="200" mnc="053" apn="0" port="" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" type="mms" />
   <apn carrier="Cosmote GR" mcc="202" mnc="01" apn="Internet" type="default,supl" />
   <apn carrier="Cosmote GR MMS" mcc="202" mnc="01" apn="Mms" mmsc="195.167.65.220:8002" mmsproxy="10.10.10.20" mmsport="8080" type="mms" />
   <apn carrier="Cosmote Wireless Internet" mcc="202" mnc="01" apn="internet" type="default,supl" />
@@ -699,10 +698,15 @@
   <apn carrier="EHRPD - Verizon IMS" mcc="311" mnc="480" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - Verizon CBS" mcc="311" mnc="480" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - Verizon SUPL" mcc="311" mnc="480" apn="VZW800" type="supl" protocol="IPV4V6" bearer="13" />
-  <apn carrier="Virgin Mobile US" mcc="311" mnc="490" apn="0" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" port="" type="mms" />
+  <apn carrier="Virgin Mobile US" mcc="311" mnc="490" apn="Virgin Mobile" user="Virgin Mobile" server="*" password="*" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" port="" type="mms" />
+  <apn carrier="LTE - Virgin OTA" mcc="311" mnc="490" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="EHRPD - Virgin OTA" mcc="311" mnc="490" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="LTE - USCC INTERNET" mcc="311" mnc="580" apn="usccinternet" type="default,dun,mms,fota" mmsc="http://mmsc1.uscc.net/mmsc/MMS" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="MetroPCS DEFAULT" mcc="311" mnc="660" apn="internet.metropcs" user="" password="" type="default,hipri,admin,mms" authtype="0" mmsc="http://mms.metropcs.net:3128/mmsc" protocol="IP" roaming_protocol="IP" bearer="14" inactivity_timer="7080" />
   <apn carrier="MetroPCS IMS"  mcc="311" mnc="660" apn="ims.metropcs" user="" password="" type="ims" authtype="0" mmsc="http://mms.metropcs.net:3128/mmsc" protocol="IP" roaming_protocol="IP" bearer="14" inactivity_timer="7080" />
+  <apn carrier="Boost_Mobile" mcc="311" mnc="870" apn="Boost_Mobile" user="Boost_Mobile" server="*" type="mms" password="*" mmsc="http://mm.myboostmobile.com" mmsproxy="68.28.31.7" mmsport="80" authtype="3"/>
+  <apn carrier="LTE - Boost OTA" mcc="311" mnc="870" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="EHRPD - Boost OTA" mcc="311" mnc="870" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="Claro PR" mcc="330" mnc="110" apn="internet.claropr.com" port="8080" type="default,supl" />
   <apn carrier="Claro PR MMS" mcc="330" mnc="110" apn="mms.claropr.com" mmsc="http://mmsg.claropr.com:1021/mmsc" mmsproxy="10.50.38.3" mmsport="8799" type="mms" />
   <apn carrier="LTE CLARO" mcc="330" mnc="110" apn="lte.claropr.com" authtype="1" type="default,supl" />
