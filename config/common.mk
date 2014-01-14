@@ -112,7 +112,8 @@ PRODUCT_COPY_FILES += \
 
 # This is CM!
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml \
+    vendor/cm/config/preferred-apps/cyanogenmod.xml:system/etc/preferred-apps/cyanogenmod.xml
 
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
