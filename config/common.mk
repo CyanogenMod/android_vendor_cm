@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     procrank \
     Superuser \
     su \
-    ProBamStats
+    ProBamStats \
+    ProbamUpdater
 
 ############### Add PROBAM GAPPS
 
@@ -200,8 +201,7 @@ PRODUCT_COPY_FILES += \
 # ProBAM Updater and Xposed
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/appsetting.apk:system/app/appsetting.apk \
-    vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk \
-    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk
+    vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
