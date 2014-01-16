@@ -147,19 +147,19 @@ case "$1" in
     # Stub
   ;;
   post-restore)
-    # Remove the AOSP Stock Launcher after restore
+    # Remove the stock/AOSP Launcher after restore
     rm -f /system/priv-app/Launcher2.apk
     rm -f /system/priv-app/Launcher3.apk
     rm -f /system/app/Launcher2.apk
     rm -f /system/app/Launcher3.apk
 
-    # Remove the AOSP MMS app after restore
+    # Remove the stock/AOSP MMS app after restore
     rm -f /system/priv-app/Mms.apk
     
-    # Remove the AOSP Browser after restore
+    # Remove the stock/AOSP Browser after restore
     rm -f /system/app/Browser.apk
 
-    # Remove the AOSP Keyboard after restore
+    # Remove the stock/AOSP Keyboard after restore
     rm -f /system/app/LatinIME.apk
 
     # Remove pieces from other GApps or ROM's (from updater-script)
