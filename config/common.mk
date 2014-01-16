@@ -201,10 +201,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/appsetting.apk:system/app/appsetting.apk \
     vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk \
-    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk \
-    vendor/cm/proprietary/Restart_Camera_xda.apk:system/app/Restart_Camera_xda.apk \
-    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk \
-    vendor/cm/proprietary/intelli3g.apk:system/app/intelli3g.apk
+    vendor/cm/proprietary/ProBamUpdater.apk:system/app/ProBamUpdater.apk
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
