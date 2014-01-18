@@ -1,252 +1,303 @@
-ProBAM Project name: android_packages_apps_Settings
-  .codexc - import the required class
-  .codexc - Advanced reboot enabled by default (2/2)
-  .codexc - Notification drawer: full swipe to switch detection (2/2)
-  .codexc - Statusbar: double-tap to sleep
-  .Andrew Xie - Fix FC when trying to adjust radio band via *#*#4636#*#* dialer code.
-  .Craig Schmitt - Settings: Fix for missing notification volume slider in Volume panel.
-  .Koushik Dutta - AppOps/Privacy Guard: Fix up misaligned switches.
-  .jereksel - Settings: PL translations
-  .Marco Brohet - Settings: NL translations
-  .Chirayu Desai - PrivacyGuard: Specify a default value in Settings.getInt method call
-  .Frant1c - Settings: LT translations
-  .Lorenzo M - Settings: ES translations
-  .Vladislav Koldobskiy - Settings: RU translation
-  .pureexe - Setting : TH translation
-  .Francesco - Settings: IT translations
-  .arnau - Settings: CA translations
-  .codexc - enable halo or multiwindow
-  .maxwen - settings: performance icons
-  .kroz - Settings: follow kitkat's ui
-  .codexc - add omni performance control
-  .codexc - Density changer ported from SlimRoms credits to kufikugel thanks andros11  timpohladthomas
-  .codexc - Revert LCD Density From init.d
-  .codexc - Remove help button from Rambar
-  .Lars Greiss - Settings: TRDS 3.0 and new theme engine preparation (2/4)
-  .Lars Greiss - Settings: MediaScanner behavior on boot (3/3)
-  .codexc - Revert Change density on the fly in settings
-  .codexc - implement app sidebar and network usage stats [2/2]
-  .Lars Greiss - Settings: Advanced low battery indicator options (1/2)
-  .Robert Burns - Forward port Status Bar settings (2/2)
+AOSB KitKat 1.2.5
 
-ProBAM Project name: android_frameworks_base
-  .codexc - HALO notification should open in floating window mode
-  .codexc - getBoolean alternative
-  .kroz - trds:[framework] dark images adjustments
-  .garwedgess - Notification drawer: full swipe to switch detection (1/2)
-  .Der-Schubi - Advanced reboot enabled by default (1/2)
-  .Ricardo Cerqueira - Limit QC camera features to post-ICS HALs
-  .Vladislav Koldobskiy - Core: RU: revert some strings.xml changes
-  .Lorenzo M - frameworks_base: ES translations
-  .Vladislav Koldobskiy - Core & SystemUI: RU translation
-  .Dalingrin - SystemUI: Add double tap to sleep gesture
-  .Veeti Paananen - Remove the navigation camera icon in keyguard if disabled by DPM
-  .Marco Brohet - base: NL translations
-  .arnau - Base_SystemUI: CA translations
-  .elektroschmock - Frameworks: Update DE translation
-  .Kyrylo Mikos - BluetoothManagerService: fix enabling/disabling BT from Quictsettings under second user,
-  .codexc - Revert "Base: Fix ActiveDisplay"
-  .codexc - prevent multiwindow if halo enabled please multiwindow stay out if HALO there !! , but we will leave you in activity
-  .codexc - Base: Fix ActiveDisplay fix: ActiveDisplay never disabled after using turn off display option revert: fix for disappearing notification bar
-  .Lokesh Chamane - Remove Slims Wallpapers
-  .JBirdVegas - Suppress String resources build warnings
-  .Tylar Overturf - frameworks: Smooth background gradient
-  .Sungmin Choi - fix possible buffer overrun and memory leak
-  .Roman Birg - services: don't clear wallpaper when SystemUI disconnects.
-  .nuclearmistake - Merge in a lot of VANIR fixes and improvements
-  .nico - Don't show Netstats when there's no traffic
-  .Dirk Rettschlag - Network stats: use number formating based on android code
-  .mengsun - NetworkPolicy: Validate policy templates before updating
-  .Xiaocheng Li - audio: Set slient persist property according to ringer mode
-  .Narayan Kamath - MediaDrm#mNativeContext is a long, not int.
-  .Daniel 2 Olofsson - Fix to NullPointerException on move back in ActivityStack.
-  .Kroz - Improve AOSP Download/Upload animation
-  .kroz - TRDS: Dark DocumentsUI
-  .codexc - fixup
-  .Lars Greiss - fb: TRDS dark base theme
-  .Lars Greiss - fb: TRDS 3.0 and new theme engine preparation (1/4)
-  .codexc - [Revert] Change density on the fly
-  .sehoon.jang - Prevent MediaScanner infinite loop with invalid path
-  .Lars Greiss - base: MediaScanner behavior on boot (1/3)
-  .codexc - support chinese language from moKee
-  .xplodwild - Multi-window support
-  .0xD34D - implement app sidebar
-  .0xD34D - Add network usage stats to status bar [1/2]
-  .Robert Burns - Forward port Status Bar interface (1/2)
-  .Lars Greiss - Frameworks: Advanced low battery indicator options (1/2)
-  .codexc - Screenshot delete credit cristianomatos
-  .codexc - port forword: Add a key combo to start/stop video recording
-  .Arham Jamal - Improve scrolling cache
-  .codexc - fixup
-  .Nitin Arora - Bluetooth: Changes for LPP and extended LE scan
-  .Juffin Alex Varghese - OBEX: Reduce Obex MTU size for A2DP or SCO concurrency
-  .Hemant Gupta - Bluetooth: HID: Add support for HID Device Role
-  .maxwen - base: correct default enablement of battery light
-  .Prachee Ramsinghani - ActivityManager: Donot take launcher screenshot.
-  .Cyril Mottier - Correctly set the animation flag of the ActionBar
-  .Janson Kang - Speed up orientation rotation
-  .PrimeDirective - increase touch sensitivity
-  .Scott Brady - Restore options to disable bootanimation and wallpaper
+Merge CM lasts Changes
+CRT animation: add scale down
+List animation: views and interpolator
+Dialer: Flip to Mute/Reject Call
+Dialer: allow disabling call end sound
+Dialer: Add Facebook contact sync support
+InCallUI: fix non intrusive incallui layout
+InCallUI: UI from blue to white
+InCallUI: fix card call incoming colors in BlackUI
+Bluetooth: Fix phonebook sync problems on some car kits
+Bluetooth: GAP: Avoid adding device to cached device list
+Settings: AOSB new Settings icons thanks lolations!
+Settings: AOSB DE translations thanks mirco !
+Settings: AOSB DE translations grammar fixes thanks Marcus!
+SystemUI: Always show translucent decor on recents panel
+Frameworks: many fixes for memory leak
+add new AOSB Wallpapers thanks +Tareq Halaby 
+add new AOSB BlackUI
+add new AOSB Bootanimation
+White-ify tab colors
+Add Music Tile
+AppOps Minor Fix
+Fix UserTile
+Fix SystemUI FC at bootup
+Fix expanded desktop options
+Fix battery icon in status bar after reboot
+LS Notifications dinamic width & blacklist options
+Losckscreen Notifications fixes
+Lockscreen Notifications: fix phone turning on in pocket
+LS Notification dinamic width & blacklist options
+added national roaming info for Tuenti Movil in Spain
+added national roaming for Orange in Austria
+added national roaming for BOB in Austria
+BlackUI: change alert dialog to new 4.4 UI guidelines and add
+BlackUI: global menu follow new 4.4 UI
+BlackUI: correct seeker fb style for 4.4
+Xposed update and built from source
+Xposed installer hide from launcher
+m7-common: Update sensor binaries
+hlte: update adreno blobs
+n7100: enable ZSL mode
+n7100: audio: don't disable back mic upon voice call end
+hammerhead: Remove bug report shortcut
+hammerhead: Enable volume button wake
+hammerhead: Add stereowide effect
+Base: The Netherlands national Roaming
+Camera : sdcard-storage option﻿
 
-ProBAM Project name: android_vendor_cm
-  .codexc - update gapps and update to v1.2.2
-  .Ricardo Cerqueira - selinuxrelabel: Remove attempts to relabel /system
-  .Dan Pasanen - add crpalmer for droid dna
-  .Michael Bestas - Fix Dialog Mobile Broadband MMS APN
-  .mcampbellsmith - Recheck /data for selinux labeling
-  .introkun - Fix internet APN for Life:) provider.
-  .Brinly Taylor - cm: add Samsung Galaxy Premier (GT-I9260) maintainer
-  .Abhisek Devkota - Reorder FarEast APN
-  .Veeti Paananen - Port: Don't show phone unlock targets for devices without voice (2/2)
-  .broodplank - Add Internet/MMS APNS for Tesco Ireland (TMI)
-  .Steven Luo - common_mini_tablet_wifionly.mk: don't try to install removed BlueZ config file
-  .codexc - cleanup
-  .codexc - update to v1.2.1
-  .codexc - Preserve Xposed Framework Files
-  .codexc - update change logs
+AOSB KitKat 1.2.4
 
-ProBAM Project name: android_packages_apps_Camera2
-  .Steve Kondik - camera: ZSL and focus fixes
-  .Lars Greiss - camera2: set focusmode default always to auto
-  .Emilian Peev - Camera: Overrides the focus mode for ZSL
-  .Vijay kumar Tumati - Camera: Avoid animating cature with decoded jpeg in long shot
-  .Lars Greiss - camera2: remove fine/normal/superfine jpegquality and use always int
-  .Lars Greiss - camera2: enable ISO mode settings to new UI
-  .Lars Greiss - camera2: enable focusmode settings UI
-  .Lars Greiss - Camera2: fix warnings
-  .Lars Greiss - Camera2: set default video quality back to 5 and code style cleanup
-  .Muhammed Nazim - TrueView Returns!
-  .Pawit Pornkitprasan - Camera: don't display picture size unless supported
-  .Lars Greiss - Camera2: seperate color effect settings camera and video
-  .Lars Greiss - Camera: enable jpeg quality setting and add video jpeg quality
-  .Michael Bestas - Camera: Add red-eye flash mode support
-  .Lars Greiss - camera2: fix scene mode crash
-  .codeworkx - Add Samsung camcorder mode
-  .maxwen - camera: added needsEarlyVideoSize
-  .Lars Greiss - camera2: update to new 4.4 KitKat UI
-  .Lars Greiss - camera2: add proper lable for screen capture on video mode
-  .Lars Greiss - camera2: follow new 4.4 UI guidelines
-  .Lars Greiss - Camera: finish Settings in new google style
-  .Lars Greiss - Camera2: move custom strings into slim files
-  .Lars Greiss - Camera2: enable color effects Settings in UI
-  .Pascal Pollet - Camera: Add a GPS indicator
-  .Lars Greiss - Camera: add Smart capture
-  .Lars Greiss - Camera2: roll back UI menu changes from CAF
-  .Lars Greiss - fix aapt warnings + correct strings.xml
-  .Pawit Pornkitprasan - Camera: fix preview for landscape devices
-  .Pawit Pornkitprasan - Camera: revert CodeAurora's panorama angle handling
-  .Lars Greiss - Camera2: Preview needs to be stopped when changing resolution
-  .Lars Greiss - Camera2: check for video size available
-  .Pawit Pornkitprasan - Camera2: enable antibanding by default
-  .Pawit Pornkitprasan - Camera: fix panorama preview on older devices
-  .Steve Kondik - camera: Support for HTC's HDR mode
-  .Steve Kondik - camera: Disable wavelet denoise by default
-  .Jorge Ruesga - Camera: Fix CameraRootView layout size on tablets
-  .Lars Greiss - camera: Add all resolutions, focus modes, scene modes, and color effects.
-  .Steve Kondik - camera: Remove the luma-adaptation seekbar
-  .Lars Greiss - camera: Cleanup and compatibility fixes
-  .Lars Greiss - Revert "Camera: Propagate power mode selection from UI to lower layers."
+Merge Lastes CM Changes
+Settings: Custom CRT Animation
+Settings: enable/disable wifi name from notification drawer
+Settings: Enable AppOps
+Settings: add development animation transition mode 0.75 and 0.25
+Settings: User-selectable camera click sound
+Settings: Mobile Network Battery Saver Mode
+Settings: Configurable up to user (LTE or 4G)
+Settings: Don't set a null alias before unpairing
+Settings: Advanced BatteryBar
+Settings: New Navigation bar/ring
+Settings: Add text plain battery style
+Settings: fix led pulsespeedoff disable behaviour
+Frameworks: Delete media tests
+Frameworks: speed up statubar/notification drawer
+Frameworks: squash of leak & race fixes
+Frameworks: Facebook Sync Dirty Hack
+Frameworks: Add CPU boosting hooks
+Frameworks: Hot reboot (Quick)
+Frameworks: show more info in boot dialog
+AOKP: Custom Navigation Ring
+AOKP: Custom Navigation Bar
+HALO: make windows move able and scale able
+Gallery: Storage configuration options
+Remove old NavigationBar/Ring
+Dialer: Fix Dialpad Text Color when PiB is enabled.
+Dialer: restore full compatibility with theme chooser
+Dialer: DarkUi update
+Dialer: Goodbye blue dialpad ,Consistent white dialer
+tile: LTE toggle support
+add screen record to power menu
+screenshot: quick delete action
+Fix: Lockscreen Blur Rotation
+multiwindow: Fix NullPointerException
+Fix multi-user issues
+SystemUI: Allow theming battery via theme chooser
+too many translations was added
+hlte: use samsung's gps libloc api.
+hlte: Update adreno libraries
+m7 : Update graphics libraries﻿
+Add new APN 
 
-ProBAM Project name: android_packages_services_Telephony
-  .kroz - TRDS:[Telephony] Dark Dialer (2/2)
-  .Lorenzo M - Telephony: fix LT translations
-  .Frant1c - Telephony: LT translations
-  .Marco Brohet - Telephony: NL translations
 
-ProBAM Project name: android_packages_providers_MediaProvider
-  .blk_jack - MediaProvider: MediaScanner behavior on boot (2/3)
+AOSB KitKat 1.2.3
 
-ProBAM Project name: android_packages_inputmethods_LatinIME
-  .kroz - TRDS: Darker Keyboard
+Merge Lastes CM Changes
+base: mutliwindow: notify split view if layout changed
+base: improve dialogs and menu popups
+base: HALO notification should open in floating window mode
+Settings: lock screen camera widget configurable
+Settings: notification drawer background
+Settings: TRDS some tweaks and fixes
+Settings: Remove ZRAM settings
+Settings: new sound settings
+Settings: Stylus gestures features
+Lockscreen: Make the lock screen camera widget configurable
+Lockscreen: LockScreen Notifications by AOSPAL
+Lockscreen: See through
+Lockscreen: Lockscreen Blur
+Notification drawer: full swipe to switch detection
+Advanced reboot enabled by default
+Statusbar: double-tap to sleep
+Gallery: Darker Gallery
+Gallery: Optimized images
+Camera:  Darker Camera
+Camera:  White panorama ui
+Camera:  bring back support for Samsung HDR format
+phone:   Add option for setting device phone number
+Mms: Mms Bubbles
+Mms: Dark Mms
+Mms: Breathing SMS Notification
+Sound: Control Faux123′s Sound Control Kernel Modules
+Sound: Revamp DSP Manager
+Support note3 family
+Improve translations for all packages
+AOSB Full Dutch Translations
+AOSB updater was fixed
 
-ProBAM Project name: android_packages_apps_PerformanceControl
-  .ale8530 - Update IT Translation
 
-ProBAM Project name: android_packages_apps_InCallUI
-  .kroz - TRDS: Dark InCallUI
+AOSB KitKat 1.2.2
 
-ProBAM Project name: android_packages_apps_DeskClock
-  .Ricardo Cerqueira - Dedupe NL xlation
-  .Frant1c - DeskClock: LT translations
-  .Marco Brohet - DeskClock: NL translations
+Merge Lastes CM Changes
+Update Gapps
+Advanced reboot enabled by default
+Statusbar: double-tap to sleep
+Keyboard: fix finger gestures
+xposed: Fix Density DPI in PerApp Settings
+Settings: Fix for missing notification volume slider in Volume panel.
+AppOps/Privacy Guard: Fix up misaligned switches.
+ActiveDisplay: new fixes !
+Settings: Notification drawer: full swipe to switch detection
+Settings: add omni performance control
+Settings: Density changer ported from SlimRoms
+Settings: AOSB in Black!
+Settings: MediaScanner behavior on boot
+multiwindow: Settings – enable halo or multiwindow
+multiwindow: HALO notification should open in floating window mode
+multiwindow: prevent multiwindow if halo enabled please multiwindow stay out if HALO there !!
+Frameworks: dark images adjustments
+Frameworks: Huge Update translation
+Frameworks: fix enabling/disabling BT from Quictsettings under second user
+Frameworks: Smooth background gradient
+Frameworks: possible buffer overrun and memory leak
+Frameworks: Merge in a lot of deep fixes and improvements
+Frameworks: Don’t show Netstats when there’s no traffic
+Kernel: Support exFAT
+TRDS: Improve AOSP Download/Upload animation
+TRDS: Dark DocumentsUI
+TRDS: Dark base theme
+TRDS: Dark dailer theme
+TRDS: Dark contacts theme
+TRDS: Dark settings theme
+Use PA Keyboard as default
+Fix FC when trying to adjust radio band via *#*#4636#*#* dialer code.
+selinuxrelabel: Remove attempts to relabel /system
+Fix Dialog Mobile Broadband MMS APN
+Revert Old LCD Density From init.d
+camera: ZSL and focus fixes
+camera: set focusmode default always to auto
+camera: Overrides the focus mode for ZSL
+camera: enable ISO mode settings to new UI
+camera: enable focusmode settings UI
+add Samsung Galaxy Premier (GT-I9260) maintainer
+t0lte: new sensors blob 1-3 -2014
+n7100: new sensors blob 1-3 -2014
 
-ProBAM Project name: android_packages_apps_Email
-  .Lorenzo M - Email: ES translations
 
-ProBAM Project name: android_packages_apps_BluetoothExt
-  .Frant1c - BluetoothExt: LT translations
+AOSB KitKat 1.2.1
 
-ProBAM Project name: android_packages_apps_ContactsCommon
-  .kroz - TRDS:[ContactsCommon] Dark Contacts (2/2)
+Merge lasts CM changes
+MultiWindow credit and authored by xplodwild!
+implement App sidebar!! credit 0xD34D
+Add network usage stats to status bar
+Status Bar settings
+CM Screen Security settings
+Screenshot delete credit cristianomatos
+OMNI: Add a key combo to start/stop video recording – usage: power + vol up
+Improve scrolling cache
+Speed up orientation rotation
+increase touch sensitivity
+Advanced low battery indicator options
+Move to TheMuppets Source
+Support Chinese Languages
+Xposed: Immerseme Mod
+Xposed: Intelli3G – 2G/3G Toggle and battery saver
+Xposed: Update App Settings (Per app DPI) v1.7.1
+camera update-to-date but still buggy a bit on note2 :(
+camera: Preview needs to be stopped when changing resolution
+Camera: Fix panorama preview on older devices
+camera: TrueView
+camera: Fix Smart Capture label display
+camera: Add ZSL support for Samsung/Qualcomm cameras
+camera: don’t display picture size unless supported
+camera: Add Samsung camcorder mode
+camera: camera quick fix credit xda
+mms: ios features :p
+mms: Add quick emoji button next to text input
+mms: Emoji and Smiley support
+bluetooth: Revert “v1.2 Bluetooth changes”
+bluetooth: Allow sending apk files to remote device
+bluetooth: Changes for LPP and extended LE scan
+bluetooth Reduce Obex MTU size for A2DP or SCO concurrency
+bluetooth: HID: Add support for HID Device Role
+SAM Kernel: smdk4412: Notification LED controls
+SAM Kernel: Update WiFi drivers from 1.61.47 –> 1.61.58
+SAM Kernel: Boeffla Sound support
+N7100: Open source sensors – sensors fixed :)
+t0lte: remove initial setDelay from sensors
+backup current xposed files when dirty flash
 
-ProBAM Project name: android_packages_apps_Launcher3
-  .elektroschmock - Launcher3: Add AOSP dummy strings to reduce aapt warnings
-  .choldimir - Launcher3: ES translations
-  .jereksel - Launcher3: PL translations
+ 
 
-ProBAM Project name: android_packages_apps_Contacts
-  .kroz - TRDS:[Contacts] Dark Contacts (1/2)
+AOSB KitKat 1.2.0
 
-ProBAM Project name: android_packages_apps_Gallery2
-  .Gustavo - Gallery2: PT-BR Translations
+Merge lasts CM changes
+enable SElinux as Permissive by default
+Add su support and upadte to prebuilt su v1.86
+update AOSB gapps and bootanitmation
+add Active display
+AD: Display Time out
+AD: Turn Off Display
+AD: Threshold to proximity
+AD: Sort notifications by newest to oldest
+AD: HUGE Fixes
+enable developer options by default
+Show DSPManager in sound settings
+add PropModder
+add halo master switch
+add Navigation bar with custom dimensions
+Add RAM bar with custom colors
+Add Configurable init.d
+camera: Merge tag ‘android-4.4.2_r1′ into HEAD
+camera: Add options to better control video preview size
+camera: Add Samsung camcorder mode
+camera: camera: added needsEarlyVideoSize
+camera: Merge remote-tracking branch ‘aosp/kitkat-mr1-release’ into HEAD
+camera: Port additional resolutions from cm-10.2
+Mms: Option to delay SMS Sending
+Mms: Remove aapt warnings in DE
+Mms: fix quick message layout on 320dp
+systemui: fix circle battery percentage alignment for low dpi devices
+systemui: Fix hidden battery icon style
+Browser: update translations
+Browser: disable incognito mode
+Added smiles without noise to AOSP keyboard
+AudioFX: Add center frequency param to bassboost
+AudioEffect: Add a stereo widener effect
+Gallery2: Use correct editor ID for sharpness filter
+m7vzw: update blobs from 2.10.605.1 RUU
+dlx: Update shared libraries from Verizon’s 4.2.2 release
+MANTA: Update proprietary files to 4.4.2
+jf: update bcmdhd firmware to 1.88.51 from gpe 4.4
+n7105: remove closed source blobs
+SamsungCDMAv6RIL: update to latest RIL
 
-ProBAM Project name: android_packages_apps_Dialer
-  .kroz - TRDS:[Dialer] Dark Dialer (1/2)
-  .codexc - [2/2] Dialer: Add a non-intrusive dialoger for incoming calls
-  .wszfer - fix NullPointerException
+ 
 
-ProBAM Project name: android_packages_apps_CMFileManager
-  .jereksel - CMFileManager: PL translations
+AOSB KitKat 1.0.1
 
-ProBAM Project name: android_packages_apps_Torch
-  .Lorenzo M - Torch: ES translations
-  .jereksel - Torch: PL translations
-
-ProBAM Project name: android_frameworks_av
-  .Steve Kondik - Revert "Camera: Rotate display if app doesn't use setDisplayOrientation."
-  .Steve Kondik - av: Additional ifdefs for QCOM DirectTrack
-  .Praveen Chavan - stagefright: provide a custom key to prefer adaptive playback
-  .Shiv Maliyappanahalli - libmedia: Add support for LCH tones
-  .Steve Kondik - DTS Postpro integration (for frameworks/av)
-  .Haynes Mathew George - audioflinger: Fix for a deadlock
-  .Deva Ramasubramanian - libstagefright: Add HEVC as a recognized MIME in ExtendedExtractor
-
-ProBAM Project name: android_frameworks_native
-  .Ricardo Cerqueira - surfaceflinger: Apply bugfixes to the correct hwc code paths
-  .Tom Briden - surfaceflinger: don't handle EVENT_ORIENTATION when !HWC_DEVICE_API_VERSION_1_0
-  .Lars Greiss - [3-4/4] TRDS 3.0 Native theme engine preparation
-
-ProBAM Project name: android_frameworks_opt_telephony
-  .Shareef Ali - SamsungQualcommRil: reversed engineered implimentation of dial() from touchwiz
-  .Shareef Ali - SamsungQualcommRIL: Add more validation of Signal Strength
-
-ProBAM Project name: proprietary_vendor_samsung
-  .Hashcode - hltevzw: fix to the fix for the sensor fix
-  .Hashcode - hltevzw: fix libsensirion
-  .Arne Coucheron - serrano: Remove unused blobs and update vidc firmware
-  .slayher - Update ril blobs.
-  .Hashcode - hltevzw: blobs
-  .Arne Coucheron - serrano: Rename camera driver
-  .Shareef Ali - h: fix derp.
-  .Steve Kondik - hltexx: Fix makefile
-  .Steve Kondik - hlte: Blobs
-  .Shareef Ali - h: fixup sensor libs
-  .Brian Beloshapka - epicmtd: Switch to opensource libGLES_android.so.
-  .Brian Beloshapka - epicmtd: Remove proprietary lpm binaries.
-  .Steve Kondik - hlte: Remove libxml2
-  .Steve Kondik - hltexx: Sensors
-  .Shareef Ali - remove dsstores
-  .Shareef Ali - h: use working gps lib from arcee
-  .Shareef Ali - h: update props
-  .Steve Kondik - hlte: Sexy hexy
-  .slayher - h add tmo variant files
-  .Shareef Ali - h: add bluetooth workaround
-  .Shareef Ali - h: hltespr
-  .Steve Kondik - hlte: Add blobs
-
-ProBAM Project name: themes-platform-vendor-tmobile-apps-ThemeChooser
-  .Lorenzo M - ThemeChooser: ES translations
-  .Frant1c - ThemeChooser: LT translations
-
-ProBAM Project name: proprietary_vendor_lge
-  .Brint E. Kriebel - hammerhead: Add APKs as PRODUCT_PACKAGES
+Merge tag ‘android-4.4.2_r1′ into HEAD
+Kernel: CM Stock
+Framework: allow disabling non intrusive incall ui
+Framework: Fit HALO in CyanogenMod custom battery implementation
+Framework: HALO
+PS1: Initial port
+Fix conficts with notification LED
+Fix derp
+Major derp
+HALO Mods
+Rebase
+Fix blackist
+PS2: Fix build
+PS3: Fix bubble sometimes doesn’t respond on new notification
+PS4: Align halo icon
+Settings: Builtin Xposed Framework
+Settings: Per App Settings (Change DPI Setting)
+InCall: Add a non-intrusive dialog for incoming calls
+Dialer: Add a non-intrusive dialoger for incoming calls
+Telephony: allow disabling non intrusive incall ui
+Update PA Gapps:
+Chrome Browser (replaces AOSP Browser) | Cloud Print | Gmail | Google+ | Google Calendar (replaces AOSP Calendar) | Google Drive | Google Earth | Google Keep | Google Keyboard (replaces AOSP Keyboard) | Google Play Books | Google Play Games | Google Play Newsstand | Google Play Music | Google Play Movies | Google Play services | Google Text-to-Speech | Google Search | Google Wallet | Hangouts (replaces AOSP SMS App) | Maps | Quickoffice | Sound Search for Google Play | Street View on Google Maps | TalkBack | YouTube
+Custom Hardware Button Mapping Support
+Note2 Fix Sensors
+Camera Improvements
+Support More APN values
+Fix Blobs – xLarge Commit
+New Blobs from S4 Google Edition by our team member jumoog
+Improve Sensors
+OMNI: Center frequency for Bass Boost
+OMNI: Stereo widening
+Update AOSB New Updater/Stats

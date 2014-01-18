@@ -187,21 +187,22 @@ PRODUCT_PACKAGES += \
     procrank \
     Superuser \
     su \
-    ProBamStats \
-    ProbamUpdater
+    ProBamStats
 
 ############### Add PROBAM GAPPS
 
 # copy gapps
-PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/gapps,system)
+#PRODUCT_COPY_FILES += \
+#	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/gapps,system)
 
 ############### Add PROBAM GAPPS
 
 # ProBAM Updater and Xposed
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/appsetting.apk:system/app/appsetting.apk \
-    vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk
+    vendor/cm/proprietary/xposed_installer.apk:system/app/xposed_installer.apk \
+    vendor/cm/proprietary/AosbOTA.apk:system/app/AosbOTA.apk
+
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
