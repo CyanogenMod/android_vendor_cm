@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     CMFota \
     DashClock \
     HALO \
+    OmniGears \
     WhisperPush
 
 # CM Hardware Abstraction Framework
