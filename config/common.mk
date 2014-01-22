@@ -148,7 +148,10 @@ PRODUCT_PACKAGES += \
     CMFota \
     DashClock \
     HALO \
-    OmniGears \
+    smoke \
+    blackout \
+    appsetting \
+    xposed_installer \
     WhisperPush
 
 # CM Hardware Abstraction Framework
