@@ -55,6 +55,11 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
+# Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
@@ -297,9 +302,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 # Add PROBAM version
-PROBAM_VERSION_MAJOR = 1.2.5
+PROBAM_VERSION_MAJOR = 1.2.6
 PROBAM_VERSION_MINOR = stable
-PROBAM_GOO_VERSION = 125
+PROBAM_GOO_VERSION = 126
 VERSION := $(PROBAM_VERSION_MAJOR)_$(PROBAM_VERSION_MINOR)
 PROBAM_VERSION := $(VERSION)_$(shell date +%Y%m%d-%H%M%S)
 
