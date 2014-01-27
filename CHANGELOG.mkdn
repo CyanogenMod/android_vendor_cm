@@ -1,3 +1,53 @@
+AOSB KitKat 1.2.6
+
+Merge CM lasts Changes
+Gesture Anywhere
+Screen Recording in power menu
+Screen Recorder: add ability to record audio from mic
+abbility to connect facebook contacts into contacts app
+Telo Radio!! (option to customize mobile data during specific events – settings)﻿
+PowerSaver CPU :: special port !
+PowerSaverManager :: special port !
+Custom Carrier Label
+status bar: Add center clock
+status bar: AM/PM Style Settings
+DarkUI auto detect light minor fixes
+Bluetooth major fixes
+Fix ScreenRecorder FC
+USB debugging minor fix for toggling
+Dialer: Add to blacklist
+Dialer: Add Dialer suggestions and reverse lookup
+Dialer: fix chinese exchange
+WiFi: Add forget all networks
+Adds ability to answer call with hardware HOME button
+Disable proximity sensor when screen goes on AD PocketMode
+AOKP custom system animations 
+Quicktile row option:set 3,4,5 tiles per row 
+Quick Settings Fixes
+Quick Settings flip preference
+Quick Settings flip animation on clicking a tile
+Slim IME options
+Settings: instant led test
+Settings: Add System App Remover
+Settings: Arrange some features
+Settings: Move RamBar To Interface
+Settings: Move Xposed To Interface
+Reimplement: See through :: merge new fixes
+Reimplement: Lockscreen Blur :: merge new fixes
+Reimplement: LS Notifications :: merge new fixes
+LS Notifications: Fix Pocket mode not works on some devices
+Quiet Hours: Allow disabling phone ringer
+Fix crash when opening privacy settings on tablets.
+Add option to always show battery status on lockscreen
+Camera button HW support 
+Allow modification of the camera widget option on insecure lock screens
+Create AOSB Dialog to be used for boot message dialog
+IME switcher notification - thanks cm
+slims fullscreen disable on landscape
+slims force autorotation on IME
+aosb keep check for halo status with multiwindow
+New Translations on all packages﻿
+
 AOSB KitKat 1.2.5
 
 Merge CM lasts Changes
