@@ -75,11 +75,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/etc/cron,system/etc/cron)
 
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/su/daemonsu:system/xbin/daemonsu \
-    vendor/cm/prebuilt/common/su/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-
-
 # Configurable
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
@@ -187,9 +182,15 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    Superuser \
-    su \
     ProBamStats
+
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/su/su:system/xbin/su \
+    vendor/cm/prebuilt/common/su/daemonsu:system/xbin/daemonsu \
+    vendor/cm/prebuilt/common/su/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/cm/prebuilt/common/su/install-recovery.sh:system/etc/install-recovery.sh \
+    vendor/cm/prebuilt/common/su/Superuser.apk:system/app/Superuser.apk \
+    vendor/cm/prebuilt/common/su/.installed_su_daemon:system/etc/.installed_su_daemon
 
 ############### Add PROBAM GAPPS
 
