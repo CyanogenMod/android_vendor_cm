@@ -182,7 +182,8 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    ProBamStats
+    ProBamStats \
+    OmniSwitch
 
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/su/su:system/xbin/su \
