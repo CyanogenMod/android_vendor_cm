@@ -674,16 +674,17 @@
   <apn carrier="EHRPD Tethering" mcc="311" mnc="230" apn="tethering.cs4glte.com" type="tethering" user="" password="" mmsc="http://pix.cspire.com/servlets/mms" mmsproxy = "66.175.144.91" mmsport = "80" protocol="IP" roaming_protocol="IP" bearer="13" />
   <apn carrier="GCI Data" mcc="311" mnc="370" apn="web.gci" type="default,supl" />
   <apn carrier="GCI MMS" mcc="311" mnc="370" apn="mms.gci" mmsproxy="209.4.229.92" mmsport="9201" mmsc="http://mmsc.gci.csky.us:6672" type="mms" />
-  <apn carrier="LTE - Verizon Internet" mcc="311" mnc="480" apn="VZWINTERNET" type="default,dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+  <apn carrier="LTE - Verizon Internet" mcc="311" mnc="480" apn="VZWINTERNET" type="default, mms,dun, stdhipri, supl" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - Verizon FOTA" mcc="311" mnc="480" apn="VZWADMIN" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - Verizon IMS" mcc="311" mnc="480" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - Verizon CBS" mcc="311" mnc="480" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - Verizon SUPL" mcc="311" mnc="480" apn="VZW800" type="supl" protocol="IPV4V6" bearer="14" />
-  <apn carrier="EHRPD - Verizon Internet" mcc="311" mnc="480" apn="VZWINTERNET" type="default,dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13"  />
+  <apn carrier="EHRPD - Verizon Internet" mcc="311" mnc="480" apn="VZWINTERNET" type="default, mms,dun, stdhipri, supl" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13"  />
   <apn carrier="EHRPD - Verizon FOTA"  mcc="311" mnc="480" apn="VZWADMIN" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - Verizon IMS" mcc="311" mnc="480" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - Verizon CBS" mcc="311" mnc="480" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - Verizon SUPL" mcc="311" mnc="480" apn="VZW800" type="supl" protocol="IPV4V6" bearer="13" />
+  <apn carrier="Verizon CDMA HRPD" mcc="311" mnc="480" apn="CdmaNai" type="default,mms,hipri,dun,stdhipri,supl" protocol="IPV4V6" roaming_protocol="IPV4" />
   <apn carrier="Virgin Mobile US" mcc="311" mnc="490" apn="0" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" port="" type="mms" />
   <apn carrier="LTE - USCC INTERNET" mcc="311" mnc="580" apn="usccinternet" type="default,dun,mms,fota" mmsc="http://mmsc1.uscc.net/mmsc/MMS" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="MetroPCS DEFAULT" mcc="311" mnc="660" apn="internet.metropcs" user="" password="" type="default,hipri,admin,mms" authtype="0" mmsc="http://mms.metropcs.net:3128/mmsc" protocol="IP" roaming_protocol="IP" bearer="14" inactivity_timer="7080" />
