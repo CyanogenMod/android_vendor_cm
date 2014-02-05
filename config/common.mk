@@ -131,7 +131,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
-    libemoji
+    libemoji \
+    Screencast
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
