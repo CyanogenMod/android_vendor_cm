@@ -1,3 +1,111 @@
+AOSB KitKat 1.2.9
+
+AOSB Recent App iPhoney UI
+AOSB PowerSaverManager !
+Mutliwindow: Follow Recent UI Changes
+Settings: start the PowerSaver service if activated
+Telephony: Open source google dialer and more
+Dialer: lookup/nearby places, Google and OpenStreetMap
+InCall: full screen photo
+InCallUI: add decline and answer incoming call action on notifications
+Telephony: Incoming Call in Background
+DownloadProvider: remove launcher icon
+DownloadProvider: Add transfer speeds in notification
+Camera: Fix saturation, contrast, sharpness
+Camera: Powerkey shutter
+Camera: fix crash on screen off-on on preview screen
+Status bar: clock and date customization (center clock, am/pm)
+Fix icons overflowing status bar view in center clock and date layout
+SamsungServiceMode: add support for OEM API version 2
+Update missing google UI changes for 4.4
+MMS: Fix The slideshow can’t be shown in the message
+MMS: Resize the image in background
+Status bar clock and date customization
+LockBeforeUnlock the new way
+Settings: Add an option to reset custom user preferences
+Left handed navbar during landscape mode
+Settings LightSettingsDialog: update led on text change
+Bring back Camera widget option for tablets
+Show Navigation bar menu for every device now
+DisplaySettings: Add hardware-framework support for tap-to-wake
+OmniSwitch hide from launcher
+OmniSwitch: rambar cleanup and layout rework
+OmniSwitch: UI tweaks
+VoicePlus Enable app op to write SMS
+fix led Make sure to turn off led after pulse
+start the PowerSaver service if activated
+LockBeforeUnlock the new way
+Lockscreen Notifications: Custom Background color
+Lockscreen Notifications: try to fix occasionally SystemUI FC on boot
+Lockscreen Notifications: fix FC when an expanded notification
+Lockscreen Notifications: Add “Clear All drawables” for NavBar
+Lockscreen Notifications: Custom Background color
+Lockscreen Notifications: dismiss all button, improve animations
+QS: give animation love to network mode and wifi tiles
+
+AOSB KitKat 1.2.8
+
+Merge CM lasts Changes
+SystemUI: Keep force close on some devices when change languange
+YouTube: Fix glitch and some audio issues
+AOSB Exclusive Feature Custom SmoothProgressBar:
+Note3 : update to new kitkat bootloader
+early data connection fix
+Remove KeyguardTestActivity Hope this improved battery life
+AOKP Navigation bar menu in settings for all devices now﻿
+Quick Record tile
+AIO AOKP custom system animations
+AOKP Animation Control
+ListView Animation
+Keyboard Animation
+Scrolling Animation
+Add OmniSwitch to Setting
+DarkUI: fix search textfield
+DarkUI: fix number picker blue line and highlight
+Lockscreen Notifications: rewrite add notification logic
+Lockscreen Notifications: make dynamic width a device overlay setting
+Lockscreen Notifications: Show all notifications when waking device
+SoundPack: Audio Themes Settings
+SoundPack: Create SoundPack in SD Card if not exists
+SoundPack: Update AOSB Default SoundPack to iOS Pack
+Dialer: Fix chinese Dailer Crash
+Settings: Fix NL Crash
+Settings: Fix RU Crash
+Settings: Fix BR Crash
+Camera: Add Burst mode
+Camera: Add indicator icon for burst mode
+Camera2: Enable 10MP and nHD pictures modes
+Camera2: Set default video quality to the highest
+Camera2: New Storage configuration options
+Mms: There is no reason to use ugly Icons
+Mms: Display message type properly for MMS and SMS
+Mms: Fix the send button disappearance after selecting the forward recipient
+Mms: Update widget to fit kk
+Revert PowerSaverManager
+Revert center clock
+fix wifi not connecting, once the APN gets disabled state
+Add double tap sleep feature to secure lockscreens﻿
+
+AOSB KitKat 1.2.7
+
+Merge CM Changes
+Remove CM SU
+Settings: use chainfire SU App
+new system optimizations , should feel more speed
+Camera2: implement volume key zoom in video mode
+Camera2: implement exposure compensation settings in video mode
+Camera: separate settings for color effects
+Camera2: fix touch to foucs
+Add double tap sleep feature to secure lockscreens.
+fix appears black screen for a while
+chromium engine support uploading file in browser
+Added sahlnaskh arabic font
+Fix alarm wakelock not being released.
+Alarm: Add one more RTC alarm type for poweroff alarm.
+Perform NTP lookup at Mobile data connections
+TeloRadio: optimizations
+Arrange some features in settings
+
 AOSB KitKat 1.2.6
 
 Merge CM lasts Changes
