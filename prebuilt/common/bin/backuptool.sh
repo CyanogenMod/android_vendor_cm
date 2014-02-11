@@ -32,7 +32,7 @@ xposed_backup()
 # Restore Xposed Framework (bin/app_process)
 xposed_restore()
 {
-        if [ -f /tmp/backup/app_process ]
+        if [ -f /tmp/backupdir/app_process ]
                 then
                         mv /system/bin/app_process /system/bin/app_process.orig
                         cp /tmp/backupdir/app_process /system/bin/
