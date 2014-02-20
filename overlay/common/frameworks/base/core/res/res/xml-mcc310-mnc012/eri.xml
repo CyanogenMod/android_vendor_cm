@@ -22,7 +22,7 @@
     <CallPromptId Id="0" CallPromptText="CallPromptId0" />
     <CallPromptId Id="1" CallPromptText="CallPromptId1" />
     <CallPromptId Id="2" CallPromptText="CallPromptId2" />
-    <EriInfo RoamingIndicator="0" IconIndex="0" IconMode="0" EriText="" CallPromptId="0" AlertId="0" />
+    <EriInfo RoamingIndicator="0" IconIndex="1" IconMode="0" EriText="Verizon Wireless" CallPromptId="0" AlertId="0" />
     <EriInfo RoamingIndicator="1" IconIndex="1" IconMode="0" EriText="Verizon Wireless" CallPromptId="0" AlertId="0" />
     <EriInfo RoamingIndicator="2" IconIndex="2" IconMode="1" EriText="" CallPromptId="0" AlertId="0" />
     <EriInfo RoamingIndicator="64" IconIndex="1" IconMode="0" EriText="Verizon Wireless" CallPromptId="0" AlertId="0" />
