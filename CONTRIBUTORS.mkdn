@@ -23,7 +23,7 @@ Maintainers (CyanogenMod 11.0):
 * __HTC One (Sprint):__ kushdeck, toastcfh
 * __HTC One (Verizon):__ flyhalf205, mdmower
 * __HTC One S:__ intervigil, xkonni
-* __HTC One X:__ gorbi16, mdeejay, tbalden, Thömy
+* __HTC One X:__ gorbi16, mdeejay, tbalden, Thï¿½my
 * __HTC One X+:__ Lloir, tombriden
 * __HTC One XL:__ h8rift, intervigil
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
@@ -96,8 +96,12 @@ Maintainers (CyanogenMod 11.0):
 * __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codeworkx, codyf86
 * __Samsung Galaxy Tab 2 10.1" (GT-P51xx):__ codeworkx, codyf86
 * __Samsung Vibrant (SGH-T959):__ FaultException
+* __Sony Xperia Go (lotus):__ munjeni
+* __Sony Xperia P (nypon):__ percy_g2
+* __Sony Xperia Sola (pepper):__ munjeni
 * __Sony Xperia SP (huashan):__ jerpelea, Kali- (FreeXperia team), adfad666, uberlaggydarwin
 * __Sony Xperia T (mint):__ jerpelea, Kali- (FreeXperia team), codeworkx, cdesai, tilal6991
+* __Sony Xperia U (kumquat):__ DroidModderXtreme, Gava97 , Andrewasth (XperiaNovathor team), 95A31
 * __Sony Xperia V (tsubasa):__ jerpelea, Kali- (FreeXperia team), codeworkx, tilal6991, championswimmer
 * __Sony Xperia Z (yuga):__ jerpelea, Kali- (FreeXperia team), cdesai, codeworkx, championswimmer
 * __Sony Xperia ZL (odin):__ jerpelea, Kali- (FreeXperia team), championswimmer
@@ -121,13 +125,13 @@ Translators:
 * __Chinese (Simplified):__ Andrew Jiang, John Hsing, Engle Mars
 * __Chinese (Traditional):__ Li Chi Tung, Fu-Chun Hsu
 * __Czech:__ Ondrej Zima, Radovan Kepak, Pavel Kucera, Jozka Jozin, Jiri Silvarich, Vaclav Moucha
-* __Danish:__ Jacob Overgaard Madsen, Morten Jørgensen, Henning Nielsen Lund, Mikael Jepsen
+* __Danish:__ Jacob Overgaard Madsen, Morten Jï¿½rgensen, Henning Nielsen Lund, Mikael Jepsen
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Eddy Witkamp
 * __Finnish:__ Niko Koivu
-* __French:__ Delphin PETER, Eric Mourougandy, Léo Colombaro, Florent Imfloflo, Tanguy Pruvot, Matthias Bosc
-* __German:__ Kim Lê, Jacob Müller, Christoph Quiter, Markus Hoeber, Danny Baumann
+* __French:__ Delphin PETER, Eric Mourougandy, Lï¿½o Colombaro, Florent Imfloflo, Tanguy Pruvot, Matthias Bosc
+* __German:__ Kim Lï¿½, Jacob Mï¿½ller, Christoph Quiter, Markus Hoeber, Danny Baumann
 * __Greek:__ Michael Bestas, Vasilis Akritas
-* __Hungarian:__ Tamás Tóth, Dávid László, Dániel Buga
+* __Hungarian:__ Tamï¿½s Tï¿½th, Dï¿½vid Lï¿½szlï¿½, Dï¿½niel Buga
 * __Italian:__ Francesco Foresta, Mauro Bazzano
 * __Japanese:__ Takuo Kitame, Taichi Nishimura
 * __Norwegian:__ Odin Ugedal, Arne Coucheron
@@ -135,8 +139,8 @@ Translators:
 * __Portuguese (Brazilian):__ Gustavo Rosa, Pedro Carneiro, Emerson Pinter
 * __Russian:__ Pavel Volkov, Vladislav Koldobskiy, Vladimir Belkov
 * __Slovak:__ Dusan Kazik
-* __Spanish:__ Jorge Ruesga, Lorenzo M. Castaño
-* __Swedish:__ Simon Bäck, Ted Lundwall, Esa Laukkanen, Björn Lundén
+* __Spanish:__ Jorge Ruesga, Lorenzo M. Castaï¿½o
+* __Swedish:__ Simon Bï¿½ck, Ted Lundwall, Esa Laukkanen, Bjï¿½rn Lundï¿½n
 
 Graphics and Assets:
 --------------------
