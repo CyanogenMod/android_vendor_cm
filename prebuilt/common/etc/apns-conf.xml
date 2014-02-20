@@ -1138,6 +1138,41 @@
   <apn carrier="Softbank(desire)" mcc="440" mnc="20" apn="open.softbank.ne.jp" user="softbankX06HT" password="KfNSDrQQs2AtFQ9M" mmsc="http://mms/" mmsproxy="andmms.softbank.ne.jp" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Softbank(datasim)" mcc="440" mnc="20" apn="softbank" user="ai@softbank" password="softbank" type="default,supl" />
   <apn carrier="Softbank(internet)" mcc="420" mnc="20" apn="andglobal.softbank.ne.jp" user="andg001softbank" password="pumbbghkpgyysxa" mmsc="http://mms/" mmsproxy="andmms.softbank.ne.jp" mmsport="8080" type="default,mms" />
+  <apn carrier="au LTE NET" mcc="440" mnc="50" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="50" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="50" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="50" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="50" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="51" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="51" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="51" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="51" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="51" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="52" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="52" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="52" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="52" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="52" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="53" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="53" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="53" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="53" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="53" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="54" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="54" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="54" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="54" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="54" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="55" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="55" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="55" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="55" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="55" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="56" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="56" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="440" mnc="56" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="440" mnc="56" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="440" mnc="56" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="SKT3G" mcc="450" mnc="05" apn="web.sktelecom.com" mmsc="http://omms.nate.com:9082/oma_mms" mmsproxy="smart.nate.com" mmsport="9093" type="default,supl,mms" />
   <apn carrier="SK Telecom (Roaming)" mcc="450" mnc="05" apn="roaming.sktelecom.com" server="*" mmsc="vmms.nate.com" mmsport="8082" type="default,supl,mms" />
   <apn carrier="SKT LTE" mcc="450" mnc="05" apn="lte.sktelecom.com" mmsc="http//omms.nate.com:9082/oma_mms" mmsproxy="smart.nate.com" mmsport="9093" type="defaul,supl,mms" />
@@ -1196,15 +1231,40 @@
   <apn carrier="中国移动 (China Mobile) GPRS" mcc="460" mnc="07" apn="cmnet" type="default,supl" />
   <apn carrier="中国移动彩信 (China Mobile)" mcc="460" mnc="07" apn="cmwap" proxy="10.0.0.172" port="80" mmsc="http://mmsc.monternet.com" mmsproxy="10.0.0.172" mmsport="80" type="mms" />
   <apn carrier="FarEasTone" mcc="466" mnc="01" apn="internet" type="default,supl" />
+  <apn carrier="au LTE NET" mcc="466" mnc="01" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="01" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="01" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="01" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="01" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="遠傳電信(Far EasTone) (Fetnet01)" mcc="466" mnc="01" apn="fetnet01" proxy="210.241.199.199" port="80" type="default,supl" />
   <apn carrier="FarEasTone MMS" mcc="466" mnc="01" apn="fetnet01" mmsc="http://mms" mmsproxy="210.241.199.199" mmsport="9201" type="mms" />
+  <apn carrier="au LTE NET" mcc="466" mnc="05" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="05" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="05" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="05" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="05" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="88" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="88" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="88" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="88" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="88" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="KGT" mcc="466" mnc="88" apn="internet" type="default,supl" />
   <apn carrier="KGT MMS" mcc="466" mnc="88" apn="kgtmms" mmsc="http://mms.kgtmms.net.tw/mms/wapenc" mmsproxy="172.28.33.5" mmsport="8080" type="mms" />
+  <apn carrier="au LTE NET" mcc="466" mnc="89" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="89" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="89" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="89" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="89" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="震旦電信(AURORA) (MMS)" mcc="466" mnc="89" apn="aurorawap" mmsc="http://auroramms" mmsproxy="172.24.128.36" mmsport="8080" type="mms" />
   <apn carrier="震旦電信(AURORA) (Internet)" mcc="466" mnc="89" apn="auroraweb" type="default,supl" />
   <apn carrier="Vibo" mcc="466" mnc="89" apn="internet" type="default,supl" />
   <apn carrier="威寶電信(VIBO)" mcc="466" mnc="89" apn="vibo" mmsc="http://mms" mmsproxy="172.24.128.36" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Vibo" mcc="466" mnc="89" apn="vibo" mmsc="http://mms" mmsproxy="172.24.128.36" mmsport="8080" type="mms" />
+  <apn carrier="au LTE NET" mcc="466" mnc="92" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="92" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="92" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="92" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="92" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="中華電信(Chunghwa)" mcc="466" mnc="92" apn="emome" mmsc="http://mms.emome.net:8002" mmsproxy="10.1.1.1" mmsport="8080" type="default,supl,mms" />
   <apn carrier="CHT MMS" mcc="466" mnc="92" apn="emome" mmsc="http://mms.emome.net:8002" mmsproxy="10.1.1.1" mmsport="8080" type="mms" />
   <apn carrier="CHT" mcc="466" mnc="92" apn="internet" type="default,supl" />
@@ -1212,9 +1272,19 @@
   <apn carrier="Mobitai" mcc="466" mnc="93" apn="internet" user="gprs" password="gprs" type="default,supl" />
   <apn carrier="台灣大哥大(TW Mobile) (MMS)" mcc="466" mnc="93" apn="mms" mmsc="http://mms.catch.net.tw" mmsproxy="10.1.1.2" mmsport="80" type="mms" />
   <apn carrier="台灣大哥大(TW Mobile) (twm)" mcc="466" mnc="93" apn="twm" type="default,supl" />
+  <apn carrier="au LTE NET" mcc="466" mnc="97" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="97" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="97" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="97" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="97" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="Taiwan Mobile Internet" mcc="466" mnc="97" apn="internet" type="default,supl" />
   <apn carrier="Taiwan Mobile MMS" mcc="466" mnc="97" apn="mms" mmsc="http://mms.catch.net.tw" mmsproxy="10.1.1.2" mmsport="80" type="mms" />
   <apn carrier="Taiwan Mobile" mcc="466" mnc="97" apn="twm" type="default,supl" />
+  <apn carrier="au LTE NET" mcc="466" mnc="99" apn="uno.au-net.ne.jp" user="685840734641020@uno.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="99" apn="au.au-net.ne.jp" user="user@au.au-net.ne.jp" password="au" authtype="2" type="default,mms,supl,hipri" state="readonly" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="au CPA" mcc="466" mnc="99" type="default,mms,supl,hipri,dun" protocol="IPV4V6" />
+  <apn carrier="au LTE NET" mcc="466" mnc="99" apn="unitrg.au-net.ne.jp" user="X36yN3Dhe9UjPhzm@unitrg.au-net.ne.jp" password="KpyrR6BP" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
+  <apn carrier="au LTE NET for DATA" mcc="466" mnc="99" apn="autrg.au-net.ne.jp" user="user@autrg.au-net.ne.jp" password="au" authtype="2" type="dun" state="hidden" protocol="IPV4V6" />
   <apn carrier="TransAsia" mcc="466" mnc="99" apn="internet" type="default,supl" />
   <apn carrier="TransAsia MMS" mcc="466" mnc="99" apn="mms" mmsc="http://mms" mmsproxy="10.1.1.2" mmsport="80" type="mms" />
   <apn carrier="台灣大哥大(TW Mobile) (twm)" mcc="466" mnc="99" apn="twm" type="default,supl" />
