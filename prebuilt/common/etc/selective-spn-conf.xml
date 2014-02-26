@@ -1646,7 +1646,10 @@
   <spnOverride numeric="310520" spn="VeriSign" />
   <spnOverride numeric="20404"  spn="Verizon" />
   <spnOverride numeric="246081" spn="Verizon" />
+  <spnOverride numeric="310002" spn="Verizon" />
+  <spnOverride numeric="310003" spn="Verizon" />
   <spnOverride numeric="310004" spn="Verizon" />
+  <spnOverride numeric="310005" spn="Verizon" />
   <spnOverride numeric="310012" spn="Verizon" />
   <spnOverride numeric="311480" spn="Verizon" />
   <spnOverride numeric="310450" spn="Viaero" />
