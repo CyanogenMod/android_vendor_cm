@@ -8,7 +8,7 @@ $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 include vendor/cm/config/cm_audio.mk
 
 # Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
