@@ -1,6 +1,7 @@
 # T-Mobile theme engine
 PRODUCT_PACKAGES += \
        ThemeManager \
+       ThemesProvider \
        ThemeChooser \
        com.tmobile.themes
 
