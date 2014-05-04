@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable \
+    librs_jni \
     SoundRecorder
 
 PRODUCT_PACKAGES += \
