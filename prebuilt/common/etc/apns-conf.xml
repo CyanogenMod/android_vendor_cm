@@ -1163,8 +1163,8 @@
   <apn carrier="Oman Mobile" mcc="422" mnc="02" apn="wap" user="wap" password="wap" type="default,supl" />
   <apn carrier="Nawras" mcc="422" mnc="03" apn="isp.nawras.com.om" user="test" password="test" type="default,supl" />
   <apn carrier="Nawras MMS" mcc="422" mnc="03" apn="mms.nawras.com.om" user="test" password="test" proxy="10.128.240.19" port="8080" mmsc="http://10.128.240.16/servlets/mms" mmsproxy="10.128.240.19" mmsport="8080" type="mms" />
-  <apn carrier="Etisalat UAE" mcc="424" mnc="02" apn="etisalat.ae" type="default,supl" />
-  <apn carrier="Etisalat UAE MMS" mcc="424" mnc="02" apn="mms" user="mms" password="mms" mmsc="http://mms/servlets/mms" mmsproxy="10.12.0.30" mmsport="9201" type="mms" />
+  <apn carrier="Etisalat UAE" mcc="424" mnc="02" apn="etisalat.ae" type="default,supl" authtype="1" />
+  <apn carrier="Etisalat UAE MMS" mcc="424" mnc="02" apn="mms" user="mms" password="mms" mmsc="http://mms/servlets/mms" mmsproxy="10.12.0.32" mmsport="8080" type="mms" authtype="1" />
   <apn carrier="du" mcc="424" mnc="03" apn="du" mmsc="http://mms.du.ae" mmsproxy="10.19.18.4" mmsport="9201" type="default,supl,mms" />
   <apn carrier="3G Portal" mcc="425" mnc="01" apn="uwap.orange.co.il" port="8080" type="default,supl" />
   <apn carrier="MMS 3G" mcc="425" mnc="01" apn="uwap.orange.co.il" mmsc="http://192.168.220.15/servlets/mms" mmsport="8080" type="mms" />
@@ -1610,4 +1610,19 @@
   <apn carrier="Movistar PA" apn="internet.movistar.pa" user="movistarpa" password="movistarpa" type="default,supl"/>
   <apn carrier="Claro PA" apn="web.claro.com.pa" user="CLAROWEB" pass="CLAROWEB" type="default,supl" />
   <apn carrier="Digicel PA" apn="web.digicelpanama.com" type="default,supl"/>
+  <apn carrier="Enitel" apn="internet.ideasalo.ni" type="default,supl,dun" mcc="710" mnc="21" user="internet" password="internet" authtype="1" />
+  <apn carrier="Enitel MMS" mcc="710" mnc="21" apn="mms.indeasalo.ni" user="mms" password="mms" mmsproxy="10.6.32.2" mmsport="8080" mmsc="http://10.6.32.27/servlets/mms" authtype="1" type="mms" />
+  <apn carrier="Movistar" mcc="710" mnc="30" apn="internet.movistar.ni" user="movistarni" password="movistarni" authtype="1" type="default,supl,dun" />
+  <apn carrier="Movistar MMS" mcc="710" mnc="30" apn="mms.movistar.ni" user="movistarni" password="movistarni" mmsproxy="10.12.23.1" mmsport="80" mmsc="http://mms.movistar.ni" authtype="1" type="mms" />
+  <apn carrier="Movistar" mcc="710" mnc="300" apn="internet.movistar.ni" user="movistarni" password="movistarni" authtype="1" type="default,supl,dun" />
+  <apn carrier="Movistar MMS" mcc="710" mnc="300" apn="mms.movistar.ni" user="movistarni" password="movistarni" mmsproxy="10.12.23.1" mmsport="80" mmsc="http://mms.movistar.ni" authtype="1" type="mms" />
+  <apn carrier="Enitel" mcc="710" mnc="73" apn="internet.ideasalo.ni" user="internet" password="internet" authtype="1" type="default,supl,dun" />
+  <apn carrier="Enitel MMS" mcc="710" mnc="73" apn="mms.indeasalo.ni" user="mms" password="mms" mmsproxy="10.6.32.2" mmsport="8080" mmsc="http://10.6.32.27/servlets/mms" authtype="1" type="mms" />
+  <apn carrier="Enitel" mcc="710" mnc="730" apn="internet.ideasalo.ni" user="internet" password="internet" authtype="1" type="default,supl,dun" />
+  <apn carrier="Enitel MMS" mcc="710" mnc="730" apn="mms.indeasalo.ni" user="mms" password="mms" mmsproxy="10.6.32.2" mmsport="8080" mmsc="http://10.6.32.27/servlets/mms" authtype="1" type="mms" />
+  <apn carrier="Poste Mobile" mcc="222" mnc="10" apn="wap.postemobile.it" type="default,supl" />
+  <apn carrier="Poste Mobile MMS" mcc="222" mnc="10" apn="mms.postemobile.it" mmsc="http://mms.postemobile.it/servlets/mms" mmsproxy="10.128.224.10" mmsport="80" authtype="0" type="mms" />
+  <apn carrier="Trilogy Dominicana" mcc="370" mnc="04" apn="edge.viva.net.do" mmsproxy="192.168.16.10" mmsport="9401" user="viva" password="viva" type="default,supl,mms" />
+  <apn carrier="Sipgate" mcc="262" mnc="03" apn="sipgate" user="sipgate" password="sipgate" type="default,supl,mms" authtype="2" />
+  <apn carrier="Safaricom" mcc="639" mnc="02" apn="wap.safaricom.com" user="saf" password="data" mmsc="http://mms.gprs.safaricom.com" type="default,supl,mms" />
 </apns>
