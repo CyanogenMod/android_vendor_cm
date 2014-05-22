@@ -315,6 +315,19 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
+    ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
+        CM_SIGNED_WITH_DEV_CERTIFICATE := true
+    endif
+endif
+
+# update the recovery with system updates by default on signed builds
+ifeq ($(CM_SIGNED_WITH_DEV_CERTIFICATE),true)
+    PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=true
+else
+    PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
