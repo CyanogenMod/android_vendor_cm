@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMFileManager \
     LockClock \
-    CMUpdater \
     CMFota \
     CMAccount
 
@@ -267,6 +266,8 @@ ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
     ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
         CM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
     endif
+else
+    PRODUCT_PACKAGES += CMUpdater
 endif
 
 ifeq ($(CM_BUILDTYPE), RELEASE)
