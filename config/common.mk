@@ -206,26 +206,25 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+# Superuser
+PRODUCT_PACKAGES += \
+    Superuser \
+    su
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
+
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
-    Superuser \
-    su
+    procrank
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=1
-else
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
 
 endif
 
