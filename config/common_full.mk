@@ -21,7 +21,8 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     VisualizationWallpapers \
     PhotoTable \
-    SoundRecorder
+    SoundRecorder \
+    PhotoPhase
 
 PRODUCT_PACKAGES += \
     VideoEditor \
@@ -30,13 +31,6 @@ PRODUCT_PACKAGES += \
     libvideoeditor_osal \
     libvideoeditor_videofilters \
     libvideoeditorplayer
-
-# Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
-    libnamparser
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
