@@ -45,6 +45,9 @@
         <item>com.aurorasoftworks.quadrant.*BenchmarkExecutionActivity,2</item>
         <item>com.antutu.ABenchMark.*,2</item>
         <item>.*com.antutu.benchmark.*,2</item>
+
+        <!-- Hack for CTSHostJankUI issue -->
+        <item>com.android.cts.opengl.*primitive.GLPrimitiveActivity,0</item>
     </string-array>
 
 </resources>
