@@ -45,6 +45,8 @@
         <item>com.aurorasoftworks.quadrant.*BenchmarkExecutionActivity,2</item>
         <item>com.antutu.ABenchMark.*,2</item>
         <item>.*com.antutu.benchmark.*,2</item>
+
+        <item>com.android.cts.jank.opengl.CtsHostJankOpenGl,0</item>
     </string-array>
 
 </resources>
