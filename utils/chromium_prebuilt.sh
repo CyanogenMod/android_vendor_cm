@@ -18,17 +18,16 @@
 if [ $# -eq 1 ]; then
     TOP=$1
     DEVICE=$TARGET_DEVICE
-    TARGET_DIR=$OUT
 elif [ -n "$(gettop)" ]; then
     TOP=$(gettop)
     DEVICE=$(get_build_var TARGET_DEVICE)
-    TARGET_DIR=$(get_build_var OUT_DIR)/target/product/$DEVICE
 else
     echo "Please run envsetup.sh and lunch before running this script,"
     echo "or provide the build root directory as the first parameter."
     return 1
 fi
 
+TARGET_DIR=$OUT
 PREBUILT_DIR=$TOP/prebuilts/chromium/$DEVICE
 
 if [ -d $PREBUILT_DIR ]; then
@@ -53,32 +52,6 @@ echo "Generating Makefiles..."
 
 HASH=$(git --git-dir=$TOP/external/chromium/.git --work-tree=$TOP/external/chromium rev-parse --verify HEAD)
 echo $HASH > $PREBUILT_DIR/hash.txt
-
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/Android.mk
-# Copyright (C) 2014 The OmniROM Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-ifeq (\$(TARGET_DEVICE),__DEVICE__)
-ifeq (\$(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
-
-LOCAL_PATH := \$(call my-dir)
-
-include \$(call all-makefiles-under,\$(LOCAL_PATH))
-endif
-endif
-
-EOF
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/chromium_prebuilt.mk
 # Copyright (C) 2014 The OmniROM Project
