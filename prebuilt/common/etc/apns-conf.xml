@@ -20,6 +20,18 @@
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
 <apns version="8">
+  <apn carrier="LTE - SPRINT test ISP" mcc="001" mnc="01" apn="n.ispsn" mmsproxy="68.28.31.7" mmsc="http://mms.sprintpcs.com" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" type="default,mms" bearer="14"  />
+  <apn carrier="LTE - SPRINT test OTA" mcc="001" mnc="01" apn="otasn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="fota" bearer="14" />
+  <apn carrier="LTE - SPRINT test PAM" mcc="001" mnc="01" apn="pamsn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="dun" bearer="14" />
+  <apn carrier="LTE - SPRINT test ISP" mcc="001" mnc="010" apn="n.ispsn" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" type="default,mms" bearer="14" />
+  <apn carrier="LTE - SPRINT test OTA" mcc="001" mnc="010" apn="otasn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="fota" bearer="14" />
+  <apn carrier="LTE - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="dun" bearer="14" />
+  <apn carrier="EHRPD - SPRINT test ISP" mcc="001" mnc="01" apn="n.ispsn" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" type="default,mms" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test OTA" mcc="001" mnc="01" apn="otasn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="fota" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test PAM" mcc="001" mnc="01" apn="pamsn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="dun" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test ISP" mcc="001" mnc="010" apn="n.ispsn" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" type="default,mms" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test OTA" mcc="001" mnc="010" apn="otasn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="fota" bearer="13" />
+  <apn carrier="EHRPD - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" protocol="IPV4V6" roaming_protocol="IPV4V6" type="dun" bearer="13" />
   <apn carrier="Virgin Mobile US" mcc="200" mnc="053" apn="0" port="" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" type="mms" />
   <apn carrier="Cosmote GR" mcc="202" mnc="01" apn="Internet" type="default,supl" />
   <apn carrier="Cosmote GR MMS" mcc="202" mnc="01" apn="Mms" mmsc="195.167.65.220:8002" mmsproxy="10.10.10.20" mmsport="8080" type="mms" />
@@ -656,6 +668,8 @@
   <apn carrier="T-Mobile US LTE" mcc="310" mnc="260" apn="fast.t-mobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
   <apn carrier="T-Mobile US LTE IPv6" mcc="310" mnc="260" apn="fast.t-mobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" protocol="IPV6" />
   <apn carrier="Simple" mcc="310" mnc="260" apn="simple" mmsc="http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
+  <apn carrier="APN1 Virgin Internet LTE" numeric="310120" mcc="310" mnc="120" apn="n.vmu.ispsn" user="Sprint" server="" password="*" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mmsc.vmobl.com:8088/mms?type=null" type="default,supl,mms,fota,dun" bearer="14" />
+  <apn carrier="APN2 Virgin Internet EHRPD" numeric="310120" mcc="310" mnc="120" apn="n.vmu.ispsn" user="Sprint" server="" password="*" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mmsc.vmobl.com:8088/mms?type=null" type="default,supl,mms,fota,dun" bearer="13" />
   <apn carrier="StraightTalk T-Mobile" mcc="310" mnc="260" apn="wap.tracfone" port="8080" mmsc="http://mms.tracfone.com" type="default,supl,mms" />
   <apn carrier="T-Mobile US 270" mcc="310" mnc="270" apn="epc.tmobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
   <apn carrier="T-Mobile US 310" mcc="310" mnc="310" apn="epc.tmobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
