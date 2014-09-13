@@ -462,16 +462,22 @@
   <apn carrier="Heyah MMS" mcc="260" mnc="02" apn="heyahmms" user="heyah" password="heyah" mmsc="http:/mms.heyah.pl/servlets/mms" mmsproxy="213.158.194.057" mmsport="8080" type="mms" />
   <apn carrier="Mobilking MMS" mcc="260" mnc="02" apn="mmsMOBILKING" user="mobilking" password="mobilking" mmsc="http://mms.mobilking.pl/servlets/mms" mmsproxy="213.158.194.226" mmsport="8080" type="mms" />
   <apn carrier="Mobilking" mcc="260" mnc="02" apn="wapMOBILKING" user="mobilking" password="mobilking" type="default,supl" />
+  <apn carrier="T-Mobile PL" mcc="260" mnc="02" apn="internet" type="default,supl" />
+  <apn carrier="T-Mobile PL MMS" mcc="260" mnc="02" apn="mms" mmsc="http://mms/servlets/mms" mmsproxy="213.158.194.226" mmsport="8080" type="mms" />
   <apn carrier="ASTER" mcc="260" mnc="03" apn="aster.internet" user="internet" password="internet" type="default,supl" />
   <apn carrier="ASTER MMS" mcc="260" mnc="03" apn="aster.mms" user="mms" password="mms" mmsc="http://mms.aster.pl" mmsproxy="192.168.006.138" mmsport="8080" type="mms" />
   <apn carrier="Orange PL" mcc="260" mnc="03" apn="internet" user="internet" password="internet" type="default,supl" />
   <apn carrier="MMS Orange" mcc="260" mnc="03" apn="mms" user="mms" password="mms" mmsc="http://mms.orange.pl" mmsproxy="192.168.6.104" mmsport="8080" type="mms" />
+  <apn carrier="MMS njumobile" mcc="260" mnc="03" apn="mms" user="mms" password="mms" mmsc="http://mms.njumobile.pl" mmsproxy="192.168.6.104" mmsport="8080" type="mms" />
   <apn carrier="MNI" mcc="260" mnc="03" apn="mni.internet" user="mni.internet" password="mni.internet" type="default,supl" />
   <apn carrier="MNI MMS" mcc="260" mnc="03" apn="mni.mms" user="mni.mms" password="mni.mms" mmsc="http://mms.mni.pl/" mmsproxy="192.168.006.135" mmsport="8080" type="mms" />
   <apn carrier="Play" mcc="260" mnc="06" apn="internet" type="default,supl" />
   <apn carrier="Play MMS" mcc="260" mnc="06" apn="mms" mmsc="http://10.10.28.164/mms/wapenc" mmsproxy="10.10.25.5" mmsport="8080" type="mms" />
+  <apn carrier="Red Bull Mobile PL MMS" mcc="260" mnc="06" apn="mms" mmsc="http://10.10.28.164/mms/wapenc" mmsproxy="10.10.25.5" mmsport="8080" type="mms" />
+  <apn carrier="Lycamobile" mcc="260" mnc="09" apn="data.lycamobile.pl" user="lmpl" password="plus" type="default,supl" />
   <apn carrier="Cyfrowy Polsat" mcc="260" mnc="12" apn="internet.cyfrowypolsat.pl" type="default,supl" />
   <apn carrier="Cyfrowy Polsat MMS" mcc="260" mnc="12" apn="mms.cyfrowypolsat.pl" mmsc="http://mms.cyfrowypolsat.pl:8002/" mmsproxy="79.171.2.33" mmsport="8080" type="mms" />
+  <apn carrier="Aero2" mcc="260" mnc="17" apn="darmowy" type="default,supl" />
   <apn carrier="Telekom DE-MMS" mcc="262" mnc="01" apn="internet.t-mobile" mmsc="http://mms.t-mobile.de/servlets/mms" mmsproxy="172.028.023.131" mmsport="8008" type="mms" />
   <apn carrier="Telekom DE" mcc="262" mnc="01" apn="internet.telekom" user="tm" password="tm" server="*" type="default,supl" />
   <apn carrier="Vodafone DE-MMS" mcc="262" mnc="02" apn="event.vodafone.de" mmsc="http://139.7.24.1/servlets/mms" mmsproxy="139.7.29.17" mmsport="80" type="mms" />
