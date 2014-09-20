@@ -643,6 +643,7 @@
   <apn carrier="Verizon IMS" mcc="310" mnc="012" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" />
   <apn carrier="Verizon CBS" mcc="310" mnc="012" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" />
   <apn carrier="Cricket" mcc="310" mnc="16" apn="wap.mycricket.com" user="@mycricket.com" password="cricket" mmsc="http://mms.mycricket.com/servlets/mms" mmsproxy="" mmsport="" proxy="wap.mycricket.com" port="8080" authtype="2" type="*" />
+  <apn carrier="Bluegrass Cellular" mcc="310" mnc="020" apn="internet" user="%M@myblueworks.com" password="blue" mmsc="http://mms.iot1.com/bluegrass/mms.php" mmsproxy="66.255.55.23" mmsport="9201" type="default,mms" />
   <apn carrier="Cellular South" mcc="310" mnc="023" apn="internet" mmsc="http://pix.cellularsouth.com/servlets/mms" authtype="3" port="" mmsport="" type="mms" />
   <apn carrier="metropcs" mcc="310" mnc="027" apn="wap.metropcs.net" user="MDN@mymetropcs.com" password="metropcs" server="http://mms.metropcs.net/servlets/mmsc" mmsc="http://mms.metropcs.net/mmsc" mmsport="3128" type="default,supl,mms" />
   <apn carrier="MetroPCS LTE" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" server="" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" mmsproxy="" mmsport="" type="default,mms,supl" />
