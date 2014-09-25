@@ -230,8 +230,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 endif
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
-
 PRODUCT_VERSION_MAJOR = 11
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
@@ -342,3 +340,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+
+PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
