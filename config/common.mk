@@ -186,6 +186,14 @@ PRODUCT_PACKAGES += \
     sqlite3 \
     strace
 
+# Extra recovery tools in CM
+PRODUCT_PACKAGES += \
+    recovery_e2fsck \
+    recovery_mke2fs \
+    recovery_tune2fs \
+    mount.exfat_static \
+    minivold
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
