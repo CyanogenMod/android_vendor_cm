@@ -1756,4 +1756,6 @@
   <apn carrier="Movistar UY" mcc="748" mnc="07" apn="apnumt.movistar.com.uy" user="movistar" password="movistar" type="default,supl" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="Ooredoo TN" mcc="605" mnc="03" apn="internet.ooredoo.tn" type="default,supl" />
+  <apn carrier="Tunisie Télécom TN" mcc="605" mnc="02" apn="internet.tn" type="default,supl" />
 </apns>
