@@ -4,6 +4,54 @@ BASEDIR=`dirname $0`
 mkdir -p $BASEDIR/proprietary
 
 # Get Terminal Emulator for Android (we use a prebuilt so it can update from Play Store)
-curl -L -o $BASEDIR/proprietary/Term.apk -O -L https://jackpal.github.com/Android-Terminal-Emulator/downloads/Term.apk
+curl -L -o $BASEDIR/proprietary/Term.apk -O -L https://jackpal.github.io/Android-Terminal-Emulator/downloads/Term.apk
 unzip -o -d $BASEDIR/proprietary $BASEDIR/proprietary/Term.apk lib/*
+
+(cat << EOF) > $BASEDIR/proprietary/Android.mk
+LOCAL_PATH := \$(my-dir)
+
+ifneq (\$(filter arm mips x86,\$(TARGET_ARCH)),)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := AndroidTerm
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := Term.apk
+LOCAL_REQUIRED_MODULES := libjackpal-androidterm4
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := PRESIGNED
+include \$(BUILD_PREBUILT)
+
+ifeq (\$(TARGET_ARCH),arm)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libjackpal-androidterm4
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := lib/armeabi/\$(LOCAL_MODULE).so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include \$(BUILD_PREBUILT)
+endif
+
+ifeq (\$(TARGET_ARCH),mips)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libjackpal-androidterm4
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := lib/mips/\$(LOCAL_MODULE).so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include \$(BUILD_PREBUILT)
+endif
+
+ifeq (\$(TARGET_ARCH),x86)
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libjackpal-androidterm4
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := lib/x86/\$(LOCAL_MODULE).so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include \$(BUILD_PREBUILT)
+endif
+
+endif
+EOF
 
