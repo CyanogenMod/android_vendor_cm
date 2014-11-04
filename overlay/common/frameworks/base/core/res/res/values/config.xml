@@ -47,4 +47,7 @@
         <item>.*com.antutu.benchmark.*,2</item>
     </string-array>
 
+    <!-- Define the optional activity for the prelaunch check -->
+    <string name="config_prelaunchcheckactivity" translatable="false">com.nextbit.app/.ui.ConflictActivity</string>
+
 </resources>
