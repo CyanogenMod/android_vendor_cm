@@ -157,7 +157,7 @@ Translators:
 * __Malay:__ tanakwagu (tanakwagu)
 * __Norwegian Bokmal:__ Vegard Fladby (Allram), Sten Eikrem (Storesteinen)
 * __Persian:__ Ali Niki (alinik), Mehdi HosseinZade (Arshen) (Arshen-2014), Yaser Rajabi (yrajabi)
-* __Polish:__ Dawid (dawidohs), Kamil Jarosław (devloz1996), Michał Gątkowski (IreuN), Andrzej Ressel (jereksel), Michał Kamień (kamykowsky), lozohcum M (lozohcum), Tomasz Popielarczyk (popielarczyktomasz), Michał Jakubowski (revanmj)
+* __Polish:__ Dawid (dawidohs), Kamil Jarosław (devloz1996), Michał Gątkowski (IreuN), Andrzej Ressel (jereksel), Michał Kamień (kamykowsky), lozohcum M (lozohcum), Tomasz Popielarczyk (popielarczyktomasz), Michał Jakubowski (revanmj), Mateusz Godlewski (godlesplay)
 * __Portuguese:__ João Pedro Luís (joaopluis), Sergio Borges (sergioborges99), André Pinela (sheffzor), Tercio Carvalho (tercioc)
 * __Portuguese, Brazilian:__ Carlos Henrique Brendler Cabral (carloshbcabral), Gafanhotz (Gafanhotz), Gustavo Rosa (gustavogyn), Tercio Carvalho (tercioc)
 * __Romanian:__ apolodor (apolodor), azzureux (azzureux), Marian-Mina Mihai (bboylalu), mihaitaus (mihaitaus)
