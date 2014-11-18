@@ -221,11 +221,6 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank
 
-# Terminal Emulator
-PRODUCT_COPY_FILES +=  \
-    vendor/cm/proprietary/Term.apk:system/app/Term/Term.apk \
-    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
-
 endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
