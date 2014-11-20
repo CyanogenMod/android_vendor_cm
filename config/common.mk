@@ -153,7 +153,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMUpdater \
     CMAccount \
-    CMHome
+    CMHome \
+    BlissPapers
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
