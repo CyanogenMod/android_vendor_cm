@@ -177,6 +177,12 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace
+    
+# Extra tools
+PRODUCT_PACKAGES += \
+    vim \
+    zip \
+    unrar    
 
 # Openssh
 PRODUCT_PACKAGES += \
