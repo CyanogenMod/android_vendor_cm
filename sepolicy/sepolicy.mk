@@ -15,6 +15,8 @@ BOARD_SEPOLICY_UNION += \
     auditd.te \
     installd.te \
     netd.te \
+    qrngd.te \
+    sysinit.te \
     system.te \
     ueventd.te \
     vold.te \

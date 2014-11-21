@@ -1,0 +1,5 @@
+type qrngd, domain;
+type qrngd_exec, exec_type, file_type;
+init_daemon_domain(qrngd)
+
+allow qrngd hw_random_device:chr_file r_file_perms;
