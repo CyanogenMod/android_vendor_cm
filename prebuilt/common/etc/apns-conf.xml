@@ -858,6 +858,7 @@
   <apn carrier="IDEA MMS" mcc="404" mnc="04" apn="mmsc" mmsc="http://10.4.42.21:8002/" mmsproxy="10.4.42.15" mmsport="8080" type="mms" />
   <apn carrier="Vodafone IN MMS" mcc="404" mnc="05" apn="portalnmms" mmsc="http://mms1.live.vodafone.in/mms/" mmsproxy="10.10.1.100" mmsport="9401" type="mms" />
   <apn carrier="Vodafone IN" mcc="404" mnc="05" apn="www" type="default,supl" />
+  <apn carrier="AIRTEL MMS" mcc="404" mnc="06" apn="airtelmms.com" mmsc="http://100.1.201.171:10021/mmsc" mmsproxy="100.1.201.172" mmsport="8799" type="mms" />
   <apn carrier="IDEA" mcc="404" mnc="07" apn="internet" type="default,supl" />
   <apn carrier="IDEA MMS" mcc="404" mnc="07" apn="mmsc" mmsc="http://10.4.42.21:8002/" mmsproxy="10.4.42.15" mmsport="8080" type="mms" />
   <apn carrier="Reliance MMS" mcc="404" mnc="09" apn="rcommms" mmsc="http://mms.rcom.co.in/mms" mmsproxy="10.239.221.5" mmsport="8080" type="mms" />
@@ -957,6 +958,7 @@
   <apn carrier="BSNL MMS" mcc="404" mnc="59" apn="mmssouth.cellone.in" user="MSISDN" password="mmsc" mmsc="http://10.7.236.11:8514" mmsproxy="10.7.236.11" mmsport="8080" type="mms" />
   <apn carrier="Vodafone IN MMS" mcc="404" mnc="60" apn="portalnmms" mmsc="http://mms1.live.vodafone.in/mms/" mmsproxy="10.10.1.100" mmsport="9401" type="mms" />
   <apn carrier="Vodafone IN" mcc="404" mnc="60" apn="www" type="default,supl" />
+  <apn carrier="Airtel MMS" mcc="404" mnc="61" apn="airtelmms.com" mmsc="http://100.1.201.171:10021/mmsc" mmsproxy="100.001.201.172" mmsport="8799" type="mms" />
   <apn carrier="BSNL" mcc="404" mnc="62" apn="bsnlnet" user="MSISDN" password="MSISDN" type="default,supl" />
   <apn carrier="BSNL MMS" mcc="404" mnc="62" apn="mmssouth.cellone.in" user="MSISDN" password="mmsc" mmsc="http://10.7.236.11:8514" mmsproxy="10.7.236.11" mmsport="8080" type="mms" />
   <apn carrier="BSNL" mcc="404" mnc="64" apn="bsnlnet" user="MSISDN" password="MSISDN" type="default,supl" />
@@ -1155,6 +1157,8 @@
   <apn carrier="Aircel MMS" mcc="405" mnc="804" apn="aircelmms" mmsc="http://172.17.83.67//servlets/mms" mmsproxy="172.17.83.69" mmsport="8080" type="mms" />
   <apn carrier="Aircel" mcc="405" mnc="805" apn="aircelgprs" type="default,supl" />
   <apn carrier="Aircel MMS" mcc="405" mnc="805" apn="aircelmms" mmsc="http://172.17.83.67//servlets/mms" mmsproxy="172.17.83.69" mmsport="8080" type="mms" />
+  <apn carrier="Aircel" mcc="405" mnc="806" apn="aircelgprs" type="default,supl" />
+  <apn carrier="Aircel MMS" mcc="405" mnc="806" apn="aircelmms" mmsc="http://172.17.83.67//servlets/mms" mmsproxy="172.17.83.69" mmsport="8080" type="mms" />
   <apn carrier="Aircel" mcc="405" mnc="807" apn="aircelgprs" type="default,supl" />
   <apn carrier="Aircel MMS" mcc="405" mnc="807" apn="aircelmms" mmsc="http://172.17.83.67//servlets/mms" mmsproxy="172.17.83.69" mmsport="8080" type="mms" />
   <apn carrier="Aircel" mcc="405" mnc="808" apn="aircelgprs" type="default,supl" />
