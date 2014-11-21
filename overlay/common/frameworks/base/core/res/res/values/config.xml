@@ -36,6 +36,15 @@
     </string-array>
     -->
 
+    <!-- Show reboot/airplane  -->
+    <string-array trnslatable="false" name="config_globalActionsList">
+        <item>power</item>
+        <item>reboot</item>
+        <item>airplane</item>
+        <item>bugreport</item>
+        <item>users</item>
+    </string-array>
+
     <string name="config_mms_user_agent">CyanogenMod</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
