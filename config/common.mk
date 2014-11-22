@@ -220,9 +220,13 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
-# ViPER4ANDROID    
-    vendor/cm/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
-    vendor/cm/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so  
+# ViPER4ANDROID
+PRODUCT_COPY_FILES +=  \    
+    vendor/cm/prebuilt/viper/app/Viper4Android/viper4android.apk:system/app/Viper4Android/viper4android.apk
+
+# ViPER4ANDROID Driver
+PRODUCT_COPY_FILES +=  \   
+    vendor/cm/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so   
     
 # SuperSu Flasher
 PRODUCT_COPY_FILES += \
