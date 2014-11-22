@@ -221,16 +221,16 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
 # ViPER4ANDROID    
-    vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
-    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so  
+    vendor/cm/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
+    vendor/cm/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so  
     
 # SuperSu Flasher
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/bin/supersuflasher.sh:system/bin/supersuflasher.sh
+    vendor/cm/prebuilt/common/bin/supersuflasher.sh:system/bin/supersuflasher.sh
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip      
+    vendor/cm/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip      
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
