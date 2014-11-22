@@ -1,0 +1,4 @@
+ui_print("{x}...Flashing SuperUser...");
+package_extract_file("system/bin/supersuflasher.sh", "/tmp/supersuflasher.sh");
+set_metadata("/tmp/supersuflasher.sh", "uid", 0, "gid", 0, "mode", 0755);
+run_program("/tmp/supersuflasher.sh");
