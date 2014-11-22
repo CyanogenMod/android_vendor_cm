@@ -13,8 +13,10 @@ BOARD_SEPOLICY_UNION += \
     seapp_contexts \
     service_contexts \
     auditd.te \
+    init.te \
     installd.te \
     netd.te \
+    sysinit.te \
     system.te \
     ueventd.te \
     vold.te \
