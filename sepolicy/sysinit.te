@@ -1,0 +1,11 @@
+type sysinit, domain;
+type sysinit_exec, exec_type, file_type;
+
+init_daemon_domain(sysinit)
+
+#============= sysinit ==============
+allow sysinit devpts:chr_file { read write open ioctl getattr };
+allow sysinit shell_exec:file { read execute open };
+allow sysinit system_file:file { execute_no_trans };
+allow sysinit self:process setcurrent;
+
