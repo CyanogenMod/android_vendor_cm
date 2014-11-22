@@ -129,3 +129,4 @@ service sysinit /system/bin/sysinit
     user root
     oneshot
     disabled
+    seclabel u:r:sysinit:s0
