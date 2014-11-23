@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= cyanogenmod
 
-SUPERUSER_EMBEDDED := true
+SUPERUSER_EMBEDDED := false
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -221,12 +221,9 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
 # ViPER4ANDROID
-PRODUCT_COPY_FILES +=  \    
-    vendor/cm/prebuilt/viper/app/Viper4Android/viper4android.apk:system/app/Viper4Android/viper4android.apk
-
-# ViPER4ANDROID Driver
-PRODUCT_COPY_FILES +=  \   
-    vendor/cm/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so   
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/viper/viper4android.apk:system/app/Viper4Android/viper4android.apk \
+    vendor/cm/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so 
     
 # SuperSu Flasher
 PRODUCT_COPY_FILES += \
@@ -234,8 +231,8 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip      
-
+    vendor/cm/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip         
+    
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 else
