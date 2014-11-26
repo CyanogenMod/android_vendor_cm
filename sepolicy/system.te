@@ -1,1 +1,4 @@
 allow system_server wallpaper_file:file relabelto;
+
+# allow adb related properties to be set
+allow system_server shell_prop:property_service set;
