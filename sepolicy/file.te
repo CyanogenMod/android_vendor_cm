@@ -2,3 +2,5 @@
 allow file_type rootfs:filesystem associate;
 
 type auditd_log, file_type;
+
+type adbtcp_prop, property_type;
