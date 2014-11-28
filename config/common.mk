@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= cyanogenmod
 
-SUPERUSER_EMBEDDED := false
+SUPERUSER_EMBEDDED := ture
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -216,14 +216,6 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/viper/viper4android.apk:system/app/Viper4Android/viper4android.apk \
     vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so 
-    
-# SuperSu Flasher
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/bin/supersuflasher.sh:system/bin/supersuflasher.sh
-
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip         
     
 # HFM Files
 PRODUCT_COPY_FILES += \
