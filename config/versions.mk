@@ -28,7 +28,7 @@ endif
 ifdef BLISS_RELEASE
     BLISS_VERSION := "Blisspop-v"$(VERSION) 
 else
-    BLISS_VERSION := "$(TARGET_PRODUCT)-Lollipop-$(BLISS_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+    BLISS_VERSION := "BlissPop-v$(VERSION)-$(BLISS_BUILD)-$(BLISS_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 
