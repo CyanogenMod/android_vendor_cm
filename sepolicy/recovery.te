@@ -6,3 +6,9 @@ allow recovery shell_prop:property_service set;
 # Recovery dialogs
 unix_socket_connect(recovery, vold, vold)
 allow recovery tmpfs:sock_file create_file_perms;
+
+# otasigcheck
+allow recovery system_data_file:file open;
+
+# Perf mode
+allow recovery recovery_prop:property_service set;
