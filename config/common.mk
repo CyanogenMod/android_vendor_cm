@@ -217,6 +217,11 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/viper/viper4android.apk:system/app/Viper4Android/viper4android.apk \
     vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so 
     
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon    
+    
 # HFM Files
 PRODUCT_COPY_FILES += \
 	vendor/bliss/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
