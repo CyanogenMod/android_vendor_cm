@@ -1,8 +1,28 @@
+type recoveryfs_data_file, file_type;
+type recovery_prop, property_type;
+
+recovery_only(`
+
 # Secure adb (setup_adbd)
 allow adbd adb_keys_file:dir search;
+allow recovery adb_keys_file:dir search;
 allow recovery adb_keys_file:file r_file_perms;
 allow recovery shell_prop:property_service set;
 
 # Recovery dialogs
 unix_socket_connect(recovery, vold, vold)
 allow recovery tmpfs:sock_file create_file_perms;
+
+# Read packages.xml
+allow recovery system_data_file:file r_file_perms;
+
+# Manage fstab
+allow recovery rootfs:dir { write add_name };
+allow recovery rootfs:file { write create };
+allow recovery recoveryfs_data_file:file create_file_perms;
+
+# Control properties
+allow recovery recovery_prop:property_service set;
+allow recovery default_prop:property_service set;
+
+')
