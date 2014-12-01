@@ -1,1 +1,2 @@
-genfscon fuseblk / u:object_r:sdcard_external:s0
+genfscon fuseblk    /           u:object_r:sdcard_external:s0
+genfscon rootfs     /etc/fstab  u:object_r:recovery_fstab:s0

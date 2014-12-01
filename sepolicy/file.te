@@ -2,3 +2,4 @@
 allow file_type rootfs:filesystem associate;
 
 type auditd_log, file_type;
+type recovery_fstab, fs_type;
