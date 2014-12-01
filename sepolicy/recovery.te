@@ -1,8 +1,22 @@
+recovery_only(`
+
 # Secure adb (setup_adbd)
 allow adbd adb_keys_file:dir search;
+allow recovery adb_keys_file:dir r_dir_perms;
 allow recovery adb_keys_file:file r_file_perms;
 allow recovery shell_prop:property_service set;
 
 # Recovery dialogs
 unix_socket_connect(recovery, vold, vold)
 allow recovery tmpfs:sock_file create_file_perms;
+
+# Read packages.xml
+allow recovery system_data_file:file r_file_perms;
+
+# Manage fstab
+allow recovery recovery_fstab:file create_file_perms;
+
+# Control properties
+allow recovery recovery_prop:property_service set;
+
+')
