@@ -31,12 +31,13 @@ else
     BLISS_VERSION := "BlissPop-v$(VERSION)-$(BLISS_BUILD)-$(BLISS_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
-BLISS_DISPLAY_VERSION := $(BLISS_VERSION)
+BLISS_DISPLAY_VERSION := $(VERSION)
+BLISS_DISPLAY_BUILDTYPE := $(BLISS_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(BLISS_VERSION) \
     ro.bliss.version=$(VERSION)-$(BLISS_BUILDTYPE)
     
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.bliss.display.version=$(BLISS_DISPLAY_VERSION)
-
+  ro.bliss.display.version=$(BLISS_DISPLAY_VERSION) \
+  ro.bliss.display.buildtype=$(BLISS_DISPLAY_BUILDTYPE)
