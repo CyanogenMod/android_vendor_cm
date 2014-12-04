@@ -212,6 +212,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES +=  \
     vendor/bliss/proprietary/Term.apk:system/app/Term/Term.apk \
     vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
+    
+# Proprietary latinime lib needed for Keyboard swyping
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so    
 
 # ViPER4ANDROID
 PRODUCT_COPY_FILES += \
