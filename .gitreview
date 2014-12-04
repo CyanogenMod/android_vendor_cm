@@ -1,0 +1,5 @@
+[gerrit]
+host=buildbox.blissroms.com
+port=8081
+project=android_vendro_bliss.git
+defaultbranch=lp5.0
