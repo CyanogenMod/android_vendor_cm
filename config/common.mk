@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CMAccount \
     CMHome \
-    BlissPapers
+    BlissPapers \
+    KernelTweaker
 
 # Bliss Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
