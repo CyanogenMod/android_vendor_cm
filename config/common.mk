@@ -138,8 +138,8 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     audio_effects.conf \
     CMWallpapers \
-    Apollo \
     CMFileManager \
+    Eleven \
     LockClock \
     CMUpdater \
     CMAccount \
