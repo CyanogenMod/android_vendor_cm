@@ -2,7 +2,7 @@
 
 # Exports
 
-. $ANDROID_BUILD_TOP/vendor/liquid/tools/colors
+. $ANDROID_BUILD_TOP/vendor/bliss/tools/colors
 
 export Changelog=Changelog.txt
 
