@@ -1,0 +1,3 @@
+# ASEC
+allow system_app asec_apk_file:dir { getattr };
+allow system_app asec_apk_file:file r_file_perms;
