@@ -24,7 +24,7 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/liquid/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/bliss/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
