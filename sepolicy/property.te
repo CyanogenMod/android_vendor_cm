@@ -1,0 +1,2 @@
+type adbtcp_prop, property_type;
+type recovery_prop, property_type;
