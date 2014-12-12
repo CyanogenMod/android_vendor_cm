@@ -214,10 +214,6 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Terminal Emulator
-PRODUCT_COPY_FILES +=  \
-    vendor/bliss/proprietary/Term.apk:system/app/Term/Term.apk \
-    vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
 # ViPER4ANDROID
 PRODUCT_COPY_FILES += \
