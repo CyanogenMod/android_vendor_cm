@@ -47,4 +47,6 @@
         <item>.*com.antutu.benchmark.*,2</item>
     </string-array>
 
+    <!-- Enable lockscreen rotation checkbox in Settings -->
+    <bool name="config_enableLockScreenRotation">true</bool>
 </resources>
