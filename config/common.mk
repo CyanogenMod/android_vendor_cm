@@ -214,12 +214,6 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     Superuser \
     su
-
-
-# ViPER4ANDROID
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/viper/viper4android.apk:system/app/Viper4Android/viper4android.apk \
-    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so 
     
 # SuperSU
 PRODUCT_COPY_FILES += \
