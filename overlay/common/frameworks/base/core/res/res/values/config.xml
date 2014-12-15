@@ -58,4 +58,6 @@
         <item>users</item>
     </string-array>
 
+    <!-- Enable lockscreen rotation checkbox in Settings -->
+    <bool name="config_enableLockScreenRotation">true</bool>
 </resources>
