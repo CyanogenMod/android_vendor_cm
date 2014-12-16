@@ -9,6 +9,9 @@
 # For minivold in recovery
 /sbin/minivold            u:object_r:vold_exec:s0
 
+# Themes
+/data/system/theme(/.*)?  u:object_r:theme_data_file:s0
+
 #############################
 # performance-related sysfs files (CM)
 /sys/kernel/mm/ksm(/.*)?       --          u:object_r:sysfs_writable:s0
