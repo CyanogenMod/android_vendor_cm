@@ -147,6 +147,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMAccount \
     CMHome \
+    OmniSwitch \
+    MonthCalendarWidget \
     BlissPapers \
     DeviceControl
 
@@ -214,7 +216,6 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    OmniSwitch \
     Superuser \
     su
     
