@@ -257,4 +257,4 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 -include vendor/cyngn/product.mk
 
-$(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call prepend-product-if-exists, vendor/extra/product.mk)
