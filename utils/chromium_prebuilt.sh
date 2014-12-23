@@ -54,32 +54,6 @@ echo "Generating Makefiles..."
 HASH=$(git --git-dir=$TOP/external/chromium_org/.git --work-tree=$TOP/external/chromium_org rev-parse --verify HEAD)
 echo $HASH > $PREBUILT_DIR/hash.txt
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/Android.mk
-# Copyright (C) 2014 The OmniROM Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-ifeq (\$(TARGET_DEVICE),__DEVICE__)
-ifeq (\$(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
-
-LOCAL_PATH := \$(call my-dir)
-
-include \$(call all-makefiles-under,\$(LOCAL_PATH))
-endif
-endif
-
-EOF
-
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/chromium_prebuilt.mk
 # Copyright (C) 2014 The OmniROM Project
 #
