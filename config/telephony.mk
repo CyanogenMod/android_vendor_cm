@@ -25,4 +25,4 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Highscore.ogg
+    ro.config.ringtone=Orion.ogg
