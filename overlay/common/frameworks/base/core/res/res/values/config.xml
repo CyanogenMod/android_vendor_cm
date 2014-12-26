@@ -54,8 +54,10 @@
         <item>power</item>
         <item>reboot</item>
         <item>airplane</item>
-        <item>bugreport</item>
         <item>users</item>
+        <item>profile</item>
+        <item>screenshot</item>
+        <item>silent</item>        
     </string-array>
 
 </resources>
