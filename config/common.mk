@@ -151,7 +151,8 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     MonthCalendarWidget \
     BlissPapers \
-    DeviceControl
+    DeviceControl \
+    CameraNext
 
 # Bliss Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
