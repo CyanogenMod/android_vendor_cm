@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= cyanogenmod
+PRODUCT_BRAND ?= bliss
 
 SUPERUSER_EMBEDDED := ture
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
