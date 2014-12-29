@@ -95,6 +95,10 @@ PRODUCT_COPY_FILES += \
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    
+# fstrim support
+PRODUCT_COPY_FILES += \
+vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim    
 
 # Bliss-specific init file
 PRODUCT_COPY_FILES += \
