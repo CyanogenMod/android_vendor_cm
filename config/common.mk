@@ -222,7 +222,6 @@ PRODUCT_PACKAGES += \
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
-
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
@@ -239,14 +238,11 @@ PRODUCT_COPY_FILES += \
 	vendor/bliss/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
 	vendor/bliss/prebuilt/etc/hosts.og:system/etc/hosts.og
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=1
-else
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
 
-endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/bliss/overlay/common
 
