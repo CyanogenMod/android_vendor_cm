@@ -98,7 +98,7 @@ PRODUCT_COPY_FILES += \
     
 # fstrim support
 PRODUCT_COPY_FILES += \
-vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim    
+    vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim    
 
 # Bliss-specific init file
 PRODUCT_COPY_FILES += \
