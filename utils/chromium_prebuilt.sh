@@ -54,7 +54,7 @@ echo "Generating Makefiles..."
 HASH=$(git --git-dir=$TOP/external/chromium_org/.git --work-tree=$TOP/external/chromium_org rev-parse --verify HEAD)
 echo $HASH > $PREBUILT_DIR/hash.txt
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/chromium_prebuilt.mk
+sed s/__DEVICE__/$DEVICE/g > $PREBUILT_DIR/chromium_prebuilt.mk << EOF
 # Copyright (C) 2014 The OmniROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -81,5 +81,4 @@ PRODUCT_COPY_FILES += \\
 \$(shell cp -r \$(LOCAL_PATH)/app/webview/lib/arm/libwebviewchromium.so out/target/product/__DEVICE__/system/app/webview/lib/arm/libwebviewchromium.so)
 
 EOF
-
 echo "Done!"
