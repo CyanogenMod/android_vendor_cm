@@ -129,6 +129,11 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 include vendor/bliss/config/themes_common.mk
 
+# Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
+
 # Required CM packages
 PRODUCT_PACKAGES += \
     Development \
@@ -155,7 +160,6 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     MonthCalendarWidget \
     BlissPapers \
-    ScreenRecorder \
     CameraNext
 
 # Bliss Hardware Abstraction Framework
