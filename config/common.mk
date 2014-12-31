@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     MonthCalendarWidget \
     BlissPapers \
+    ScreenRecorder \
     CameraNext
 
 # Bliss Hardware Abstraction Framework
