@@ -8,3 +8,6 @@ allow vold fuse_device:chr_file rw_file_perms;
 
 # NTFS-3g wants to drop permission
 allow vold self:capability { setgid setuid };
+
+# Performance settings
+allow vold sysfs_writable:file rw_file_perms;
