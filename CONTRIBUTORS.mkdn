@@ -12,6 +12,7 @@ Maintainers (CyanogenMod 11.0):
 * __Asus EeePad Transformer Pad Infinity TF700T:__ dasunsrule32
 * __Asus EeePad Transformer Pad TF701T:__ pershoot
 * __B&N NookColor (encore):__ eyeballer, fattire, keyodi, krylon360, sluo (NookieDevs)
+* __Google Android One:__ varunchitre15
 * __Google Galaxy Nexus:__ , bekit, Bumble-Bee, burnsra, KalimochoAz, something15525
 * __Google Nexus S:__ burnsra, KalimochoAz, klusark
 * __Google Nexus 4:__ rmcc
