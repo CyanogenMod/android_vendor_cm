@@ -1,7 +1,7 @@
 CyanogenMod
 ===========
 
-Maintainers (CyanogenMod 11.0):
+Maintainers (CyanogenMod 12.0):
 -----------------------------
 * __Acer A700:__ pawitp
 * __Amazon Kindle Fire 1st Edition:__ Hashcode, FuZZ__
@@ -32,8 +32,13 @@ Maintainers (CyanogenMod 11.0):
 * __HTC One X:__ gorbi16, mdeejay, tbalden, Thömy
 * __HTC One X+:__ Lloir, tombriden
 * __HTC One XL:__ h8rift, intervigil
+* __LG G3 (AT&T) (D850):__ AndroidUser00110001
+* __LG G3 (T-Mobile) (D851):__ savoca
+* __LG G3 (International) (D855):__ AngelBob
+* __LG G3 (Verizon) (VS985):__ invisiblek
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
 * __LG Optimus LTE (SK Telecom) (SU640):__ arcee
+* __Moto G 4G (xt1039,xt1040,xt1042,xt1045/peregrine):__ somcom3x, intervigil
 * __Moto X (xt1053,xt1055,xt1056,xt1058,xt1060/ghost):__ Hashcode, Skrilax_CZ
 * __Motorola Atrix HD (MB886/qinara):__ epinter, Hashcode, Skrilax_CZ, nadlabak
 * __Motorola Droid 3 (solana):__ Hashcode, stargo
@@ -80,15 +85,12 @@ Maintainers (CyanogenMod 11.0):
 * __Samsung Galaxy S II (AT&T) (SGH-I777):__
 * __Samsung Galaxy S II (intl) (GT-I9100):__ codeworkx, Espenfjo
 * __Samsung Galaxy S II (intl) (GT-I9100G):__ codeworkx, Jiangyi, Ryuinferno
-* __Samsung Galaxy S III (AT&T) (SGH-I747):__ cyanogen, invisiblek, mkasick, noobnl
+* __Samsung Galaxy S III (AT&T) (SGH-I747):__ nardholio
+* __Samsung Galaxy S III (Sprint) (SPH-L710):__ noobnl
+* __Samsung Galaxy S III (Verizon) (SCH-I535):__ invisiblek
 * __Samsung Galaxy S III (intl) (GT-I9300):__ codeworkx
 * __Samsung Galaxy S III LTE (GT-I9305):__ mcampbellsmith, codeworkx
-* __Samsung Galaxy S IV (AT&T) (SGH-I337):__ attn1
-* __Samsung Galaxy S IV (Canada) (SGH-I337M):__ DvTonder
-* __Samsung Galaxy S IV LTE (GT-I9505):__ invisiblek, noobnl
 * __Samsung Galaxy S IV (Sprint) (SPH-L720):__ mkasick, noobnl
-* __Samsung Galaxy S IV (T-Mobile) (SGH-M919):__ cyanogen
-* __Samsung Galaxy S IV (US Cellular) (SCH-R540):__ noobnl
 * __Samsung Galaxy S IV (Verizon) (SCH-I545):__ invisiblek
 * __Samsung Galaxy S IV Mini 3G (GT-I9190):__ arco
 * __Samsung Galaxy S IV Mini LTE (GT-I9195):__ arco
