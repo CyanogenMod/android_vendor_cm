@@ -54,10 +54,6 @@
         <item>reboot</item>
         <item>airplane</item>
         <item>users</item>
-        <item>profile</item>
-        <item>settings</item>
-        <item>lockdown</item>                
-        <item>screenshot</item>
         <item>silent</item>        
     </string-array>
 
