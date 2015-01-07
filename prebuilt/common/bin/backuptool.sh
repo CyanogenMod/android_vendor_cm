@@ -22,10 +22,7 @@ restore_addon_d() {
 
 # Proceed only if /system is the expected major and minor version
 check_prereq() {
-if ( ! grep -q "^ro.bliss.version=$V-*" /system/build.prop ); then
-  echo "Not backing up files from incompatible version: $V"
-  return 0
-fi
+echo "$V"
 return 1
 }
 
