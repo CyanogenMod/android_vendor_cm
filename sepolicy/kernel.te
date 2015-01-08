@@ -1,0 +1,2 @@
+# Allow the kernel to write to block device files for UMS
+allow kernel block_device:blk_file write;
