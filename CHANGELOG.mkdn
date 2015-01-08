@@ -1,6 +1,20 @@
 Bliss Rom
 ===============
 
+BlissPop 5.0.2 -v1.7
+-Backup Fixed and working for GAPPS
+-Custom SoftNav Bar brought in thanks to Vanir
+-Donate Option in Downloads section- Any help is appreciated.
+-Fixed White on White for Contacts "Groups" section.
+-New FAB Button for Recents
+-Darker Loading DEXOPT Window.
+-Power Menu Customization and enabled all options.
+-Brought Device Control Back in.
+-Updated to SuperSU v2.44
+-T9 Dial Pad search from CM.
+-
+
+
 BlissPop 5.0.2 -v1.6
 
 -I will start populating this very soon. Lots to catch up on.
