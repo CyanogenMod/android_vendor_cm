@@ -1,6 +1,10 @@
 Bliss Rom
 ===============
 
+BlissPop leading up to v1.8
+-Added SlimPie 1-10-14
+-Various Clean Up. 
+
 BlissPop 5.0.2 -v1.7
 -Backup Fixed and working for GAPPS
 -Custom SoftNav Bar brought in thanks to Vanir
