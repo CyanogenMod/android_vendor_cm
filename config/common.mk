@@ -98,7 +98,12 @@ PRODUCT_COPY_FILES += \
     
 # fstrim support
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim    
+    vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim
+    
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Bliss-specific init file
 PRODUCT_COPY_FILES += \
@@ -228,11 +233,6 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
-    
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon    
     
 # HFM Files
 PRODUCT_COPY_FILES += \
