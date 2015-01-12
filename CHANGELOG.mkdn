@@ -3,7 +3,10 @@ Bliss Rom
 
 BlissPop leading up to v1.8
 -Added SlimPie 1-10-14
--Various Clean Up. 
+-Various Clean Up.
+-Fix for recent in SlimPie 1-11-14
+-Switch to Disable Brightness slider in notification drawer. 1-12-14
+-Display Density mod to change setting to what apps see as far as density, not show them actual density. 1-12-14 
 
 BlissPop 5.0.2 -v1.7
 -Backup Fixed and working for GAPPS
