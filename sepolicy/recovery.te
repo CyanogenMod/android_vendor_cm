@@ -31,4 +31,14 @@ allow recovery file_type:notdevfile_class_set { unlink getattr };
 allow recovery install_data_file:file create_file_perms;
 allow recovery system_data_file:file create;
 
+# Create /storage/sdcard*
+allow recovery rootfs:dir { create };
+allow vold rootfs:dir { write add_name };
+
+# Read /storage/sdcard*
+allow recovery sdcard_posix:dir { open read search };
+
+# Apply update.zip from /storage/sdcard*
+allow recovery sdcard_posix:file { getattr open read };
+
 ')
