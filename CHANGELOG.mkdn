@@ -1,12 +1,24 @@
 Bliss Rom
 ===============
+BlissPop leading up to v1.9
 
 BlissPop leading up to v1.8
 -Added SlimPie 1-10-14
 -Various Clean Up.
 -Fix for recent in SlimPie 1-11-14
 -Switch to Disable Brightness slider in notification drawer. 1-12-14
--Display Density mod to change setting to what apps see as far as density, not show them actual density. 1-12-14 
+-Display Density mod to change setting to what apps see as far as density, not show them actual density. 1-12-14
+- New Battery Styles thanks to XXMrHyde.
+- Used navbar and hwkeys tweaks from crdroid to enable navbar on all devices.
+- Ambient dispaly fix
+-Fixes to navbar
+-Documents is now a stand alone app
+- Ability to disable Brightness slider in notifications.
+- CM THEME ENGINE!!!
+- Expanded volume panel
+- Unlink ringtone and notification volume
+- Updates to QS Customization
+- Various other updates from CM. 
 
 BlissPop 5.0.2 -v1.7
 -Backup Fixed and working for GAPPS
