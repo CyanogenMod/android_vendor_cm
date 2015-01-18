@@ -154,7 +154,7 @@ Translators:
 * __Kurdish:__ falah (Dylan2785)
 * __Latvian:__ Māris Rēdmanis (maaris)
 * __Lithuanian:__ Liudas Ališauskas (liudas.alisauskas), Edmundas Plentauskas (plentauskas1992), HardLight (polizplz), Saulius Vyšniauskas (SauliusVy)
-* __Luxembourgish:__ Michel Weimerskirch (michel_weimerskirch), soued031 (soued031)
+* __Luxembourgish:__ Michel Weimerskirch (michel_weimerskirch), Edson Souza Morais (soued031)
 * __Malay:__ tanakwagu (tanakwagu)
 * __Norwegian Bokmal:__ Vegard Fladby (Allram), Sten Eikrem (Storesteinen)
 * __Persian:__ Ali Niki (alinik), Mehdi HosseinZade (Arshen) (Arshen-2014), Yaser Rajabi (yrajabi)
