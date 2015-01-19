@@ -84,6 +84,7 @@ Maintainers (CyanogenMod 11.0):
 * __Samsung Galaxy S III LTE (GT-I9305):__ mcampbellsmith, codeworkx
 * __Samsung Galaxy S IV (AT&T) (SGH-I337):__ attn1
 * __Samsung Galaxy S IV (Canada) (SGH-I337M):__ DvTonder
+* __Samsung Galaxy S IV 3G (GT-I9500):__ intervigil, Alberto96
 * __Samsung Galaxy S IV LTE (GT-I9505):__ invisiblek, noobnl
 * __Samsung Galaxy S IV (Sprint) (SPH-L720):__ mkasick, noobnl
 * __Samsung Galaxy S IV (T-Mobile) (SGH-M919):__ cyanogen
