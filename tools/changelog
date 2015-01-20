@@ -35,5 +35,5 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
-cp $Changelog $OUT/
+cp $Changelog $OUT/system/etc/
 rm $Changelog
