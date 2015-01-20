@@ -4,7 +4,7 @@
 
 . $ANDROID_BUILD_TOP/vendor/bliss/tools/colors
 
-export Changelog=Changelog.txt
+export Changelog=CHANGELOG-bliss.txt
 
 if [ -f $Changelog ];
 then
