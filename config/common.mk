@@ -161,8 +161,7 @@ PRODUCT_PACKAGES += \
     BlissPapers \
     DeviceControl \
     OpenCamera \
-    DeepDarkness \
-    CyanogenSetupWizard
+    DeepDarkness
 
 # Bliss Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
