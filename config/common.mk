@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
     MonthCalendarWidget \
     BlissPapers \
     DeviceControl \
-    OpenCamera
+    OpenCamera \
+    DeepDarkness
 
 # Bliss Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
