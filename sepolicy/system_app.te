@@ -1,3 +1,5 @@
 # For performance settings
 allow system_app sysfs_devices_system_cpu:file rw_file_perms;
 allow system_app sysfs_devices_system_iosched:file rw_file_perms;
+allow system_app cache_file:dir {add_name rw_file_perms};
+allow system_app cache_file:file {create rw_file_perms};
