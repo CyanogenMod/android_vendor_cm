@@ -1,0 +1,1 @@
+allow 90userinit userinit_prop:property_service set;
