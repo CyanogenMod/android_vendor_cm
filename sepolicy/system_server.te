@@ -1,0 +1,2 @@
+# Read ringtones from storage
+allow system_server fuse_audio_file:file read;
