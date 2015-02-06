@@ -12,6 +12,11 @@
 # For minivold in recovery
 /sbin/minivold            u:object_r:vold_exec:s0
 
+# For audio files on fuse storage
+/storage/sdcard[0-9]+/Alarms(/.*)?            u:object_r:fuse_audio_file:s0
+/storage/sdcard[0-9]+/Notifications(/.*)?     u:object_r:fuse_audio_file:s0
+/storage/sdcard[0-9]+/Ringtones(/.*)?         u:object_r:fuse_audio_file:s0
+
 #############################
 # performance-related sysfs files (CM)
 /sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_devices_system_cpu:s0
