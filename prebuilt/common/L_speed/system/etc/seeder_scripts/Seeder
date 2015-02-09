@@ -1,0 +1,25 @@
+#!/system/bin/sh
+
+LOG=/data/Tweaks/Seeder_v7.log
+
+echo "# L Speed Logs" | tee -a $LOG
+echo "" | tee -a $LOG
+echo "$( date +"%m-%d-%Y %H:%M:%S" )ACTIVATING SEEDER.." | tee -a $LOG;
+
+if pgrep qrngd > /dev/null; then
+  echo "qrngd already running! Seeder will not be started!" >> $LOG
+  exit 1
+fi
+
+if [ -e /system/bin/qrngd -o -e /system/xbin/qrngd ]; then
+  echo "qrngd found in /system! Seeder will not be started!" >> $LOG
+  exit
+fi
+
+rngd -t 2 -T 1 -s 256 --fill-watermark=80%
+sleep 2
+echo -8 > /proc/$(pgrep rngd)/oom_adj
+renice 5 `pidof rngd`
+
+echo "" | tee -a $LOG
+echo "$( date +"%m-%d-%Y %H:%M:%S" ) SEEDER IS ACTIVATED" | tee -a $LOG;

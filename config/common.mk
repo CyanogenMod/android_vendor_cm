@@ -93,6 +93,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim
     
+# L Speed
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/KernelTweaks.log:data/Tweaks/KernelTweaks.log \
+    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/ram_manager.log:data/Tweaks/ram_manager.log \
+    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/Seeder_v7.log:data/Tweaks/Seeder_v7.log \
+    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/zipalign.log:data/Tweaks/zipalign.log \
+    vendor/bliss/prebuilt/common/L_speed/system/bin/seeder:system/bin/seeder \
+    vendor/bliss/prebuilt/common/L_speed/system/bin/uninstaller:system/bin/uninstaller \
+    vendor/bliss/prebuilt/common/L_speed/system/etc/init.d/01kernelTweaks:system/etc/init.d/01kernelTweaks \
+    vendor/bliss/prebuilt/common/L_speed/system/etc/init.d/02zipalign:system/etc/init.d/02zipalign \
+    vendor/bliss/prebuilt/common/L_speed/system/etc/init.d/03ram_manager:system/etc/init.d/03ram_manager \
+    vendor/bliss/prebuilt/common/L_speed/system/etc/init.d/Seeder:system/etc/init.d/Seeder \
+    vendor/bliss/prebuilt/common/L_speed/system/etc/seeder_scripts/Seeder:system/etc/seeder_scripts/Seeder \
+    vendor/bliss/prebuilt/common/L_speed/system/xbin/entro:system/xbin/entro \
+    vendor/bliss/prebuilt/common/L_speed/system/xbin/openvpn:system/xbin/openvpn \
+    vendor/bliss/prebuilt/common/L_speed/system/xbin/rngd:system/xbin/rngd \
+    vendor/bliss/prebuilt/common/L_speed/system/xbin/zipalign:system/xbin/zipalign    
+    
 # SuperSU
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
@@ -252,3 +270,4 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 $(call prepend-product-if-exists, vendor/extra/product.mk)
 
 -include vendor/cm/config/sm.mk
+

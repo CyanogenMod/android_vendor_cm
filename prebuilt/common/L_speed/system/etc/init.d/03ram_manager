@@ -1,0 +1,26 @@
+#!/system/bin/sh
+
+LOG=/data/Tweaks/ram_manager.log
+
+echo "# L Speed log " | tee -a $LOG
+echo "" | tee -a $LOG
+echo "$( date +"%m-%d-%Y %H:%M:%S" ) Tweaking minfree values & adj lowmem values..." | tee -a $LOG;
+
+
+# ADJ
+echo "0,2,5,7,9,15" > /sys/module/lowmemorykiller/parameters/adj;
+
+# Minfree
+
+mem=`free|grep Mem | awk '{print $2}'`;
+
+if [ "$mem" -lt 512000 ];then
+    echo "1408,2816,3755,7040,9387,12288" > /sys/module/lowmemorykiller/parameters/minfree;	
+elif [ "$mem" -lt 1024000 ];then
+	echo "2560,4096,6144,12288,14336,18432" > /sys/module/lowmemorykiller/parameters/minfree;
+else 
+	echo "3755,6144,9387,14336,17284,21240" > /sys/module/lowmemorykiller/parameters/minfree;
+fi;
+
+echo "" | tee -a $LOG
+echo "$( date +"%m-%d-%Y %H:%M:%S" ) RAM manager values successfully applied" | tee -a $LOG;

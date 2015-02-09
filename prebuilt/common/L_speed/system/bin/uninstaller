@@ -1,0 +1,48 @@
+#!/system/bin/sh
+
+#======================#
+#
+ #Uninstaller
+#============================#
+
+clear
+   echo ""
+   echo "L Speed uninstaller,please wait..."
+sleep 3
+   echo ""
+   echo "Mounting /system partition..."
+sleep 1
+busybox mount -o remount,rw /system
+   echo ""
+   echo "Removing scripts,please wait..."
+sleep 5
+
+busybox rm -rf /data/Tweaks
+busybox rm -rf /system/etc/seeder_scripts
+busybox rm -f /system/etc/init.d/01kernelTweak
+busybox rm -f /system/etc/init.d/01kernelTweaks
+busybox rm -f /system/etc/init.d/02zipalign
+busybox rm -f /system/etc/init.d/03ram_manager
+busybox rm -f /system/etc/init.d/04fstrim
+busybox rm -f /system/etc/init.d/Seeder
+
+   echo ""
+   echo "Removing binaries and libraries,please wait..."
+sleep 5
+
+
+busybox rm -f /system/bin/seeder
+busybox rm -f /system/xbin/openvpn
+busybox rm -f /system/xbin/zipalign
+busybox rm -f /system/xbin/rngd
+busybox rm -f /system/xbin/entro
+
+   echo ""
+   echo "L speed has been completely removed from your phone..."
+sleep 3
+   echo ""
+   echo "deleting uninstaller script from /bin directory"
+sleep 2
+   echo ""
+   echo "Please reboot your device!"
+busybox rm -f /system/bin/uninstaller
