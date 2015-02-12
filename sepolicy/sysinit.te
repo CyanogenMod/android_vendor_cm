@@ -8,4 +8,9 @@ allow sysinit devpts:chr_file { rw_file_perms };
 allow sysinit shell_exec:file { rx_file_perms };
 allow sysinit system_file:file { rx_file_perms };
 allow sysinit self:process setcurrent;
-
+allow sysinit userinit_exec:file rx_file_perms;
+allow sysinit userinit_exec:dir r_dir_perms;
+allow sysinit property_socket:sock_file write;
+allow sysinit init:unix_stream_socket connectto;
+allow sysinit userinit_prop:property_service set;
+allow sysinit sysfs:file rw_file_perms;
