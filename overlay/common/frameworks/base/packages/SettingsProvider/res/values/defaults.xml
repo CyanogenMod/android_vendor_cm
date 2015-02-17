@@ -31,4 +31,7 @@
 
     <!-- Default for Settings.Secure.STATS_COLLECTION. -->
     <bool name="def_cm_stats_collection">true</bool>
+
+    <!-- Defaults for Settings.System.Secure.ADVANCED_MODE. -->
+    <bool name="advanced_mode">true</bool>
 </resources>
