@@ -23,6 +23,7 @@ BOARD_SEPOLICY_UNION += \
     installd.te \
     mediaserver.te \
     netd.te \
+    platform_app.te \
     property.te \
     recovery.te \
     shell.te \
