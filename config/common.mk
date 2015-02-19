@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
     
 # L Speed
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/KernelTweaks.log:data/Tweaks/KernelTweaks.log \
+    vendor/bliss/prebuilt/common/L_speed/data/Tweaks/kernelTweaks.log:data/Tweaks/kernelTweaks.log \
     vendor/bliss/prebuilt/common/L_speed/data/Tweaks/ram_manager.log:data/Tweaks/ram_manager.log \
     vendor/bliss/prebuilt/common/L_speed/data/Tweaks/Seeder_v7.log:data/Tweaks/Seeder_v7.log \
     vendor/bliss/prebuilt/common/L_speed/data/Tweaks/zipalign.log:data/Tweaks/zipalign.log \
