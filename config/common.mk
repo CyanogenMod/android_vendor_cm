@@ -273,5 +273,5 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
 
--include vendor/cm/config/sm.mk
+-include vendor/bliss/config/sm.mk
 
