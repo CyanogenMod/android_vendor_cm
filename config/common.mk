@@ -110,6 +110,10 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/openvpn:system/xbin/openvpn \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/rngd:system/xbin/rngd \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/zipalign:system/xbin/zipalign    
+
+# Bliss Rom Stats
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/RomStats/RomStats.apk:system/app/RomStats/RomStats.apk
     
 # SuperSU
 PRODUCT_COPY_FILES += \
