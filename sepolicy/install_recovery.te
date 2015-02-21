@@ -1,0 +1,5 @@
+# service flash_recovery in init.rc
+
+# Create and delete /cache/saved.file
+allow install_recovery recovery_cache_file:dir rw_dir_perms;
+allow install_recovery recovery_cache_file:file create_file_perms;

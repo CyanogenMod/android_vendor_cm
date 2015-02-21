@@ -21,6 +21,7 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     hostapd.te \
     installd.te \
+    install_recovery.te \
     mediaserver.te \
     netd.te \
     property.te \
