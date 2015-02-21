@@ -1,0 +1,8 @@
+# service flash_recovery in init.rc
+
+# Create and delete /cache/saved.file
+allow install_recovery recovery_cache_file:dir rw_dir_perms;
+allow install_recovery recovery_cache_file:file create_file_perms;
+
+# Read and write to mmc block devices
+allow install_recovery mmc_block_device:blk_file rw_file_perms;
