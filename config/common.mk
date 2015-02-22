@@ -283,7 +283,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.liquid.version=$(LIQUID_VERSION)
+    ro.bliss.version=$(BLISS_VERSION)
 
 -include vendor/bliss/config/sm.mk
 
