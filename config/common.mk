@@ -146,6 +146,7 @@ PRODUCT_COPY_FILES += \
 include vendor/bliss/config/themes_common.mk
 
 # RomStats
+PRODUCT_PACKAGES += \
     RomStats
 
 # Screen recorder
