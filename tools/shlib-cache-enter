@@ -1,0 +1,107 @@
+#!/usr/bin/env python
+
+import os
+import re
+import subprocess
+import sys
+import getopt
+
+cfg = dict()
+cfg['verbose'] = 0
+
+def verbose(s):
+    if cfg['verbose'] > 0:
+        sys.stderr.write(s)
+
+optargs, argv = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
+for k, v in optargs:
+    if k in ('-v', '--verbose'):
+        cfg['verbose'] += 1
+
+if len(argv) < 4:
+    print "Usage: android-cache-enter <cachedir> <srcdir> <depdir> <vars...>"
+    sys.exit(1)
+
+cachedir = argv[0]
+srcdir = argv[1]
+depdir = argv[2]
+vars = argv[3:]
+
+verbose("android-cache-enter: cachedir=%s, srcdir=%s, depdir=%s\n" % (cachedir,srcdir,depdir))
+
+# Default C++ extension
+cpp_ext = ".cpp"
+
+srcfiles = []
+for var in vars:
+    verbose("var=%s\n" %(var))
+    k, v = var.split('=', 1)
+    if k == 'LOCAL_SRC_FILES':
+        for f in v.split():
+            srcfiles.append(f)
+    if k == 'LOCAL_CPP_EXTENSION' and v != '':
+        cpp_ext = v
+
+savefile = "%s/vars.mk" % (cachedir)
+f = open(savefile, 'w')
+for var in vars:
+    f.write("%s\n" % (var))
+f.close()
+
+# The dependencies files are expected to be make fragments in the
+# following format:
+#
+# obj-file: dependency-file ...
+# dependency-file:
+# ...
+#
+# We only care about the first line.
+#
+# Note the first line will always be backslash-continued, hence the
+# need for readline_ex() below.
+#
+# We read the first part (the dependencies of obj-file) and store the
+# information for each dependency in a dict.
+
+def readline_ex(f):
+    xline = ''
+    line = f.readline().rstrip()
+    while line.endswith('\\'):
+        xline += line[1:-1]
+        line = f.readline().rstrip()
+    xline += line
+    return xline
+
+deps = dict()
+def add_deps(filename):
+    f = open(filename, 'r')
+    line = readline_ex(f)
+    f.close()
+    fields = line.split()
+    # XXX: allow whitespace before ':'
+    if fields[0][-3:] != '.o:':
+        print "first line does not match: %s" % (fields[0])
+    for field in fields[1:]:
+        verbose("dep: %s\n" % (field))
+        k = field
+        st = os.stat(k)
+        v = '%d:%d' % (st.st_mtime, st.st_size)
+        verbose("android-cache-enter: deps: k=%s v=%s\n" % (k, v))
+        deps[k] = v
+
+source_extensions = set(['.c', cpp_ext, '.S', '.m'])
+for f in srcfiles:
+    root, ext = os.path.splitext(f)
+    if ext in source_extensions:
+        idx = len(ext)
+        pfile = "%s/%s.P" % (depdir, f[0:-idx])
+        verbose("android-cache-enter: src: f=%s, ext=%s, pfile=%s\n" % (f, ext, pfile))
+        add_deps(pfile)
+    else:
+        verbose("android-cache-enter: src: f=%s, ext=%s, no match\n" % (f, ext))
+
+savefile = "%s/deps" % (cachedir)
+f = open(savefile, 'w')
+for d in deps:
+    f.write("%s:%s\n" % (deps[d], d))
+f.close()
