@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+
+# Check whether a cached lib may be used.
+#
+# Prints the value "true" or "false".
+#
+# - The files lib.so, vars.mk, and deps must exist
+# - The values in vars.mk must match the passed-in values
+# - The files listed in deps must match
+
+import os
+import re
+import subprocess
+import sys
+import getopt
+
+cfg = dict()
+cfg['verbose'] = 0
+
+def verbose(s):
+    if cfg['verbose'] > 0:
+        sys.stderr.write(s)
+
+optargs, argv = getopt.getopt(sys.argv[1:], 'v', ['verbose'])
+for k, v in optargs:
+    if k in ('-v', '--verbose'):
+        cfg['verbose'] += 1
+
+if len(argv) < 3:
+    print "Usage: android-cache-check <cachedir> <srcdir> <vars...>"
+    sys.exit(1)
+
+cachedir = argv[0]
+srcdir = argv[1]
+
+vars = []
+for var in argv[2:]:
+    try:
+        (k, v) = var.split('=', 1)
+        vars.append("%s=%s" % (k.strip(), v.strip()))
+    except:
+        vars.append(var.strip())
+
+verbose("android-cache-check: cachedir=%s, srcdir=%s, vars=%s\n" % (cachedir, srcdir, vars))
+
+result = True
+
+# Required files must exist
+required_files = ['lib.so', 'vars.mk', 'deps']
+for f in required_files:
+    path = "%s/%s" % (cachedir, f)
+    if not os.path.exists(path):
+        print "false (%s not present)" % (path)
+        sys.exit(0)
+
+# vars must match the passed-in values
+idx = 0
+f = open("%s/vars.mk" % (cachedir), 'r')
+for line in f:
+    line = line.rstrip()
+    if not line == vars[idx]:
+        print "false (%s != %s)" % (line, vars[idx])
+        sys.exit(0)
+    idx += 1
+f.close()
+
+# referenced files must be unchanged
+f = open("%s/deps" % (cachedir), 'r')
+for line in f:
+    line = line.rstrip()
+    mtime, size, pathname = line.split(':')
+    if not os.path.exists(pathname):
+        print "false (file %s gone)" % (pathname)
+        sys.exit(0)
+    st = os.stat(pathname)
+    if not int(st.st_mtime) == int(mtime) or not int(st.st_size) == int(size):
+        print "false (file %s changed)" % (pathname)
+        sys.exit(0)
+f.close()
+
+print "true"
