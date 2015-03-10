@@ -13,10 +13,8 @@ endif
 # Only use these compilers on linux host.
 ifeq (linux,$(HOST_OS))
 
-ifeq (4.8,$(TARGET_TC_ROM))
-USE_SM_TOOLCHAIN := true
-endif
-ifeq (4.9,$(TARGET_TC_ROM))
+#tobitege: check multiple versions
+ifeq (1,$(words $(filter 4.8 4.8-sm 4.9 4.9-sm,$(TARGET_TC_ROM))))
 USE_SM_TOOLCHAIN := true
 endif
 
@@ -111,8 +109,8 @@ SM_AND_STATUS := $(filter (release) (prerelease) (experimental),$(SM_AND))
 SM_AND_VERSION := $(SM_AND_VERSION)-$(SM_AND_DATE)-$(SM_AND_STATUS)
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sm.android=$(SM_AND_VERSION)
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.sm.android=$(SM_AND_VERSION)
 
 ifeq (true,$(BLISS_GRAPHITE))
 OPT1 := (graphite)
@@ -150,7 +148,7 @@ LOCAL_DISABLE_GRAPHITE := \
   libSR_Core \
   fio
 
-ifeq (4.9,$(TARGET_TC_ROM))
+ifeq (1,$(words $(filter 4.9 4.9-sm,$(TARGET_TC_ROM))))
   LOCAL_DISABLE_GRAPHITE += \
     libFraunhoferAAC
 endif
@@ -168,8 +166,7 @@ OPT4 := (krait)
 endif
 
 GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)
-ifneq (,$(GCC_OPTIMIZATION_LEVELS))
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sm.flags=$(GCC_OPTIMIZATION_LEVELS)
-endif
-
+#ifneq (,$(GCC_OPTIMIZATION_LEVELS))
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.sm.flags=$(GCC_OPTIMIZATION_LEVELS)
+#endif

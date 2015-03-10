@@ -88,11 +88,11 @@ PRODUCT_COPY_FILES += \
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-    
+
 # fstrim support
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/98fstrim:system/etc/init.d/98fstrim
-    
+
 # L Speed
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/L_speed/data/Tweaks/kernelTweaks.log:data/Tweaks/kernelTweaks.log \
@@ -109,8 +109,8 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/entro:system/xbin/entro \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/openvpn:system/xbin/openvpn \
     vendor/bliss/prebuilt/common/L_speed/system/xbin/rngd:system/xbin/rngd \
-    vendor/bliss/prebuilt/common/L_speed/system/xbin/zipalign:system/xbin/zipalign    
-    
+    vendor/bliss/prebuilt/common/L_speed/system/xbin/zipalign:system/xbin/zipalign
+
 # SuperSU
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
@@ -132,11 +132,11 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
-    
+
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
-endif    
+endif
 
 # This is Bliss!
 PRODUCT_COPY_FILES += \
@@ -213,12 +213,12 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace
-    
+
 # Extra tools
 PRODUCT_PACKAGES += \
     vim \
     zip \
-    unrar    
+    unrar
 
 # Openssh
 PRODUCT_PACKAGES += \
@@ -247,7 +247,7 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
-    
+
 # HFM Files
 PRODUCT_COPY_FILES += \
 	vendor/bliss/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
@@ -285,5 +285,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.bliss.version=$(BLISS_VERSION)
 
--include vendor/bliss/config/sm.mk
-
+#-include vendor/bliss/config/sm.mk
