@@ -7,3 +7,8 @@ mkdir -p $BASEDIR/proprietary
 curl -L -o $BASEDIR/proprietary/Term.apk -O -L https://jackpal.github.com/Android-Terminal-Emulator/downloads/Term.apk
 unzip -o -d $BASEDIR/proprietary $BASEDIR/proprietary/Term.apk lib/*
 
+# Copy libjackpal-termexec to armeabi-v7a if doesn't exists
+if [ ! -f $BASEDIR/proprietary/lib/armeabi-v7a/libjackpal-termexec.so ]; then
+    cp $BASEDIR/proprietary/lib/armeabi/libjackpal-termexec.so $BASEDIR/proprietary/lib/armeabi-v7a
+fi
+
