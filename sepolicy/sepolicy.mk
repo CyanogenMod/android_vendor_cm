@@ -24,6 +24,7 @@ BOARD_SEPOLICY_UNION += \
     mediaserver.te \
     netd.te \
     property.te \
+    radio.te \
     recovery.te \
     shell.te \
     su.te \
