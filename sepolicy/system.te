@@ -1,5 +1,4 @@
 allow system_server wallpaper_file:file relabelto;
-allow system_server dalvikcache_data_file:file write;
 
 # allow adb related properties to be set
 allow system_server adbtcp_prop:property_service set;
@@ -15,3 +14,8 @@ allow system_server resourcecache_data_file:file create_file_perms;
 
 # System server dynamically loads some dexfiles
 allow system_server dex2oat_exec:file rx_file_perms;
+
+# Keyhandler
+type_transition system_server cache_file:file keyhandler_cache_file;
+allow system_server cache_file:dir { search add_name write };
+allow system_server keyhandler_cache_file:file { execute lock };
