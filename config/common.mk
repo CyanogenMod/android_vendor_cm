@@ -158,6 +158,7 @@ PRODUCT_PACKAGES += \
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
+    org.cyanogenmod.platform-res \
     org.cyanogenmod.platform \
     org.cyanogenmod.platform.xml
 
