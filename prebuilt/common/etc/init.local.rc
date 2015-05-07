@@ -118,6 +118,12 @@ on property:service.adb.tcp.port=-1
 on property:persist.radio.noril=1
     setprop ro.radio.noril 1
 
+# For now default this to opendns until we modify the code to read a system propery
+# dnscrypt proxy
+service dnscrypt-proxy /system/xbin/dnscrypt-proxy
+    class main
+    disabled
+
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
     user root
