@@ -1,0 +1,15 @@
+allow init self:udp_socket bind;
+allow init port:udp_socket name_bind;
+allow init node:udp_socket node_bind;
+allow init self:udp_socket setopt;
+allow init self:udp_socket write;
+allow init self:udp_socket read;
+
+allow init self:tcp_socket create;
+allow init self:tcp_socket ioctl;
+allow init self:tcp_socket setopt;
+allow init self:tcp_socket bind;
+allow init self:tcp_socket listen;
+allow init port:tcp_socket name_bind;
+allow init node:tcp_socket node_bind;
+
