@@ -1,4 +1,5 @@
 # CyanogenMod Extras
+
 import /init.superuser.rc
 import /init.prebundle.rc
 
@@ -114,6 +115,18 @@ on property:service.adb.tcp.port=5555
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
+
+# For now default this to opendns until we modify the code to read a system propery
+# dnscrypt proxy
+service dnscrypt-proxy /system/xbin/dnscrypt-proxy -L /system/etc/dnscrypt-resolvers.csv -R opendns
+    class main
+    disabled
+
+# dnscrypt triggers
+on property:net.dnscryptproxy=enabled
+    start dnscrypt-proxy
+on property:net.dnscryptproxy=disabled
+    stop dnscrypt-proxy
 
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
