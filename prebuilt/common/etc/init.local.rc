@@ -123,6 +123,12 @@ on boot
     # Persistent properties (only created if persist exists)
     mkdir /persist/properties 0770 system system
 
+# For now default this to opendns until we modify the code to read a system propery
+# dnscrypt proxy
+service dnscrypt-proxy /system/xbin/dnscrypt-proxy
+    class main
+    disabled
+
 # sysinit (/system/etc/init.d)
 service sysinit /system/bin/sysinit
     user root
