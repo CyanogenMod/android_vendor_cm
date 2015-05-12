@@ -41,6 +41,7 @@
   <apn carrier="Vodafone GR-MMS" mcc="202" mnc="05" apn="mms.vodafone.net" user="user" password="pass" mmsc="http://mms.vodafone.gr" mmsproxy="213.249.19.49" mmsport="5080" type="mms" />
   <apn carrier="Vodafone GR" mcc="202" mnc="05" apn="surfonly.vodafone.gr" type="default,supl" />
   <apn carrier="Vodafone GR Prepaid" mcc="202" mnc="05" apn="webkarta.vodafone.gr" type="default,supl" />
+  <apn carrier="Q Internet" mcc="202" mnc="09" apn="myq" type="default,supl" />
   <apn carrier="Q-Telecom MMS GPRS" mcc="202" mnc="09" apn="q-mms.myq.gr" mmsc="http://mms.myq.gr" mmsproxy="192.168.80.134" mmsport="8080" type="mms" />
   <apn carrier="WIND GR" mcc="202" mnc="10" apn="gint.b-online.gr" type="default,supl" />
   <apn carrier="WIND GR MMS" mcc="202" mnc="10" apn="mnet.b-online.gr" user="mms" password="mms" mmsc="http://192.168.200.95/servlets/mms" mmsproxy="192.168.200.11" mmsport="9401" type="mms" />
