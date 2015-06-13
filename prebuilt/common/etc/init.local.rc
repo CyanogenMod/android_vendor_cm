@@ -17,7 +17,7 @@ on post-fs-data
     start sysinit
 
 on property:ro.crypto.state=unencrypted
-    srart sysinit
+    start sysinit
 
 on boot
     # interactive governor
