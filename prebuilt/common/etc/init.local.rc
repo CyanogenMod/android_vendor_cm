@@ -16,6 +16,9 @@ on post-fs-data
     # Run sysinit
     start sysinit
 
+on property:ro.crypto.state=unencrypted
+    start sysinit
+
 on boot
     # interactive governor
     chown system system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
