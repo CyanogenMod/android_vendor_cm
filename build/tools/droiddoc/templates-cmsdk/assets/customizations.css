@@ -9,6 +9,15 @@
     text-decoration: none;
 }
 
+#headerLeft {
+    float: left;
+}
+
+#headerRight {
+    float: right;
+    width: 33%;
+}
+
 #header {
     border-bottom: 4px solid rgb(1, 125, 187);
 }
