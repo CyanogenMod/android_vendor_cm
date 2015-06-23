@@ -206,3 +206,12 @@ body {
     clear: both;
     width: 97.0238096%}
 }
+
+#headerLeft {
+    float: left;
+}
+
+#headerRight {
+    float: right;
+    width: 33%;
+}
