@@ -175,8 +175,8 @@
   <apn carrier="INTERNET" mcc="214" mnc="01" apn="airtelnet.es" proxy="212.73.32.10" port="80" mmsproxy="" mmsport="" mmsc="" server="" user="vodafone" password="vodafone" authtype="1" type="default,supl" />
   <apn carrier="Vodafone ES-MMS" mcc="214" mnc="01" apn="mms.vodafone.net" proxy="" port="" mmsproxy="212.73.32.10" mmsport="80" mmsc="http://mmsc.vodafone.es/servlets/mms" server="" user="wap@wap" password="wap125" type="mms" />
   <apn carrier="Vodafone ES-Internet" mcc="214" mnc="01" apn="ac.vodafone.es" user="vodafone" password="vodafone" type="default,supl" />
-  <apn carrier="Movistar" mcc="214" mnc="02" apn="telefonica.es" proxy="10.138.255.133" port="8080" mmsproxy="" mmsport="" mmsc="" server="" user="telefonica" password="telefonica" type="default,supl" />
-  <apn carrier="Movistar MMS" mcc="214" mnc="02" apn="telefonica.es" proxy="" port="" mmsproxy="10.138.255.5" mmsport="8080" mmsc="http://mms.movistar.com" server="" user="telefonica" password="telefonica" type="mms" />
+  <apn carrier="Movistar" mcc="214" mnc="02" apn="telefonica.es" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="telefonica" password="telefonica" authtype="1" type="default,supl" />
+  <apn carrier="Movistar MMS" mcc="214" mnc="02" apn="telefonica.es" proxy="" port="" mmsproxy="10.138.255.5" mmsport="8080" mmsc="http://mms.movistar.com" server="" user="telefonica" password="telefonica" authtype="1" type="mms" />
   <apn carrier="Movistar" mcc="214" mnc="02" apn="movistar.es" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="MOVISTAR" password="MOVISTAR" type="dun,default" />
   <apn carrier="Orange Internet Móvil" mcc="214" mnc="03" apn="orangeworld" proxy="10.132.61.10" port="8080" mmsproxy="" mmsport="" mmsc="" server="" user="orange" password="orange" authtype="1" type="default,supl" />
   <apn carrier="Orange Internet PC" mcc="214" mnc="03" apn="internet" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="orange" password="orange" authtype="1" type="dun" />
@@ -198,9 +198,9 @@
   <apn carrier="Vodafone MMS" mcc="214" mnc="06" apn="mms.vodafone.net" user="wap@wap" password="wap125" mmsc="http://mmsc.vodafone.es/servlets/mms" mmsproxy="212.73.32.10" mmsport="80" type="mms" />
   <apn carrier="Lebara" mcc="214" mnc="06" apn="gprsmov.lebaramobile.es" type="default,supl" />
   <apn carrier="Lebara MMS" mcc="214" mnc="06" apn="mms.lebaramobile.es" user="wap@wap" password="wap125" mmsc="http://mms.lebaramobile.es/servlets/mms" mmsproxy="212.73.32.10" mmsport="80" type="default,supl" />
-  <apn carrier="Movistar" mcc="214" mnc="07" apn="telefonica.es" proxy="10.138.255.133" port="8080" mmsproxy="" mmsport="" mmsc="" server="" user="telefonica" password="telefonica" type="default,supl" />
+  <apn carrier="Movistar" mcc="214" mnc="07" apn="telefonica.es" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="telefonica" password="telefonica" authtype="1" type="default,supl" />
+  <apn carrier="Movistar MMS" mcc="214" mnc="07" apn="telefonica.es" proxy="" port="" mmsproxy="10.138.255.5" mmsport="8080" mmsc="http://mms.movistar.com" server="" user="telefonica" password="telefonica" authtype="1" type="mms" />
   <apn carrier="Conexión compartida" mcc="214" mnc="07" apn="movistar.es" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="MOVISTAR" password="MOVISTAR" type="dun,default" />
-  <apn carrier="Movistar MMS" mcc="214" mnc="07" apn="telefonica.es" proxy="" port="" mmsproxy="10.138.255.5" mmsport="8080" mmsc="http://mms.movistar.com" server="" user="telefonica" password="telefonica" type="mms" />
   <apn carrier="Euskaltel" mcc="214" mnc="08" apn="internet.euskaltel.mobi" user="CLIENTE" password="EUSKALTEL" type="default,supl" />
   <apn carrier="Euskaltel MMS" mcc="214" mnc="08" apn="euskaltelmms.euskaltel.mobi" user="MMS" password="EUSKALTEL" mmsc="http://mms.euskaltel.mobi" mmsproxy="172.16.18.74" mmsport="8080" type="mms" />
   <apn carrier="TeleCable Internet" mcc="214" mnc="16" apn="internet.telecable.es" user="telecable" password="telecable" type="default,supl" />
@@ -339,6 +339,7 @@
   <apn carrier="Iusacell Modem" mcc="222" mnc="19" apn="modem.iusacellgsm.mx" user="iusacellgsm" password="iusacellgsm" type="dun" />
   <apn carrier="Iusacell MMS" mcc="222" mnc="19" apn="mms.iusacellgsm.mx" mmsproxy="" mmsport="" mmsc="http://mms.iusacell3g.com/" server="" user="mmsiusacellgsm" password="mmsiusacellgsm" type="mms" />
   <apn carrier="Wind Internet" mcc="222" mnc="88" apn="internet.wind" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" authtype="3" type="default,supl" />
+  <apn carrier="Lycamobile" mcc="222" mnc="35" apn="data.lycamobile.it" proxy="" port="" mmsproxy="" mmsport="" mmsc="" server="" user="lmit" password="plus" type="default,supl" />
   <apn carrier="MMS Wind" mcc="222" mnc="88" apn="mms.wind" proxy="" port="" user="" password="" server="" mmsc="http://mms.wind.it" mmsproxy="212.245.244.100" mmsport="8080" authtype="3" type="mms" />
   <apn carrier="3" mcc="222" mnc="99" apn="tre.it" mmsc="http://10.216.59.240:10021/mmsc" mmsproxy="62.13.171.3" mmsport="8799" authtype="3" type="default,supl,mms" />
   <apn carrier="Fastweb" mcc="222" mnc="99" apn="apn.fastweb.it" mmsc="http://mms.fastweb.it/mms/wapenc" mmsproxy="10.0.65.9" mmsport="8080" type="default,supl,mms" />
