@@ -1461,7 +1461,7 @@
   <apn carrier="Internet" mcc="310" mnc="090" apn="isp" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mvno_type="" mvno_match_data="" spn="" type="default,supl" />
   <apn carrier="MMS" mcc="310" mnc="090" apn="mms" proxy="" port="" user="" password="" server="" mmsc="http://mms.edgemobile.net/mmsc" mmsproxy="12.108.12.13" mmsport="3128" mvno_type="" mvno_match_data="" spn="" type="mms" />
   <apn carrier="Edge MMS Prepay" mcc="310" mnc="090" apn="ppmms" proxy="" port="" user="" password="" server="" mmsc="http://mms.edgemobile.net/mmsc" mmsproxy="12.108.12.13" mmsport="3128" mvno_type="" mvno_match_data="" spn="" type="mms" />
-  <apn carrier="ATT WAP" mcc="310" mnc="70" apn="wap.cingular" proxy="wireless.cingular.com" port="80" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,mms" />
+  <apn carrier="ATT Nextgenphone" mcc="310" mnc="410" apn="phone" mmsc="http://mmsc.mobile.att.net" mmsproxy="proxy.mobile.att.net" mmsport="80" type="default,supl,mms,hipri,fota" />
   <apn carrier="ATT Broadband" mcc="310" mnc="70" apn="Broadband" type="default,supl" />
   <apn carrier="ATT WAP" mcc="310" mnc="90" apn="wap.cingular" proxy="wireless.cingular.com" port="80" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,mms" />
   <apn carrier="ATT Broadband" mcc="310" mnc="90" apn="Broadband" type="default,supl" />
