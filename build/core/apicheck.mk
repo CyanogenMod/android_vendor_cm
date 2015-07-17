@@ -116,4 +116,9 @@ update-cm-system-api: $(INTERNAL_PLATFORM_CM_SYSTEM_API_FILE) | $(ACP)
 	@echo Copying cm_system-removed.txt
 	$(hide) $(ACP) $(INTERNAL_CM_PLATFORM_SYSTEM_REMOVED_API_FILE) $(FRAMEWORK_CM_PLATFORM_SYSTEM_REMOVED_API_FILE)
 
+.PHONY: update-cm-prebuilts-latest-public-api
+update-cm-prebuilts-latest-public-api: $(FRAMEWORK_CM_PLATFORM_API_FILE) | $(ACP)
+	@echo -e ${CL_GRN}"Publishing cm_current.txt as latest API release"${CL_RST}
+	@(hide) $(ACP) $(FRAMEWORK_CM_PLATFORM_API_FILE) $(CM_SRC_API_DIR)/$(cm_last_released_sdk_version).txt
+
 endif
