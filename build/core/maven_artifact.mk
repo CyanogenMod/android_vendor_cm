@@ -32,13 +32,23 @@ artifact_filename := $(LOCAL_MAVEN_GROUP).$(LOCAL_MAVEN_ARTIFACT)-$(LOCAL_MAVEN_
 
 LOCAL_PREBUILT_MODULE_FILE := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),$(LOCAL_MODULE),,COMMON)/$(artifact_filename)
 
+ifeq ($(shell mvn --version | head -1),Apache Maven 3.0.5)
+  copy_task :=
+  repo_param := -DrepoUrl=
+  output_param := -Ddestination=
+else
+  copy_task := dependency:copy
+  repo_param := -DremoteRepositories=central::::
+  output_param := -DoutputDirectory=
+endif
+
 $(LOCAL_PREBUILT_MODULE_FILE): specifier := $(LOCAL_MAVEN_GROUP):$(LOCAL_MAVEN_ARTIFACT):$(LOCAL_MAVEN_VERSION):$(LOCAL_MAVEN_PACKAGING)$(if $(LOCAL_MAVEN_CLASSIFIER),:$(LOCAL_MAVEN_CLASSIFIER))
 $(LOCAL_PREBUILT_MODULE_FILE): repo := $(LOCAL_MAVEN_REPO)
 $(LOCAL_PREBUILT_MODULE_FILE):
-	@mvn -q dependency:get dependency:copy \
-		-DremoteRepositories=central::::$(repo) \
+	$(hide) mvn -q dependency:get $(copy_task) \
+		$(repo_param)$(repo) \
 		-Dartifact=$(specifier) \
-		-DoutputDirectory=$(dir $@) \
+		$(output_param)$(dir $@) \
 		-Dmdep.prependGroupId=true \
 		-Dmdep.overWriteSnapshots=true \
 		-Dmdep.overWriteReleases=true \
