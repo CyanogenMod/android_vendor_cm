@@ -114,7 +114,7 @@
   <apn carrier="JIM Mobile Internet" mcc="206" mnc="20" apn="gprs.base.be" proxy="" port="" user="base" password="base" server="" mmsc="" mmsproxy="" mmsport="" mvno_type="" mvno_match_data="" spn="" authtype="1" type="default,supl" />
   <apn carrier="JIM Mobile MMS" mcc="206" mnc="20" apn="mms.base.be" proxy="" port="" user="base" password="base" server="" mmsc="http://mmsc.base.be" mmsproxy="217.72.235.1" mmsport="8080" mvno_type="" mvno_match_data="" spn="" authtype="1" type="mms" />
   <apn carrier="Orange Internet" mcc="208" mnc="01" apn="orange.fr" proxy="" port="" user="orange" password="orange" server="" mmsc="" mmsproxy="" mmsport="" mvno_type="" mvno_match_data="" spn="" type="default,supl,dun" />
-  <apn carrier="Orange MMS" mcc="208" mnc="01" apn="orange.acte" proxy="" port="" mmsproxy="192.168.010.200" mmsport="8080" mmsc="http://mms.orange.fr" user="orange" password="orange" type="mms" />
+  <apn carrier="Orange MMS" mcc="208" mnc="01" apn="orange" proxy="" port="" mmsproxy="" mmsport="" mmsc="http://mms.orange.fr" user="orange" password="orange" type="mms" />
   <apn carrier="Orange World" mcc="208" mnc="01" apn="orange" user="orange" password="orange" authtype="2" type="default,supl" />
   <apn carrier="Orange Entreprise" mcc="208" mnc="01" apn="orange-mib" proxy="172.16.2.8" port="8000" user="orange" password="orange" authtype="2" type="default,supl" />
   <apn carrier="Orange France" mcc="208" mnc="01" apn="orange" proxy="" port="" user="orange" password="orange" server="" mmsc="" mmsproxy="" mmsport="" mvno_type="" mvno_match_data="" spn="" type="default,supl" />
