@@ -16,6 +16,7 @@
 
 # For minivold in recovery
 /sbin/minivold            u:object_r:vold_exec:s0
+/etc/blkid.tab*           u:object_r:blkid_table_file:s0
 
 #############################
 # performance-related sysfs files (CM)

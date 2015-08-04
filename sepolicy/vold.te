@@ -12,5 +12,7 @@ allow vold self:capability { setgid setuid };
 
 # Vold can also run as minivold in the rootfs
 recovery_only(`
-  allow vold rootfs:dir { add_name write };
+  allow vold rootfs:dir { add_name write remove_name };
+  allow vold blkid_table_file:file { rename write link setattr create unlink };
+  file_type_auto_trans(vold, rootfs, blkid_table_file)
 ')

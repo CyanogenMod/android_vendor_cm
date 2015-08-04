@@ -11,3 +11,6 @@ type sysfs_devices_system_iosched, file_type, sysfs_type;
 
 # Recovery's "cache"
 type recovery_cache_file, file_type, mlstrustedobject;
+
+# For libext2_blkid in recovery
+type blkid_table_file, file_type;
