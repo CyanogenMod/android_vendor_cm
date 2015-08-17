@@ -1498,11 +1498,9 @@
   <apn carrier="WCW Internet" mcc="310" mnc="180" apn="internet.wcc.net" user="3257630000" password="mmsc" type="default,supl" authtype="0" />
   <apn carrier="WCW-MMS" mcc="310" mnc="180" apn="mms.wcc.net" proxy="209.55.70.246" port="80" mmsc="http://mms.wcc.net" mmsproxy="209.55.70.246" mmsport="80" user="13257630000" password="mmsc" type="mms" authtype="3" />
   <apn carrier="WCW-MMS only" mcc="310" mnc="180" apn="mms.wcc.net" proxy="209.55.70.244" port="80" mmsc="http://mms.wcc.net" mmsproxy="209.55.70.246" mmsport="80" user="3257630000" password="mmsc" type="default,mms" authtype="3" />
-  <apn carrier="T-Mobile US LTE" mcc="310" mnc="260" apn="fast.t-mobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
-  <apn carrier="T-Mobile US LTE IPv6" mcc="310" mnc="260" apn="fast.t-mobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" protocol="IPV6" />
+  <apn carrier="T-Mobile US LTE" mcc="310" mnc="260" apn="fast.t-mobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" protocol="IPV6" roaming_protocol="IP" />
   <apn carrier="T-Mobile GPRS" mcc="310" mnc="260" apn="fast.t-mobile.com" proxy="" port="" user="" password="" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" authtype="0" type="default,supl,mms" />
-  <apn carrier="MetroPCS LTE" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" type="default,mms,supl" />
-  <apn carrier="MetroPCS LTE IPv6" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" type="default,mms,supl" protocol="IPV6" />
+  <apn carrier="MetroPCS LTE" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" type="default,mms,supl" protocol="IPV6" roaming_protocol="IP" />
   <apn carrier="MetroPCS" mcc="310" mnc="260" apn="fast.t-mobile.com" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" mvno_type="gid" mvno_match_data="6d38" type="default,mms,supl" />
   <apn carrier="Net10" mcc="310" mnc="260" apn="wap.tracfone" port="8080" mmsc="http://mms.tracfone.com" type="default,mms,supl" />
   <apn carrier="Family Mobile" mcc="310" mnc="260" apn="web.omwtoday.com" port="" mmsc="http://wirelessfour.mmsmvno.com/mms/wapenc" mvno_type="gid" mvno_match_data="4d4b" type="default,mms,supl" />
