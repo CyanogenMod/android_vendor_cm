@@ -266,6 +266,7 @@
   <spnOverride numeric="46007"  spn="中国移动" />
   <spnOverride numeric="46003"  spn="中国电信" />
   <spnOverride numeric="46005"  spn="中国电信" />
+  <spnOverride numeric="46011"  spn="中国电信" />
   <spnOverride numeric="46020"  spn="China Tietong" />
   <spnOverride numeric="46001"  spn="中国联通" />
   <!-- Colombia -->
