@@ -20,3 +20,9 @@ PRODUCT_PACKAGES += \
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Orion.ogg
+
+#Don't ask for SIM PIN after leaving APM
+ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+endif
