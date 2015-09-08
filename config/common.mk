@@ -148,7 +148,8 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CMAccount \
     CMHome \
-    CyanogenSetupWizard
+    CyanogenSetupWizard \
+    Snap
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
