@@ -5,6 +5,56 @@ on init
     export ANDROID_CACHE /cache
     export TERMINFO /system/etc/terminfo
 
+    # Set up the BFQIO hierarchy
+    chmod 0755 /sys/fs/cgroup
+    mkdir /sys/fs/cgroup/bfqio 0755 root system
+    mount cgroup none /sys/fs/cgroup/bfqio bfqio
+    write /sys/fs/cgroup/bfqio/bfqio.ioprio_class 2
+    write /sys/fs/cgroup/bfqio/bfqio.ioprio 1
+    write /sys/fs/cgroup/bfqio/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/tasks
+
+    # Realtime class
+    mkdir /sys/fs/cgroup/bfqio/rt 0755 root system
+    write /sys/fs/cgroup/bfqio/rt/bfqio.ioprio_class 1
+    write /sys/fs/cgroup/bfqio/rt/bfqio.ioprio 4
+    write /sys/fs/cgroup/bfqio/rt/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/rt/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/rt/tasks
+
+    # UI class
+    mkdir /sys/fs/cgroup/bfqio/ui 0755 root system
+    write /sys/fs/cgroup/bfqio/ui/bfqio.ioprio_class 1
+    write /sys/fs/cgroup/bfqio/ui/bfqio.ioprio 7
+    write /sys/fs/cgroup/bfqio/ui/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/ui/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/ui/tasks
+
+    # High priority
+    mkdir /sys/fs/cgroup/bfqio/hipri 0755 root system
+    write /sys/fs/cgroup/bfqio/hipri/bfqio.ioprio_class 2
+    write /sys/fs/cgroup/bfqio/hipri/bfqio.ioprio 0
+    write /sys/fs/cgroup/bfqio/hipri/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/hipri/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/hipri/tasks
+
+    # Background
+    mkdir /sys/fs/cgroup/bfqio/bg 0755 root system
+    write /sys/fs/cgroup/bfqio/bg/bfqio.ioprio_class 2
+    write /sys/fs/cgroup/bfqio/bg/bfqio.ioprio 7
+    write /sys/fs/cgroup/bfqio/bg/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/bg/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/bg/tasks
+
+    # Idle
+    mkdir /sys/fs/cgroup/bfqio/idle 0755 root system
+    write /sys/fs/cgroup/bfqio/idle/bfqio.ioprio_class 3
+    write /sys/fs/cgroup/bfqio/idle/bfqio.ioprio 3
+    write /sys/fs/cgroup/bfqio/idle/bfqio.weight 1000
+    chown root system /sys/fs/cgroup/bfqio/idle/tasks
+    chmod 0666 /sys/fs/cgroup/bfqio/idle/tasks
+
 on post-fs-data
     mkdir /data/.ssh 0750 root shell
     mkdir /cache/recovery 0770 system cache
