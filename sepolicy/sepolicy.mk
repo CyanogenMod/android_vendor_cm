@@ -38,3 +38,8 @@ BOARD_SEPOLICY_UNION += \
     vold.te \
     zygote.te \
     mac_permissions.xml
+
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+BOARD_SEPOLICY_DIRS += \
+    vendor/cm/sepolicy/qcom
+endif
