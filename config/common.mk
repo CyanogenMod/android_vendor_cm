@@ -101,6 +101,14 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
 
+# Use all common apps
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/app,system/app)
+
+# Use all common libs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/cm/prebuilt/common/lib,system/lib)
+
 # CM-specific init file
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
@@ -108,7 +116,8 @@ PRODUCT_COPY_FILES += \
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/cm/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/cm/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd \
+    vendor/cm/prebuilt/common/media/suda-phonelocation.dat:system/media/location/suda-phonelocation.dat 
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -140,14 +149,10 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
-    AudioFX \
+    PhoneLocationProvider \
     CMWallpapers \
     CMFileManager \
     Eleven \
-    LockClock \
-    CMUpdater \
     CMAccount \
     CMHome \
     CyanogenSetupWizard
