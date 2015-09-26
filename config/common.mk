@@ -155,7 +155,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     CMAccount \
     CMHome \
-    CyanogenSetupWizard
+    CyanogenSetupWizard \
+    CMSettingsProvider
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
