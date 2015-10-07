@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # T-Mobile theme engine
-include vendor/cm/config/themes_common.mk
+#include vendor/cm/config/themes_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -146,7 +146,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-    AudioFX \
     CMWallpapers \
     CMFileManager \
     Eleven \
@@ -156,6 +155,7 @@ PRODUCT_PACKAGES += \
     CMHome \
     CyanogenSetupWizard \
     CMSettingsProvider
+# AudioFX \
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
@@ -208,14 +208,22 @@ PRODUCT_PACKAGES += \
     rsync
 
 # Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
+#PRODUCT_PACKAGES += \
+#    libffmpeg_extractor \
+#    libffmpeg_omx \
+#    media_codecs_ffmpeg.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    media.sf.omx-plugin=libffmpeg_omx.so \
+#    media.sf.extractor-plugin=libffmpeg_extractor.so
+
+
+# TCM (TCP Connection Management) support
+PRODUCT_PACKAGES += \
+    tcmiface
+
+PRODUCT_BOOT_JARS += \
+    tcmiface
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
