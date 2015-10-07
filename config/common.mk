@@ -158,15 +158,15 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider
 
 # CM Platform Library
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.platform-res \
-    org.cyanogenmod.platform \
-    org.cyanogenmod.platform.xml
+#PRODUCT_PACKAGES += \
+#    org.cyanogenmod.platform-res \
+#    org.cyanogenmod.platform \
+#    org.cyanogenmod.platform.xml
 
 # CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
+#PRODUCT_PACKAGES += \
+#    org.cyanogenmod.hardware \
+#    org.cyanogenmod.hardware.xml
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
