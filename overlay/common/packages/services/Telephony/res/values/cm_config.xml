@@ -15,8 +15,8 @@
 -->
 
 <resources>
-  <string-array name="dialer_default_classes" translatable="false">
+  <!--<string-array name="dialer_default_classes" translatable="false">
       <item>com.android.dialer/com.android.dialer.DialtactsActivity</item>
       <item>com.cyngn.dialer/com.android.dialer.DialtactsActivity</item>
-  </string-array>
+  </string-array>-->
 </resources>
