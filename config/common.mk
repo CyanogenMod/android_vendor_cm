@@ -105,6 +105,15 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 
+# Include the OpenSSL compatablity wrapper if target still references some of its symbols
+ifeq ($(BOARD_USES_OPENSSL_SYMBOLS),true)
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/init.sslcompat.rc:root/init.sslcompat.rc
+
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+endif
+
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/cm/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
