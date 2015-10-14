@@ -1,0 +1,19 @@
+eng_only(`
+    allow audiod bootchart_log:file w_file_perms;
+    allow bluetooth_loader bootchart_log:file w_file_perms;
+    allow bootanim bootchart_log:file w_file_perms;
+    allow debuggerd bootchart_log:file w_file_perms;
+    allow healthd bootchart_log:file w_file_perms;
+    allow lmkd bootchart_log:file w_file_perms;
+    allow logd bootchart_log:file w_file_perms;
+    allow mediaserver bootchart_log:file w_file_perms;
+    allow rfs_access bootchart_log:file w_file_perms;
+    allow rmt_storage bootchart_log:file w_file_perms;
+    allow servicemanager bootchart_log:file w_file_perms;
+    allow surfaceflinger bootchart_log:file w_file_perms;
+    allow sysinit bootchart_log:file w_file_perms;
+    allow tee bootchart_log:file w_file_perms;
+    allow vm_bms bootchart_log:file w_file_perms;
+    allow vold bootchart_log:file w_file_perms;
+    allow zygote bootchart_log:file w_file_perms;
+')
