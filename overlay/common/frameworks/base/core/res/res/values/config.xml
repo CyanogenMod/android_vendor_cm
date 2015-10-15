@@ -66,12 +66,12 @@
 
     <!-- Defines external services to be started by the SystemServer at boot. The service itself
          should publish as a binder services in its onStart -->
-    <!--string-array name="config_externalCMServices">
+    <string-array name="config_externalCMServices">
         <item>org.cyanogenmod.platform.internal.CMStatusBarManagerService</item>
         <item>org.cyanogenmod.platform.internal.ProfileManagerService</item>
         <item>org.cyanogenmod.platform.internal.PartnerInterfaceService</item>
         <item>org.cyanogenmod.platform.internal.CMTelephonyManagerService</item>
         <item>org.cyanogenmod.platform.internal.CMHardwareService</item>
         <item>org.cyanogenmod.platform.internal.AppSuggestManagerService</item>
-    </string-array-->
+    </string-array>
 </resources>
