@@ -106,6 +106,8 @@
   <apn carrier="blau ES" mcc="214" mnc="19" apn="gprs-service.com" mmsc="http://217.18.32.180:8080" mmsproxy="217.18.32.181" mmsport="8080" type="default,supl,mms" />
   <apn carrier="Simyo ES" mcc="214" mnc="19" apn="gprs-service.com" type="default,supl" />
   <apn carrier="Simyo ES-MMS" mcc="214" mnc="19" apn="gprs-service.com" password="1234" mmsc="http://mms-services.eu" mmsproxy="217.12.32.180" mmsport="8080" type="mms" />
+  <apn carrier="Internet ONO" mcc="214" mnc="18" apn="internet.ono.com" type="default,supl"/>
+  <apn carrier="MMS ONO" mcc="214" mnc="18" apn="mms.ono.com" mmsc="http://mms.ono.com" mmsproxy="10.126.0.50" mmsport="8080" type="mms"/>
   <apn carrier="Jazztel" mcc="214" mnc="21" apn="jazzinternet" type="default,supl" />
   <apn carrier="Jazztel MMS" mcc="214" mnc="21" apn="jazzmms" mmsc="http://jazztelmms.com:8081" mmsproxy="217.18.32.183" mmsport="8081" type="mms" />
   <apn carrier="Pannon MMS" mcc="216" mnc="01" apn="mms" mmsc="http://mmsc.pgsm.hu/" mmsproxy="193.225.154.22" mmsport="8080" type="mms" />
