@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# Let Boxer know to show Cyanogen branding
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/org.cyanogenmod.partner.boxer.xml:system/etc/permissions/org.cyanogenmod.partner.boxer.xml
+
 # T-Mobile theme engine
 include vendor/cm/config/themes_common.mk
 

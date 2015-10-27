@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Cyanogen, Inc.
+  -->
+<permissions>
+    <!-- This feature indicates compatibility with partner functionality -->
+    <feature name="com.cyanogen.partner.boxer" />
+</permissions>
