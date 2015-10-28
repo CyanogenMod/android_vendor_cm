@@ -185,6 +185,7 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
+    mkntfs \
     ntfsfix \
     ntfs-3g \
     gdbserver \
