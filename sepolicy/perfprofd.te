@@ -1,0 +1,3 @@
+userdebug_or_eng(`
+  allow perfprofd property_socket:sock_file w_file_perms;
+')
