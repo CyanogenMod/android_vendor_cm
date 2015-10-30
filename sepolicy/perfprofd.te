@@ -1,0 +1,1 @@
+allow perfprofd property_socket:sock_file w_file_perms;
