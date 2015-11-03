@@ -4,7 +4,7 @@ $(call inherit-product, vendor/cm/config/common.mk)
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
 
-# Optional CM packages
+# Live wallpapers
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -14,7 +14,6 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     PhotoTable \
-    SoundRecorder \
     PhotoPhase
 
 # Extra tools in CM
