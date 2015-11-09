@@ -1,0 +1,9 @@
+#####################################
+# sysinit_daemon_domain(domain)
+# Set up a transition from init to the daemon domain
+# upon executing its binary.
+define(`sysinit_daemon_domain', `
+domain_auto_trans(sysinit, $1_exec, $1)
+tmpfs_domain($1)
+allow $1 sysinit:fd use;
+')
