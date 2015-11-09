@@ -7,6 +7,7 @@ BOARD_SEPOLICY_DIRS += \
     vendor/cm/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    te_macros \
     file.te \
     file_contexts \
     genfs_contexts \
@@ -28,6 +29,7 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     recovery.te \
     shell.te \
+    sshd.te \
     su.te \
     sysinit.te \
     system.te \

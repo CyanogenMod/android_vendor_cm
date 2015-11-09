@@ -20,3 +20,8 @@ type persist_property_file, file_type;
 
 # Knobs for LiveDisplay
 type livedisplay_sysfs, sysfs_type, file_type;
+
+# sshd
+type sshd_data_file, file_type, data_file_type;
+type sshd_exec, exec_type, file_type;
+

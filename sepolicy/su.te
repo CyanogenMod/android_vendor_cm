@@ -58,6 +58,9 @@ userdebug_or_eng(`
   allow untrusted_app superuser_device:dir { r_dir_perms };
   allow untrusted_app superuser_device:sock_file { write };
 
+# sshd can do su
+  domain_auto_trans(sshd, su_exec, su)
+
 
   # For Settings control of access
   allow system_app superuser_device:sock_file { read write create setattr unlink getattr };
