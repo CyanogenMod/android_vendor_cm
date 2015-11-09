@@ -24,7 +24,6 @@
 # sshd
 /system/bin/start-ssh	  u:object_r:sshd_exec:s0
 /system/bin/sshd	  u:object_r:sshd_exec:s0
-/system/bin/scp		  u:object_r:su_exec:s0
 /data/ssh(/.*)?		  u:object_r:sshd_data_file:s0
 /data/.ssh(/.*)?	  u:object_r:sshd_data_file:s0		  
 

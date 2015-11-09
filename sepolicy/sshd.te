@@ -1,0 +1,22 @@
+# sshd is not available in -user-mode (in the same way as su)
+
+userdebug_or_eng(`
+# sshd daemon
+type sshd, domain;
+
+sysinit_daemon_domain(sshd)
+net_domain(sshd)
+
+
+allow sshd self:capability { setgid setuid net_admin net_raw net_bind_service};
+allow sshd self:packet_socket create_socket_perms;
+allow sshd self:netlink_route_socket { create_socket_perms nlmsg_write };
+allow sshd sshd_exec:file x_file_perms;
+allow sshd self:capability { dac_override sys_chroot kill };
+allow sshd sshd_data_file:file create_file_perms;
+allow sshd sshd_data_file:dir create_dir_perms;
+allow sshd system_file:file rx_file_perms;
+allow sshd shell_exec:file rx_file_perms;
+allow sshd devpts:chr_file rw_file_perms;
+allow sshd ptmx_device:chr_file create_file_perms;
+')
