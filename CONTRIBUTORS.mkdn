@@ -30,7 +30,7 @@ Maintainers (CyanogenMod 12.1):
 * __HTC One (GSM):__ h8rift
 * __HTC One M8:__ deck, h8rift, invisblek, toastcfh, u-ra, uberlaggydarwin
 * __HTC One M8 Dual SIM (m8dug):__ bgcngm
-* __HTC One M9 (hima):__ cyanogen, Rashed97, varunchitre15
+* __HTC One M9 (hima):__ cyanogen, intervigil, Rashed97, varunchitre15
 * __HTC One Max (T6):__ flyhalf205, sbrissen
 * __HTC One (Sprint):__ kushdeck, toastcfh
 * __HTC One (Verizon):__ flyhalf205, mdmower
@@ -38,12 +38,12 @@ Maintainers (CyanogenMod 12.1):
 * __HTC One X:__ gorbi16, mdeejay, tbalden, Thömy
 * __HTC One X+:__ Lloir, tombriden
 * __HTC One XL:__ h8rift, intervigil
-* __LG G2 (AT&T) (D800):__ arcee, Rashed97, Shelnutt2
-* __LG G2 (T-Mobile) (D801):__ arcee, Rashed97, Shelnutt2
-* __LG G2 (International) (D802):__ arcee, Rashed97, Shelnutt2
-* __LG G2 (Canada) (D803):__ arcee, Rashed97, Shelnutt2
-* __LG G2 (Sprint) (LS980):__ arcee, Rashed97, Shelnutt2
-* __LG G2 (Verizon) (VS980):__ arcee, Rashed97, Shelnutt2
+* __LG G2 (AT&T) (D800):__ arcee, intervigil, Rashed97, Shelnutt2
+* __LG G2 (T-Mobile) (D801):__ arcee, intervigil, Rashed97, Shelnutt2
+* __LG G2 (International) (D802):__ arcee, intervigil, Rashed97, Shelnutt2
+* __LG G2 (Canada) (D803):__ arcee, intervigil, Rashed97, Shelnutt2
+* __LG G2 (Sprint) (LS980):__ arcee, intervigil, Rashed97, Shelnutt2
+* __LG G2 (Verizon) (VS980):__ arcee, intervigil, Rashed97, Shelnutt2
 * __LG G3 (AT&T) (D850):__ AndroidUser00110001
 * __LG G3 (T-Mobile) (D851):__ savoca
 * __LG G3 (Canada) (D852):__ AndroidUser00110001
