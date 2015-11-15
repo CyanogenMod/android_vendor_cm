@@ -20,6 +20,13 @@
 # For minivold in recovery
 /sbin/minivold            u:object_r:vold_exec:s0
 
+
+# sshd
+/system/bin/start-ssh	  u:object_r:sshd_exec:s0
+/system/bin/sshd	  u:object_r:sshd_exec:s0
+/data/ssh(/.*)?		  u:object_r:sshd_data_file:s0
+/data/.ssh(/.*)?	  u:object_r:sshd_data_file:s0		  
+
 #############################
 # performance-related sysfs files (CM)
 /sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_devices_system_cpu:s0
