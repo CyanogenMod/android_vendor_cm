@@ -1,0 +1,2 @@
+allow domain block_device:dir getattr; 
+allow domain fuse_device:chr_file getattr;
