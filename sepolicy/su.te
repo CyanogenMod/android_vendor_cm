@@ -41,6 +41,7 @@ userdebug_or_eng(`
   dontaudit sudaemon domain:peer *;
   dontaudit sudaemon domain:binder *;
   dontaudit sudaemon property_type:property_service *;
+  dontaudit sudaemon appops_service:service_manager *;
 ')
 
 ## Perms for the app
@@ -57,7 +58,6 @@ userdebug_or_eng(`
   allow untrusted_app sudaemon:unix_stream_socket { connectto read write setopt ioctl };
   allow untrusted_app superuser_device:dir { r_dir_perms };
   allow untrusted_app superuser_device:sock_file { write };
-
 
   # For Settings control of access
   allow system_app superuser_device:sock_file { read write create setattr unlink getattr };
