@@ -125,19 +125,20 @@ Maintainers (CyanogenMod 12.1):
 * __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codyf86
 * __Samsung Galaxy Tab 2 10.1" (GT-P51xx):__ codyf86
 * __Samsung Galaxy Tab Pro 8.4" (SM-T320):__ crpalmer
+* __Samsung Galaxy Tab S 8.4" (SM-T700):__ deadman96385
 * __Samsung Vibrant (SGH-T959):__ FaultException
 * __Sony Xperia E3  (flamingo):__ FreeXperia Team
-* __Sony Xperia L (taoshan):__ varunchitre15, FreeXperia Team
+* __Sony Xperia L (taoshan):__ olivieer, FreeXperia Team
 * __Sony Xperia M (nicki):__ RonG, FreeXperia Team
 * __Sony Xperia M2 (eagle):__ FreeXperia Team
-* __Sony Xperia SP (huashan):__ FreeXperia Team, uberlaggydarwin, Mrcl1450
+* __Sony Xperia SP (huashan):__ FreeXperia Team, uberlaggydarwin, Mrcl1450, AdrianDC
 * __Sony Xperia T (mint):__ FreeXperia Team, tilal6991, uberlaggydarwin
 * __Sony Xperia T2 Ultra  (tianchi):__ FreeXperia Team
 * __Sony Xperia T3  (seagull):__ FreeXperia Team
 * __Sony Xperia V (tsubasa):__ FreeXperia Team, tilal6991, championswimmer, uberlaggydarwin
-* __Sony Xperia Z (yuga):__ FreeXperia Team, championswimmer, Turl
-* __Sony Xperia ZL (odin):__  FreeXperia Team, championswimmer
-* __Sony Xperia ZR (dogo):__  FreeXperia Team, championswimmer
+* __Sony Xperia Z (yuga):__ FreeXperia Team, Turl, olivieer
+* __Sony Xperia ZL (odin):__  FreeXperia Team, olivieer
+* __Sony Xperia ZR (dogo):__  FreeXperia Team
 * __Sony Xperia Tablet Z LTE (pollux):__ FreeXperia Team, snc
 * __Sony Xperia Tablet Z WiFi (pollux_windy):__ FreeXperia Team, snc
 * __Sony Xperia Tablet Z2 LTE (castor):__ FreeXperia Team
