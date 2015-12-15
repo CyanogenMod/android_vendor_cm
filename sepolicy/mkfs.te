@@ -1,0 +1,10 @@
+# mkfs
+# Set up an filesystem on one or more block devices.
+type mkfs, domain;
+type mkfs_exec, exec_type, file_type;
+
+init_daemon_domain(mkfs)
+
+allow mkfs block_device:dir search;
+allow mkfs userdata_block_device:blk_file rw_file_perms;
+allow mkfs cache_block_device:blk_file rw_file_perms;
