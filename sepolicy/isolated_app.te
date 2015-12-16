@@ -1,0 +1,3 @@
+# Rules for gello sandboxed process
+allow isolated_app app_data_file:dir search;
+allow isolated_app app_data_file:file ioctl;
