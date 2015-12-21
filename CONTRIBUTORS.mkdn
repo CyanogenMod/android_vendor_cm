@@ -215,7 +215,7 @@ Translators:
 * __Swedish:__ Simon Bäck (backsimon), elelinux (elelinux), Simon Danielsson (sad_88), Ted Lundwall (TedLundwall)
 * __Tamil:__ Kishore Sheik Ahamed (kishoreinme), Solomon Sunder (solomonsunder), Stars Soft (starssoft), அருண் குமார் - Arun Kumar (thangamani-arun)
 * __Thai:__ pureexe (pureexe)
-* __Turkish:__ Arif GÜLER (ArF), Mesut Öztürk (doktormesut), Murat KOŞAK (muratkosak), okirat (okirat), Şenol (senoleker)
+* __Turkish:__ Ali Kömesöğütlü (byzlo685), Ardy Ard (arrabax), Arif GÜLER (ArF), Mesut Öztürk (doktormesut), Murat KOŞAK (muratkosak), okirat (okirat), Şenol (senoleker)
 * __Ukrainian:__ Andriy Poznakhovskyy (Andrulko), Nazar Sokolovsky (nazar_sokolovsky), Maks (probil), xalich (xalich)
 * __Uyghur:__ jiveking (jiveking)
 * __Vietnamese:__ Bảo Quân (quan221295), Triet Bui Minh (x3cafe)
