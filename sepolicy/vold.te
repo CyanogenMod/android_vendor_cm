@@ -14,3 +14,6 @@ allow vold self:capability { setgid setuid };
 recovery_only(`
   allow vold rootfs:dir { add_name write };
 ')
+
+# Allow vold to access exfat partition
+allow vold mnt_media_rw_stub_file:dir r_dir_perms;
