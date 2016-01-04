@@ -3,3 +3,7 @@ allow zygote theme_data_file:dir r_dir_perms;
 
 # ps command may do this
 allow untrusted_app zygote:process getsched;
+
+# USB OTG
+allow zygote vfat:filesystem { unmount };
+allow zygote labeledfs:filesystem { unmount };
