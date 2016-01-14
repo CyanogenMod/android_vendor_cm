@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     bzip2 \
     curl \
     powertop \
+    tree \
     unrar \
     unzip \
     vim \
