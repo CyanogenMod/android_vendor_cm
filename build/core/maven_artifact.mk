@@ -50,7 +50,20 @@ $(LOCAL_PREBUILT_MODULE_FILE):
 		-DoutputDirectory=$(dir $@)
 	@echo -e ${CL_GRN}"Download:"${CL_RST}" $@"
 
+ifdef LOCAL_JACK_ENABLED
+# This is required to be defined before the LOCAL_MODULES target below gets defined, it's a NOOP registered again in
+# BUILD_PREBUILT.  This is done because BUILD_PREBUILT doesn't actually handle generating the .jack files properly and
+# only generates a target but doesn't set the LOCAL_MODULE dependent on it.
+$(call intermediates-dir-for,JAVA_LIBRARIES,$(LOCAL_MODULE),,COMMON):
+
+# This adds another step required for LOCAL_MODULE to be completed -- generating the jack file, it just so happens
+# to be built when doing a brunch, but not when doing an mmm, so this makes it work lswith both
+$(LOCAL_MODULE): $(call intermediates-dir-for,JAVA_LIBRARIES,$(LOCAL_MODULE),,COMMON)/classes.jack
+endif # LOCAL_JACK_ENABLED is disabled
+
 include $(BUILD_PREBUILT)
+
+# after this, we need to actually generate the .jack file for it
 
 # the "fetchprebuilts" target will go through and pre-download all of the maven dependencies in the tree
 fetchprebuilts: $(LOCAL_PREBUILT_MODULE_FILE)
