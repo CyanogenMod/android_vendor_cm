@@ -16,11 +16,14 @@ Maintainers (CyanogenMod 13.0):
 * __Google Android One:__ varunchitre15
 * __Google Galaxy Nexus:__ bekit, Bumble-Bee, burnsra, KalimochoAz, something15525
 * __Google Nexus S:__ burnsra, KalimochoAz, klusark
-* __Google Nexus 4:__ rmcc
-* __Google Nexus 5:__ fluxi
+* __Google Nexus 4:__ ciwrl
+* __Google Nexus 5:__ ciwrl
+* __Google Nexus 5X:__ ciwrl, jakew02
 * __Google Nexus 6:__ dhacker29
+* __Google Nexus 6P:__ ciwrl, dhacker29, Sam Mortimer
 * __Google Nexus 7:__ burnsra, fattire, Thömy, nemith, JoeyRizzoli (GSM)
-* __Google Nexus 10:__ atinm, dalingrin, kornyone, gweedo767
+* __Google Nexus 9:__ simonsickle, ciwrl
+* __Google Nexus 10:__ Tortel, ciwrl
 * __Google Nexus Player:__ dhacker29, bmc08gt
 * __HTC Desire 601(zara/zaracl):__ uberlaggydarwin, PatrikKT
 * __HTC Desire 816:__ Grarak, v_superuser
@@ -28,11 +31,11 @@ Maintainers (CyanogenMod 13.0):
 * __HTC Droid DNA:__ crpalmer, invisiblek
 * __HTC Droid Incredible 4G LTE:__ intervigil, mdmower
 * __HTC Evo 4G LTE:__ kushdeck, toastcfh
-* __HTC One (GSM):__ h8rift
+* __HTC One (GSM):__ codeworkx, h8rift
 * __HTC One M8:__ deck, h8rift, invisblek, toastcfh, u-ra, uberlaggydarwin
 * __HTC One M8 Dual SIM (m8dug):__ bgcngm
 * __HTC One M9 (hima):__ cyanogen, Rashed97, varunchitre15
-* __HTC One Max (T6):__ flyhalf205, sbrissen
+* __HTC One Max (T6):__ Flyhalf205
 * __HTC One (Sprint):__ kushdeck, toastcfh
 * __HTC One (Verizon):__ flyhalf205, mdmower
 * __HTC One S:__ intervigil, xkonni
@@ -45,15 +48,11 @@ Maintainers (CyanogenMod 13.0):
 * __LG G2 (Canada) (D803):__ arcee, Rashed97, Shelnutt2
 * __LG G2 (Sprint) (LS980):__ arcee, Rashed97, Shelnutt2
 * __LG G2 (Verizon) (VS980):__ arcee, Rashed97, Shelnutt2
-* __LG G3 (AT&T) (D850):__
-* __LG G3 (T-Mobile) (D851):__ bryan2894
-* __LG G3 (Canada) (D852):__ cuzz1369
+* __LG G3 (AT&T) (D850):__ AndroidUser00110001
+* __LG G3 (T-Mobile) (D851):__ savoca
+* __LG G3 (Canada) (D852):__ AndroidUser00110001
 * __LG G3 (International) (D855):__ finnq
-* __LG G3 (Korea) (F400):__ TheNoFace
-* __LG G3 (Sprint) (LS990):__
 * __LG G3 (Verizon) (VS985):__ invisiblek
-* __LG G4 (T-Mobile) (H811):__ codeworkx, genesixxbf3
-* __LG G4 (International) (H815):__ codeworkx, genesixxbf3
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
 * __LG Optimus LTE (SK Telecom) (SU640):__ arcee
 * __Moto E 2014 (xt1021,xt1022,xt1023/condor):__ percy_g2, scritch007, ashwin007
@@ -79,9 +78,8 @@ Maintainers (CyanogenMod 13.0):
 * __Motorola Xoom 3G (UMTS):__ bazar, SteadyHawkin, TDR (Team Rogue)
 * __Motorola Xoom 4G LTE (Verizon):__ bazar, SteadyHawkin, TDR (Team Rogue)
 * __OnePlus One:__ cyanogen, intervigil, inwotep, arcee
-* __Oppo Find 5:__ intervigil, nebkat, raymanfx
+* __Oppo Find 5:__ intervigil, nebkat
 * __Oppo Find 7:__ intervigil, tdm, inwotep, mikeioannina
-* __Oppo N1:__ raymanfx
 * __Oppo N3:__ invisiblek, maniac103
 * __Oppo R7:__ maniac103, mikeioannina, Rashed97
 * __Oppo R7 Plus:__ maniac103, mikeioannina, Rashed97
@@ -96,8 +94,6 @@ Maintainers (CyanogenMod 13.0):
 * __Samsung Galaxy Note II LTE (Sprint) (SPH-L900):__ sbrissen
 * __Samsung Galaxy Note II LTE (USCC) (SCH-R950):__ sbrissen
 * __Samsung Galaxy Note III (hlte):__ cyanogen, noobnl, slayher
-* __Samsung Galaxy Note IV Exynos (trelte):__ raymanfx
-* __Samsung Galaxy Note IV Exynos (trhplte):__ raymanfx
 * __Samsung Galaxy Note 8.0 3G (GT-N5100):__ sbrissen
 * __Samsung Galaxy Note 8.0 WiFi (GT-N5110):__ sbrissen
 * __Samsung Galaxy Note 10.1 (GT-N80XX):__ Espenfjo
@@ -108,7 +104,7 @@ Maintainers (CyanogenMod 13.0):
 * __Samsung Galaxy S (GT-I9000):__ pawitp
 * __Samsung Galaxy S (GT-I9000B):__ helvio88
 * __Samsung Galaxy S II (GT-I9100):__ Caio Schnepper
-* __Samsung Galaxy S II (intl) (GT-I9100G):__ Jiangyi, Ryuinferno
+* __Samsung Galaxy S II (intl) (GT-I9100G):__ codeworkx, Jiangyi, Ryuinferno
 * __Samsung Galaxy S II (T-Mobile) (SGH-T989):__ mikeyman77
 * __Samsung Galaxy S II (AT&T) (SGH-I727):__ topprospect
 * __Samsung Galaxy S III (AT&T) (SGH-I747):__ nardholio
@@ -128,22 +124,22 @@ Maintainers (CyanogenMod 13.0):
 * __Samsung Galaxy S V (Vodafone) (SM-G900I):__ Regi24
 * __Samsung Galaxy Tab 7" (GSM):__ cdesai, humberos
 * __Samsung Galaxy Tab 7" (CDMA):__ jt1134
-* __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codyf86
+* __Samsung Galaxy Tab 2 7" (GT-P31xx):__ codeworkx, codyf86
 * __Samsung Galaxy Tab 2 10.1" (GT-P51xx):__ codyf86
 * __Samsung Galaxy Tab Pro 8.4" (SM-T320):__ crpalmer
 * __Samsung Vibrant (SGH-T959):__ FaultException
 * __Sony Xperia E3  (flamingo):__ FreeXperia Team
-* __Sony Xperia L (taoshan):__ olivieer, FreeXperia Team
+* __Sony Xperia L (taoshan):__ varunchitre15, FreeXperia Team
 * __Sony Xperia M (nicki):__ RonG, FreeXperia Team
 * __Sony Xperia M2 (eagle):__ FreeXperia Team
-* __Sony Xperia SP (huashan):__ Mrcl1450
+* __Sony Xperia SP (huashan):__ FreeXperia Team, uberlaggydarwin, Mrcl1450
 * __Sony Xperia T (mint):__ FreeXperia Team, tilal6991, uberlaggydarwin
 * __Sony Xperia T2 Ultra  (tianchi):__ FreeXperia Team
 * __Sony Xperia T3  (seagull):__ FreeXperia Team
 * __Sony Xperia V (tsubasa):__ FreeXperia Team, tilal6991, championswimmer, uberlaggydarwin
-* __Sony Xperia Z (yuga):__ FreeXperia Team, Turl, olivieer
-* __Sony Xperia ZL (odin):__  FreeXperia Team
-* __Sony Xperia ZR (dogo):__  FreeXperia Team
+* __Sony Xperia Z (yuga):__ FreeXperia Team, championswimmer, Turl
+* __Sony Xperia ZL (odin):__  FreeXperia Team, championswimmer
+* __Sony Xperia ZR (dogo):__  FreeXperia Team, championswimmer
 * __Sony Xperia Tablet Z LTE (pollux):__ FreeXperia Team, snc
 * __Sony Xperia Tablet Z WiFi (pollux_windy):__ FreeXperia Team, snc
 * __Sony Xperia Tablet Z2 LTE (castor):__ FreeXperia Team
@@ -228,5 +224,5 @@ Graphics and Assets:
 
 Former Contributors:
 --------------------
-* __Devices:__ Entropy512, xplodwild
+* __Devices:__ Entropy512, xplodwild, fluxi, gweedo767, kornyone, dalingrin
 * __Features:__ mad-murdock, wysie, Ander Webbs, ChainsDD, xplodwild
