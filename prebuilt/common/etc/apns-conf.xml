@@ -3942,4 +3942,14 @@
   <apn carrier="Claro MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" proxy="" port="" mmsc="http://mms.ctimovil.com.uy" user="" password="" type="mms" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="du" name="du internet" apn="du" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="424" mnc="03" type="default,supl" authtype="" />
+  <apn carrier="du" name="du mms" apn="du" proxy="" port="" user="" password="" server="" mmsc="http://mms.du.ae" mmsproxy="10.19.18.4" mmsport="8080" mcc="424" mnc="03" type="mms" authtype="" />
+  <apn carrier="Etisalat" name="etisalat" apn="etisalat.ae" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="424" mnc="02" type="default,supl" authtype="" />
+  <apn carrier="Etisalat" name="etisalat mms" apn="mms" proxy="" port="" user="mms" password="mms" server="" mmsc="http://mms/servlets/mms" mmsproxy="10.12.0.30" mmsport="8080" mcc="424" mnc="02" type="mms" authtype="" />
+  <apn carrier="Spark NZ" name="Data" apn="internet" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="530" mnc="05" type="default,supl" authtype="" />
+  <apn carrier="Spark NZ" name="MMS" apn="internet" proxy="" port="" user="" password="" server="" mmsc="http://lsmmsc.xtra.co.nz" mmsproxy="210.55.11.73" mmsport="80" mcc="530" mnc="05" type="mms" authtype="" />
+  <apn carrier="vodafone NZ" name="Vodafone NZ" apn="vodafone" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="530" mnc="01" type="default,supl" authtype="" protocol="IPV4" roaming_protocol="IPV4" />
+  <apn carrier="vodafone NZ" name="VFNZ Gateway" apn="live.vodafone.com" proxy="" port="" user="" password="" server="" mmsc="http://pxt.vodafone.net.nz/pxtsend" mmsproxy="172.30.38.3" mmsport="8080" mcc="530" mnc="01" type="mms" authtype="" />
+  <apn carrier="Skinny" name="default" apn="wapaccess.co.nz" proxy="" port="" user="" password="" server="" mmsc="" mmsproxy="" mmsport="" mcc="530" mnc="05" type="default,supl" authtype="" mvno_match_data="5300520" mvno_type="imsi" />
+  <apn carrier="Skinny" name="default" apn="wapaccess.co.nz" proxy="" port="" user="" password="" server="" mmsc="http://mms.mmsaccess.co.nz" mmsproxy="210.055.011.073" mmsport="80" mcc="530" mnc="05" type="mms" authtype="" mvno_match_data="5300520" mvno_type="imsi" />
 </apns>
