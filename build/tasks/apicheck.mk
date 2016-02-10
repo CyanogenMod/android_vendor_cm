@@ -41,6 +41,8 @@ checkapi-cm : check-cm-public-api
 # (See vendor/cmsdk/Android.mk)
 # we need to add api-stubs as additional dependency of the api check.
 
+$(INTERNAL_CM_PLATFORM_API_FILE): cm-api-stubs-docs
+
 # Check that the API we're building hasn't broken the last-released
 # SDK version.
 $(eval $(call check-api, \
@@ -81,7 +83,13 @@ update-cm-api : update-cm-public-api
 .PHONY: check-cm-system-api
 checkapi-cm : check-cm-system-api
 
+<<<<<<< HEAD:build/core/apicheck.mk
 # Check that the Cyanogen System API we're building hasn't broken the last-released
+=======
+$(INTERNAL_CM_PLATFORM_SYSTEM_API_FILE): cm-system-api-stubs-docs
+
+# Check that the System API we're building hasn't broken the last-released
+>>>>>>> 97ac30e... cm: Set explicit dependencies on stubs for checkapi-cm.:build/tasks/apicheck.mk
 # SDK version.
 $(eval $(call check-api, \
     checksystemapi-cm-last, \
