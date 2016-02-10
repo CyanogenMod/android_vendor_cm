@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! "$BUILD_WITH_COLORS" = "0" ]; then
+  CL_RED="\033[31m" # RED
+  CL_GRN="\033[32m" # Green
+  CL_YLW="\033[33m" # Yellow
+  CL_BLU="\033[34m" # Blue
+  CL_MAG="\033[35m" # Magenta/Purple
+  CL_CYN="\033[36m" # Cyan
+  CL_RST="\033[0m"  # Reset
+fi
