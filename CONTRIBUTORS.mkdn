@@ -51,6 +51,7 @@ Maintainers (CyanogenMod 12.1):
 * __LG G3 (Verizon) (VS985):__ invisiblek
 * __LG G4 (T-Mobile) (H811):__ codeworkx, genesixxbf3
 * __LG G4 (International) (H815):__ codeworkx, genesixxbf3
+* __LG V10 (T-Mobile) (H901):__ genesixxbf3
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
 * __LG Optimus LTE (SK Telecom) (SU640):__ arcee
 * __Moto E 2014 (xt1021,xt1022,xt1023/condor):__ percy_g2, scritch007, ashwin007
