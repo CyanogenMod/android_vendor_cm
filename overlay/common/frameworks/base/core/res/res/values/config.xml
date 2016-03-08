@@ -66,5 +66,6 @@
         <item>org.cyanogenmod.platform.internal.PerformanceManagerService</item>
         <item>org.cyanogenmod.platform.internal.ThemeManagerService</item>
         <item>org.cyanogenmod.platform.internal.IconCacheManagerService</item>
+        <item>org.cyanogenmod.platform.internal.LiveLockScreenManagerService</item>
     </string-array>
 </resources>
