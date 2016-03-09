@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock \
     CMUpdater \
+    CMAccount \
     CMHome
 
 # CM Hardware Abstraction Framework
