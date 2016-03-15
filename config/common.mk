@@ -351,7 +351,7 @@ ifndef CM_PLATFORM_REV
   # For internal SDK revisions that are hotfixed/patched
   # Reset after each CM_PLATFORM_SDK_VERSION release
   # If you are doing a release and this is NOT 0, you are almost certainly doing it wrong
-  CM_PLATFORM_REV := 0
+  CM_PLATFORM_REV := 1
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
