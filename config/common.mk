@@ -218,6 +218,10 @@ PRODUCT_PACKAGES += \
     su
 endif
 
+#CM Weather Content Provider
+PRODUCT_PACKAGES += \
+    WeatherProvider
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
 
