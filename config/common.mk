@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CyanogenSetupWizard \
     CMSettingsProvider \
-    ExactCalculator
+    ExactCalculator \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
