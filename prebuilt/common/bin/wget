@@ -1,184 +1,520 @@
 #!/system/bin/sh
-# wget-curl, a curl wrapper acting as a wget drop-in replacement - version git-HEAD
-# Usage: wget [wget args] [i need to fill this in later] <url(s)>
-# Download all URLs given using curl, but using wget's options.
+
+# Copyright (C) 2016 Cyanogen, Inc.
 #
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# End of help.
-# Copyright (c) 2015 Kylie McClain <somasis@exherbo.org>
+# http://www.apache.org/licenses/LICENSE-2.0
 #
-# Permission to use, copy, modify, and/or distribute this software for any
-# purpose with or without fee is hereby granted, provided that the above
-# copyright notice and this permission notice appear in all copies.
-#
-# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-# REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-# AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-# INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-# LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-# OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-# PERFORMANCE OF THIS SOFTWARE.
-#
-# End of copyright.
-#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-set -o pipefail
-shopt -u shift_verbose >/dev/null 2>&1
-
-help() {
-    sed -n '/^#/!d;s/^# //;s/^#//;3,${p;}' "$0" | \
-        while IFS= read help_line;do
-            if [[ "$help_line" == "End of help." ]];then
-                exit 0
-            else
-                printf "%s\n" "$help_line"
-            fi
-        done
-    exit 0
+show_version() {
+	echo "GNU Wget 1.16 wrapper"
+	echo ""
+	echo "Copyright (C) 2016 Cyanogen, Inc."
+	echo "License GPLv2: GNU GPL version 2"
+	echo "<http://www.gnu.org/licenses/gpl.html>"
+	echo "This is free software: you are free to change and redistribute it."
+	echo "There is NO WARRANTY, to the extent permitted by law."
+	exit 0
 }
 
-version() {
-    sed 's/^# //;s/, .* - version / /;2q;$!d' "$0"
-    copyright
-    exit 0
+show_help() {
+	echo "GNU Wget 1.16 wrapper, a non-interactive network retriever."
+	echo "Usage: wget [OPTION]... [URL]..."
 }
 
-copyright() {
-    sed -n '/^#/!d;s/^# //;s/^#//;/End of help./,${p;}' "$0" | \
-        while IFS= read copyright_line;do
-            if [[ "$copyright_line" == "End of help." ]];then
-                true
-            elif [[ "$copyright_line" == "End of copyright." ]];then
-                break
-            else
-                printf '%s\n' "$copyright_line"
-            fi
-        done
+urls=""
+add_url() {
+	local url="$1"
+	if [ ${url: -1} == "/" ]; then
+		url="${url}index.html"
+	fi
+	urls="$urls $url"
 }
 
-stderr() {
-    printf "$@" >&2
-}
+http_header=()
 
-error() {
-    stderr "$0: $1\n"
-    exit "$2"
-}
+# Defaults
+opt_background="0"
+opt_continue="0"
+opt_headers="0"
+opt_inputfile=""
+opt_ip=""
+opt_timeout=""
+opt_tries=""
+opt_useragent=""
+opt_verbose="1"
 
-invalid_arg() {
-    error "invalid option -- '$1'" 2
-}
-
-append_opt() {
-    for opt in $@;do
-        CURL_OPTS="${CURL_OPTS} ${opt}"
-    done
-}
-
-curl() {
-    eval "command curl $@ ${CURL_RAW}"
-}
-
-append_raw_arg() {
-    CURL_RAW="$CURL_RAW $@"
-}
-
-has_opt() { # exit 0 if CURL_OPTS has arg, non-zero if doesn't
-    if [[ "$CURL_OPTS" == *" $1"* ]];then
-        return 0
-    else
-        return 1
-    fi
-}
-
-reexec_without() { # download afterwards without $1 in OPTS
-    reexec_args_without="$reexec_args_without $@"
-    reexec=1
-}
-
-reexec_only() {
-    for arg in $@;do
-        CURL_OPTS_REEXEC_ONLY="${CURL_OPTS_REEXEC_ONLY} $arg"
-    done
-}
-
-print_url() {
-    has_opt -s || printf "%s\n" "$1"
-}
-
-# 46ABDFHIKLNOPQRSTUVXabcdhiklm nH nc nd np nv opqrtvwx
-while getopts ':46ABDFHIKLNO:PQRST:U:VXa:bcdhiklmopqrtvwx' argument "$@";do
-    case "$argument" in
-        # a lot of these are noop right now because they are wget mirror args
-        # which curl doesn't really do, and i am not sure if i should implement them
-        4)  append_opt -4       ;;
-        6)  append_opt -6       ;;
-        A)  true                ;; # probably can't implement this easily...
-        B)  true                ;;
-        D)  true                ;;
-        E)  true                ;;
-        F)  true                ;; # curl doesn't care what the input is
-        H)  true                ;;
-        I)  true                ;;
-        K)  true                ;;
-        L)  true                ;;
-        N)  true                ;;
-        O)  append_opt "-o $OPTARG"                 ;;
-        P)  true                ;;
-        Q)  true                ;;
-        R)  true                ;;
-        S)  append_opt -I;reexec_without -I -s  ;;
-        T)  append_opt "-m $OPTARG"                 ;;
-        U)  append_opt "--user-agent \"$OPTARG\""   ;;
-        V)  version; curl --version; exit 0         ;;
-        X)  true                                    ;;
-        a)  append_raw_arg "2>&1 | tee -a $OPTARG"  ;;
-        b)
-            wget_log="wget-log"
-            i=1
-            while [[ -f "${wget_log}" ]];do
-                # if that exists, increment until we find something that doesn't
-                i=$(($i+1))
-                wget_log="wget-log.${i}"
-            done
-            append_raw_arg ">\"$wget_log\" 2>&1 &"
-            printf "Continuing in background, pid %s.\nOutput will be written to '$wget_log'.\n" "$$"
-        ;;
-        c)  append_opt "-C -"                       ;;
-        d)  append_opt "-v"                         ;;
-        e)  true                                    ;;
-        h)  help                                    ;;
-        i)
-            [[ ! -f "$OPTARG" ]] && error "$OPTARG does not exist" 3
-            for url in $(<"$OPTARG");do
-                URLS=( ${URLS[@]} "$url" )
-            done
-        ;;
-        q)  append_opt "-s"                         ;;
-    esac
-    shift $(($OPTIND-1))
+# Android has no getopt(1), and getopts built-in does not handle long opts.
+while [ "$#" -gt 0 -a "${1:0:1}" = "-" ]; do
+	opt="$1"
+	shift
+	arg=""
+	if [ "${opt:0:2}" = "--" ]; then
+		longopt_only=0
+		opt=${opt:2}
+		if [ "$opt" != "${opt%%=*}" ]; then
+			arg="${opt#*=}"
+			opt="${opt%%=*}"
+		else
+			if [ "${opt:0:3}" = "no-" ]; then
+				opt=${opt:3}
+				arg=0
+			else
+				arg=1
+			fi
+		fi
+		case "$opt" in
+		"adjust-extension") opt="E" ;;
+		"ask-password") opt_askpass="$arg"
+			longopt_only=1
+			opt_askpass="$arg"
+			;;
+		"append-output") opt="a" ;;
+		"auth-no-challenge")
+			longopt_only=1
+			# XXX
+			;;
+		"background") opt="b" ;;
+		"backup-converted") opt="K" ;;
+		"backups")
+			longopt_only=1
+			# XXX
+			;;
+		"base") opt="B" ;;
+		"bind-address")
+			longopt_only=1
+			# XXX
+			;;
+		"body-data")
+			longopt_only=1
+			# XXX
+			;;
+		"body-file")
+			longopt_only=1
+			# XXX
+			;;
+		"ca-certificate")
+			longopt_only=1
+			https_ca_cert="$arg"
+			;;
+		"ca-directory")
+			longopt_only=1
+			https_ca_dir="$arg"
+			;;
+		"cache")
+			longopt_only=1
+			http_cache="$arg"
+			;;
+		"certificate")
+			longopt_only=1
+			https_cert="$arg"
+			;;
+		"certificate-type")
+			longopt_only=1
+			https_cert_type="$arg"
+			;;
+		"check-certificate")
+			longopt_only=1
+			# XXX
+			;;
+		"clobber") opt="nc" ;;
+		"config")
+			longopt_only=1
+			# XXX
+			;;
+		"connect-timeout")
+			longopt_only=1
+			# XXX
+			;;
+		"content-disposition")
+			longopt_only=1
+			# XXX
+			;;
+		"convert-links") opt="k" ;;
+		"content-on-error")
+			longopt_only=1
+			# XXX
+			;;
+		"continue") opt="c" ;;
+		"cookies")
+			longopt_only=1
+			http_cookies="$arg"
+			;;
+		"debug") opt="d" ;;
+		"default-page")
+			longopt_only=1
+			# XXX
+			;;
+		"delete-after")
+			longopt_only=1
+			# XXX
+			;;
+		"dns-cache")
+			longopt_only=1
+			# XXX
+			;;
+		"dns-timeout")
+			longopt_only=1
+			# XXX
+			;;
+		"egd-file")
+			longopt_only=1
+			https_egd_file="$arg"
+			;;
+		"execute") opt="e" ;;
+		"force-html") opt="F" ;;
+		"header")
+			longopt_only=1
+			http_header+=("$arg")
+			;;
+		"help") opt="h" ;;
+		"http-keep-alive")
+			longopt_only=1
+			http_keepalive="$arg"
+			;;
+		"http-password")
+			longopt_only=1
+			http_pass="$arg"
+			;;
+		"http-user")
+			longopt_only=1
+			http_user="$arg"
+			;;
+		"https-only")
+			longopt_only=1
+			http_secureonly="$arg"
+			;;
+		"ignore-length")
+			longopt_only=1
+			http_ignore_length="$arg"
+			;;
+		"inet4-only") opt="4" ;;
+		"inet6-only") opt="6" ;;
+		"input-file") opt="i" ;;
+		"iri")
+			longopt_only=1
+			# XXX
+			;;
+		"keep-session-cookies")
+			longopt_only=1
+			# XXX
+			;;
+		"level") opt="l" ;;
+		"limit-rate")
+			longopt_only=1
+			opt_limitrate="$arg"
+			;;
+		"load-cookies")
+			longopt_only=1
+			http_load_cookies="$arg"
+			;;
+		"local-encoding")
+			longopt_only=1
+			# XXX
+			;;
+		"max-redirect")
+			longopt_only=1
+			http_maxredir="$arg"
+			;;
+		"method")
+			longopt_only=1
+			http_method="$arg"
+			;;
+		"mirror") opt="m" ;;
+		"output-document") opt="O" ;;
+		"output-file") opt="o" ;;
+		"page-requisites") opt="p" ;;
+		"password")
+			longopt_only=1
+			opt_askpass=0
+			ftp_pass="$arg"
+			http_pass="$arg"
+			;;
+		"post-data")
+			longopt_only=1
+			http_postdata="$arg"
+			;;
+		"post-file")
+			longopt_only=1
+			http_postfile="$arg"
+			;;
+		"prefer-family")
+			longopt_only=1
+			# XXX
+			;;
+		"private-key")
+			longopt_only=1
+			https_privkey="$arg"
+			;;
+		"private-key-type")
+			longopt_only=1
+			https_privkey_type="$arg"
+			;;
+		"progress")
+			longopt_only=1
+			# XXX
+			;;
+		"proxy")
+			longopt_only=1
+			# XXX
+			;;
+		"proxy-password")
+			longopt_only=1
+			http_proxy_pass="$arg"
+			;;
+		"proxy-user")
+			longopt_only=1
+			http_proxy_user="$arg"
+			;;
+		"quiet") opt="q" ;;
+		"quota") ;; # XXX
+		"random-file")
+			longopt_only=1
+			https_random_file="$arg"
+			;;
+		"random-wait")
+			longopt_only=1
+			# XXX
+			;;
+		"read-timeout")
+			longopt_only=1
+			# XXX
+			;;
+		"recursive") opt="r" ;;
+		"referer")
+			longopt_only=1
+			http_referer="$arg"
+			;;
+		"remote-encoding")
+			longopt_only=1
+			# XXX
+			;;
+		"report-speed")
+			longopt_only=1
+			# XXX
+			;;
+		"restrict-file-names")
+			longopt_only=1
+			# XXX
+			;;
+		"retry-connrefused")
+			longopt_only=1
+			# XXX
+			;;
+		"save-cookies")
+			longopt_only=1
+			http_save_cookies="$arg"
+			;;
+		"save-headers")
+			longopt_only=1
+			http_saveheaders="$arg"
+			;;
+		"secure-protocol")
+			longopt_only=1
+			http_secureproto="$arg"
+			;;
+		"server-response") opt="S" ;;
+		"show-progress")
+			longopt_only=1
+			# XXX
+			;;
+		"spider")
+			longopt_only=1
+			# XXX
+			;;
+		"start-pos")
+			longopt_only=1
+			# XXX
+			;;
+		"strict-comments")
+			longopt_only=1
+			# XXX
+			;;
+		"timeout") opt="T" ;;
+		"timestamping") opt="N" ;;
+		"tries") opt="t" ;;
+		"trust-server-names")
+			longopt_only=1
+			# XXX
+			;;
+		"unlink")
+			longopt_only=1
+			# XXX
+			;;
+		"use-server-timestamps")
+			longopt_only=1
+			# XXX
+			;;
+		"user")
+			longopt_only=1
+			ftp_user="$arg"
+			http_user="$arg"
+			;;
+		"user-agent") opt="U" ;;
+		"verbose") opt="v" ;;
+		"version") opt="V" ;;
+		"wait") opt="w" ;;
+		"waitretry")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-cdx")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-compression")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-dedup")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-digests")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-file")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-header")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-keep-log")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-max-size")
+			longopt_only=1
+			# XXX
+			;;
+		"warc-tempdir")
+			longopt_only=1
+			# XXX
+			;;
+		*) show_help ;;
+		esac
+		if [ "$longopt_only" -ne 0 ]; then
+			continue
+		fi
+	else
+		opt="${opt:1}"
+		case "$opt" in
+		o|a|i|O)
+			arg="$1"
+			shift
+			;;
+		*)
+			arg=1
+			;;
+		esac
+	fi
+	case "$opt" in
+	4) opt_ip="4" ;;
+	6) opt_ip="6" ;;
+	a) opt_logfile="$arg"
+	   opt_logappend=1
+	   ;;
+	b) opt_background=1 ;;
+	B) ;; # Ignored
+	c) opt_continue=1 ;;
+	d) ;; # Ignored
+	e) ;; # Ignored XXX: can we implement this?
+	E) ;; # Ignored
+	F) ;; # Ignored
+	h) show_help ;;
+	i) opt_inputfile="$arg" ;;
+	k) ;; # Ignored
+	K) ;; # Ignored
+	l) ;; # Ignored
+	m) ;; # Ignored
+	nc) opt_noclobber=1 ;;
+	nv) opt_verbose=1 ;;
+	N) ;; # Ignored
+	o) opt_logfile="$arg"
+	   opt_logappend=0
+	   ;;
+	O) opt_output="$arg" ;;
+	p) ;; # Ignored
+	q) opt_verbose=0 ;;
+	r) ;; # Ignored
+	S) opt_headers=1 ;;
+	t) opt_tries="$arg" ;;
+	T) opt_timeout="$arg" ;;
+	U) opt_useragent="$arg" ;;
+	v) opt_verbose=2 ;;
+	V) show_version ;;
+	w) ;; # Ignored
+	esac
 done
 
-# set wget default equivilants
-append_opt -L # follow redirects
-append_opt -# # progress bar
-
-if [[ -z "${URLS[@]}" ]];then
-    URLS=( ${@} )
+for url in $@; do
+	add_url "$url"
+done
+if [ -n "$opt_inputfile" ]; then
+	for url in $(cat $opt_inputfile); do
+		add_url "$url"
+	done
 fi
 
-for url in ${URLS[@]};do
-    url_file=${url##*/}
-    if [[ "$url" == "$url_file" ]];then
-        # has no remote file name and -o is not in CURL_OPTS... assume index.html
-        has_opt -o || append_opt "-o index.html"
-    fi
+curlopts="--location"
 
-    eval "print_url '$url';curl ${CURL_OPTS} -- $url"
-    if [[ "$reexec" ]];then
-        for reexec_arg in ${reexec_args_without};do
-            CURL_OPTS_REEXEC=$(echo "${CURL_OPTS_REEXEC:-$CURL_OPTS}" | sed "s# $reexec_arg##")
-        done
-        eval "print_url '$url';curl ${CURL_OPTS_REEXEC} ${CURL_OPTS_REEXEC_ONLY} -- $url"
-    fi
-done
+if [ -n "$opt_ip" ]; then
+	curlopts="$curlopts -$opt_ip"
+fi
+
+if [ "$opt_continue" -ne 0 ]; then
+	curlopts="$curlopts -C -"
+fi
+
+if [ "$opt_headers" -ne 0 ]; then
+	curlopts="$curlopts -D -"
+fi
+
+if [ -n "$opt_timeout" ]; then
+	curlopts="$curlopts -m $opt_timeout"
+fi
+
+if [ -n "$opt_useragent" ]; then
+	curlopts="$curlopts -A $opt_useragent"
+fi
+
+case "$opt_verbose" in
+"0") curlopts="$curlopts --silent" ;;
+"1") ;;
+*) curlopts="$curlopts --verbose" ;;
+esac
+
+if [ -n "$opt_tries" ]; then
+	curlopts="$curlopts --retry $opt_tries"
+fi
+
+if [ -n "$opt_output" ]; then
+	if [ "$opt_output" != "-" ]; then
+		curlopts="$curlopts -o $opt_output"
+	fi
+else
+	curlopts="$curlopts --remote-name-all"
+fi
+
+if [ "$opt_background" -ne 0 ]; then
+	wlog="wget-log"
+	i=1
+	while [ -f "$wlog" ]; do
+		i=$((i+1))
+		wlog="wget-log.$i"
+	done
+	curlbg=">$wlog 2>&1 &"
+fi
+
+exec curl $curlopts $urls $curlbg
