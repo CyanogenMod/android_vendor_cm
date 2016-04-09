@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-    AudioFX \
+    OSSAudioFX \
     CMWallpapers \
     CMFileManager \
     Eleven \
