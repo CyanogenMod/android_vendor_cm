@@ -10,6 +10,13 @@ allow sysinit system_file:file { rx_file_perms };
 allow sysinit self:process setcurrent;
 
 userdebug_or_eng(`
+    # sysinit is permissive to permit setenforce.
+    # this allow sysinit change selinux model
+    permissive sysinit;
+
+    # add sysinit to netdomain
+    net_domain(sysinit);
+
     allow sysinit userinit_data_exec:file { r_file_perms relabelto };
     allow sysinit property_socket:sock_file write;
     allow sysinit init:unix_stream_socket connectto;
@@ -18,4 +25,33 @@ userdebug_or_eng(`
     allow sysinit sysfs_devices_system_cpu:file write;
     allow sysinit self:capability dac_override;
     allow sysinit userinit_exec:file { rx_file_perms };
+
+    # capability required by iptables and ip
+    allow sysinit self:capability { net_admin net_raw kill };
+    dontaudit sysinit self:capability fsetid;
+
+    # allow /system/bin/ip
+    allow sysinit self:netlink_route_socket {create_socket_perms nlmsg_write };
+    allow sysinit self:netlink_nflog_socket create_socket_perms;
+    allow sysinit self:netlink_socket create_socket_perms;
+
+    # iptables
+    allow sysinit netdomain:rawip_socket {read write getattr setattr getopt setopt};
+
+    # allow /system/bin/ip to read rt_tables
+    allow sysinit net_data_file:file { r_file_perms };
+
+    # sysctl
+    allow sysinit proc_net:file { rw_file_perms };
+    allow sysinit proc:file { rw_file_perms };
+
+    # allow write to sdcard
+    # sdcard is not ready at the time sysinit run
+    # allow sysinit sdcard_type:dir create_dir_perms;
+    # allow sysinit sdcard_type:file create_file_perms;
+
+    # allow write to /data/local/tmp
+    allow sysinit shell_data_file:dir create_dir_perms;
+    allow sysinit shell_data_file:file create_file_perms;
+
 ')
