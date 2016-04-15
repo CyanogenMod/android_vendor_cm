@@ -306,7 +306,7 @@
   <apn carrier="Jazztel MMS" mcc="214" mnc="21" apn="jazzmms" mmsc="http://jazztelmms.com:8081" mmsproxy="217.18.32.183" mmsport="8081" type="mms" />
   <apn carrier="Digimobil Internet" mcc="214" mnc="22" apn="internet.digimobil.es" proxy="" port="" user="digi" password="digi" mmsc="" mvno_type="spn" mvno_match_data="DigiMobil" type="default,supl" />
   <apn carrier="Lycamobile" mcc="214" mnc="25" apn="data.lycamobile.es" proxy="" port="" user="lmes" password="plus" mmsc="" mvno_type="spn" mvno_match_data="Lycamobile" type="default,supl,mms" />
-  <apn carrier="Truphone" mcc="214" mnc="27" apn="truphone.com" proxy="" port="" user="" password="" mmsc="" authtype="1" type="default,supl" />
+  <apn carrier="Truphone" mcc="214" mnc="27" apn="truphone.com" type="default,dun" />
   <apn carrier="Tuenti" mcc="214" mnc="32" apn="tuenti.com" proxy="" port="" user="tuenti" password="tuenti" mmsc="" mvno_type="spn" mvno_match_data="Tuenti" type="default,supl,mms" />
   <apn carrier="Masmovil" mcc="214" mnc="32" apn="internetmas" type="default,supl" />
   <apn carrier="Telenor Net" mcc="216" mnc="01" apn="net" type="default,supl" />
@@ -604,7 +604,7 @@
   <apn carrier="3 UK" mcc="234" mnc="20" apn="three.co.uk" proxy="" port="" user="" password="" mmsc="http://mms.um.three.co.uk:10021/mmsc" mmsproxy="217.171.129.2" mmsport="8799" type="default,supl,mms" />
   <apn carrier="Giffgaff" mcc="234" mnc="20" apn="giffgaff.com" proxy="" port="" user="giffgaff" password="user" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mvno_type="spn" mvno_match_data="giffgaff" type="default,supl,mms" />
   <apn carrier="BT Business" mcc="234" mnc="230" apn="btmobile.bt.com" user="bt" password="bt" mmsc="http://mms/" mmsproxy="149.254.201.135" mmsport="8080" authtype="1" type="default,supl,mms" />
-  <apn carrier="Truphone UK" mcc="234" mnc="25" apn="truphone.com" type="default,supl" />
+  <apn carrier="Truphone" mcc="234" mnc="25" apn="truphone.com" type="default,dun" />
   <apn carrier="UK - Lycamobile Web" mcc="234" mnc="26" apn="data.lycamobile.co.uk" proxy="" port="" user="lmuk" password="plus" mmsc="" mvno_type="spn" mvno_match_data="Lycamobile" authtype="1" type="default,supl" />
   <apn carrier="UK - Lycamobile MMS" mcc="234" mnc="26" apn="" proxy="" port="" user="" password="" mmsc="" mvno_type="spn" mvno_match_data="Lycamobile" authtype="1" type="mms" />
   <apn carrier="T-Mobile Internet" mcc="234" mnc="30" apn="general.t-mobile.uk" proxy="" port="" user="t-mobile" password="tm" mmsc="" authtype="1" type="default,supl" />
@@ -661,7 +661,6 @@
   <apn carrier="Orange MMS" mcc="234" mnc="34" apn="orangemms" mmsproxy="192.168.224.10" mmsport="8080" mmsc="http://mms.orange.co.uk/" user="Orange" password="Multimedia" type="mms" />
   <apn carrier="EE Internet" mcc="234" mnc="34" apn="everywhere" user="eesecure" password="secure" authtype="1" type="default,supl,dun" />
   <apn carrier="EE MMS" mcc="234" mnc="34" apn="eezone" user="eesecure" password="secure" mmsc="http://mms/" mmsproxy="149.254.201.135" mmsport="8080" authtype="1" type="mms" />
-  <apn carrier="Truphone Internet" mcc="234" mnc="35" apn="truphone.com" type="default,supl" />
   <apn carrier="Jersey Internet" mcc="234" mnc="50" apn="pepper" proxy="" port="" user="" password="" mmsc="" type="default,supl" />
   <apn carrier="Jersey WAP" mcc="234" mnc="50" apn="pepper" proxy="212.9.19.199" port="3130" user="wap" password="wap" mmsc="" type="default,supl" />
   <apn carrier="Jersey MMS" mcc="234" mnc="50" apn="mms" proxy="" port="" user="mms" password="mms" mmsc="http://mms.surfmail.com/mmsc" mmsproxy="212.9.19.199" mmsport="3130" type="mms" />
@@ -1069,7 +1068,7 @@
   <apn carrier="Cyfrowy Polsat INTERNET" mcc="260" mnc="12" apn="internet.cp" proxy="" port="" user="" password="" mmsc="" type="default,supl" />
   <apn carrier="Cyfrowy Polsat MMS" mcc="260" mnc="12" apn="mms.cyfrowypolsat.pl" proxy="" port="" user="" password="" mmsc="http://mms.cyfrowypolsat.pl:8002" mmsproxy="79.171.2.33" mmsport="8080" type="mms" />
   <apn carrier="Aero2" mcc="260" mnc="17" apn="darmowy" type="default,supl" />
-  <apn carrier="Truphone PL" mcc="260" mnc="33" apn="truphone.com" type="default,supl" />
+  <apn carrier="Truphone" mcc="260" mnc="33" apn="truphone.com" type="default,dun" />
   <apn carrier="T-Mobile Internet" mcc="262" mnc="01" apn="internet.t-mobile" proxy="" port="" user="t-mobile" password="tm" mmsc="" authtype="1" type="default,supl" />
   <apn carrier="T-Mobile MMS" mcc="262" mnc="01" apn="internet.t-mobile" proxy="" port="" user="t-mobile" password="tm" mmsc="http://mms.t-mobile.de/servlets/mms" mmsproxy="172.028.023.131" mmsport="8008" authtype="1" type="mms" />
   <apn carrier="Telekom DE-MMS" mcc="262" mnc="01" apn="internet.t-mobile" user="t-mobile" password="tm" mmsc="http://mms.t-mobile.de/servlets/mms" mmsproxy="172.28.23.131" mmsport="8008" type="mms" />
@@ -3927,4 +3926,11 @@
   <apn carrier="Claro MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" proxy="" port="" mmsc="http://mms.ctimovil.com.uy" user="" password="" type="mms" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="Truphone" mcc="204" mnc="04" apn="truphone.com" type="default,dun" mvno_match_data="204043914" mvno_type="imsi" />
+  <apn carrier="Truphone" mcc="204" mnc="04" apn="truphone.com" type="default,dun" mvno_match_data="20404794" mvno_type="imsi" />
+  <apn carrier="Truphone" mcc="262" mnc="42" apn="truphone.com" type="default,dun" />
+  <apn carrier="Truphone" mcc="310" mnc="30" apn="truphone.com" type="default,dun" />
+  <apn carrier="Truphone" mcc="310" mnc="300" apn="truphone.com" type="default,dun" />
+  <apn carrier="Truphone" mcc="454" mnc="08" apn="truphone.com" type="default,dun" />
+  <apn carrier="Truphone" mcc="505" mnc="02" apn="truphone.com" type="default,dun" mvno_match_data="50502100" mvno_type="imsi" />
 </apns>
