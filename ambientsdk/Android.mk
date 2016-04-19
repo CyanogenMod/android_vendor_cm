@@ -18,10 +18,10 @@ LOCAL_MODULE := ambientsdk
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_UNINSTALLABLE_MODULE := true
 
-LOCAL_MAVEN_REPO := https://repo1.maven.org/maven2
-LOCAL_MAVEN_GROUP := com.cyngn.ambient
+LOCAL_MAVEN_REPO := https://maven.cyngn.com/artifactory/repo
+LOCAL_MAVEN_GROUP := com.cyanogen.ambient
 LOCAL_MAVEN_ARTIFACT := ambientsdk
-LOCAL_MAVEN_VERSION := 1.5.2
+LOCAL_MAVEN_VERSION := 1.5.4-staging_callerinfoapi-SNAPSHOT
 LOCAL_MAVEN_PACKAGING := aar
 
 include $(BUILD_MAVEN_PREBUILT)
