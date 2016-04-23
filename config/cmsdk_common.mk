@@ -1,6 +1,7 @@
 # Permissions for cmsdk services
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml \
+    vendor/cm/config/permissions/org.cyanogenmod.audio.xml:system/etc/permissions/org.cyanogenmod.audio.xml \
     vendor/cm/config/permissions/org.cyanogenmod.livelockscreen.xml:system/etc/permissions/org.cyanogenmod.livelockscreen.xml \
     vendor/cm/config/permissions/org.cyanogenmod.statusbar.xml:system/etc/permissions/org.cyanogenmod.statusbar.xml \
     vendor/cm/config/permissions/org.cyanogenmod.profiles.xml:system/etc/permissions/org.cyanogenmod.profiles.xml \
@@ -20,6 +21,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
+
+# JNI Libraries
+PRODUCT_PACKAGES += \
+    libcmsdk_platform_jni
 
 ifndef CM_PLATFORM_SDK_VERSION
   # This is the canonical definition of the SDK version, which defines
