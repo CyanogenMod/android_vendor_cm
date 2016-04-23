@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+# JNI Libraries
+PRODUCT_PACKAGES += \
+    libcmsdk_platform_jni
+
 ifndef CM_PLATFORM_SDK_VERSION
   # This is the canonical definition of the SDK version, which defines
   # the set of APIs and functionality available in the platform.  It
