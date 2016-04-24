@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     ExactCalculator \
     LiveLockScreenService \
-    WeatherProvider
+    WeatherProvider \
+    OpenWeatherMapProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
