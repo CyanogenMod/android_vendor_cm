@@ -52,3 +52,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.build.version.plat.rev=$(CM_PLATFORM_REV)
 
+# CyanogenMod Platform Services
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ext.platform.service=org.cyanogenmod.platform.internal.CMPlatformServices
