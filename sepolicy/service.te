@@ -1,3 +1,4 @@
+type cm_platform_services, system_api_service, system_server_service, service_manager_type;
 type edge_gesture_service, system_api_service, system_server_service, service_manager_type;
 type themes_service, system_api_service, system_server_service, service_manager_type;
 type torch_service, system_api_service, system_server_service, service_manager_type;
