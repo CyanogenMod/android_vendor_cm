@@ -19,6 +19,7 @@
 
 # skip api check for PDK buid
 ifeq (,$(filter true, $(WITHOUT_CHECK_API) $(TARGET_BUILD_PDK)))
+ifneq ($(ONE_SHOT_MAKEFILE),__none__)
 
 .PHONY: checkapi-cm
 
@@ -140,4 +141,5 @@ update-cm-prebuilts-latest-public-api: $(FRAMEWORK_CM_PLATFORM_API_FILE) | $(ACP
 	@echo -e ${CL_GRN}"Publishing cm_current.txt as latest system API release"${CL_RST}
 	$(hide) $(ACP) $(FRAMEWORK_CM_PLATFORM_SYSTEM_API_FILE) $(current_system_api_release_text_file)
 
+endif
 endif
