@@ -3925,4 +3925,26 @@
   <apn carrier="Claro MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" proxy="" port="" mmsc="http://mms.ctimovil.com.uy" user="" password="" type="mms" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="Internet" mcc="405" mnc="840" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" />
+  <apn carrier="Internet" mcc="405" mnc="854" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="855" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="856" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="857" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="858" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="859" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="860" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="861" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="862" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="863" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="864" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="865" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="866" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="867" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="868" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="869" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="870" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="871" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="872" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="873" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
+  <apn carrier="Internet" mcc="405" mnc="874" apn="jionet" type="default,supl" protocol="IPV4V6" roaming_protocol="IP" carrier_enabled="true" />
 </apns>
