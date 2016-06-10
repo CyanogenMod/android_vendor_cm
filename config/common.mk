@@ -129,7 +129,8 @@ include vendor/cm/config/cmsdk_common.mk
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
-    Profiles
+    Profiles \
+    PicoTtsCM
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
