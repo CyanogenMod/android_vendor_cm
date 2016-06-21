@@ -56,4 +56,7 @@
 
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
+
+    <!-- Enable IpReachability monitor by default -->
+    <bool name="config_wifi_ipreachability_monitor">true</bool>
 </resources>
