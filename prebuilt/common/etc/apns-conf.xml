@@ -107,8 +107,8 @@
   <apn carrier="Voo Mobile" mcc="206" mnc="05" apn="telenetwap.be" user="" password="" type="default,supl" />
   <apn carrier="Voo MMS" mcc="206" mnc="05" apn="mms.be" proxy="" port="" user="mms" password="mms" mmsc="http://mmsc.telenet.be" mmsproxy="195.130.149.100" mmsport="80" authtype="1" type="mms" />
   <apn carrier="Lycamobile BE" mcc="206" mnc="06" apn="data.lycamobile.be" user="lmbe" password="plus" type="default,supl" />
-  <apn carrier="Mobistar" mcc="206" mnc="10" apn="mworld.be" proxy="" port="" user="" password="" mmsc="" authtype="1" type="default,supl" />
-  <apn carrier="Mobistar MMS" mcc="206" mnc="10" apn="mms.be" proxy="" port="" user="mobistar" password="mobistar" mmsc="http://mmsc.mobistar.be" mmsproxy="212.65.63.143" mmsport="8080" authtype="1" type="mms" />
+  <apn carrier="Orange B" mcc="206" mnc="10" apn="mworld.be" proxy="" port="" user="" password="" mmsc="" authtype="1" type="default,supl" />
+  <apn carrier="Orange B MMS" mcc="206" mnc="10" apn="mms.be" proxy="" port="" user="mobistar" password="mobistar" mmsc="http://mmsc.mobistar.be" mmsproxy="212.65.63.143" mmsport="8080" authtype="1" type="mms" />
   <apn carrier="Telenet" mcc="206" mnc="10" apn="telenetwap.be" proxy="" port="" user="" password="" mmsc="" authtype="1" type="default,supl" />
   <apn carrier="BASE Belgium" mcc="206" mnc="20" apn="gprs.base.be" proxy="" port="" user="base" password="base" mmsc="" authtype="1" type="default,supl" />
   <apn carrier="BASE MMS Belgium" mcc="206" mnc="20" apn="mms.base.be" proxy="" port="" user="base" password="base" mmsc="http://mmsc.base.be" mmsproxy="217.72.235.1" mmsport="8080" authtype="1" type="mms" />
