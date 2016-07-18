@@ -55,3 +55,11 @@
 
 # bash
 /system/xbin/bash                               u:object_r:shell_exec:s0
+
+#############################
+# asec containers
+#
+# Label the external storage ASEC image files correctly
+# See also the AOSP labels for internal storage (/data/app-asec) and
+# system/vold/VolumeManager: SEC_ASECDIR_EXT and SEC_ASECDIR_INT
+/mnt/secure/asec(/.*)?                          u:object_r:asec_image_file:s0
