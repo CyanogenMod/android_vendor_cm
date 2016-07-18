@@ -21,6 +21,9 @@ PACKAGE_LIST=()
 VENDOR_STATE=-1
 COMMON=-1
 
+TMPDIR="/tmp/extractfiles.$$"
+mkdir "$TMPDIR"
+
 #
 # setup_vendor
 #
@@ -516,6 +519,42 @@ function write_makefiles() {
 }
 
 #
+# oat2dex
+#
+# $1: odexed apk|jar to deodex
+# $2: original odexed apk|jar to deodex
+#
+# Convert apk|jar .odex in the corresposing classes.dex
+#
+function oat2dex() {
+    local D_FILE="$1"
+    local O_FILE="$2"
+    local ARCH=
+    local OAT=
+
+    if [ -d "$SRC/system/framework/arm64" ]; then
+        ARCH="arm64"
+    else
+        ARCH="arm"
+    fi
+
+    local D_OAT="`dirname $D_FILE`/oat/$ARCH/`basename $D_FILE ."${D_FILE##*.}"`.odex"
+    local O_OAT="`dirname $O_FILE`/oat/$ARCH/`basename $O_FILE ."${O_FILE##*.}"`.odex"
+
+    if [ -f "$D_OAT" ]; then
+        OAT="$D_OAT"
+    elif [ -f "$O_OAT" ]; then
+        OAT="$O_OAT"
+    else
+        return 0
+    fi
+
+    java -jar "$BAKSMALIJAR" -x -o "$TMPDIR/dexout" -c boot.oat -d "$SRC/system/framework/$ARCH" "$OAT"
+    java -jar "$SMALIJAR" "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
+    rm -rf "$TMPDIR/dexout"
+}
+
+#
 # init_adb_connection:
 #
 # Starts adb server and waits for the device
@@ -616,6 +655,23 @@ function extract() {
             # if file does not exist try CM target
             if [ "$?" != "0" ]; then
                 cp "$SRC/system/$DEST" "$OUTPUT_DIR/$DEST"
+            fi
+            if [ "$?" == "0" ]; then
+                # Fixup xml files
+                if [[ "$OUTPUT_DIR/$DEST" =~ .xml$ ]]; then
+                    xmlheader=$(grep '^<?xml version' "$OUTPUT_DIR/$DEST")
+                    grep -v '^<?xml version' "$OUTPUT_DIR/$DEST" > "$OUTPUT_DIR/$DEST".temp
+                    (echo "$xmlheader"; cat "$OUTPUT_DIR/$DEST".temp ) > "$OUTPUT_DIR/$DEST"
+                    rm "$OUTPUT_DIR/$DEST".temp
+                fi
+                if [[ "$OUTPUT_DIR/$DEST" =~ .(apk|jar)$ ]]; then
+                    oat2dex "$SRC/system/$DEST" "$SRC/system/$FILE"
+                    if [ -f "$TMPDIR/classes.dex" ]; then
+                        zip -gjq "$OUTPUT_DIR/$DEST" "$TMPDIR/classes.dex"
+                        rm "$TMPDIR/classes.dex"
+                        echo "    (updated "$OUTPUT_DIR/$DEST" from odex files)"
+                    fi
+                fi
             fi
         fi
         chmod 644 "$OUTPUT_DIR/$DEST"
