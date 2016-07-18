@@ -1,4 +1,4 @@
-$(call inherit-product, vendor/cm/config/common_mini.mk)
+$(call inherit-product, vendor/cm/config/common_mini.m
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
