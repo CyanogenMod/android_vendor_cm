@@ -20,6 +20,10 @@ PRODUCT_PACKAGES_LIST=()
 PACKAGE_LIST=()
 VENDOR_STATE=-1
 COMMON=-1
+FULLY_DEODEXED=-1
+
+TMPDIR="/tmp/extractfiles.$$"
+mkdir "$TMPDIR"
 
 #
 # setup_vendor
@@ -458,19 +462,6 @@ endif
 EOF
 }
 
-# Return success if adb is up and not in recovery
-function _adb_connected {
-    {
-        if [[ "$(adb get-state)" == device &&
-              "$(adb shell test -e /sbin/recovery; echo $?)" == 0 ]]
-        then
-            return 0
-        fi
-    } 2>/dev/null
-
-    return 1
-};
-
 #
 # parse_file_list
 #
@@ -513,6 +504,139 @@ function write_makefiles() {
     parse_file_list "$1"
     write_product_copy_files
     write_product_packages
+}
+
+#
+# _adb_connected:
+#
+# Return success if adb is up and not in recovery
+#
+function _adb_connected {
+    {
+        if [[ "$(adb get-state)" == device &&
+              "$(adb shell test -e /sbin/recovery; echo $?)" == 0 ]]
+        then
+            return 0
+        fi
+    } 2>/dev/null
+
+    return 1
+};
+
+#
+# _adb_silent_pull:
+#
+# $1: file to be pulled
+# $2: target file/folder
+#
+# Silently pulls files from adb and
+# return 0 if files can be successfully pulled
+# echos the TARGET name into $TMPDIR/oatloc
+#    (the value of OAT for adb SRC)
+#
+function _adb_silent_pull {
+
+    # determine target file name and $3 it
+    local target="$2"
+    [ -d "$2" ] && target="$2/`basename $1`"
+
+    # echo OAT path
+    echo "$target" > $TMPDIR/oatloc
+
+    # try to pull
+    adb pull "$1" "$2" 1>&2 2>/dev/null && return 0
+
+    return 1 #nope
+};
+
+#
+# _directory_silent_pull:
+#
+# $1: source file
+# $2: target file/folder
+#
+# Behaves like _adb_silent_pull, but for directory SRC
+# returns 0 if cp succeeds
+# echos the SOURCE name into $TMPDIR/oatloc
+#    (the value of OAT for adb SRC)
+#
+function _directory_silent_pull {
+    [ ! -f "$1" ] && return 1 #fail if source missing
+
+    # echo OAT path
+    echo "$1" > "$TMPDIR"/oatloc
+
+    # try to copy
+    cp "$1" "$2" 2>/dev/null && return 0
+
+    return 1
+};
+
+#
+# oat2dex
+#
+# $1: odexed apk|jar to deodex (extracted from CM target)
+# $2: odexed apk|jar to deodex (extracted from OEM target)
+# $3: source of the odexed apk|jar
+#
+# Convert apk|jar .odex in the corresposing classes.dex
+#
+function oat2dex() {
+    local SRC="`echo $3 | sed 's/\/$//g'`" #without trailing /
+    local getfile=_directory_silent_pull
+
+    if [ "$SRC" = "adb" ]; then
+        SRC=""
+        getfile=_adb_silent_pull
+    fi
+    local D_FILE="${SRC}/$1"
+    local O_FILE="${SRC}/$2"
+    local ARCHES=
+    local BOOTOATS=
+    local OAT=
+    # Extract applicable boot.oats (if file exists) to the temp folder
+    if [ ! -f "$TMPDIR/boot.oat" ] && [ ! -f "$TMPDIR/boot64.oat" ]; then
+        $getfile "${SRC}/system/framework/arm64/boot.oat" "$TMPDIR/boot64.oat"
+        $getfile "${SRC}/system/framework/arm/boot.oat" "$TMPDIR/boot.oat"
+
+        for x in "$TMPDIR/"boot*.oat; do
+            if [ ! -f "$x" ]; then
+                # system is fully deodexed, return
+                FULLY_DEODEXED=1
+                return 0
+            fi
+        done
+    fi
+
+    [ -f $TMPDIR/boot64.oat ] && ARCHES="arm64"
+    [ -f $TMPDIR/boot.oat ] && ARCHES="${ARCHES} arm"
+
+    for ARCHBOOTOAT in "$TMPDIR/"boot*.oat; do
+        BOOTOATS="$BOOTOATS -c $ARCHBOOTOAT"
+    done
+
+    for ARCH in $ARCHES; do
+        local D_OAT="`dirname $D_FILE`/oat/$ARCH/`basename $D_FILE ."${D_FILE##*.}"`.odex"
+        local O_OAT="`dirname $O_FILE`/oat/$ARCH/`basename $O_FILE ."${O_FILE##*.}"`.odex"
+
+        if ! $getfile "$D_OAT" "$TMPDIR" &&
+           ! $getfile "$O_OAT" "$TMPDIR"; then
+            # apk|jar is already odexed, continue
+            continue
+        else
+            OAT="`cat "$TMPDIR"/oatloc`"
+        fi
+
+        if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
+            echo "\$BAKSMALIJAR and \$SMALIJAR must be set for oat2dex to work!"
+            exit 1
+        fi
+
+        java -jar "$BAKSMALIJAR" -x -o "$TMPDIR/dexout" $BOOTOATS -d "$TMPDIR" "$OAT"
+        java -jar "$SMALIJAR" "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
+    done
+    rm -f "$TMPDIR"/oatloc
+    rm -rf "$TMPDIR/dexout"
 }
 
 #
@@ -616,6 +740,17 @@ function extract() {
             # if file does not exist try CM target
             if [ "$?" != "0" ]; then
                 cp "$SRC/system/$DEST" "$OUTPUT_DIR/$DEST"
+            fi
+        fi
+        if [ "$?" == "0" ]; then
+            # Deodex apk|jar if that's the case
+            if [[ "$FULLY_DEODEXED" -ne "1" && "$OUTPUT_DIR/$DEST" =~ .(apk|jar)$ ]]; then
+                oat2dex "/system/$DEST" "/system/$FILE" "$SRC"
+                if [ -f "$TMPDIR/classes.dex" ]; then
+                    zip -gjq "$OUTPUT_DIR/$DEST" "$TMPDIR/classes.dex"
+                    rm "$TMPDIR/classes.dex"
+                    echo "    (updated "$OUTPUT_DIR/$DEST" from odex files)"
+                fi
             fi
         fi
         chmod 644 "$OUTPUT_DIR/$DEST"
