@@ -741,6 +741,13 @@ function extract() {
                     echo "    (updated "$OUTPUT_DIR/$DEST" from odex files)"
                 fi
             fi
+            # Fixup xml files
+            if [[ "$OUTPUT_DIR/$DEST" =~ .xml$ ]]; then
+                xmlheader=$(grep '^<?xml version' "$OUTPUT_DIR/$DEST")
+                grep -v '^<?xml version' "$OUTPUT_DIR/$DEST" > "$OUTPUT_DIR/$DEST".temp
+                (echo "$xmlheader"; cat "$OUTPUT_DIR/$DEST".temp ) > "$OUTPUT_DIR/$DEST"
+                rm "$OUTPUT_DIR/$DEST".temp
+            fi
         fi
         chmod 644 "$OUTPUT_DIR/$DEST"
     done
