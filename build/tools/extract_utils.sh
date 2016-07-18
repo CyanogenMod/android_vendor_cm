@@ -20,6 +20,10 @@ PRODUCT_PACKAGES_LIST=()
 PACKAGE_LIST=()
 VENDOR_STATE=-1
 COMMON=-1
+FULLY_DEODEXED=-1
+
+TMPDIR="/tmp/extractfiles.$$"
+mkdir "$TMPDIR"
 
 #
 # setup_vendor
@@ -517,6 +521,93 @@ function write_makefiles() {
 }
 
 #
+# oat2dex
+#
+# $1: odexed apk|jar to deodex
+# $2: original odexed apk|jar to deodex
+# $3: source of the odexed apk|jar
+#
+# Convert apk|jar .odex in the corresposing classes.dex
+#
+function oat2dex() {
+    if [ "$SRC" = "adb" ]; then
+        local D_FILE="$1"
+        local O_FILE="$2"
+    else
+        local D_FILE="$3/$1"
+        local O_FILE="$3/$2"
+    fi
+    local SRC="$3"
+    local OAT=
+
+    # Determine ARCH and extract boot.oat (if file exists) to temp folder
+    if [ ! -f "$TMPDIR/boot.oat" ]; then
+        if [ "$SRC" = "adb" ]; then
+            adb pull "/system/framework/arm64/boot.oat" "$TMPDIR"
+            if [ "$?" != "0" ]; then
+                adb pull "/system/framework/arm/boot.oat" "$TMPDIR"
+                if [ "$?" != "0" ]; then
+                    # system is fully deodexed, so return
+                    FULLY_DEODEXED=1
+                    return 0
+                else
+                    export ARCH="arm"
+                fi
+            else
+                export ARCH="arm64"
+            fi
+        else
+            if [ -d "$SRC/system/framework/arm64" ]; then
+                export ARCH="arm64"
+            elif [ -d "$SRC/system/framework/arm" ]; then
+                export ARCH="arm"
+            else
+                # system is fully deodexed, so return
+                FULLY_DEODEXED=1
+                return 0
+            fi
+            cp "$SRC/system/framework/$ARCH/boot.oat" "$TMPDIR"
+        fi
+    fi
+
+    local D_OAT="`dirname $D_FILE`/oat/$ARCH/`basename $D_FILE ."${D_FILE##*.}"`.odex"
+    local O_OAT="`dirname $O_FILE`/oat/$ARCH/`basename $O_FILE ."${O_FILE##*.}"`.odex"
+
+    if [ "$SRC" = "adb" ]; then
+        adb pull "$D_OAT" "$TMPDIR"
+        if [ "$?" != "0" ]; then
+            adb pull "$O_OAT" "$TMPDIR"
+            if [ "$?" != "0" ]; then
+                # apk|jar is already odexed, so return
+                return 0
+            else
+                OAT="$TMPDIR/`basename $O_OAT`"
+            fi
+        else
+            OAT="$TMPDIR/`basename $D_OAT`"
+        fi
+    else
+        if [ -f "$D_OAT" ]; then
+            OAT="$D_OAT"
+        elif [ -f "$O_OAT" ]; then
+            OAT="$O_OAT"
+        else
+            # apk|jar is already odexed, so return
+            return 0
+        fi
+    fi
+
+    if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
+        echo "\$BAKSMALIJAR and \$SMALIJAR must be set for oat2dex to work!"
+        exit 1
+    fi
+
+    java -jar "$BAKSMALIJAR" -x -o "$TMPDIR/dexout" -c boot.oat -d "$TMPDIR" "$OAT"
+    java -jar "$SMALIJAR" "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
+    rm -rf "$TMPDIR/dexout"
+}
+
+#
 # init_adb_connection:
 #
 # Starts adb server and waits for the device
@@ -617,6 +708,23 @@ function extract() {
             # if file does not exist try CM target
             if [ "$?" != "0" ]; then
                 cp "$SRC/system/$DEST" "$OUTPUT_DIR/$DEST"
+            fi
+        fi
+        if [ "$?" == "0" ]; then
+            # Fixup xml files
+            if [[ "$OUTPUT_DIR/$DEST" =~ .xml$ ]]; then
+                xmlheader=$(grep '^<?xml version' "$OUTPUT_DIR/$DEST")
+                grep -v '^<?xml version' "$OUTPUT_DIR/$DEST" > "$OUTPUT_DIR/$DEST".temp
+                (echo "$xmlheader"; cat "$OUTPUT_DIR/$DEST".temp ) > "$OUTPUT_DIR/$DEST"
+                rm "$OUTPUT_DIR/$DEST".temp
+            fi
+            if [[ "$FULLY_DEODEXED" -ne "1" && "$OUTPUT_DIR/$DEST" =~ .(apk|jar)$ ]]; then
+                oat2dex "/system/$DEST" "/system/$FILE" "$SRC"
+                if [ -f "$TMPDIR/classes.dex" ]; then
+                    zip -gjq "$OUTPUT_DIR/$DEST" "$TMPDIR/classes.dex"
+                    rm "$TMPDIR/classes.dex"
+                    echo "    (updated "$OUTPUT_DIR/$DEST" from odex files)"
+                fi
             fi
         fi
         chmod 644 "$OUTPUT_DIR/$DEST"
