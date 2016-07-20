@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider \
     DataUsageProvider \
-    WallpaperPicker
+    WallpaperPicker \
+    ThemeManagerService
 
 # Exchange support
 PRODUCT_PACKAGES += \
