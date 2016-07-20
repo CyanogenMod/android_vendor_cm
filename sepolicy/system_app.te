@@ -6,3 +6,7 @@ allow system_app media_rw_data_file:file create_file_perms;
 
 # Boot animation
 allow system_app ctl_bootanim_prop:property_service set;
+
+# Theme manager service
+allow system_app theme_data_file:dir create_dir_perms;
+allow system_app theme_data_file:file create_file_perms;
