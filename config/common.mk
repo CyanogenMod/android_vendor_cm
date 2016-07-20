@@ -133,7 +133,8 @@ include vendor/cm/config/cmsdk_common.mk
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
-    Profiles
+    Profiles \
+    ThemeManagerService
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
