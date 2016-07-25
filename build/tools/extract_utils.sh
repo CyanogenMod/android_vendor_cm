@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES_LIST=()
 PRODUCT_PACKAGES_LIST=()
 PACKAGE_LIST=()
 VENDOR_STATE=-1
+RADIO_VENDOR_STATE=-1
 COMMON=-1
 
 #
@@ -69,8 +70,10 @@ function setup_vendor() {
 
     if [ "$5" == "true" ] || [ "$5" == "1" ]; then
         VENDOR_STATE=1
+        RADIO_VENDOR_STATE=1
     else
         VENDOR_STATE=0
+        RADIO_VENDOR_STATE=0
     fi
 }
 
@@ -516,6 +519,43 @@ function write_makefiles() {
 }
 
 #
+# append_firmware_calls_to_makefiles:
+#
+# $1: file containing the list of firmware images to extract
+#
+# Appends to Android.mk the calls to all extracted firmware images
+# (filesmap used by releasetools to map firmware images
+#  should be kept in the device tree)
+#
+function append_firmware_calls_to_makefiles() {
+    if [ ! -e "$1" ]; then
+        echo "$1 does not exist!"
+        exit 1
+    fi
+
+    parse_file_list "$1"
+
+    local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
+    local COUNT=${#FILELIST[@]}
+    local FILE=
+
+    if [ "$COUNT" -eq "0" ]; then
+        return 0
+    fi
+
+    printf '$(call add-radio-file,../../../device/%s/%s/radio/filesmap)\n' \
+        "$VENDOR" "$DEVICE" >> "$ANDROIDMK"
+    for (( i=1; i<COUNT+1; i++ )); do
+        FILE="${FILELIST[$i-1]}"
+        TARGET=$(target_file "$FILE")
+        printf '$(call add-radio-file,radio/%s)\n' \
+            "$TARGET" >> "$ANDROIDMK"
+    done
+    printf '\n' >> "$ANDROIDMK"
+    return 0
+}
+
+#
 # init_adb_connection:
 #
 # Starts adb server and waits for the device
@@ -623,4 +663,52 @@ function extract() {
 
     # Don't allow failing
     set -e
+}
+
+#
+# extract_firmware:
+#
+# $1: file containing the list of items to extract
+# $2: path to extracted radio folder
+#
+function extract_firmware() {
+    if [ ! -e "$1" ]; then
+        echo "$1 does not exist!"
+        exit 1
+    fi
+
+    if [ -z "$OUTDIR" ]; then
+        echo "Output dir not set!"
+        exit 1
+    fi
+
+    parse_file_list "$1"
+
+    # Don't allow failing
+    set -e
+
+    local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
+    local COUNT=${#FILELIST[@]}
+    local FILE=
+    local SRC="$2"
+    local OUTPUT_DIR="$CM_ROOT"/"$OUTDIR"/radio
+
+    if [ "$RADIO_VENDOR_STATE" -eq "0" ]; then
+        echo "Cleaning firmware output directory ($OUTPUT_DIR).."
+        rm -rf "${OUTPUT_DIR:?}/"*
+        RADIO_VENDOR_STATE=1
+    fi
+
+    echo "Extracting $COUNT files in $1 from $SRC:"
+
+    for (( i=1; i<COUNT+1; i++ )); do
+        FILE="${FILELIST[$i-1]}"
+        printf '  - %s \n' "/radio/$FILE"
+
+        if [ ! -d "$OUTPUT_DIR" ]; then
+            mkdir -p "$OUTPUT_DIR"
+        fi
+        cp "$SRC/$FILE" "$OUTPUT_DIR/$FILE"
+        chmod 644 "$OUTPUT_DIR/$FILE"
+    done
 }
