@@ -158,6 +158,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     ExactCalculator \
     LiveLockScreenService \
+    CMAudioService \
     WeatherProvider \
     DataUsageProvider \
     WallpaperPicker
