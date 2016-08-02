@@ -20,6 +20,11 @@
 /system/bin/mkfs\.ntfs    u:object_r:mkfs_exec:s0
 
 # For minivold in recovery
+/sbin/e2fsck              u:object_r:fsck_exec:s0
+/sbin/fsck.exfat          u:object_r:fsck_exec:s0
+/sbin/fsck.ext4           u:object_r:fsck_exec:s0
+/sbin/fsck.f2fs           u:object_r:fsck_exec:s0
+/sbin/fsck.ntfs           u:object_r:fsck_exec:s0
 /sbin/minivold            u:object_r:vold_exec:s0
 
 #############################

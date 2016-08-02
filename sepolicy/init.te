@@ -2,3 +2,10 @@
 allow init block_device:dir search;
 allow init userdata_block_device:blk_file rw_file_perms;
 allow init cache_block_device:blk_file rw_file_perms;
+
+# Allow relabelling on init from rootfs
+recovery_only(`
+  allow init rootfs:lnk_file relabelfrom;
+  allow init fsck_exec:lnk_file relabelto;
+  allow init vold_exec:lnk_file relabelto;
+')

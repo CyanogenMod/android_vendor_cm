@@ -1,2 +1,7 @@
 # External storage
 allow fsck_untrusted self:capability sys_admin;
+
+# Recovery minivold access to fsck symlinks
+recovery_only(`
+  allow fsck_untrusted fsck:file entrypoint;
+')
