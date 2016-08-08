@@ -185,6 +185,13 @@ PRODUCT_PACKAGES += \
     strace \
     pigz
 
+# Custom off-mode charger
+PRODUCT_PACKAGES += \
+    cm_charger_res_images \
+    font_log.png \
+    libhealthd.cm
+
+# ExFAT support
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
 TARGET_USES_EXFAT := true
