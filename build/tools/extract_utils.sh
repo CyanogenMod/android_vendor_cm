@@ -16,7 +16,9 @@
 #
 
 PRODUCT_COPY_FILES_LIST=()
+PRODUCT_COPY_FILES_HASHES=()
 PRODUCT_PACKAGES_LIST=()
+PRODUCT_PACKAGES_HASHES=()
 PACKAGE_LIST=()
 VENDOR_STATE=-1
 VENDOR_RADIO_STATE=-1
@@ -510,16 +512,31 @@ function parse_file_list() {
     fi
 
     PRODUCT_PACKAGES_LIST=()
+    PRODUCT_PACKAGES_HASHES=()
     PRODUCT_COPY_FILES_LIST=()
+    PRODUCT_COPY_FILES_HASHES=()
 
     while read -r line; do
         if [ -z "$line" ]; then continue; fi
 
+        # If the line has a pipe delimiter, a sha1 hash should follow.
+        # This indicates the file should be pinned and not overwritten
+        # when extracting files.
+        local SPLIT=(${line//\|/ })
+        local COUNT=${#SPLIT[@]}
+        local SPEC=${SPLIT[0]}
+        local HASH="x"
+        if [ "$COUNT" -gt "1" ]; then
+            HASH=${SPLIT[1]}
+        fi
+
         # if line starts with a dash, it needs to be packaged
-        if [[ "$line" =~ ^- ]]; then
-            PRODUCT_PACKAGES_LIST+=("${line#-}")
+        if [[ "$SPEC" =~ ^- ]]; then
+            PRODUCT_PACKAGES_LIST+=("${SPEC#-}")
+            PRODUCT_PACKAGES_HASHES+=("$HASH")
         else
-            PRODUCT_COPY_FILES_LIST+=("$line")
+            PRODUCT_COPY_FILES_LIST+=("$SPEC")
+            PRODUCT_COPY_FILES_HASHES+=("$HASH")
         fi
 
     done < <(egrep -v '(^#|^[[:space:]]*$)' "$1" | sort | uniq)
@@ -579,8 +596,7 @@ function get_file() {
 
         return 1
     else
-        # try to copy
-        cp "$SRC/$1" "$2" 2>/dev/null && return 0
+        # try to cop "$SRC/$1" "$2" 2>/dev/null && return 0
 
         return 1
     fi
@@ -619,6 +635,10 @@ function oat2dex() {
 
     if [ -z "$ARCHES" ]; then
         FULLY_DEODEXED=1 && return 0 # system is fully deodexed, return
+    fi
+
+    if [ ! -f "$CM_TARGET" ]; then
+        return;
     fi
 
     if grep "classes.dex" "$CM_TARGET" >/dev/null; then
@@ -708,16 +728,21 @@ function extract() {
     set +e
 
     local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} ${PRODUCT_PACKAGES_LIST[@]} )
+    local HASHLIST=( ${PRODUCT_COPY_FILES_HASHES[@]} ${PRODUCT_PACKAGES_HASHES[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
     local OUTPUT_ROOT="$CM_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_TMP=/tmp/"$OUTDIR"/proprietary
+
     if [ "$SRC" = "adb" ]; then
         init_adb_connection
     fi
 
     if [ "$VENDOR_STATE" -eq "0" ]; then
         echo "Cleaning output directory ($OUTPUT_ROOT).."
-        rm -rf "${OUTPUT_ROOT:?}/"*
+        rm -rf "${OUTPUT_TMP:?}"
+        mkdir -p "${OUTPUT_TMP:?}"
+        mv "${OUTPUT_ROOT:?}/"* "${OUTPUT_TMP:?}/"
         VENDOR_STATE=1
     fi
 
@@ -730,11 +755,13 @@ function extract() {
         local SPLIT=(${FILELIST[$i-1]//:/ })
         local FILE="${SPLIT[0]#-}"
         local OUTPUT_DIR="$OUTPUT_ROOT"
+        local TMP_DIR="$OUTPUT_TMP"
         local TARGET=
 
         if [ "$ARGS" = "rootfs" ]; then
             TARGET="$FROM"
             OUTPUT_DIR="$OUTPUT_DIR/rootfs"
+            TMP_DIR="$TMP_DIR/rootfs"
         else
             TARGET="system/$FROM"
             FILE="system/$FILE"
@@ -761,10 +788,13 @@ function extract() {
             fi
         else
             # Try OEM target first
-            cp "$SRC/$FILE" "$DEST"
+            if [ -f "$SRC/$FILE" ]; then
+                cp "$SRC/$FILE" "$DEST"
             # if file does not exist try CM target
-            if [ "$?" != "0" ]; then
+            elif [ -f "$SRC/$TARGET" ]; then
                 cp "$SRC/$TARGET" "$DEST"
+            else
+                printf '    !! file not found in source\n'
             fi
         fi
 
@@ -782,12 +812,39 @@ function extract() {
             fi
         fi
 
-        local TYPE="${DIR##*/}"
-        if [ "$TYPE" = "bin" -o "$TYPE" = "sbin" ]; then
-            chmod 755 "$DEST"
-        else
-            chmod 644 "$DEST"
+        # Check pinned files
+        local HASH="${HASHLIST[$i-1]}"
+        if [ ! -z "$HASH" ] && [ "$HASH" != "x" ]; then
+            local KEEP=""
+            local TMP="$TMP_DIR/$FROM"
+            if [ -f "$TMP" ]; then
+                if [ ! -f "$DEST" ]; then
+                    KEEP="1"
+                else
+                    local DEST_HASH=$(sha1sum "$DEST" | awk '{print $1}' )
+                    if [ "$DEST_HASH" != "$HASH" ]; then
+                        KEEP="1"
+                    fi
+                fi
+                if [ "$KEEP" = "1" ]; then
+                    local TMP_HASH=$(sha1sum "$TMP" | awk '{print $1}' )
+                    if [ "$TMP_HASH" = "$HASH" ]; then
+                        printf '    + (keeping pinned file with hash %s)\n' "$HASH"
+                        cp -p "$TMP" "$DEST"
+                    fi
+                fi
+            fi
         fi
+
+        if [ -f "$DEST" ]; then
+            local TYPE="${DIR##*/}"
+            if [ "$TYPE" = "bin" -o "$TYPE" = "sbin" ]; then
+                chmod 755 "$DEST"
+            else
+                chmod 644 "$DEST"
+            fi
+        fi
+
     done
 
     # Don't allow failing
