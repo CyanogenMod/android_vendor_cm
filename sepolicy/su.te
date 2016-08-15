@@ -66,4 +66,5 @@ userdebug_or_eng(`
   allow system_app superuser_device:dir { create rw_dir_perms setattr unlink };
 
   allow kernel sudaemon:fd { use };
+  allow kernel media_rw_data_file:file { read write };
 ')
