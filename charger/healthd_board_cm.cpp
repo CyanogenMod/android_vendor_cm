@@ -79,14 +79,15 @@ static int draw_surface_centered(GRSurface* surface)
 #define STR_LEN 64
 static void draw_capacity(int capacity)
 {
+    char cap_str[STR_LEN];
+    snprintf(cap_str, (STR_LEN - 1), "%d%%", capacity);
+
     struct frame *f = &anim.frames[0];
-    int w = gr_get_width(f->surface);
+    int w = gr_measure(cap_str);
     int h = gr_get_height(f->surface);
     int x = (gr_fb_width() - w) / 2 ;
     int y = (gr_fb_height() + h) / 2;
 
-    char cap_str[STR_LEN];
-    snprintf(cap_str, (STR_LEN - 1), "%d%%", capacity);
     gr_color(255, 255, 255, 255);
     gr_text(x, y * 1.05, cap_str, 0);
 }
