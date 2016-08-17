@@ -36,6 +36,10 @@
 #include <sys/timerfd.h>
 #include <linux/rtc.h>
 
+#include <sys/mount.h>
+#include <dirent.h>
+
+
 #include "healthd.h"
 #include "minui/minui.h"
 
@@ -62,6 +66,7 @@ static struct animation anim = {
 };
 
 static bool font_inited;
+static bool time_valid;
 
 static int draw_surface_centered(GRSurface* surface)
 {
@@ -287,6 +292,115 @@ err:
     LOGE("Exit from alarm thread\n");
     return NULL;
 }
+
+#define MAX_PATH_LEN 255
+static void fix_time()
+{
+    int rc, fd = -1;
+    time_t rtc_time;
+    struct timeval tv;
+    static const char *paths[] = { "/data/system/time/", "/data/time/"  };
+    uint64_t offset;
+    struct dirent *dt;
+    char ats_path[MAX_PATH_LEN] = { 0 };
+
+    rc = alarm_get_time(RTC_TIME, &rtc_time);
+    if (rc < 0) {
+        ALOGE("Failed to read RTC_TIME!\n");
+        return;
+    }
+
+    tv.tv_sec = rtc_time;
+    tv.tv_usec = 0;
+
+    settimeofday(&tv, NULL);
+    time_valid = true;
+
+// Some qcom devices have an offset written inside the files "ats_N" with
+// "ats_2" being for TimeOfDay (for more info see time_genoff.h in CodeAurora,
+// qcom-opensource/time-services
+// Code adopted from TWRP project
+#ifdef NEEDS_QCOM_FIX
+    time_valid = false;
+    for (size_t i = 0; i < (sizeof(paths) / sizeof(paths[0])); i++) {
+        DIR *d = opendir(paths[i]);
+        if (!d) {
+            continue;
+        }
+
+        while ((dt = readdir(d)) != NULL) {
+            if (dt->d_type != DT_REG || strncmp(dt->d_name, "ats_", 4) != 0) {
+                continue;
+            }
+
+            // Prefer ats_2 if existing
+            if (ats_path[0] == '\0' || strcmp(dt->d_name, "ats_2") == 0) {
+                snprintf(ats_path, MAX_PATH_LEN - 1, "%s%s", paths[i], dt->d_name);
+            }
+        }
+
+        closedir(d);
+    }
+
+    if (ats_path[0] == '\0') {
+        LOGE("Error during getting time!\n");
+        return;
+    }
+
+    LOGI("%s", ats_path);
+
+    fd = open(ats_path, O_RDONLY);
+    if (fd < 0) {
+        LOGE("Can't open ats_path: %s\n", ats_path);
+        return;
+    }
+
+    read(fd, &offset, sizeof(offset));
+    close(fd);
+
+    tv.tv_sec += offset / 1000;
+    tv.tv_usec += (offset % 1000) * 1000;
+
+    while (tv.tv_usec >= 1000000) {
+        tv.tv_sec++;
+        tv.tv_usec -= 1000000;
+    }
+
+    settimeofday(&tv, NULL);
+    time_valid = true;
+#endif
+}
+
+#define OFFSET_X 10
+#define OFFSET_Y 10
+static void draw_time()
+{
+    timeval time;
+    struct tm *nowtm;
+    char time_str[STR_LEN];
+
+    fix_time();
+    if (!time_valid) {
+        return;
+    }
+
+    gettimeofday(&time, NULL);
+    if (time.tv_sec <= 0) {
+        return;
+    }
+
+    nowtm = localtime(&time.tv_sec);
+    strftime(time_str, sizeof(time_str), "%H:%M", nowtm);
+    LOGI("Current time: %s\n", time_str);
+
+    int w = gr_measure(time_str);
+    int screen_width = gr_fb_width();
+    int screen_height = gr_fb_height();
+    int x = screen_width - w - OFFSET_X;
+    int y = OFFSET_Y;
+
+    gr_text(x, y, time_str, 0);
+}
 #endif
 
 void healthd_board_init(struct healthd_config*)
@@ -317,6 +431,13 @@ void healthd_board_init(struct healthd_config*)
         if (rc < 0)
             LOGE("Create alarm thread failed\n");
     }
+
+#ifdef NEEDS_QCOM_FIX
+    rc = mount(NULL, "/dev/block/bootdevice/by-name/userdata", "/data", MS_RDONLY, NULL);
+    if (rc < 0) {
+        LOGE("Mounting of /data failed\n");
+    }
+#endif
 #endif
 }
 
@@ -359,6 +480,11 @@ void healthd_board_mode_charger_draw_battery(
 
     draw_surface_centered(anim.frames[anim.cur_frame].surface);
     draw_capacity(capacity);
+
+#ifdef QCOM_HARDWARE
+    draw_time();
+#endif
+
     // Move to next frame, with max possible frame at max_idx
     anim.cur_frame = ((anim.cur_frame + 1) % anim.num_frames);
 }
