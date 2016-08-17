@@ -16,6 +16,9 @@ endif
 ifneq ($(HEALTHD_BACKLIGHT_LEVEL),)
     LOCAL_CFLAGS += -DHEALTHD_BACKLIGHT_LEVEL=$(HEALTHD_BACKLIGHT_LEVEL)
 endif
+ifeq ($(BOARD_USES_QC_TIME_SERVICES),true)
+    LOCAL_CFLAGS += -DNEEDS_QCOM_FIX
+endif
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -51,6 +54,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := $(_img_modules)
 LOCAL_OVERRIDES_PACKAGES := charger_res_images
 include $(BUILD_PHONY_PACKAGE)
+
+BOARD_SEPOLICY_DIRS += vendor/cm/charger/sepolicy
 
 _add-charger-image :=
 _img_modules :=
