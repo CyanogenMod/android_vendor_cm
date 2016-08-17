@@ -1,0 +1,6 @@
+#============= healthd ==============
+allow healthd property_data_file:file { read open };
+allow healthd self:capability sys_time;
+allow healthd time_data_file:dir { read open };
+allow healthd time_data_file:file { read open };
+allow healthd userdata_block_device:blk_file mounton;
