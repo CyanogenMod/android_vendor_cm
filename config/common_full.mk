@@ -13,7 +13,3 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     PhotoTable \
     PhotoPhase
-
-# Themes
-PRODUCT_PACKAGES += \
-    HexoLibre
