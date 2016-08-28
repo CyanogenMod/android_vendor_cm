@@ -1,0 +1,7 @@
+#============= healthd ==============
+allow healthd property_data_file:dir search;
+allow healthd property_data_file:file r_file_perms;
+allow healthd self:capability { sys_admin sys_time };
+allow healthd time_data_file:dir r_dir_perms;
+allow healthd time_data_file:file r_file_perms;
+allow healthd userdata_block_device:blk_file mounton;
