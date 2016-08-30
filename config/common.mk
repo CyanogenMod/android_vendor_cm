@@ -133,12 +133,9 @@ endif
 
 # Required CM packages
 PRODUCT_PACKAGES += \
-    CMAudioService \
     CMParts \
     Development \
-    BluetoothExt \
     Profiles \
-    ThemeManagerService \
     WeatherManagerService
 
 # Optional CM packages
@@ -165,8 +162,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    DataUsageProvider \
-    WallpaperPicker
+    DataUsageProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
