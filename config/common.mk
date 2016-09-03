@@ -133,6 +133,7 @@ endif
 
 # Required CM packages
 PRODUCT_PACKAGES += \
+    CMParts \
     Development \
     Profiles \
     WeatherManagerService
