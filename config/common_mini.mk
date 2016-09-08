@@ -6,8 +6,16 @@ PRODUCT_SIZE := mini
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
 
-# Default notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Argon.ogg \
-    ro.config.alarm_alert=Helium.ogg
-
+# Extra tools in CM
+PRODUCT_PACKAGES += \
+    7z \
+    lib7z \
+    bash \
+    bzip2 \
+    curl \
+    powertop \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
