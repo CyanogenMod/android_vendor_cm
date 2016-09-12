@@ -3,4 +3,5 @@ allow mediaserver themeservice_app_data_file:dir r_dir_perms;
 allow mediaserver themeservice_app_data_file:file r_file_perms;
 
 # For camera
-allow mediaserver media_rw_data_file:file write;
+allow mediaserver media_rw_data_file:dir create_dir_perms;
+allow mediaserver media_rw_data_file:file create_file_perms;
