@@ -165,6 +165,10 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider
 
+# Theme related packages
+PRODUCT_PACKAGES += \
+	aapt
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
