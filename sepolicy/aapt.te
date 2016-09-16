@@ -1,0 +1,13 @@
+# aapt, when executed by installd
+type aapt, domain, domain_deprecated;
+type aapt_exec, exec_type, file_type;
+
+# Use open file to /data/resource-cache file inherited from installd.
+allow aapt installd:fd use;
+allow aapt resourcecache_data_file:file { getattr read write open };
+allow aapt resourcecache_data_file:dir search;
+
+# Open and read from target and overlay apk files passed by argument.
+allow aapt apk_data_file:file r_file_perms;
+
+allow aapt installd:fifo_file { read write };

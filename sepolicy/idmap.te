@@ -1,0 +1,2 @@
+allow idmap resourcecache_data_file:file { getattr read write open };
+allow idmap resourcecache_data_file:dir search;
