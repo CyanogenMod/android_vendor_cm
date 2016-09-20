@@ -9,6 +9,7 @@ allow themeservice_app cm_themes_service:dir search;
 allow themeservice_app connectivity_service:service_manager find;
 allow themeservice_app display_service:service_manager find;
 allow themeservice_app mount_service:service_manager find;
+allow themeservice_app network_management_service:service_manager find;
 allow themeservice_app notification_service:service_manager find;
 allow themeservice_app system_app_data_file:dir search;
 allow themeservice_app user_service:service_manager find;
