@@ -1,9 +1,11 @@
 type superuser_device, file_type, mlstrustedobject;
+type sudaemon_exec, exec_type, file_type;
 
 ## Perms for the daemon
 
 userdebug_or_eng(`
-  domain_trans(init, su_exec, sudaemon)
+  type sudaemon, domain;
+  domain_trans(init, sudaemon_exec, sudaemon)
 
   typeattribute sudaemon domain, mlstrustedsubject;
 
@@ -14,10 +16,6 @@ userdebug_or_eng(`
 
   # sudaemon is also permissive to permit setenforce.
   permissive sudaemon;
-
-  # Add sudaemon to various domains
-  net_domain(sudaemon)
-  app_domain(sudaemon)
 
   dontaudit sudaemon self:capability_class_set *;
   dontaudit sudaemon kernel:security *;
@@ -42,11 +40,16 @@ userdebug_or_eng(`
   dontaudit sudaemon domain:binder *;
   dontaudit sudaemon property_type:property_service *;
   dontaudit sudaemon appops_service:service_manager *;
-')
+  dontaudit su property_type:file *;
+  dontaudit su service_manager_type:service_manager *;
+  dontaudit su servicemanager:service_manager list;
+  dontaudit su keystore:keystore_key *;
+  dontaudit su domain:debuggerd *;
+  dontaudit su domain:drmservice *;
+  dontaudit su unlabeled:filesystem *;
 
-## Perms for the app
+  ## Perms for the app
 
-userdebug_or_eng(`
   # Translate user apps to the shell domain when using su
   #
   # PR_SET_NO_NEW_PRIVS blocks this :(
@@ -54,7 +57,7 @@ userdebug_or_eng(`
   # typealias shell alias suclient;
   # domain_auto_trans(untrusted_app, su_exec, suclient)
 
-  allow untrusted_app su_exec:file { execute_no_trans getattr open read execute };
+  allow untrusted_app su_exec:lnk_file { getattr open read };
   allow untrusted_app sudaemon:unix_stream_socket { connectto read write setopt ioctl };
   allow untrusted_app superuser_device:dir { r_dir_perms };
   allow untrusted_app superuser_device:sock_file { write };
@@ -67,6 +70,9 @@ userdebug_or_eng(`
 
   allow kernel sudaemon:fd { use };
 
+  # Log usage
+  auditallow appdomain su_exec:file execute;
+
+  neverallow { domain userdebug_or_eng(`-init -sudaemon') } sudaemon_exec:file no_x_file_perms;
 ')
 
-neverallow { domain userdebug_or_eng(`-dumpstate -shell -su -untrusted_app -init -sudaemon') } su_exec:file no_x_file_perms;

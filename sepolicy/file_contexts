@@ -49,3 +49,7 @@
 
 # bash
 /system/xbin/bash                               u:object_r:shell_exec:s0
+
+# Superuser
+/system/bin/su                                  u:object_r:su_exec:s0
+/system/xbin/su-daemon                          u:object_r:sudaemon_exec:s0
