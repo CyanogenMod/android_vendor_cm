@@ -165,12 +165,10 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     CMSettingsProvider \
     CMUpdater \
-    CMWallpapers \
     CyanogenSetupWizard \
     Eleven \
     ExactCalculator \
     Launcher3 \
-    LiveLockScreenService \
     LockClock \
     Screencast \
     SoundRecorder \
