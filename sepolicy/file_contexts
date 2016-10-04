@@ -2,6 +2,7 @@
 
 # Themes
 /data/system/theme(/.*)?  u:object_r:themeservice_app_data_file:s0
+/system/bin/aapt u:object_r:aapt_exec:s0
 
 /system/bin/sysinit       u:object_r:sysinit_exec:s0
 
