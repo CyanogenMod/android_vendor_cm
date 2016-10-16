@@ -144,6 +144,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
     CMParts \
+    CMPerformanceManagerService \
     Development \
     Profiles \
     WeatherManagerService
