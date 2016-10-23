@@ -1,3 +1,4 @@
 # Theme related packages
 PRODUCT_PACKAGES += \
-    aapt
+    aapt \
+    ThemeManagerService
