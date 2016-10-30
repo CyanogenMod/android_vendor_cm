@@ -5,3 +5,6 @@ allow init cache_block_device:blk_file rw_file_perms;
 
 # Allow init to send class_* trigger events
 allow init property_socket:sock_file write;
+
+# Allow init to (re)load SELinux policy
+allow init kernel:security load_policy;

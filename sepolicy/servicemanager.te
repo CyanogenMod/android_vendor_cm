@@ -1,0 +1,2 @@
+# Read SELinux version
+allow servicemanager security_file:file r_file_perms;
