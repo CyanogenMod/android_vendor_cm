@@ -17,3 +17,4 @@ type livedisplay_sysfs, sysfs_type, file_type;
 type exfat, sdcard_type, fs_type, mlstrustedobject;
 type fuseblk, sdcard_type, fs_type, mlstrustedobject;
 type ntfs, sdcard_type, fs_type, mlstrustedobject;
+type vfat, sdcard_type, fs_type, mlstrustedobject;
