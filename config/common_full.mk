@@ -6,3 +6,8 @@ PRODUCT_SIZE := full
 # Themes
 PRODUCT_PACKAGES += \
     HexoLibre
+
+# Live wallpapers
+PRODUCT_PACKAGES += \
+    PhaseBeam \
+    PhotoPhase
