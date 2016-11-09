@@ -271,7 +271,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
 PRODUCT_VERSION = 1.0
-    CM_VERSION := Okeys-1.0$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
+    CM_VERSION := Okeys$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.rr.version=$(CM_VERSION) \
