@@ -166,7 +166,6 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CMWallpapers \
     CyanogenSetupWizard \
-    Eleven \
     ExactCalculator \
     Launcher3 \
     LiveLockScreenService \
@@ -177,9 +176,9 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
+# Custom CM packages
+ 
+    masquerade 
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
@@ -267,134 +266,27 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+    persist.sys.root_access=1
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
-PRODUCT_VERSION_MAJOR = 14
-PRODUCT_VERSION_MINOR = 1
-PRODUCT_VERSION_MAINTENANCE := 0
-
-ifeq ($(TARGET_VENDOR_SHOW_MAINTENANCE_VERSION),true)
-    CM_VERSION_MAINTENANCE := $(PRODUCT_VERSION_MAINTENANCE)
-else
-    CM_VERSION_MAINTENANCE := 0
-endif
-
-# Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
-
-ifndef CM_BUILDTYPE
-    ifdef RELEASE_TYPE
-        # Starting with "CM_" is optional
-        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^CM_||g')
-        CM_BUILDTYPE := $(RELEASE_TYPE)
-    endif
-endif
-
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
-    CM_BUILDTYPE :=
-endif
-
-ifdef CM_BUILDTYPE
-    ifneq ($(CM_BUILDTYPE), SNAPSHOT)
-        ifdef CM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL
-            CM_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
-        endif
-    else
-        ifndef CM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            CM_BUILDTYPE := EXPERIMENTAL
-        else
-            # Remove leading dash from CM_EXTRAVERSION
-            CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to CM_EXTRAVERSION
-            CM_EXTRAVERSION := -$(CM_EXTRAVERSION)
-        endif
-    endif
-else
-    # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
-    CM_EXTRAVERSION :=
-endif
-
-ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        CM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
-    endif
-endif
-
-ifeq ($(CM_BUILDTYPE), RELEASE)
-    ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(CM_BUILD)
-    else
-        ifeq ($(TARGET_BUILD_VARIANT),user)
-            ifeq ($(CM_VERSION_MAINTENANCE),0)
-                CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD)
-            else
-                CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(CM_VERSION_MAINTENANCE)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD)
-            endif
-        else
-            CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(CM_BUILD)
-        endif
-    endif
-else
-    ifeq ($(CM_VERSION_MAINTENANCE),0)
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
-    else
-        CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(CM_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
-    endif
-endif
+PRODUCT_VERSION = 1.0
+    CM_VERSION := Okeys-1.0$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(CM_VERSION) \
-  ro.cm.releasetype=$(CM_BUILDTYPE) \
+  ro.rr.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION) \
-  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
-
-ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
-    PRODUCT_EXTRA_RECOVERY_KEYS += \
-        vendor/cm/build/target/product/security/cm \
-        vendor/cm/build/target/product/security/cm-devkey
-endif
-
--include vendor/cm-priv/keys/keys.mk
+  ro.romstats.name=Okeys \
+  ro.romstats.version=$(PRODUCT_VERSION) \
+  ro.romstats.tframe=7 
 
 CM_DISPLAY_VERSION := $(CM_VERSION)
 
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-  ifneq ($(CM_BUILDTYPE), UNOFFICIAL)
-    ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-      ifneq ($(CM_EXTRAVERSION),)
-        # Remove leading dash from CM_EXTRAVERSION
-        CM_EXTRAVERSION := $(shell echo $(CM_EXTRAVERSION) | sed 's/-//')
-        TARGET_VENDOR_RELEASE_BUILD_ID := $(CM_EXTRAVERSION)
-      else
-        TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d)
-      endif
-    else
-      TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
-    endif
-    ifeq ($(CM_VERSION_MAINTENANCE),0)
-        CM_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD)
-    else
-        CM_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(CM_VERSION_MAINTENANCE)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(CM_BUILD)
-    endif
-endif
-endif
-endif
-
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.display.version=$(CM_DISPLAY_VERSION)
+  ro.rr.display.version=$(CM_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/cm/config/partner_gms.mk
+
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
