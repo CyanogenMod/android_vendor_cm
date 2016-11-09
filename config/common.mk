@@ -274,7 +274,7 @@ PRODUCT_VERSION = 1.0
     CM_VERSION := Okeys$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.rr.version=$(CM_VERSION) \
+  ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION) \
   ro.romstats.name=Okeys \
   ro.romstats.version=$(PRODUCT_VERSION) \
@@ -283,7 +283,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 CM_DISPLAY_VERSION := $(CM_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.rr.display.version=$(CM_DISPLAY_VERSION)
+  ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
