@@ -274,8 +274,8 @@ PRODUCT_VERSION = 1.0
     CM_VERSION := Okeys$(PRODUCT_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(CM_VERSION) \
-  ro.modversion=$(CM_VERSION) \
+  ro.cm.version=14.1$(CM_VERSION) \
+  ro.modversion=1.0$(CM_VERSION) \
   ro.romstats.name=Okeys \
   ro.romstats.version=$(PRODUCT_VERSION) \
   ro.romstats.tframe=7 
