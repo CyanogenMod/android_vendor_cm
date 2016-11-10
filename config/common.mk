@@ -175,10 +175,7 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider
-
-# Custom CM packages
- 
-    masquerade 
+    masquerade
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
