@@ -207,3 +207,8 @@ on property:sys.io.scheduler=bfq
     write /sys/block/sde/queue/iosched/slice_idle 0
     write /sys/block/dm-0/queue/iosched/slice_idle 0
 
+on property:ro.device.has.cache.partition=0
+    export DOWNLOAD_CACHE /data/cache
+
+on property:ro.device.has.cache.partition=1
+    export DOWNLOAD_CACHE /cache
