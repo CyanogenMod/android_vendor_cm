@@ -28,6 +28,7 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
     qcom_flags += -DQTI_BSP
 
     BOARD_USES_ADRENO := true
+    TARGET_USES_MEDIA_EXTENSIONS := true
 
     TARGET_USES_QCOM_BSP := true
 
