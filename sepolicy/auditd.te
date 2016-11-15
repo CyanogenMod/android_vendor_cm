@@ -1,0 +1,13 @@
+type auditd, domain;
+type auditd_exec, exec_type, file_type;
+
+init_daemon_domain(auditd)
+
+allow auditd auditd_data_file:dir rw_dir_perms;
+allow auditd auditd_data_file:file create_file_perms;
+
+allow auditd self:netlink_audit_socket { create_socket_perms nlmsg_write};
+allow auditd self:capability audit_control;
+
+allow auditd kernel:system syslog_read;
+allow auditd rootfs:lnk_file getattr;
