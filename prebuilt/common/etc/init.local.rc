@@ -21,6 +21,7 @@ on post-fs-data
     mkdir /data/ssh 0750 root shell
     mkdir /data/ssh/empty 0600 root shell
     mkdir /cache/recovery 0770 system cache
+    mkdir /data/misc/audit 02750 system system
 
     # Run sysinit
     start sysinit
