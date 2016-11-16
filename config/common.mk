@@ -115,6 +115,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
+# Keyboard swipe libs
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+
+ifeq ($(TARGET_SUPPORTS_64_BITS_APPS), true)
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
