@@ -29,5 +29,4 @@ PRODUCT_COPY_FILES += \
 	$(RINGTONE_PATH)/CyanTone.ogg:system/media/audio/ringtones/CyanTone.ogg \
 	$(RINGTONE_PATH)/Highscore.ogg:system/media/audio/ringtones/Highscore.ogg \
 	$(RINGTONE_PATH)/Lyon.ogg:system/media/audio/ringtones/Lyon.ogg \
-	$(RINGTONE_PATH)/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg \
-
+	$(RINGTONE_PATH)/Rockin.ogg:system/media/audio/ringtones/Rockin.ogg
