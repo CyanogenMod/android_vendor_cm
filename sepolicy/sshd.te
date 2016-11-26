@@ -1,0 +1,52 @@
+### Data storage
+type sshd_data, file_type, data_file_type;
+
+userdebug_or_eng(`
+    type_transition { sshd sshd_init } system_data_file:{ dir file } sshd_data;
+    allow sshd_init sshd_data:dir { rw_dir_perms create_dir_perms };
+    allow sshd_init sshd_data:file { rw_file_perms create_file_perms };
+    allow sshd sshd_data:dir { rw_dir_perms };
+    allow sshd sshd_data:file { rw_file_perms };
+')
+
+
+### Init script domain
+type sshd_init, domain;
+type sshd_init_exec, exec_type, file_type;
+
+userdebug_or_eng(`
+    init_daemon_domain(sshd_init)
+
+    allow sshd_init self:capability { chown dac_override };
+    allow sshd_init devpts:chr_file { rw_file_perms };
+    allow sshd_init shell_exec:file { rx_file_perms };
+    allow sshd_init system_file:file { rx_file_perms };
+    allow sshd_init toolbox_exec:file { rx_file_perms };
+
+    # Hand off once we finally start the daemon
+    domain_auto_trans(sshd_init, sshd_exec, sshd)
+')
+
+
+### Main sshd domain
+type sshd, domain;
+type sshd_exec, exec_type, file_type;
+
+userdebug_or_eng(`
+    # Shell domain crosstalk, same as adb
+    domain_auto_trans(sshd, shell_exec, shell)
+    allow shell sshd:fd use;
+    # rsync and friends
+    allow shell sshd:fifo_file { rw_file_perms };
+
+    # Allow network comm
+    net_domain(sshd);
+
+    allow sshd self:capability { chown dac_override kill net_bind_service net_raw setgid setuid sys_chroot };
+    allow sshd devpts:chr_file { rw_file_perms setattr };
+    allow sshd sshd_exec:file { rx_file_perms };
+    allow sshd sshd_init:fd use;
+
+    allow dpmd sshd:fd use;
+    allow dpmd sshd:tcp_socket { read write };
+')
