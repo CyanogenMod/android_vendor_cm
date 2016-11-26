@@ -2001,4 +2001,6 @@
   <apn carrier="Movistar UY" mcc="748" mnc="07" apn="apnumt.movistar.com.uy" user="movistar" password="movistar" type="default,supl" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
+  <apn carrier="Mitel Mobile MMS" mcc="310" mnc="120" apn="Sprint" user="Sprint" server="*" type="mms" password="1234" mmsc="http://mms.plspictures.com" mmsproxy="68.28.31.7" mmsport="80" authtype="3"/>
+  <apn carrier="Mitel Mobile internet" mcc="310" mnc="120" apn="n.m5.ispsn" type="default,mms,supl,hipri" mmsc="http://mms.plspictures.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" />
 </apns>
