@@ -18,8 +18,6 @@ on init
     chmod 0220 /dev/bfqio/rt-display/cgroup.event_control
 
 on post-fs-data
-    mkdir /data/ssh 0750 root shell
-    mkdir /data/ssh/empty 0600 root shell
     mkdir /cache/recovery 0770 system cache
 
     # Run sysinit
@@ -28,6 +26,9 @@ on post-fs-data
     # Change permissions on fsck log so it can be added to the dropbox
     chown root log /dev/fscklogs/log
     chmod 0640 /dev/fscklogs/log
+
+on post-fs-data && property:persist.sshd.autostart=1
+    start sshd
 
 on boot
     # interactive governor
@@ -150,6 +151,10 @@ on boot
 service sysinit /system/bin/sysinit
     user root
     oneshot
+    disabled
+
+service sshd /system/bin/start-ssh
+    user root
     disabled
 
 # bugreport is triggered by holding down volume down, volume up and power
