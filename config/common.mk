@@ -121,6 +121,11 @@ PRODUCT_COPY_FILES += \
 
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
+# Google Keyboard 
+PRODUCT_COPY_FILES += \
+     vendor/cm/prebuilt/common/app/com.google.android.inputmethod.latin-1/base.apk:system/app/com.google.android.inputmethod.latin-1/base.apk \
+     vendor/cm/prebuilt/common/app/com.google.android.inputmethod.latin-1/oat/arm/base.odex:system/app/com.google.android.inputmethod.latin-1/oat/arm/base.odex \
+     vendor/cm/prebuilt/common/app/com.google.android.inputmethod.latin-1/lib/arm/libjni_delight4decoder.so:system/app/com.google.android.inputmethod.latin-1/lib/arm/libjni_delight4decoder.so
 
 # Theme engine
 include vendor/cm/config/themes_common.mk
