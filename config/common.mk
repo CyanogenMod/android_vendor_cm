@@ -118,9 +118,15 @@ PRODUCT_COPY_FILES += \
 # This is CM!
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    
+# SuperSU
+ PRODUCT_COPY_FILES += \
+     vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+     vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon    
 
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
+
 # Google Keyboard 
 PRODUCT_COPY_FILES += \
      vendor/cm/prebuilt/common/app/com.google.android.inputmethod.latin-1/base.apk:system/app/com.google.android.inputmethod.latin-1/base.apk \
