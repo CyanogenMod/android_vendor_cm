@@ -31,6 +31,8 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 
     TARGET_USES_QCOM_BSP := true
 
+    TARGET_USES_MEDIA_EXTENSIONS := true
+
     # Tell HALs that we're compiling an AOSP build with an in-line kernel
     TARGET_COMPILE_WITH_MSM_KERNEL := true
 
