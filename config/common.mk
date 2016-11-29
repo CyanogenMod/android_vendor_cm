@@ -185,6 +185,7 @@ PRODUCT_PACKAGES += \
     Screencast \
     SoundRecorder \
     Trebuchet \
+    OmniSwitch \
     WallpaperPicker \
     WeatherProvider
 
