@@ -106,7 +106,7 @@ Maintainers (CyanogenMod 14.1):
 * __Oppo N1:__ raymanfx
 * __Oppo N3:__ jrior001
 * __Oppo R7:__ maniac103, mikeioannina, Rashed97
-* __Oppo R7 Plus:__ maniac103, mikeioannina, Rashed97
+* __Oppo R7 Plus:__ maniac103, mikeioannina, Rashed97, jumoog
 * __Samsung Captivate (SGH-I896 / SGH-I897):__ pawitp
 * __Samsung Epic 4G (SPH-D700):__ bbelos
 * __Samsung Exhilarate (SGH-I577):__ mikeyman77, carvsdriver
