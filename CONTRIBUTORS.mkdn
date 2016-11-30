@@ -71,6 +71,7 @@ Maintainers (CyanogenMod 14.1):
 * __LG G3 s (D724):__ Quarx2k, vm03, NikitaProAndroid
 * __LG G4 (T-Mobile) (H811):__ codeworkx, genesixxbf3
 * __LG G4 (International) (H815):__ codeworkx, genesixxbf3
+* __LG G Pad 8.3 (V500):__ fefifofum
 * __LG Optimus L70:__ Quarx2k, vm03, NikitaProAndroid
 * __LG Optimus L90:__ Quarx2k, vm03, NikitaProAndroid
 * __LG Optimus LTE (P930) / LG Nitro HD {P935):__ arcee
@@ -186,6 +187,7 @@ Maintainers (CyanogenMod 14.1):
 * __Xiaomi Mi2(s) (aries):__ Michael Zimmermann
 * __Xiaomi Mi3/4 (cancro):__ JoeyRizzoli
 * __Xiaomi Mi5 (gemini):__ bgcngm, defer, h2o64
+* __Xiaomi Redmi 1S (armani):__ fefifofum
 * __Xiaomi Redmi Note 3 (kenzo):__ TheStrix
 * __ZTE Nubia Z9 Max (nx510j):__ dianlujitao
 
