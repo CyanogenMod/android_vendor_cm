@@ -47,5 +47,7 @@ LOCAL_MAVEN_VERSION := 40
 LOCAL_MAVEN_ARTIFACT := gello
 LOCAL_MAVEN_PACKAGING := apk
 
+$(shell vendor/cm/gello/fix_gello.sh $(LOCAL_MAVEN_VERSION))
+
 include $(BUILD_MAVEN_PREBUILT)
 endif
