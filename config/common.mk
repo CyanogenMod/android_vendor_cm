@@ -146,9 +146,10 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     Terminal
 
-# Include librsjni explicitly to workaround GMS issue
+# Include explicitly to workaround GMS issues
 PRODUCT_PACKAGES += \
-    librsjni
+    librsjni \
+    libprotobuf-cpp-full
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
