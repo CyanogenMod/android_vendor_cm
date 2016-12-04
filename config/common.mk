@@ -1,5 +1,4 @@
 PRODUCT_BRAND ?= cyanogenmod
-
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -145,6 +144,10 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
 include vendor/cm/config/cmsdk_common.mk
 endif
+
+# Bootanimation
+PRODUCT_PACKAGES += \
+    bootanimation.zip
 
 # Required CM packages
 PRODUCT_PACKAGES += \
