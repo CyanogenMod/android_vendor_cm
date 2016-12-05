@@ -1,0 +1,13 @@
+linux x86_64 static ImageMagick convert binary built on an ubuntu 16.04.1 system with:
+
+*) source tarball https://www.imagemagick.org/download/ImageMagick-7.0.3-8.tar.gz
+
+*) configure with:
+./configure --disable-shared --without-bzlib --without-dps --without-fftw --without-flif --without-fpx --without-djvu --without-fontconfig --without-freetype --without-raqm --without-jbig --without-lcms --without-openjp2 --without-lqr --without-lzma --without-openexr --without-pango --with-jpeg  --without-webp --without-xml --without-x --disable-delegate-build --with-png --enable-openmp
+
+*) after making, relink utilities/magick statically with:
+/usr/bin/gcc -I/usr/include/libpng12 -fopenmp -g -O2 -Wall -mtune=haswell -fexceptions -pthread -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -o utilities/magick utilities/magick.o MagickCore/.libs/libMagickCore-7.Q16HDRI.a MagickWand/.libs/libMagickWand-7.Q16HDRI.a /store4/ImageMagick-7.0.3-8/MagickCore/.libs/libMagickCore-7.Q16HDRI.a -lpng12 -lz -lm -lgomp -ljpeg -fopenmp -pthread -static
+
+*) strip and copy:
+strip utilities/magick
+cp utilities/magick <cm>/vendor/cm/bootanimation/convert
