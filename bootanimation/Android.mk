@@ -15,10 +15,10 @@
 #
 
 define build-bootanimation
-    sh vendor/cm/bootanimation/generate-bootanimation.sh \
-    $(TARGET_SCREEN_WIDTH) \
-    $(TARGET_SCREEN_HEIGHT) \
-    $(TARGET_BOOTANIMATION_HALF_RES)
+    HOST_OS=$(HOST_OS) sh vendor/cm/bootanimation/generate-bootanimation.sh \
+            $(TARGET_SCREEN_WIDTH) \
+            $(TARGET_SCREEN_HEIGHT) \
+            $(TARGET_BOOTANIMATION_HALF_RES)
 endef
 
 TARGET_GENERATED_BOOTANIMATION := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION/bootanimation.zip
@@ -28,15 +28,17 @@ $(TARGET_GENERATED_BOOTANIMATION):
 
 ifeq ($(TARGET_BOOTANIMATION),)
     TARGET_BOOTANIMATION := $(TARGET_GENERATED_BOOTANIMATION)
-    ifeq ($(shell command -v convert),)
-        $(info **********************************************)
-        $(info The boot animation could not be generated as)
-        $(info ImageMagick is not installed in your system.)
-        $(info $(space))
-        $(info Please install ImageMagick from this website:)
-        $(info https://imagemagick.org/script/binary-releases.php)
-        $(info **********************************************)
-        $(error stop)
+    ifneq ($(HOST_OS),linux)
+        ifeq ($(shell command -v convert),)
+            $(info **********************************************)
+            $(info The boot animation could not be generated as)
+            $(info ImageMagick is not installed in your system.)
+            $(info $(space))
+            $(info Please install ImageMagick from this website:)
+            $(info https://imagemagick.org/script/binary-releases.php)
+            $(info **********************************************)
+            $(error stop)
+        endif
     endif
 endif
 

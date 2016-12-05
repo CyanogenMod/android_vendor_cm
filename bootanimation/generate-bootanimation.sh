@@ -23,7 +23,12 @@ for part_cnt in 0 1 2
 do
     mkdir -p $ANDROID_PRODUCT_OUT/obj/BOOTANIMATION/bootanimation/part$part_cnt
 done
-tar xfp "vendor/cm/bootanimation/bootanimation.tar" --to-command="convert - -resize '$RESOLUTION' \"png8:$OUT/bootanimation/\$TAR_FILENAME\""
+CONVERTBIN=$(which convert)
+if [ -z "$CONVERTBIN" -a "$HOST_OS" = "linux" ]; then
+    # use embedded linux x86_64 prebuilt
+    CONVERTBIN="vendor/cm/bootanimation/convert"
+fi
+tar xfp "vendor/cm/bootanimation/bootanimation.tar" --to-command="$CONVERTBIN - -resize '$RESOLUTION' \"png8:$OUT/bootanimation/\$TAR_FILENAME\""
 
 # Create desc.txt
 echo "$SIZE" "$SIZE" 30 > "$OUT/bootanimation/desc.txt"
