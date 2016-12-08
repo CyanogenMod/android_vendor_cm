@@ -100,11 +100,17 @@ $(call project-set-path,qcom-audio,hardware/qcom/audio/default)
 $(call project-set-path,qcom-display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
 $(call project-set-path,qcom-media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
 
-$(call project-set-path,qcom-camera,hardware/qcom/camera)
 $(call project-set-path,qcom-gps,hardware/qcom/gps)
 $(call project-set-path,qcom-sensors,hardware/qcom/sensors)
 $(call project-set-path,qcom-loc-api,vendor/qcom/opensource/location)
-$(call project-set-path,qcom-dataservices,$(TARGET_DEVICE_DIR)/dataservices)
+
+ifeq ($(TARGET_USE_SONY_VARIANT),true)
+    $(call project-set-path,qcom-camera,hardware/sony/camera)
+    $(call project-set-path,qcom-dataservices,hardware/sony/dataservices)
+else
+    $(call project-set-path,qcom-camera,hardware/qcom/camera)
+    $(call project-set-path,qcom-dataservices,$(TARGET_DEVICE_DIR)/dataservices)
+endif
 
 $(call ril-set-path-variant,ril)
 $(call wlan-set-path-variant,wlan)
