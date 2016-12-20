@@ -11,3 +11,7 @@ PRODUCT_PACKAGES += \
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Orion.ogg
+
+# IMS Default Permission
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/qcom_ims.xml:system/etc/default-permissions/qcom_ims.xml
