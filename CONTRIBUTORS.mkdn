@@ -23,6 +23,7 @@ Maintainers (CyanogenMod 14.1):
 * __BQ Aquaris E5 4G/E5 S (vegetalte):__  cmorlok, eloimuns, Kra1o5, stucki (bq-dev)
 * __BQ Aquaris M5 (piccolo):__  cmorlok, eloimuns, Kra1o5, stucki (bq-dev)
 * __Google Android One:__ varunchitre15
+* __Google Android One 3rd Gen (shamrock):__ Rygebin, Wzedlare, Deftones
 * __Google Galaxy Nexus:__ Ziyan, musical_chairs
 * __Google Nexus S:__ burnsra, KalimochoAz, klusark
 * __Google Nexus 4:__ ciwrl
