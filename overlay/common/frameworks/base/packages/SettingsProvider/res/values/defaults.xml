@@ -21,4 +21,7 @@
 
     <!-- Enable notification counters in statusbar -->
     <integer name="def_notif_count">1</integer>
+
+    <!-- Disable bluetooth by default -->
+    <bool name="def_bluetooth_on">false</bool>
 </resources>
